@@ -1,0 +1,76 @@
+\documentclass[letterpaper,twoside,11pt]{book}
+
+%fonts related
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{textcomp}
+
+%spell related
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%graphics related
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{pstricks}
+
+\usepackage{listings}
+
+%margin related
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{2cm}{2cm}
+
+\setlength{\parskip}{6pt}
+
+\usepackage{multirow}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhead[LE,RO]{\slshape}
+\fancyhead[LO,RE]{\slshape \leftmark}
+
+\usepackage[grey]{quotchap}
+
+\usepackage[
+pdfauthor={Carlos Eduardo Caballero Burgoa},%
+pdftitle={Salesforce (Productos y Listas de Precios},%
+colorlinks,%
+citecolor=black,%
+filecolor=black,%
+linkcolor=black,%
+urlcolor=black
+pdftex]{hyperref}
+
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+
+\begin{document}
+\frontmatter
+
+\include{caratula}
+\blankpage
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+\include{capitulo_01}
+%\include{capitulo_02}
+
+%\begin{appendix}
+%\include{apendice_a}
+%\end{appendix}
+
+\backmatter
+\include{bibliografia}
+
+\end{document}
+
