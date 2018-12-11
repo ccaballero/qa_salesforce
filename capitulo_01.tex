@@ -1,190 +1,52 @@
-\chapter{HTSM}
+\chapter{Introducción}
 
-\emph{HTSM (Heuristic Test Strategy Model)} fue creado por James Bach en 1996
-para que lo usen los evaluadores profesionales como una colección estructurada
-de recordatorios de qué pensar cuando están creando pruebas, divide el
-pensamiento de la creación de pruebas en diferentes ejes de análisis, que,
-cuando se unen, permiten al probador crear una estrategia de prueba
-holística\cite{Bach}.
+\emph{Salesforce} es una compañia americana conocida por producir
+\emph{Sales Cloud} un CRM (\emph{Customer relationship management}), es decir,
+un software para la administración de la relación con los clientes. Y de entre
+los elementos que componen este software, uno de los puntos fundamentales es la
+administración de sus productos, y sus precios.
 
-En este capitulo desglosaremos, y describiremos todos sus componentes, de tal
-forma que este construya un marco solido para la planificación, y ejecución de
-las pruebas de calidad del producto.
+En este documento se detalla todo el proceso de planificación, diseño, y
+ejecución de casos de prueba para garantizar los atributos de calidad deseados
+en el componente de gestión de productos, precios, y listas de precios. Tambien
+se definen los problemas, los objetivos fundamentales, y los
+factores que despertaron el interés por resolverlos.
 
-\section{Entorno de proyecto}
+\section{Antecedentes}
 
-\subsection{Misión}
-La misión del proyecto es:
+\section{Definición del problema}
 
-Evaluar la calidad de las funcionalidades provistas por \emph{Salesforce} que
-componen el modulo de gestión de productos y listas de precios, con el diseño y
-ejecución de multiples tecnicas de evaluacion, para que de esta manera se pueda
-garantizar la calidad del producto para los clientes.
+Por lo mencionado se define el problema como:
 
-\subsection{Fuentes de Información}
-Para evaluar los componentes antes citados, se encontraron las siguientes
-fuentes de información respecto al producto:
+\emph{“El componente de gestión de productos y precios en la plataforma Sales
+Cloud, siendo un componente fundamental para el exito del producto requiere”}.
 
-\begin{description}
-\item [Centro de Ayuda] Salesforce ofrece un amplio conjunto de documentación,
-información general, preguntas frecuentes, y contacto con el servicio de
-asistencia técnica desde su sitio de ayuda (https://help.salesforce.com/).
+\section{Objetivos}
 
-Estos recursos serán utiles para conocer las reclamaciones de los usuarios, las
-caracteristicas criticas del producto, y las estrategias del fabricante hacia
-sus clientes.
+\subsection{Objetivo General}
+Promover el intercambio de información entre los estudiantes, mediante el uso
+de una red social para mejorar los métodos de adquisición del conocimiento.
 
-\item [Centro de Desarrollo] Salesforce tambien posee un sitio web
-especificamente para compartir recursos de desarrollo sobre la plataforma
-(https://developer.salesforce.com/).
-
-Este sitio se prodrá aprovechar para consultar las referencias a las API del
-servicio, conocer acerca de los componentes y como pueden aprovecharse desde la
-perspectiva del desarrollador.
-
-\item [Recursos para administradores] Sitio web enfocado a ofrecer experiencias,
-videos, herramientas, y un sin fin de recursos orientados a usuarios con el rol
-de administración de recursos sobre la plataforma
-(https://admin.salesforce.com/resources).
-
-\item [Comunidad \emph{Trailblazer}] Sitio web enfocado a conectar a miembros de
-la comunidad Salesforce, para compartir experiencias, aprender, y proveer de
-nuevas ideas sobre la utilización del servicio
-(https://success.salesforce.com/).
-
-\end{description}
-
-\subsection{Equipamiento}
-En esta sección describiremos la recursos necesarios para la ejecución del
-proyecto.
-
-\subsubsection{Software}
-Se evaluaran las funcionalidades sobre el módulo sobre el navegador cuya
-participación en el mercado es la mayor, en este caso: \emph{Google Chrome}
-como puede verse en la figura \ref{software}.
-
-\begin{figure}
-\centering
-\input{graphics/cap1_1.tex}
-\caption{Participación de mercado de los navegadores hasta Noviembre del 2018.}
-\label{software}
-\end{figure}
-
-\subsubsection{Herramientas}
-En diferentes etapas del proyecto se utilizaran multiples herramientas que
-colaboren con tareas especificas del proceso de evaluación, ellas detalladas en
-el cuadro \ref{herramientas}.
-
-\begin{table}
-\centering
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Herramienta} & \textbf{Descripción} \\
-\hline
-XMind & Herramienta para la elaboración de los mapas mentales. \\
-Pairwise & Herramienta para la generación de pruebas combinatorias. \\
-Postman & Herramienta para la solicitud de peticiones HTTP para el uso de API.\\
-Testlink & Herramienta basada en web que facilita el proceso de gestión de calidad de software. \\
-\hline
-\end{tabular}
-\caption{Herramientas auxiliares de apoyo para el proyecto.}
-\label{herramientas}
-\end{table}
-
-\subsection{Cronograma}
-Véase el cuadro \ref{cronograma} en la página \pageref{cronograma}.
-
-\begin{sidewaystable}
-\centering
-\small
-\begin{tabular}{|l|l|l|p{6.5cm}|l|}
-\hline
-Objetivo General & Causa & Objetivos Específicos & Actividades & Resultados \\
-\hline
-\multirow{15}{2.6cm}{Promover la interacción académica entre los estudiantes mediante el uso de
-una red social para mejorar los métodos de adquisición del conocimiento.} &
-\multirow{3}{3cm}{Pérdida de tiempo al crear espacios de interacción por parte de los docentes
-y estudiantes.} &
-\multirow{3}{3.5cm}{Agilizar la creación de espacios virtuales para incrementar la cantidad y
-variabilidad de estos.} &
-Analizar las herramientas actuales para creación de espacios virtuales. &
-\multirow{3}{2.5cm}{Modulo para la creación de espacios virtuales.} \\
-\cline{4-4}
-& & & Diseñar e implementar un método eficaz y cómodo para la manipulación de los espacios virtuales. & \\
-\cline{4-4}
-& & & Evaluar la usabilidad y amigabilidad de la herramienta desarrollada. & \\
-\cline{2-5}
-& \multirow{3}{3cm}{De\-sa\-pro\-ve\-cha\-mi\-en\-to del conocimiento y experiencia de los estudiantes.} &
-\multirow{3}{3.5cm}{Facilitar el intercambio de recursos entre los estudiantes para acelerar la
-adquisición de experiencia.} &
-Diseñar e implementar de una arquitectura orientada a la provisión de recursos web. &
-\multirow{3}{2.5cm}{Modulo para la publicación de recursos web multimedia.} \\
-\cline{4-4}
-& & & Diseñar e implementar de una arquitectura orientada al consumo de recursos web. & \\
-\cline{4-4}
-& & & Crear un API funcional para el acceso a la información. & \\
-\cline{2-5}
-& \multirow{3}{3cm}{Inadecuada conectividad entre las distintas plataformas web 2.0.} &
-\multirow{3}{3.5cm}{Facilitar el intercambio de recursos entre distintas instancias de la red
-para mejorar la disponibilidad de recursos.} &
-Modelar un proceso de intercambio de información basado en servicios web en el sistema. &
-\multirow{3}{2.5cm}{Modulo de conectividad entre instancias de la red social.} \\
-\cline{4-4}
-& & & Implementar estándares de servicios web en el sistema. & \\
-\cline{4-4}
-& & & Crear un API funcional para el intercambio de información. & \\
-\cline{2-5}
-& \multirow{3}{3cm}{Innecesaria sobrecarga de trabajo de los docentes en la atención a los estudiantes.} &
-\multirow{3}{3.5cm}{Mejorar los canales de comunicación entre estudiantes y docentes para facilitar
-la retroalimentación.} &
-Crear espacios virtuales para las respectivas materias, grupos y dinámicas de grupo. &
-\multirow{3}{2.5cm}{Módulos auxiliares para el apoyo de la enseñanza en aula.} \\
-\cline{4-4}
-& & & Diseñar e implementar métodos que mejoren los canales de comunicación. & \\
-\cline{4-4}
-& & & Crear indicadores para el seguimiento de la fluidez de comunicación en el sistema. & \\
-\cline{2-5}
-& \multirow{3}{3cm}{Progresiva pérdida del interés de parte de los estudiantes.} &
-\multirow{3}{3.5cm}{Planear estrategias que fomenten la participación para mantener activo el sistema.} &
-Revisar los métodos actuales de atracción de los usuarios en los sistemas multiusuario. &
-\multirow{3}{2.5cm}{Módulos auxiliares de fomento a la participación de los usuarios.} \\
-\cline{4-4}
-& & & Diseñar e implementar los módulos definidos. & \\
-\cline{4-4}
-& & & Crear indicadores para el seguimiento del grado de interés en el sistema. & \\
-\hline
-\end{tabular}
-\caption{Cronograma de actividades del proyecto.}
-\label{cronograma}
-\end{sidewaystable}
-
-\subsection{Elementos a evaluar}
-Los elementos que se evaluaran los siguientes:
-
+\subsection{Objetivos Específicos}
 \begin{itemize}
-\item Productos.
-\item Precios de productos.
-\item Listas de precios.
+\item Agilizar la creación de espacios virtuales para incrementar la cantidad y
+variabilidad de estos.
+\item Facilitar el intercambio de recursos entre los estudiantes para acelerar
+la adquisición de experiencia.
+\item Mejorar los canales de comunicación entre estudiantes y docentes para
+facilitar la retroalimentación.
+\item Planear estrategias que fomenten la participación para mantener activo el
+sistema.
 \end{itemize}
 
-La evaluación se realizará a la plataforma, mediante la utilización del navegador
-web Google Chrome en su versión 68.0.
+\section{Justificación}
 
-\subsection{Documentos entregables}
+\section{Alcance}
+Es necesario mencionar que escapan de las funciones de este sistema la
+interacción entre el sistema desarrollado y otras redes sociales, sea para
+provisión o consumo de recursos.
 
-
-%\section{Elementos del producto}
-%\section{Criterios de calidad}
-%\subsection{Confiabilidad}
-%\subsection{Usabilidad}
-%\subsection{Compatibilidad}
-%\subsection{Soportabilidad}
-%\subsection{Localizabilidad}
-%\section{Técnicas de prueba}
-%\subsection{Pruebas funcionales}
-%\subsection{Pruebas de dominio}
-%\subsection{Pruebas de rendimiento}
-%\subsection{Pruebas de usuario}
-%\subsection{Pruebas de aceptación}
-%\subsection{Pruebas de localización}
+Otra restricción impuesta será el registro cerrado para usuarios, esta será
+exclusivamente por medio de invitaciones, todo esto para crear una red social
+de conexiones lo menos dispersas posibles.
 
