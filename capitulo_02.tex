@@ -12,6 +12,9 @@ forma que este construya un marco solido para la planificación, y ejecución de
 las pruebas de calidad del producto.
 
 \section{Entorno de proyecto}
+En esta sección se describiran aquellos factores del contexto que incluyen
+recursos necesarios, restricciones, y cualquier otro elemento del proyecto que
+debe ser tomado en cuenta para la evaluación.
 
 \subsection{Misión}
 La misión del proyecto es:
@@ -63,6 +66,9 @@ proyecto.
 Se evaluarán las funcionalidades de los módulos sobre el navegador cuya
 participación en el mercado es la mayor, en este caso: \emph{Google Chrome}
 como puede verse en la figura \ref{software}.
+
+Adicionalmente se utilzaran algunos navegadores adicionales en pruebas muy
+focalizadas de compatibilidad.
 
 \begin{figure}
 \centering
@@ -159,7 +165,8 @@ Los elementos que se evaluarán los siguientes:
 
 La evaluación se realizará a la plataforma, mediante la utilización del navegador
 web Google Chrome en su versión 68.0, con excepción de las pruebas automatizadas
-que seran ejecutadas mediante scripts de automatización.
+que seran ejecutadas mediante scripts de automatización, y las pruebas de
+compatibilidad que requeriran muchos navegadores para su evaluación.
 
 \subsection{Documentos entregables}
 A continuación se describen los documentos resultantes de la evaluación:
@@ -268,10 +275,21 @@ de productos en el servicio.
 \label{productos}
 \end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/productos.eps}
+\caption{Interfaz grafica para el módulo de productos.}
+\label{productos_web}
+\end{figure}
+
 \subsection{Listas de Precios}
 En la figura \ref{listas_de_precios} pueden verse las funcionalidades
 clasificadas desde la perspectiva de la interfaz de usuario, tambien se omitio
 la sección de los controles de vista de lista.
+
+Esta clasificación de las funciones se ubican en una vista de interfaz como
+puede verse en la figura \ref{listas_de_precios_web}, vista principal para la
+gestión de listas de precios en el servicio.
 
 \begin{figure}
 \centering
@@ -338,6 +356,13 @@ la sección de los controles de vista de lista.
 \label{listas_de_precios}
 \end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/listas_de_precios.eps}
+\caption{Interfaz grafica para el módulo de listas de precios.}
+\label{listas_de_precios_web}
+\end{figure}
+
 \subsection{Controles de Vista de Lista}
 En la figura \ref{vista_de_lista} pueden verse las funciones omitidas en los
 diagramas anteriores relativas a los controles de vista, ambas equivalentes
@@ -378,17 +403,100 @@ entre si.
 \end{figure}
 
 \section{Criterios de calidad}
-\subsection{Confiabilidad}
-\subsection{Usabilidad}
-\subsection{Compatibilidad}
-\subsection{Soportabilidad}
-\subsection{Localizabilidad}
+Se denomina criterio de calidad a cualquier requerimiento que define lo que el
+producto debe ser.
 
-%\section{Técnicas de prueba}
-%\subsection{Pruebas funcionales}
-%\subsection{Pruebas de dominio}
-%\subsection{Pruebas de rendimiento}
-%\subsection{Pruebas de usuario}
-%\subsection{Pruebas de aceptación}
-%\subsection{Pruebas de localización}
+Por lo general, los criterios de calidad parten de la combinación de las
+necesidades reales y de las demandas de los clientes, con el conocimiento de las
+ofertas y productos de organizaciones de la competencia y las posibilidades que
+el fabricante posee para satisfacer esas necesidades y expectativas o para
+procurar en la medida de lo posible y/o aconsejable\cite{Haaz}.
+
+Se definieron los siguientes como criterios de calidad fundamentales para el
+exito del producto\cite{Fillottrani}.
+
+\begin{description}
+\item [Usabilidad] La usabilidad se refiere a la facilidad de operación del
+    producto por parte de los usuarios, y se relaciona con el esfuerzo
+    necesario para ser utilizado, y en la evaluación individual de tal uso, por
+    parte de un conjunto especificado o implicito de usuarios.
+
+    Entre algunos de los criterios que determinan este factor, estan:
+
+    \begin{itemize}
+    \item \textbf{Entendimiento} que mide el esfuerzo del usuario en reconocer el
+        concepto lógico del software y su aplicabilidad.
+    \item \textbf{Aprendizaje} que mide el esfuerzo del usuario en aprender
+        acerca del producto.
+    \item \textbf{Operabilidad} que mide el esfuerzo del usuario en operar y
+        controlar el sistema.
+    \end{itemize}
+
+\item [Compatibilidad] La compatibilidad del navegador determina el
+    comportamiento del servicio en diferentes plataformas de navegación.
+
+    Dado que cada navegador tiene su propia manera de mostrar y gestionar los
+    contenidos de una página web. Por lo tanto, las páginas web deben diseñarse
+    de tal manera que puedan ser compatibles con cada uno de los navegadores de
+    uso común. Actualmente hay casi cien tipos diferentes de navegadores
+    disponibles, lo que dificulta que los diseñadores / webmasters desarrollen
+    sitios web con un comportamiento similar en múltiples plataformas. El
+    estricto cumplimiento de las pautas de diseño puede cumplir con estos
+    criterios hasta cierto nivel.
+
+\item [Soportabilidad] La soportabilidad es la capacidad del sistema para
+    proporcionar información útil para identificar y resolver problemas.
+
+    El costo de mantener el atributo de compatibilidad es alto y el resultado
+    solo es visible a gran escala. Sin embargo, con el crecimiento del equipo y
+    el producto, este atributo se convierte en una de las claves\cite{Ashanin}.
+
+\item [Localizabilidad] La localizabilidad es un proceso intermedio para
+    verificar que una aplicación globalizada está lista para la localización.
+    En una situación ideal, esta es solo una fase de garantía de calidad. Si se
+    diseñó y desarrolló una aplicación con miras a la localización, esta fase
+    consistirá principalmente en pruebas de localizabilidad. De lo contrario, es
+    durante esta fase que se descubrirán y corregirán los errores en el código
+    fuente que impiden la localización.
+
+    La localizabilidad ayuda a garantizar que la localización no introduzca
+    ningún defecto funcional en la aplicación\cite{Moura}.
+\end{description}
+
+\section{Técnicas de prueba}
+Habiendose definido los elementos del sistema, y los criterios bajo los que
+estos deben ser evaluados. Ahora se pasará a describir las técnicas de prueba
+que se utilizarán para cada elemento y criterio de calidad.
+
+\subsection{Pruebas de aceptación}
+La prueba de aceptación es una prueba formal que se realiza para determinar si
+un sistema satisface sus criterios de aceptación: los criterios que debe cumplir
+el sistema para que el cliente los acepte. Ayuda al cliente a determinar si
+acepta o no el sistema\cite{Naik}.
+
+\subsection{Pruebas funcionales}
+El software o sistema bajo prueba se ve como una «caja negra». La selección de
+casos de prueba para pruebas funcionales se basa en el requisito o
+especificación de diseño de la entidad de software bajo prueba. Ejemplos de
+resultados esperados, algunas veces se llaman oráculos de prueba, incluyen
+requisitos/especificaciones de diseño, valores calculados a mano y resultados
+simulados. Las pruebas funcionales hacen hincapié en el comportamiento externo
+de la entidad de software\cite{Luo}.
+
+\subsection{Pruebas de dominio}
+La prueba de dominio es una estrategia de muestreo estratificada para elegir
+algunos casos de prueba de la infinidad de casos de prueba candidatos. La
+estrategia tiene varios nombres, como la partición de equivalencia, el análisis
+de límites y la partición de categorías.
+
+La prueba de dominio es probablemente la más ampliamenfe descrita y una de las
+técnicas de prueba de software más ampliamente practicadas. Algunos autores
+restringen su consideración del alcance de esta técnica a variables de entrada
+linealizables a funciones matemáticas. Una variable linealizable es aquella
+cuyos valores se pueden asignar a una recta numérica. El análisis es más
+sencillo y más obvio en estos casos\cite{Kaner}.
+
+\subsection{Pruebas de usuario}
+\subsection{Pruebas de compatibilidad}
+\subsection{Pruebas de localización}
 
