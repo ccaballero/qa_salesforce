@@ -16,29 +16,30 @@ las pruebas de calidad del producto.
 \subsection{Misión}
 La misión del proyecto es:
 
-Evaluar la calidad de las funcionalidades provistas por \emph{Salesforce} que
-componen el modulo de gestión de productos y listas de precios, con el diseño y
-ejecución de multiples tecnicas de evaluacion, para que de esta manera se pueda
-garantizar la calidad del producto para los clientes.
+Evaluar las funcionalidades provistas por \emph{Salesforce} que componen el
+modulo de gestión de productos y listas de precios, con el diseño y ejecución de
+multiples tecnicas de evaluacion, para que de esta manera se pueda garantizar la
+calidad del producto para los clientes.
 
 \subsection{Fuentes de Información}
 Para evaluar los componentes antes citados, se encontraron las siguientes
 fuentes de información respecto al producto:
 
 \begin{description}
-\item [Centro de Ayuda] Salesforce ofrece un amplio conjunto de documentación,
-información general, preguntas frecuentes, y contacto con el servicio de
-asistencia técnica desde su sitio de ayuda (https://help.salesforce.com/).
+\item [Centro de Ayuda] \emph{Salesforce} ofrece un amplio conjunto de
+documentación, información general, preguntas frecuentes, y contacto con el
+servicio de asistencia técnica desde su sitio de ayuda
+(https://help.salesforce.com/).
 
 Estos recursos serán utiles para conocer las reclamaciones de los usuarios, las
 caracteristicas criticas del producto, y las estrategias del fabricante hacia
 sus clientes.
 
-\item [Centro de Desarrollo] Salesforce tambien posee un sitio web
+\item [Centro de Desarrollo] \emph{Salesforce} tambien posee un sitio web
 especificamente para compartir recursos de desarrollo sobre la plataforma
 (https://developer.salesforce.com/).
 
-Este sitio se prodrá aprovechar para consultar las referencias a las API del
+Este sitio se podrá aprovechar para consultar las referencias a las API del
 servicio, conocer acerca de los componentes y como pueden aprovecharse desde la
 perspectiva del desarrollador.
 
@@ -48,8 +49,8 @@ de administración de recursos sobre la plataforma
 (https://admin.salesforce.com/resources).
 
 \item [Comunidad \emph{Trailblazer}] Sitio web enfocado a conectar a miembros de
-la comunidad Salesforce, para compartir experiencias, aprender, y proveer de
-nuevas ideas sobre la utilización del servicio
+la comunidad \emph{Salesforce}, para compartir experiencias, aprender, y proveer
+de nuevas ideas sobre la utilización del servicio
 (https://success.salesforce.com/).
 
 \end{description}
@@ -59,7 +60,7 @@ En esta sección describiremos la recursos necesarios para la ejecución del
 proyecto.
 
 \subsubsection{Software}
-Se evaluaran las funcionalidades sobre el módulo sobre el navegador cuya
+Se evaluarán las funcionalidades de los módulos sobre el navegador cuya
 participación en el mercado es la mayor, en este caso: \emph{Google Chrome}
 como puede verse en la figura \ref{software}.
 
@@ -81,10 +82,10 @@ el cuadro \ref{herramientas}.
 \hline
 \textbf{Herramienta} & \textbf{Descripción} \\
 \hline
-XMind & Herramienta para la elaboración de los mapas mentales. \\
-Pairwise & Herramienta para la generación de pruebas combinatorias. \\
-Postman & Herramienta para la solicitud de peticiones HTTP para el uso de API.\\
-Testlink & Herramienta basada en web que facilita el proceso de gestión de calidad de software. \\
+\emph{XMind} & Herramienta para la elaboración de los mapas mentales. \\
+\emph{Pairwise} & Herramienta para la generación de pruebas combinatorias. \\
+\emph{Postman} & Herramienta para la solicitud de peticiones HTTP para el uso de API.\\
+\emph{Testlink} & Herramienta basada en web que facilita el proceso de gestión de calidad de software. \\
 \hline
 \end{tabular}
 \caption{Herramientas auxiliares de apoyo para el proyecto.}
@@ -148,7 +149,7 @@ Realizar la ejecución de las pruebas manuales. &
 \end{sidewaystable}
 
 \subsection{Elementos a evaluar}
-Los elementos que se evaluaran los siguientes:
+Los elementos que se evaluarán los siguientes:
 
 \begin{itemize}
 \item Productos.
@@ -170,6 +171,8 @@ A continuación se describen los documentos resultantes de la evaluación:
     la calidad del producto.
 \item [Batería de reportes de error] Conjunto de reportes de error, generados de
     cualquier problema encontrado en el proceso de ejecución de las pruebas.
+\item [Matriz de trazabilidad] Documento que describe la Relación de cobertura
+    de las funcionalidades a evaluar con los casos de prueba diseñados.
 \item [Scripts de automatización] Código fuente de los programas que se encargan
     de la automatización de las pruebas sobre el API del servicio.
 \item [Resultados de ejecución] Informe técnico que condensa los resultados
@@ -177,13 +180,209 @@ A continuación se describen los documentos resultantes de la evaluación:
 \end{description}
 
 \section{Elementos del producto}
+Dentro del alcance de la evaluación se encuentran los componentes de productos
+y listas de precios, las funcionalidades que comprenden estos se detallan en
+esta sección.
 
-%\section{Criterios de calidad}
-%\subsection{Confiabilidad}
-%\subsection{Usabilidad}
-%\subsection{Compatibilidad}
-%\subsection{Soportabilidad}
-%\subsection{Localizabilidad}
+Una caracteristica actual de \emph{Salesforce} es que cuenta con dos interfaces
+web diferentes, la antigua conocida como: \emph{Salesforce Classic}, y la nueva
+incluida desde 2015 denominada: \emph{Salesforce Lightning}; que tiene como
+objetivo principal la unificación del \emph{Look and Feel} atravez de todo el
+servicio sea cual sea el dispositivo que el cliente utilice\cite{McCarthy}.
+
+Siendo este el objetivo de la nueva interface, se ha escogido unicamente esta
+interfaz novedosa como unico objetivo de la evaluación.
+
+\subsection{Productos}
+En la figura \ref{productos} pueden verse las funcionalidades clasificadas desde
+la perspectiva de la interfaz de usuario, en ambos componentes se tienen la
+parte de los controles de vista de lista similares, por lo que se prefirio
+describir esas funciones a una estructura posterior.
+
+Esta clasificación de las funciones se ubican en una vista de interfaz como
+puede verse en la figura \ref{productos_web}, vista principal para la gestión
+de productos en el servicio.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+    grow via three points={one child at (0.5,-0.7) and
+    two children at (0.5,-0.7) and (0.5,-1.4)},
+    edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+    \node {Productos}
+        child [missing] {}
+        child { node {Filtar por: Vista de Lista}}
+        child { node {Nuevo}}
+        child { node {Buscar: Producto}}
+        child { node {Controles de Vista de Lista}
+            child { node {\ldots}}
+        }
+        child [missing] {}
+        child { node {Mostrar como}}
+        child { node {Actualizar}}
+        child { node {Modificar Lista}}
+        child { node {Lista de Productos}
+            child [missing] {}
+            child { node {Ver: Producto}
+                child [missing] {}
+                child { node {Modificar}}
+                child { node {Eliminar}}
+                child { node {Duplicar}}
+                child { node {Relacionado}
+                    child [missing] {}
+                    child { node {Agregar precio estándar}}
+                    child { node {Agregar a lista de precios}}
+                    child { node {Ver: Lista de precios}}
+                    child { node {Modificar: Lista de precios}}
+                    child { node {Eliminar: Lista de precios}}
+                    child { node {Ver todos}}
+                }
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child { node {Detalles}}
+            }
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child { node {Modificar: Producto}}
+            child { node {Eliminar: Producto}}
+        };
+\end{tikzpicture}
+\caption{Funciones que componen el módulo de gestión de productos.}
+\label{productos}
+\end{figure}
+
+\subsection{Listas de Precios}
+En la figura \ref{listas_de_precios} pueden verse las funcionalidades
+clasificadas desde la perspectiva de la interfaz de usuario, tambien se omitio
+la sección de los controles de vista de lista.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+    grow via three points={one child at (0.5,-0.7) and
+    two children at (0.5,-0.7) and (0.5,-1.4)},
+    edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+    \node {Listas de Precios}
+        child [missing] {}
+        child { node {Filtar por: Vista de Lista}}
+        child { node {Nuevo}}
+        child { node {Buscar: Lista de precios}}
+        child { node {Controles de Vista de Lista}
+            child { node {\ldots}}
+        }
+        child [missing] {}
+        child { node {Mostrar como}}
+        child { node {Actualizar}}
+        child { node {Modificar Lista}}
+        child { node {Lista de Listas de Precios}
+            child [missing] {}
+            child { node {Ver: Lista de precios}
+                child [missing] {}
+                child { node {Modificar}}
+                child { node {Eliminar}}
+                child { node {Duplicar}}
+                child { node {Relacionado}
+                    child [missing] {}
+                    child { node {Agregar productos}}
+                    child { node {Ver: Producto}}
+                    child { node {Modificar: Producto}}
+                    child { node {Eliminar: Producto}}
+                    child { node {Ver todos}}
+                    child { node {Historial de lista de precios (Ver todos)}}
+                }
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
+                child { node {Detalles}}
+            }
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child { node {Modificar: Lista de Precios}}
+            child { node {Eliminar: Lista de Precios}}
+        };
+\end{tikzpicture}
+\caption{Funciones que componen el módulo de gestión de listas de precios.}
+\label{listas_de_precios}
+\end{figure}
+
+\subsection{Controles de Vista de Lista}
+En la figura \ref{vista_de_lista} pueden verse las funciones omitidas en los
+diagramas anteriores relativas a los controles de vista, ambas equivalentes
+entre si.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+    grow via three points={one child at (0.5,-0.7) and
+    two children at (0.5,-0.7) and (0.5,-1.4)},
+    edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+    \node {Controles de Vista de Lista}
+        child [missing] {}
+        child { node {Duplicar}}
+        child { node {Cambiar nombre}}
+        child { node {Configuración de colaboración}}
+        child { node {Modificar filtros de lista}
+            child [missing] {}
+            child { node {Ver/Modificar: Filtro}}
+            child { node {Eliminar: Filtro}}
+            child { node {Agregar Filtro}}
+            child { node {Eliminar todos}}
+            child { node {Agregar lógica de filtro}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Seleccionar los campos que se visualizaran}}
+        child { node {Eliminar}}
+        child { node {Reestablecer anchuras de columna}};
+\end{tikzpicture}
+\caption{Funciones que componen el módulo de gestión de listas de precios.}
+\label{vista_de_lista}
+\end{figure}
+
+\section{Criterios de calidad}
+\subsection{Confiabilidad}
+\subsection{Usabilidad}
+\subsection{Compatibilidad}
+\subsection{Soportabilidad}
+\subsection{Localizabilidad}
 
 %\section{Técnicas de prueba}
 %\subsection{Pruebas funcionales}
