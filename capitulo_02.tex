@@ -74,7 +74,7 @@ https://help.salesforce.com/articleView?id=overview\_edition.htm}.
 
 \begin{table}
 \centering
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|p{9.0cm}|}
 \hline
 \textbf{Edición} & \textbf{Descripción} \\
 \hline
@@ -114,7 +114,7 @@ https://help.salesforce.com/articleView?id=getstart\_browsers\_sfx.htm}.
 
 \begin{table}
 \centering
-\begin{tabular}{|p{4.0cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|}
+\begin{tabular}{|p{4.5cm}|p{1.9cm}|p{1.9cm}|p{1.9cm}|p{1.9cm}|p{1.9cm}|}
 \hline
 & \textbf{Microsoft Internet Explorer} & \textbf{Microsoft Edge} & \textbf{Google Chrome} & \textbf{Mozilla Firefox} & \textbf{Apple Safari} \\
 \hline
@@ -135,15 +135,16 @@ el cuadro \ref{herramientas}.
 
 \begin{table}
 \centering
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|p{13.5cm}|}
 \hline
 \textbf{Herramienta} & \textbf{Descripción} \\
 \hline
 \emph{XMind} & Herramienta para la elaboración de los mapas mentales. \\
+\emph{GitHub.com} & Servicio de almacenamiento y versionado de código fuente y documentación. \\
+\emph{Testlink} & Herramienta basada en web que facilita el proceso de gestión de calidad de software. \\
+\emph{LambdaTest} & Herramienta basada en web para realizar la evaluación de compatibilidad en navegadores. \\
 \emph{Pairwise} & Herramienta para la generación de pruebas combinatorias. \\
 \emph{Postman} & Herramienta para la solicitud de peticiones HTTP para el uso de API.\\
-\emph{Testlink} & Herramienta basada en web que facilita el proceso de gestión de calidad de software. \\
-\emph{GitHub.com} & Servicio de almacenamiento y versionado de código fuente y documentación. \\
 \hline
 \end{tabular}
 \caption{Herramientas auxiliares de apoyo para el proyecto.}
@@ -243,12 +244,9 @@ Dentro del alcance de la evaluación se encuentran los componentes de productos
 y listas de precios, las funcionalidades que comprenden estos se detallan en
 esta sección.
 
-Se considero la interfaz \emph{Lightning Experience}, como el objetivo de la
-nueva interface, se ha escogido unicamente esta interfaz novedosa como unico
-objetivo de la evaluación.
-
-La versión \emph{Lightning Experience} esta disponible para las siguientes
-ediciones del producto: \emph{Essentials}, \emph{Group},
+Se considero la interfaz \emph{Lightning Experience}, como unico objetivo de la
+evaluación. La versión \emph{Lightning Experience} esta disponible para las
+siguientes ediciones del producto: \emph{Essentials}, \emph{Group},
 \emph{Professional}, \emph{Enterprise}, \emph{Performance}, \emph{Unlimited}, y
 \emph{Developer}.
 
@@ -567,5 +565,26 @@ Finalmente, garantiza que haya suficiente validación de errores presente en el
 software\cite{Nadig}.
 
 \subsection{Pruebas de compatibilidad}
+La prueba de compatibilidad es una prueba no funcional realizada en la
+aplicación para evaluar la compatibilidad de la aplicación en diferentes
+entornos. En este caso sobre diferentes navegadores.
+
 \subsection{Pruebas de localización}
+El propósito de las pruebas de localización es asegurar que los errores no se
+hayan introducido durante el proceso de traducción, que el contenido traducido
+se muestre correctamente y que el producto localizado funcione como se espera
+para el mercado objetivo. Probar sitios web para garantizar la adaptabilidad a
+un lugar y una cultura en particular también es crucial para sugerir su
+superioridad en el mercado objetivo\cite{Sampair}.
+
+Aquí hay algunas áreas que examinamos durante esta prueba:
+
+\begin{itemize}
+\item Todos los recursos de localización están traducidos correctamente.
+\item La compilación generada incluye todos los archivos necesarios.
+\item La funcionalidad en la versión localizada es consistente con el producto de origen.
+\item La pantalla localizada tiene el mismo número y tipo de elementos que el del producto de origen.
+\item Todos los caracteres específicos del entorno local aparecen correctamente.
+\item No hay palabras que pasen sobre los botones o se corten en la página.
+\end{itemize}
 
