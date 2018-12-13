@@ -63,19 +63,70 @@ En esta sección describiremos la recursos necesarios para la ejecución del
 proyecto.
 
 \subsubsection{Software}
+\emph{Salesforce} cuenta con multiples ediciones que comparten una apariencia,
+pero varían según la funcionalidad y los precios. Algunos clientes comienzan con
+una edición básica y actualizan a una edición más rica en características a
+medida que evolucionan los requisitos empresariales.
+
+En el cuadro \ref{ediciones} se describen las ediciones
+disponibles\footnote{Información extraida y disponible en:
+https://help.salesforce.com/articleView?id=overview\_edition.htm}.
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Edición} & \textbf{Descripción} \\
+\hline
+\emph{Essentials} & Herramienta para la elaboración de los mapas mentales. \\
+\emph{Professional} & Herramienta para la generación de pruebas combinatorias. \\
+\emph{Enterprise} & Herramienta para la solicitud de peticiones HTTP para el uso de API.\\
+\emph{Unlimited} & Herramienta basada en web que facilita el proceso de gestión de calidad de software. \\
+\emph{Developer} & Servicio de almacenamiento y versionado de código fuente y documentación. \\
+\hline
+\end{tabular}
+\caption{Ediciones actualmente disponibles de Sales Cloud.}
+\label{ediciones}
+\end{table}
+
+Una caracteristica actual de \emph{Salesforce} es que cuenta con dos interfaces
+web diferentes, la antigua conocida como: \emph{Salesforce Classic}, y la nueva
+incluida desde 2015 denominada: \emph{Salesforce Lightning}; que tiene como
+objetivo principal la unificación del \emph{Look and Feel} a traves de todo el
+servicio sea cual sea el dispositivo que el cliente utilice\cite{McCarthy}.
+
 Se evaluarán las funcionalidades de los módulos sobre el navegador cuya
 participación en el mercado es la mayor, en este caso: \emph{Google Chrome}
 como puede verse en la figura \ref{software}.
 
-Adicionalmente se utilzaran algunos navegadores adicionales en pruebas muy
-focalizadas de compatibilidad.
-
 \begin{figure}
 \centering
-\input{graphics/cap1_1.tex}
+\input{graphics/compatibilidad.tex}
 \caption{Participación de mercado de los navegadores hasta Noviembre del 2018.}
 \label{software}
 \end{figure}
+
+Adicionalmente se utilizaran algunos navegadores más en pruebas muy focalizadas
+de compatibilidad. A partir de la información disponible en la pagina de soporte
+provista por el fabricante. Como puede verse en el cuadro
+\ref{soporte_navegadores}\footnote{Información extraida y disponible em:
+https://help.salesforce.com/articleView?id=getstart\_browsers\_sfx.htm}.
+
+\begin{table}
+\centering
+\begin{tabular}{|p{4.0cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|p{2.0cm}|}
+\hline
+& \textbf{Microsoft Internet Explorer} & \textbf{Microsoft Edge} & \textbf{Google Chrome} & \textbf{Mozilla Firefox} & \textbf{Apple Safari} \\
+\hline
+Lightning Experience & IE11 (EOL Diciembre 31, 2020) & Ultima version & Ultima version & Ultima version & 11.x+ \\
+Lightning Communities & IE11 (EOL Diciembre 31, 2020) & Ultima version & Ultima version & Ultima version & 11.x+ \\
+¿Consideraciones especiales de configuración? & No & No & No & No & No \\
+Limitaciones conocidas & Sí & Si & No & Si & Si \\
+\hline
+\end{tabular}
+\caption{Ediciones actualmente disponibles de Sales Cloud.}
+\label{soporte_navegadores}
+\end{table}
 
 \subsubsection{Herramientas}
 En diferentes etapas del proyecto se utilizaran multiples herramientas que
@@ -92,6 +143,7 @@ el cuadro \ref{herramientas}.
 \emph{Pairwise} & Herramienta para la generación de pruebas combinatorias. \\
 \emph{Postman} & Herramienta para la solicitud de peticiones HTTP para el uso de API.\\
 \emph{Testlink} & Herramienta basada en web que facilita el proceso de gestión de calidad de software. \\
+\emph{GitHub.com} & Servicio de almacenamiento y versionado de código fuente y documentación. \\
 \hline
 \end{tabular}
 \caption{Herramientas auxiliares de apoyo para el proyecto.}
@@ -191,14 +243,14 @@ Dentro del alcance de la evaluación se encuentran los componentes de productos
 y listas de precios, las funcionalidades que comprenden estos se detallan en
 esta sección.
 
-Una caracteristica actual de \emph{Salesforce} es que cuenta con dos interfaces
-web diferentes, la antigua conocida como: \emph{Salesforce Classic}, y la nueva
-incluida desde 2015 denominada: \emph{Salesforce Lightning}; que tiene como
-objetivo principal la unificación del \emph{Look and Feel} atravez de todo el
-servicio sea cual sea el dispositivo que el cliente utilice\cite{McCarthy}.
+Se considero la interfaz \emph{Lightning Experience}, como el objetivo de la
+nueva interface, se ha escogido unicamente esta interfaz novedosa como unico
+objetivo de la evaluación.
 
-Siendo este el objetivo de la nueva interface, se ha escogido unicamente esta
-interfaz novedosa como unico objetivo de la evaluación.
+La versión \emph{Lightning Experience} esta disponible para las siguientes
+ediciones del producto: \emph{Essentials}, \emph{Group},
+\emph{Professional}, \emph{Enterprise}, \emph{Performance}, \emph{Unlimited}, y
+\emph{Developer}.
 
 \subsection{Productos}
 En la figura \ref{productos} pueden verse las funcionalidades clasificadas desde
@@ -496,7 +548,24 @@ linealizables a funciones matemáticas. Una variable linealizable es aquella
 cuyos valores se pueden asignar a una recta numérica. El análisis es más
 sencillo y más obvio en estos casos\cite{Kaner}.
 
-\subsection{Pruebas de usuario}
+\subsection{Pruebas negativas}
+La prueba negativa, comúnmente conocida como \emph{prueba de ruta de error} o
+\emph{prueba de falla}, generalmente se realiza para garantizar la estabilidad
+de la aplicación.
+
+La prueba negativa es el proceso de aplicar tanta creatividad como sea posible y
+validar la aplicación contra datos no válidos. Esto significa que su propósito
+es verificar si los errores se muestran al usuario donde se supone que debe
+hacerlo o si se está manejando un valor incorrecto con mayor gracia.
+
+La fiabilidad funcional de la aplicación o el software solo se puede cuantificar
+con escenarios negativos diseñados de manera efectiva. Las pruebas negativas no
+solo apuntan a detectar fallas potenciales que podrían causar un impacto grave
+en el consumo del servicio, sino que también pueden ser fundamentales para
+determinar las condiciones bajo las cuales la aplicación puede fallar.
+Finalmente, garantiza que haya suficiente validación de errores presente en el
+software\cite{Nadig}.
+
 \subsection{Pruebas de compatibilidad}
 \subsection{Pruebas de localización}
 
