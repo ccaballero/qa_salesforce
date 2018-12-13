@@ -7,6 +7,8 @@
 *.out
 *.toc
 
+*.bak
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*

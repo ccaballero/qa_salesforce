@@ -1,0 +1,9 @@
+Crear Producto
+	Nombre del producto (*)
+ 	Activo
+	Código de producto
+	Familia de productos	<select>
+	Programación de cantidades activada
+	Programación de ingresos activada
+	Año (*)
+	Descripción del producto
