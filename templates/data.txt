@@ -1,4 +1,6 @@
-Crear Producto
+﻿Crear Producto
+Modificar <Producto>
+Duplicar
 	Nombre del producto (*)
  	Activo
 	Código de producto
@@ -7,3 +9,9 @@ Crear Producto
 	Programación de ingresos activada
 	Año (*)
 	Descripción del producto
+Crear Entrada del catálogo de precios
+	Producto (*)
+	Activo
+	Lista de precios (*)
+	Precio de la lista (*)
+	Utilizar Precio estándar
