@@ -124,7 +124,7 @@ Lightning Communities & IE11 (EOL Diciembre 31, 2020) & Ultima versión & Ultima
 Limitaciones conocidas & Sí & Si & No & Si & Si \\
 \hline
 \end{tabular}
-\caption{Ediciones actualmente disponibles de Sales Cloud.}
+\caption{Lista de Compatibilidad provista por Salesforce.}
 \label{soporte_navegadores}
 \end{table}
 
@@ -256,10 +256,6 @@ la perspectiva de la interfaz de usuario, en ambos componentes se tienen la
 parte de los controles de vista de lista similares, por lo que se prefirió
 describir esas funciones a una estructura posterior.
 
-Esta clasificación de las funciones se ubican en una vista de interfaz como
-puede verse en la figura \ref{productos_web}, vista principal para la gestión
-de productos en el servicio.
-
 \begin{figure}
 \centering
 \begin{tikzpicture}[
@@ -325,6 +321,10 @@ de productos en el servicio.
 \label{productos}
 \end{figure}
 
+Esta clasificación de las funciones se ubican en una vista de interfaz como
+puede verse en la figura \ref{productos_web}, vista principal para la gestión
+de productos en el servicio.
+
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/productos.eps}
@@ -332,14 +332,76 @@ de productos en el servicio.
 \label{productos_web}
 \end{figure}
 
+Para la evaluación de estas funcionalidades se realizarán las siguientes
+evaluaciones:
+
+\begin{itemize}
+\item \textbf{Pruebas de aceptación}, para las funcionalidades de tipo CRUD en
+    el gestor de productos, es decir, creación, visualización, modificación y
+    eliminación.
+\item \textbf{Pruebas funcionales}, para todos los elementos que estan provistos
+    por la misma interfaz de usuario.
+\item \textbf{Pruebas de dominio}, para los cuatro formularios que maneja el
+    gestor de productos, los cuales pueden verse en la figura \ref{productos_formularios}.
+\item \textbf{Pruebas negativas}, para la evaluación de los mensajes de
+    error provistos por este componente.
+\end{itemize}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+    grow via three points={one child at (0.5,-0.7) and
+    two children at (0.5,-0.7) and (0.5,-1.4)},
+    edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+    \node {Productos}
+        child [missing] {}
+        child { node {Crear producto}
+            child { node {Nombre del producto (*)}}
+            child { node {Activo}}
+            child { node {Código de producto}}
+            child { node {Familia de productos}}
+            child { node {Descripción del producto}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Crear entrada del catálogo de precios}
+            child { node {Producto (*)}}
+            child { node {Activo}}
+            child { node {Lista de precios (*)}}
+            child { node {Precio de la lista (*)}}
+            child { node {Utilizar precio estandar}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Agregar a lista de precios}
+            child { node {Lista de precios (*)}}
+            child { node {Divisa (*)}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Modificar entrada del catálogo de precios}
+            child { node {Activo}}
+            child { node {Precio de la lista}}
+            child { node {Utilizar precio estandar}}
+        };
+\end{tikzpicture}
+\caption{Formularios que componen el módulo de gestión de productos.}
+\label{productos_formularios}
+\end{figure}
+
 \subsection{Listas de Precios}
 En la figura \ref{listas_de_precios} pueden verse las funcionalidades
 clasificadas desde la perspectiva de la interfaz de usuario, también se omitió
 la sección de los controles de vista de lista.
-
-Esta clasificación de las funciones se ubican en una vista de interfaz como
-puede verse en la figura \ref{listas_de_precios_web}, vista principal para la
-gestión de listas de precios en el servicio.
 
 \begin{figure}
 \centering
@@ -406,11 +468,57 @@ gestión de listas de precios en el servicio.
 \label{listas_de_precios}
 \end{figure}
 
+Esta clasificación de las funciones se ubican en una vista de interfaz como
+puede verse en la figura \ref{listas_de_precios_web}, vista principal para la
+gestión de listas de precios en el servicio.
+
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/listas_de_precios.eps}
 \caption{Interfaz gráfica para el módulo de listas de precios.}
 \label{listas_de_precios_web}
+\end{figure}
+
+Para la evaluación de estas funcionalidades se realizarán las siguientes
+evaluaciones:
+
+\begin{itemize}
+\item \textbf{Pruebas de aceptación}, para las funcionalidades de tipo CRUD en
+    el gestor de listas de precios, es decir, creación, visualización,
+    modificación y eliminación.
+\item \textbf{Pruebas funcionales}, para todos los elementos que estan provistos
+    por la misma interfaz de usuario.
+\item \textbf{Pruebas de dominio}, para los dos formularios que maneja el
+    gestor de productos, los cuales pueden verse en la figura \ref{listas_de_precios_formularios}.
+\item \textbf{Pruebas negativas}, para la evaluación de los mensajes de error
+    provistos por este componente.
+\end{itemize}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+    grow via three points={one child at (0.5,-0.7) and
+    two children at (0.5,-0.7) and (0.5,-1.4)},
+    edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+    \node {Listas de precios}
+        child [missing] {}
+        child { node {Crear lista de precios}
+            child { node {Nombre de la lista de precios}}
+            child { node {Activo}}
+            child { node {Descripción}}
+            child { node {Es lista de precios estandar}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Agregar productos}
+            child { node {Buscar entrada de catalogos de precios}}
+        };
+\end{tikzpicture}
+\caption{Formularios que componen el módulo de gestión de listas de precios.}
+\label{listas_de_precios_formularios}
 \end{figure}
 
 \subsection{Controles de Vista de Lista}
@@ -448,8 +556,87 @@ entre si.
         child { node {Eliminar}}
         child { node {Restablecer anchuras de columna}};
 \end{tikzpicture}
-\caption{Funciones que componen el módulo de gestión de listas de precios.}
+\caption{Funciones que componen el módulo de gestión de vistas de lista.}
 \label{vista_de_lista}
+\end{figure}
+
+Para la evaluación de estas funcionalidades se realizarán las siguientes
+evaluaciones:
+
+\begin{itemize}
+\item \textbf{Pruebas de aceptación}, para las funcionalidades de tipo CRUD en
+    el gestor de vistas de lista, es decir, creación, visualización,
+    modificación y eliminación.
+\item \textbf{Pruebas funcionales}, para todos los elementos que estan provistos
+    por la misma interfaz de usuario.
+\item \textbf{Pruebas de dominio}, para los seis formularios que maneja el
+    gestor de vistas de lista, los cuales pueden verse en la figura
+    \ref{vista_de_lista_formularios}.
+\item \textbf{Pruebas negativas}, para la evaluación de los mensajes de
+    error provistos por este componente.
+\end{itemize}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+    grow via three points={one child at (0.5,-0.7) and
+    two children at (0.5,-0.7) and (0.5,-1.4)},
+    edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+    \node {Vista de lista}
+        child [missing] {}
+        child { node {Nueva vista de lista}
+            child { node {Nombre de la lista}}
+            child { node {List API Name}}
+            child { node {¿Quien ve esta vista de lista?}
+                child { node {Solo yo puedo ver esta vista de lista}}
+                child { node {Todos los usuarios pueden ver esta vista de lista}}
+                child { node {Compartir vista de lista con grupos de usuarios}}
+            }
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Cambiar nombre}
+            child { node {Nombre de lista}}
+            child { node {List API Name}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Configuración de colaboración}
+            child { node {¿Quien ve esta vista de lista?}
+                child { node {Solo yo puedo ver esta vista de lista}}
+                child { node {Todos los usuarios pueden ver esta vista de lista}}
+                child { node {Compartir vista de lista con grupos de usuarios}}
+            }
+        }
+        child [missing] {}
+        child [missing] {}
+        child { node {Agregar filtro}
+            child { node {Campo}}
+            child { node {Operador}}
+            child { node {Valor}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Agregar logica de filtro}
+            child { node {Lógica de filtro}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child { node {Seleccionar los campos que se visualizaran}
+            child { node {Campos disponibles}}
+            child { node {Campos visibles}}
+        };
+\end{tikzpicture}
+\caption{Formularios que componen el módulo de gestión de vistas de listas.}
+\label{vista_de_lista_formularios}
 \end{figure}
 
 \section{Técnicas de prueba}

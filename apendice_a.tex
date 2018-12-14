@@ -1,0 +1,259 @@
+\chapter{Baterias de pruebas}
+Este anexo tiene como objetivo mostrar cada caso de prueba evaluado clasificado
+por el tipo de test que ha sido ejecutado.
+
+Para estas tablas es necesario conocer las siguientes abreviaturas:
+
+\begin{itemize}
+\item P, para el casos de prueba en el area correspondiente al modulo de Productos.
+\item LP, para el casos de prueba en el area correspondiente al modulo de Listas de Precios.
+\item VL, para el casos de prueba en el area correspondiente al modulo de Vistas de Lista.
+\end{itemize}
+
+\section{Pruebas de aceptación}
+
+\begin{longtable}{|p{15.0cm}|}
+\hline
+\textbf{Caso de Prueba} \\
+\hline
+P - Iniciador de Aplicación de salesforce muestra el enlace a «Productos» \\ \hline
+P[NUEVO] - Clic en el botón «Nuevo», lanza el formulario de creación de producto \\ \hline
+P[NUEVO] - Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+P[LISTA] - 		Elementos de la tabla de productos ofrecen un enlace para «Ver» \\ \hline
+P[LISTA] - 		Elementos de la tabla de productos ofrecen un enlace para «Modificar» \\ \hline
+P[LISTA] - 		Elementos de la tabla de productos ofrecen un enlace para «Eliminar» \\ \hline
+P[VER] - 		Vista de producto muestra las opciones de «Modificar», «Eliminar», y «Duplicar» \\ \hline
+P[VER-DETALLES] - 		Vista de producto muestra la información del producto en su pestaña «Detalles» \\ \hline
+P[VER-RELACIONADO] - 		Vista de producto muestra la lista de «Listas de precios» en su pestaña «Relacionado» \\ \hline
+P[VER-RELACIONADO] - 		«Agregar precio estándar» es visible cuando el producto no tiene un precio establecido \\ \hline
+P[VER-RELACIONADO] - 		Clic en el botón «Agregar precio estándar», lanza el formulario de creación de entrada del catálogo de precios \\ \hline
+P[VER-RELACIONADO] - 		Clic en el botón «Agregar a lista de precios», lanza el formulario de de agregar a lista de precios \\ \hline
+P[VER-RELACIONADO-LISTA] - 		Elementos de la lista de «Listas de precios» ofrecen un enlace para «Ver» \\ \hline
+P[VER-RELACIONADO-LISTA] - 		Elementos de la lista de «Listas de precios» ofrecen un enlace para «Modificar» \\ \hline
+P[VER-RELACIONADO-LISTA] - 		Elementos de la lista de «Listas de precios» ofrecen un enlace para «Eliminar» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR] - 		Clic en el botón «Modificar», lanza el formulario «Modificar Entrada del catálogo de precios» \\ \hline
+P[VER-RELACIONADO-LISTA-ELIMINAR] - 		Precio es eliminado después de accionado el botón «Eliminar» \\ \hline
+P[LISTA-MODIFICAR] - 		Clic en el botón «Modificar», lanza el formulario de edición de producto \\ \hline
+P[LISTA-ELIMINAR] - 		Producto es eliminado después de accionado el botón «Eliminar» \\ \hline
+P[LISTA-DUPLICAR] - 		Clic en el botón «Duplicar», lanza el formulario de creación de producto \\ \hline
+LP - En el iniciador de aplicación de salesforce puede verse el enlace a «Listas de precios» \\ \hline
+LP[NUEVO] - 		Clic en el botón «Nuevo», lanza el formulario de creación de lista de precios \\ \hline
+LP[NUEVO] - 		Lista de Precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+LP[LISTA] - 		Elementos de la tabla de listas de precios ofrecen un enlace para «Ver» \\ \hline
+LP[LISTA] - 		Elementos de la tabla de listas de precios ofrecen un enlace para «Modificar» \\ \hline
+LP[LISTA] - 		Elementos de la tabla de listas de precios ofrecen un enlace para «Eliminar» \\ \hline
+LP[VER] - 		Vista de listas de precios muestra las opciones de «Modificar», «Eliminar», y «Duplicar» \\ \hline
+LP[VER-DETALLES] - 		Vista de lista de precios muestra la información de la lista en su pestaña «Detalles» \\ \hline
+LP[VER-RELACIONADO] - 		Vista de lista de precios muestra la lista de «Productos» en su pestaña «Relacionado» \\ \hline
+LP[VER-RELACIONADO] - 		Vista de lista de precios muestra la lista de «Historial de lista de precios» en su pestaña «Relacionado» \\ \hline
+LP[VER-RELACIONADO] - 		«Agregar productos» es visible cuando la lista de precios no es la lista estándar \\ \hline
+LP[VER-RELACIONADO] - 		Clic en el botón «Agregar Productos», lanza el formulario para agregar productos \\ \hline
+LP[VER-RELACIONADO-LISTA] - 		Elementos de la lista de «Productos» ofrecen un enlace para «Ver» \\ \hline
+LP[VER-RELACIONADO-LISTA] - 		Elementos de la lista de «Productos» ofrecen un enlace para «Modificar» \\ \hline
+LP[VER-RELACIONADO-LISTA] - 		Elementos de la lista de «Productos» ofrecen un enlace para «Eliminar» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR] - 		Clic en el botón «Modificar», lanza el formulario «Modificar Entrada del catálogo de precios» \\ \hline
+LP[VER-RELACIONADO-LISTA-ELIMINAR] - 		Precio es eliminado después de accionado el botón «Eliminar» \\ \hline
+LP[LISTA-MODIFICAR] - 		Clic en el botón «Modificar», lanza el formulario de edición de la lista de precios \\ \hline
+LP[LISTA-ELIMINAR] - 		Lista de precios es eliminado después de accionado el botón «Eliminar» \\ \hline
+LP[LISTA-DUPLICAR] - 		Clic en el botón «Duplicar», lanza el formulario de creación de lista de precios \\ \hline
+VL[NUEVO] - 		Clic en el botón «Nuevo», lanza el formulario de nueva vista de lista \\ \hline
+VL[NUEVO] - 		Vista de lista es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+VL[DUPLICAR] - 		Clic en el botón «Duplicar», lanza el formulario de creación de vista de lista \\ \hline
+VL[CAMBIAR NOMBRE] - 		Clic en el botón «Cambiar nombre», lanza el formulario de cambiar nombre \\ \hline
+VL[CAMBIAR NOMBRE] - 		Vista de lista es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+VL[COLABORACIÓN] - 		Clic en el botón «Configuración de Colaboración», lanza el formulario de configuración \\ \hline
+VL[FILTROS] - 		Clic en el botón «Modificar filtros de lista», despliega la configuración de filtros \\ \hline
+VL[FILTROS] - 		Clic en los elementos de filtro, despliega el formulario de configuración de elemento de filtro \\ \hline
+VL[FILTROS] - 		Clic en el botón «X», remueve el elemento de filtro \\ \hline
+VL[FILTROS] - 		Clic en el botón «Agregar filtro», despliega el formulario de agregar filtro \\ \hline
+VL[FILTROS] - 		Clic en «Agregar lógica de filtro, despliega un área de texto para registrar la lógica de filtraje \\ \hline
+VL[FILTROS] - 		Clic en «Eliminar», remueve la lógica de filtro personalizada cuando esta ha sido registrada \\ \hline
+VL[VISUALIZACIÓN] - 		Clic en el botón «Seleccionar los campos que se visualizarán», despliega el formulario de selección \\ \hline
+VL[VISUALIZACIÓN] - 		Campos seleccionados son registrados con al menos un valor establecido después de accionado el botón «Guardar» \\ \hline
+VL[ELIMINAR] - 		Vista de lista es eliminada después de accionado el botón «Eliminar» \\ \hline
+\end{longtable}
+
+\section{Pruebas funcionales}
+
+\begin{longtable}{|p{15.0cm}|}
+\hline
+\textbf{Caso de Prueba} \\
+\hline
+P[NUEVO] - Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+P[NUEVO] - Formulario de creación de producto se cierra al accionar el botón «Cancelar» \\ \hline
+P[NUEVO] - Formulario de creación de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+P[NUEVO] - Mensaje «Se creó Producto "<Nombre de Producto>"» se muestra después de registrado un producto \\ \hline
+P[BUSCAR] - «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Nombre del producto» \\ \hline
+P[BUSCAR] - «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Código de producto» \\ \hline
+P[BUSCAR] - «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Descripción de producto» \\ \hline
+P[MOSTRAR COMO] - «Mostrar como» posee los elementos: «Tabla» y «Kanban» \\ \hline
+P[MOSTRAR COMO] - Opción «Tabla» en «Mostrar como», muestra los productos en formato tabular \\ \hline
+P[MOSTRAR COMO] - Opción «Kanban» en «Mostrar como», muestra los productos en formato de columnas \\ \hline
+P[ACTUALIZAR] - botón «Actualizar», reenvía las peticiones de consulta al servidor \\ \hline
+P[MOSTRAR GRÁFICOS] - «Mostrar GRÁFICOS» está deshabilitado mientras no se use una «vista de lista» determinada \\ \hline
+P[MOSTRAR GRÁFICOS] - «Mostrar GRÁFICOS» está habilitado mientras se use una «vista de lista» determinada \\ \hline
+P[MOSTRAR FILTROS] - «Mostrar filtros» está deshabilitado mientras no se use una «vista de lista» determinada \\ \hline
+P[MOSTRAR FILTROS] - «Mostrar filtros» está habilitado mientras se use una «vista de lista» determinada \\ \hline
+P[FILTRAR] - «Vistas de Lista» muestra los elementos registrados \\ \hline
+P[FILTRAR] - «Vistas de Lista» muestra el elemento «Vistos recientemente» \\ \hline
+P[LISTA] - Columnas en la tabla de productos pueden reordenar la lista dinámicamente \\ \hline
+P[LISTA] - Columnas en la tabla de productos permiten «Ajustar Texto» \\ \hline
+P[LISTA] - Columnas en la tabla de productos permiten «Recortar Texto» \\ \hline
+P[LISTA] - Tabla de productos permite la selección múltiple de elementos \\ \hline
+P[LISTA] - Tabla de productos ofrece selección y deselección de todos los elementos \\ \hline
+P[LISTA] - Celdas de la tabla de productos pueden ser editados \\ \hline
+P[LISTA] - Tabla de productos muestra la Opción «Guardar» cuando existen elementos editados \\ \hline
+P[LISTA] - Tabla de productos muestra la Opción «Cancelar» cuando existen elementos editados \\ \hline
+P[LISTA] - Elementos editados en la tabla de productos solicitan confirmación de descarte antes de cambiar de vista \\ \hline
+P[VER-RELACIONADO] - Mensaje «Se creó Entrada del catálogo de precios ."» se muestra después de registrado un precio estándar \\ \hline
+P[VER-RELACIONADO] - Formulario «Agregar a lista de precios» se cierra al accionar el botón «Cancelar» \\ \hline
+P[VER-RELACIONADO] - Formulario «Agregar a lista de precios» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR] - Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR] - Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR] - Formulario de edición de precio se cierra al accionar el botón «Cancelar» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR] - Formulario de edición de precio se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR] - Formulario «Modificar Entrada del catálogo de precios» no permite marcar «Utilizar Precio estándar» en la lista de precios por defecto \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR] - Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra después de modificado un precio \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Botón «Guardar y nuevo» muestra el formulario «Crear Entrada del catálogo de precios» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Formulario de edición de producto se cierra al accionar el botón «Cancelar» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Formulario de edición de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Mensaje «Se creó Entrada del catálogo de precios ."» se muestra después de modificado un precio \\ \hline
+P[VER-RELACIONADO-LISTA-ELIMINAR] - Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
+P[VER-RELACIONADO-LISTA-ELIMINAR] - Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar» \\ \hline
+P[VER-RELACIONADO-LISTA-ELIMINAR] - Confirmacion de eliminacion de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+P[VER-RELACIONADO-LISTA-ELIMINAR] - Mensaje «Se eliminó Producto "<Nombre de Producto>"» se muestra después de eliminado un producto \\ \hline
+P[VER-RELACIONADO] - Clic en el botón «Ver todos» amplía la lista de Listas de precios \\ \hline
+P[LISTA-MODIFICAR] - Producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+P[LISTA-MODIFICAR] - Producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+P[LISTA-MODIFICAR] - Formulario de edición de producto se cierra al accionar el botón «Cancelar» \\ \hline
+P[LISTA-MODIFICAR] - Formulario de edición de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+P[LISTA-MODIFICAR] - Mensaje «Se guardó Producto "<Nombre de Producto>"» se muestra después de modificado un producto \\ \hline
+P[LISTA-ELIMINAR] - Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
+P[LISTA-ELIMINAR] - Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar» \\ \hline
+P[LISTA-ELIMINAR] - Confirmacion de eliminacion de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+P[LISTA-ELIMINAR] - Mensaje «Se eliminó Producto "<Nombre de Producto>"» se muestra después de eliminado un producto \\ \hline
+P[LISTA-DUPLICAR] - Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+P[LISTA-DUPLICAR] - Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+P[LISTA-DUPLICAR] - Formulario de creación de producto se cierra al accionar el botón «Cancelar» \\ \hline
+P[LISTA-DUPLICAR] - Formulario de creación de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+LP[NUEVO] - Lista de Precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+LP[NUEVO] - Formulario de creación de lista de precios se cierra al accionar el botón «Cancelar» \\ \hline
+LP[NUEVO] - Formulario de creación de lista de precios se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+LP[NUEVO] - Mensaje «Se creó Lista de precios "<Nombre de Producto>"» se muestra después de registrada una lista de precios \\ \hline
+LP[BUSCAR] - «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Nombre de la lista de precios» \\ \hline
+LP[BUSCAR] - «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Descripción» \\ \hline
+LP[MOSTRAR COMO] - «Mostrar como» posee los elementos: «Tabla» y «Kanban» \\ \hline
+LP[MOSTRAR COMO] - Opción «Tabla» en «Mostrar como», muestra los productos en formato tabular \\ \hline
+LP[MOSTRAR COMO] - Opción «Kanban» en «Mostrar como», muestra los productos en formato de columnas \\ \hline
+LP[ACTUALIZAR] - botón «Actualizar», reenvía las peticiones de consulta al servidor \\ \hline
+LP[MOSTRAR GRÁFICOS] - «Mostrar GRÁFICOS» está deshabilitado mientras no se use una «vista de lista» determinada \\ \hline
+LP[MOSTRAR GRÁFICOS] - «Mostrar GRÁFICOS» está habilitado mientras se use una «vista de lista» determinada \\ \hline
+LP[MOSTRAR FILTROS] - «Mostrar filtros» está deshabilitado mientras no se use una «vista de lista» determinada \\ \hline
+LP[MOSTRAR FILTROS] - «Mostrar filtros» está habilitado mientras se use una «vista de lista» determinada \\ \hline
+LP[FILTRAR] - «Vistas de Lista» muestra los elementos registrados \\ \hline
+LP[FILTRAR] - «Vistas de Lista» muestra el elemento «Vistos recientemente» \\ \hline
+LP[LISTA] - Columnas en la tabla de listas de precios pueden reordenar la lista dinámicamente \\ \hline
+LP[LISTA] - Columnas en la tabla de listas de precios permiten «Ajustar Texto» \\ \hline
+LP[LISTA] - Columnas en la tabla de listas de precios permiten «Recortar Texto» \\ \hline
+LP[LISTA] - Tabla de listas de precios permite la selección múltiple de elementos \\ \hline
+LP[LISTA] - Tabla de listas de precios ofrece selección y deselección de todos los elementos \\ \hline
+LP[LISTA] - Celdas de la tabla de listas de precios pueden ser editados \\ \hline
+LP[LISTA] - Tabla de listas de precios muestra la Opción «Guardar» cuando existen elementos editados \\ \hline
+LP[LISTA] - Tabla de listas de precios muestra la Opción «Cancelar» cuando existen elementos editados \\ \hline
+LP[LISTA] - Elementos editados en la tabla de listas de precios solicitan confirmación de descarte antes de cambiar de vista \\ \hline
+LP[VER-RELACIONADO] - Mensaje «X Entrada del catálogo de precios registro se actualizó.» se muestra después de registrados X precios de productos \\ \hline
+LP[VER-RELACIONADO] - Formulario «Agregar producto» se cierra al accionar el botón «Cancelar» \\ \hline
+LP[VER-RELACIONADO] - Formulario «Agregar producto» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR] - Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR] - Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR] - Formulario de edición de precio se cierra al accionar el botón «Cancelar» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR] - Formulario de edición de precio se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR] - Formulario «Modificar Entrada del catálogo de precios» no permite marcar «Utilizar Precio estándar» en la lista de precios por defecto \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR] - Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra después de modificado un precio \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Botón «Guardar y nuevo» muestra el formulario «Crear Entrada del catálogo de precios» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Formulario de edición de producto se cierra al accionar el botón «Cancelar» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Formulario de edición de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Mensaje «Se creó Entrada del catálogo de precios ."» se muestra después de modificado un precio \\ \hline
+LP[VER-RELACIONADO-LISTA-ELIMINAR] - Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
+LP[VER-RELACIONADO-LISTA-ELIMINAR] - Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar» \\ \hline
+LP[VER-RELACIONADO-LISTA-ELIMINAR] - Confirmacion de eliminacion de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+LP[VER-RELACIONADO-LISTA-ELIMINAR] - Mensaje «Se eliminó Entrada del catálogo de precios "<Producto>".» se muestra después de eliminado el precio del producto \\ \hline
+LP[VER-RELACIONADO] - Clic en el botón «Ver todos» de la sección «Productos» amplía la lista de Productos \\ \hline
+LP[VER-RELACIONADO] - Clic en el botón «Ver todos» de la sección «Historial de lista de precios» amplía la lista de Productos \\ \hline
+LP[LISTA-MODIFICAR] - Lista de precios es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+LP[LISTA-MODIFICAR] - Lista de precios es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+LP[LISTA-MODIFICAR] - Formulario de edición de lista de precios se cierra al accionar el botón «Cancelar» \\ \hline
+LP[LISTA-MODIFICAR] - Formulario de edición de lista de precios se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+LP[LISTA-MODIFICAR] - Mensaje «Se guardó Lista de precios "<Nombre de Lista>"» se muestra después de modificado una lista \\ \hline
+LP[LISTA-ELIMINAR] - Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
+LP[LISTA-ELIMINAR] - Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar» \\ \hline
+LP[LISTA-ELIMINAR] - Confirmacion de eliminacion de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+LP[LISTA-ELIMINAR] - Mensaje «Se eliminó Lista de precios "<Nombre de Lista>"» se muestra después de eliminado un producto \\ \hline
+LP[LISTA-DUPLICAR] - Lista de precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
+LP[LISTA-DUPLICAR] - Lista de precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
+LP[LISTA-DUPLICAR] - Formulario de creación de lista de precios se cierra al accionar el botón «Cancelar» \\ \hline
+LP[LISTA-DUPLICAR] - Formulario de creación de lista de precios se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+VL[NUEVO] - Formulario de creación de vista de lista se cierra al accionar el botón «Cancelar» \\ \hline
+VL[NUEVO] - Formulario de creación de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+VL[NUEVO] - Registrada la vista de lista, se despliega la configuración de filtros \\ \hline
+VL[CAMBIAR NOMBRE] - Formulario de creación de vista de lista se cierra al accionar el botón «Cancelar» \\ \hline
+VL[CAMBIAR NOMBRE] - Formulario de creación de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+VL[CAMBIAR NOMBRE] - Mensaje «La vista de lista se actualizó» se muestra después de renombrada la vista de lista \\ \hline
+VL[COLABORACIÓN] - Formulario de creación de vista de lista se cierra al accionar el botón «Cancelar» \\ \hline
+VL[COLABORACIÓN] - Formulario de creación de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+VL[COLABORACIÓN] - Mensaje «La vista de lista se actualizó» se muestra después de configurada la vista de lista \\ \hline
+VL[FILTROS] - Clic en «Filtrar por propietario», despliega el menú de filtrado de los elementos \\ \hline
+VL[FILTROS] - Clic en el botón «Listo», registra y cierra el menú de filtrado de los elementos \\ \hline
+VL[FILTROS] - Clic en el botón «Listo», registra y cierra el menú de configuración de elemento de filtro \\ \hline
+VL[FILTROS] - Clic en «Eliminar todos», remueve todos los elementos de filtro \\ \hline
+VL[FILTROS] - Clic en el botón «Cancelar», ignora todos los cambios hechos en el menú de filtrado \\ \hline
+VL[FILTROS] - Clic en el botón «Guardar», registra los cambios en la configuración de la vista de lista \\ \hline
+VL[FILTROS] - Mensaje «La vista de lista se actualizó» se muestra después de registrados los cambios en la vista de lista \\ \hline
+VL[FILTROS] - Clic en el botón «Guardar como», despliega el formulario de Guardar nueva vista de lista \\ \hline
+VL[VISUALIZACIÓN] - Formulario de selección de campos de visualización se cierra al accionar el botón «Cancelar» \\ \hline
+VL[VISUALIZACIÓN] - Formulario de selección de campos de visualización se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+VL[VISUALIZACIÓN] - Mensaje «La vista de lista se actualizó» se muestra después de configurados los campos a ser visualizados \\ \hline
+VL[ELIMINAR] - Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
+VL[ELIMINAR] - Confirmación de eliminación de vista de lista se cierra al accionar el botón «Cancelar» \\ \hline
+VL[ELIMINAR] - Confirmacion de eliminacion de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+VL[ELIMINAR] - Mensaje «Se ha eliminado la vista de lista» se muestra después de eliminada la vista de lista \\ \hline
+VL[RESTABLECER] - Elemento de menú <Restablecer anchuras de columna se encuentra deshabilitado mientras no se haya modificado el ancho de las columnas \\ \hline
+VL[RESTABLECER] - Elemento de menú <Restablecer anchuras de columna se encuentra habilitado cuando se ha modificado el ancho de las columnas \\ \hline
+\end{longtable}
+
+\section{Pruebas negativas}
+
+\begin{longtable}{|p{15.0cm}|}
+\hline
+\textbf{Caso de Prueba} \\
+P[NUEVO] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+P[BUSCAR] - Mensaje «No hay elementos para mostrar» se muestra cuando la búsqueda no presenta resultados \\ \hline
+P[FILTRAR] - Mensaje «No hay elementos para mostrar» se muestra cuando no existen productos bajo una vista de lista \\ \hline
+P[LISTA] - Mensaje «No hay elementos para mostrar» cuando ningún producto ha sido registrado \\ \hline
+P[VER-RELACIONADO] - «Agregar precio estándar» no es visible cuando el producto tiene un precio establecido \\ \hline
+P[VER-RELACIONADO] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+P[VER-RELACIONADO] - Clic en el botón «Siguiente» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR] - Formulario «Modificar Entrada del catálogo de precios» permite marcar «Utilizar Precio estándar» en la lista de precios que no son por defecto \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+P[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+P[VER-RELACIONADO-LISTA-ELIMINAR] - Precio estándar no puede ser eliminado después de accionado el botón «Eliminar», si existen referencias en otras listas de precios \\ \hline
+P[LISTA-MODIFICAR] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+LP[NUEVO] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+LP[BUSCAR] - Mensaje «No hay elementos para mostrar» se muestra cuando la búsqueda no presenta resultados \\ \hline
+LP[FILTRAR] - Mensaje «No hay elementos para mostrar» se muestra cuando no existen listas de precios bajo una vista de lista \\ \hline
+LP[VER-RELACIONADO] - «Agregar productos» no es visible cuando la lista de precios es la lista estándar \\ \hline
+LP[VER-RELACIONADO] - Botón «Siguiente» para un formulario de «Agregar productos» esta deshabilitado mientras no se seleccionen productos \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR] - Formulario «Modificar Entrada del catálogo de precios» permite marcar «Utilizar Precio estándar» en la lista de precios que no son por defecto \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+LP[VER-RELACIONADO-LISTA-MODIFICAR-CREAR] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+LP[VER-RELACIONADO-LISTA-ELIMINAR] - Precio estándar no puede ser eliminado después de accionado el botón «Eliminar», si existen referencias en otras listas de precios \\ \hline
+LP[LISTA-MODIFICAR] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+VL[NUEVO] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+VL[CAMBIAR NOMBRE] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+VL[VISUALIZACIÓN] - Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
+\end{longtable}
+
