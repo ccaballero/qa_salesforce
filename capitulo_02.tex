@@ -339,7 +339,7 @@ evaluaciones:
 \item \textbf{Pruebas de aceptación}, para las funcionalidades de tipo CRUD en
     el gestor de productos, es decir, creación, visualización, modificación y
     eliminación.
-\item \textbf{Pruebas funcionales}, para todos los elementos que estan provistos
+\item \textbf{Pruebas funcionales}, para todos los elementos que están provistos
     por la misma interfaz de usuario.
 \item \textbf{Pruebas de dominio}, para los cuatro formularios que maneja el
     gestor de productos, los cuales pueden verse en la figura \ref{productos_formularios}.
@@ -373,7 +373,7 @@ evaluaciones:
             child { node {Activo}}
             child { node {Lista de precios (*)}}
             child { node {Precio de la lista (*)}}
-            child { node {Utilizar precio estandar}}
+            child { node {Utilizar precio estándar}}
         }
         child [missing] {}
         child [missing] {}
@@ -391,7 +391,7 @@ evaluaciones:
         child { node {Modificar entrada del catálogo de precios}
             child { node {Activo}}
             child { node {Precio de la lista}}
-            child { node {Utilizar precio estandar}}
+            child { node {Utilizar precio estándar}}
         };
 \end{tikzpicture}
 \caption{Formularios que componen el módulo de gestión de productos.}
@@ -486,7 +486,7 @@ evaluaciones:
 \item \textbf{Pruebas de aceptación}, para las funcionalidades de tipo CRUD en
     el gestor de listas de precios, es decir, creación, visualización,
     modificación y eliminación.
-\item \textbf{Pruebas funcionales}, para todos los elementos que estan provistos
+\item \textbf{Pruebas funcionales}, para todos los elementos que están provistos
     por la misma interfaz de usuario.
 \item \textbf{Pruebas de dominio}, para los dos formularios que maneja el
     gestor de productos, los cuales pueden verse en la figura \ref{listas_de_precios_formularios}.
@@ -506,7 +506,7 @@ evaluaciones:
             child { node {Nombre de la lista de precios}}
             child { node {Activo}}
             child { node {Descripción}}
-            child { node {Es lista de precios estandar}}
+            child { node {Es lista de precios estándar}}
         }
         child [missing] {}
         child [missing] {}
@@ -514,7 +514,7 @@ evaluaciones:
         child [missing] {}
         child [missing] {}
         child { node {Agregar productos}
-            child { node {Buscar entrada de catalogos de precios}}
+            child { node {Buscar entrada de catálogos de precios}}
         };
 \end{tikzpicture}
 \caption{Formularios que componen el módulo de gestión de listas de precios.}
@@ -567,7 +567,7 @@ evaluaciones:
 \item \textbf{Pruebas de aceptación}, para las funcionalidades de tipo CRUD en
     el gestor de vistas de lista, es decir, creación, visualización,
     modificación y eliminación.
-\item \textbf{Pruebas funcionales}, para todos los elementos que estan provistos
+\item \textbf{Pruebas funcionales}, para todos los elementos que están provistos
     por la misma interfaz de usuario.
 \item \textbf{Pruebas de dominio}, para los seis formularios que maneja el
     gestor de vistas de lista, los cuales pueden verse en la figura
@@ -625,7 +625,7 @@ evaluaciones:
         child [missing] {}
         child [missing] {}
         child [missing] {}
-        child { node {Agregar logica de filtro}
+        child { node {Agregar lógica de filtro}
             child { node {Lógica de filtro}}
         }
         child [missing] {}
@@ -650,6 +650,22 @@ un sistema satisface sus criterios de aceptación: los criterios que debe cumpli
 el sistema para que el cliente los acepte. Ayuda al cliente a determinar si
 acepta o no el sistema\cite{Naik}.
 
+Las pruebas de aceptación se realizaron para los tres componentes que comprenden
+el alcance del proyecto, como el mínimo de las funcionalidades que se consideran
+criticas, en este caso, las operaciones de creación, visualización, modificación
+y eliminación de los elementos de cada componente.
+
+Se crearon 55 casos de prueba, que pueden consultarse en los anexos de este
+documento, siendo cada caso de prueba como el que se muestra en la figura
+\ref{tc_acceptance}.
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/tc1-acceptance.eps}
+\caption{Caso de Prueba de Aceptación.}
+\label{tc_acceptance}
+\end{figure}
+
 \subsection{Pruebas funcionales}
 El software o sistema bajo prueba se ve como una «caja negra». La selección de
 casos de prueba para pruebas funcionales se basa en el requisito o
@@ -658,6 +674,21 @@ resultados esperados, algunas veces se llaman oráculos de prueba, incluyen
 requisitos/especificaciones de diseño, valores calculados a mano y resultados
 simulados. Las pruebas funcionales hacen hincapié en el comportamiento externo
 de la entidad de software\cite{Luo}.
+
+Las pruebas funcionales se realizaron para cada acción encontrada en la interfaz
+de usuario, siendo barrido completamente cualquier operación disponible en los
+componentes a evaluar.
+
+Se crearon 144 casos de prueba, que pueden consultarse en los anexos de este
+documento, siendo cada caso de prueba como el que se muestra en la figura
+\ref{tc_functional}.
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/tc2-functional.eps}
+\caption{Caso de Prueba Funcional.}
+\label{tc_functional}
+\end{figure}
 
 \subsection{Pruebas de dominio}
 La prueba de dominio es una estrategia de muestreo estratificada para elegir
@@ -689,6 +720,20 @@ en el consumo del servicio, sino que también pueden ser fundamentales para
 determinar las condiciones bajo las cuales la aplicación puede fallar.
 Finalmente, garantiza que haya suficiente validación de errores presente en el
 software\cite{Nadig}.
+
+Las pruebas negativas se centraron en los mensajes de errores que el sistema
+envía y debe enviar según los mismos criterios del producto.
+
+Se crearon 25 casos de prueba, que pueden consultarse en los anexos de este
+documento, siendo cada caso de prueba como el que se muestra en la figura
+\ref{tc_negative}.
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/tc3-negative.eps}
+\caption{Caso de Prueba Negativa.}
+\label{tc_negative}
+\end{figure}
 
 \subsection{Pruebas de compatibilidad}
 La prueba de compatibilidad es una prueba no funcional realizada en la
