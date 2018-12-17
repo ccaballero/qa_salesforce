@@ -882,8 +882,224 @@ Para el analisis de los formularios se crearon sus respectivas tablas de
 \emph{Myers} las cuales son descritas a continuación:
 
 \begin{itemize}
-\item Crear Producto
+\item Crear Producto, que puede verse en el cuadro \ref{myers_01}
+\item Crear Entrada del catalogo de precios, que puede verse en el cuadro \ref{myers_02}
+\item Agregar a lista de precios, que puede verse en el cuadro \ref{myers_03}
+\item Modificar Entrada del catalogo de precios, que puede verse en el cuadro \ref{myers_04}
+\item Crear Lista de precios, que puede verse en el cuadro \ref{myers_05}
+\item Agregar productos, que puede verse en el cuadro \ref{myers_06}
+\item Nueva vista de lista, que puede verse en el cuadro \ref{myers_07}
+\item Cambiar nombre, que puede verse en el cuadro \ref{myers_08}
+\item Configuración de colaboración, que puede verse en el cuadro \ref{myers_09}
 \end{itemize}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
+\hline
+Nombre del producto & [1-255] caracteres & 0 \\
+& & 1 \\
+& & 255 \\
+& & 256 \\
+\hline
+Activo  & {verdadero,falso} & \\
+\hline
+Codigo de producto & [0-255] caracteres & 0 \\
+& & 255 \\
+& & 256 \\
+\hline
+Familia de productos & Ninguno,[lista de valores] & \\
+\hline
+Programación de cantidades activada & {verdadero,falso} & \\
+\hline
+Programación de ingresos activada & {verdadero,falso} & \\
+\hline
+Descripcion del producto & [0,4000] caracteres & 0 \\
+& & 4000 \\
+& & 4001 \\
+\hline
+\end{tabular}
+\caption{Tabla de Myers para el Formulario «Crear Producto»}
+\label{myers_01}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|p{5.0cm}|l|}
+\hline
+\textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
+\hline
+Producto & [lista de valores] & \\
+\hline
+Activo  & {verdadero,falso} & \\
+\hline
+Lista de precios & [lista de valores] & \\
+\hline
+Precio de la lista & [-9.007.199.254.740.991, 9.007.199.254.740.991] & -9.007.199.254.740.992 \\
+& & -9.007.199.254.740.991 \\
+& & 9.007.199.254.740.991 \\
+& & 9.007.199.254.740.992 \\
+& 3 decimales & 0,999 \\
+& & 0,9999 \\
+\hline
+Utilizar Precio estandar & {verdadero,falso} & \\
+\hline
+\end{tabular}
+\caption{Tabla de Myers para el Formulario «Crear Entrada del catalogo de precios»}
+\label{myers_02}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|p{5.0cm}|l|}
+\hline
+\textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
+\hline
+Lista de precios & None,[lista de valores] & \\
+\hline
+Divisa & None,[lista de valores] & \\
+\hline
+\end{tabular}
+\caption{Tabla de Myers para el Formulario «Agregar a lista de precios»}
+\label{myers_03}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|p{5.0cm}|l|}
+\hline
+\textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
+\hline
+Activo  & {verdadero,falso} & \\
+\hline
+Precio de la lista & [-9.007.199.254.740.991, 9.007.199.254.740.991] & -9.007.199.254.740.992 \\
+& & -9.007.199.254.740.991 \\
+& & 9.007.199.254.740.991 \\
+& & 9.007.199.254.740.992 \\
+& 3 decimales & 0,999 \\
+& & 0,9999 \\
+\hline
+Utilizar Precio estandar & {verdadero,falso} & \\
+\hline
+\end{tabular}
+\caption{Tabla de Myers para el Formulario «Modificar Entrada del catalogo de precios»}
+\label{myers_04}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
+\hline
+Nombre de la lista de precios & [1-255] caracteres & 0 \\
+& & 1 \\
+& & 255 \\
+& & 256 \\
+\hline
+Activo  & {verdadero,falso} & \\
+\hline
+Descripcion del producto & [0,255] caracteres & 0 \\
+& & 255 \\
+& & 256 \\
+\hline
+Es lista de precios estandar & {verdadero,falso} & \\
+\hline
+\end{tabular}
+\caption{Tabla de Myers para el Formulario «Crear Lista de precios»}
+\label{myers_05}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|p{5.0cm}|p{5.0cm}|l|}
+\hline
+\textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
+\hline
+Buscar Entrada de catalogos de precios\ldots & [1-500] caracteres & 0 \\
+& & 1 \\
+& & 500 \\
+& & 501 \\
+\hline
+\multicolumn{3}{|l|}{Modificar Entrada de catalogos de precios seleccionada} \\
+\hline
+Activo  & {verdadero,falso} & \\
+\hline
+Precio de la lista & [-9.007.199.254.740.991, 9.007.199.254.740.991] & -9.007.199.254.740.992 \\
+& & -9.007.199.254.740.991 \\
+& & 9.007.199.254.740.991 \\
+& & 9.007.199.254.740.992 \\
+& 3 decimales & 0,999 \\
+& & 0,9999 \\
+\hline
+Utilizar Precio estandar & {verdadero,falso} & \\
+\hline
+\end{tabular}
+\caption{Tabla de Myers para el Formulario «Modificar Entrada del catalogo de precios»}
+\label{myers_06}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
+\hline
+Nombre de lista & [1-40] caracteres & 0 \\
+& & 1 \\
+& & 40 \\
+& & 41 \\
+\hline
+List API Name & [1-80] & 0 \\
+& & 1 \\
+& & 80 \\
+& & 81 \\
+& [a-zA-Z][a-zA-Z0-9\_][a-zA-Z0-9] & 1xxxxx \\
+& & \_xxxxx \\
+& & xxx\_\_xxx \\
+& & xxxxx\_ \\
+\hline
+¿Quien ve esta lista? & Solo yo puedo ver esta vista de lista & \\
+& Todos los usuarios pueden ver esta vista de lista & \\
+& Compartir vista de lista con grupos de usuarios & \\
+\hline
+\end{tabular}
+\caption{Tabla de Myers para el Formulario «Nueva vista de lista»}
+\label{myers_07}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
+\hline
+Nombre de lista & [1-40] caracteres & 0 \\
+& & 1 \\
+& & 40 \\
+& & 41 \\
+\hline
+\end{tabular}
+\caption{Tabla de Myers para el Formulario «Cambiar nombre»}
+\label{myers_08}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
+\hline
+¿Quien ve esta lista? & Solo yo puedo ver esta vista de lista & \\
+& Todos los usuarios pueden ver esta vista de lista & \\
+& Compartir vista de lista con grupos de usuarios & \\
+\hline
+\end{tabular}
+\caption{Tabla de Myers para el Formulario «Configuración de colaboración»}
+\label{myers_09}
+\end{table}
 
 \subsection{Pruebas negativas}
 La prueba negativa, comúnmente conocida como \emph{prueba de ruta de error} o
