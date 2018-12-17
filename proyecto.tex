@@ -1,4 +1,4 @@
-\documentclass[letterpaper,twoside,11pt]{book}
+\documentclass[letterpaper,oneside,11pt]{book}
 
 %fonts related
 \usepackage{helvet}
@@ -17,8 +17,8 @@
 \usepackage{tikz}
 \usetikzlibrary{trees}
 \tikzstyle{every node}=[draw=black,thick,anchor=west]
-\tikzstyle{selected}=[draw=red,fill=red!30]
-\tikzstyle{optional}=[dashed,fill=gray!50]
+\tikzstyle{form}=[draw=black,fill=yellow!20]
+\tikzstyle{confirm}=[draw=black,fill=green!20]
 
 \usepackage{graphicx}
 
@@ -72,8 +72,7 @@ pdftex]{hyperref}
 \listoftables
 
 \mainmatter
-%\include{capitulo_01}
-\include{capitulo_02}
+\include{capitulo_01}
 
 \begin{appendix}
 \include{apendice_a}
