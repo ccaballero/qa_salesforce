@@ -917,29 +917,29 @@ documento, siendo cada caso de prueba como el que se muestra en la figura
 \label{tc_negative}
 \end{figure}
 
-\subsection{Pruebas de compatibilidad}
-La prueba de compatibilidad es una prueba no funcional realizada en la
-aplicación para evaluar la compatibilidad de la aplicación en diferentes
-entornos. En este caso sobre diferentes navegadores.
-
-\subsection{Pruebas de localización}
-El propósito de las pruebas de localización es asegurar que los errores no se
-hayan introducido durante el proceso de traducción, que el contenido traducido
-se muestre correctamente y que el producto localizado funcione como se espera
-para el mercado objetivo. Probar sitios web para garantizar la adaptabilidad a
-un lugar y una cultura en particular también es crucial para sugerir su
-superioridad en el mercado objetivo\cite{Sampair}.
-
-Aquí hay algunas áreas que examinamos durante esta prueba:
-
-\begin{itemize}
-\item Todos los recursos de localización están traducidos correctamente.
-\item La compilación generada incluye todos los archivos necesarios.
-\item La funcionalidad en la versión localizada es consistente con el producto de origen.
-\item La pantalla localizada tiene el mismo número y tipo de elementos que el del producto de origen.
-\item Todos los caracteres específicos del entorno local aparecen correctamente.
-\item No hay palabras que pasen sobre los botones o se corten en la página.
-\end{itemize}
+%   \subsection{Pruebas de compatibilidad}
+%   La prueba de compatibilidad es una prueba no funcional realizada en la
+%   aplicación para evaluar la compatibilidad de la aplicación en diferentes
+%   entornos. En este caso sobre diferentes navegadores.
+%
+%   \subsection{Pruebas de localización}
+%   El propósito de las pruebas de localización es asegurar que los errores no se
+%   hayan introducido durante el proceso de traducción, que el contenido traducido
+%   se muestre correctamente y que el producto localizado funcione como se espera
+%   para el mercado objetivo. Probar sitios web para garantizar la adaptabilidad a
+%   un lugar y una cultura en particular también es crucial para sugerir su
+%   superioridad en el mercado objetivo\cite{Sampair}.
+%
+%   Aquí hay algunas áreas que examinamos durante esta prueba:
+%
+%   \begin{itemize}
+%   \item Todos los recursos de localización están traducidos correctamente.
+%   \item La compilación generada incluye todos los archivos necesarios.
+%   \item La funcionalidad en la versión localizada es consistente con el producto de origen.
+%   \item La pantalla localizada tiene el mismo número y tipo de elementos que el del producto de origen.
+%   \item Todos los caracteres específicos del entorno local aparecen correctamente.
+%   \item No hay palabras que pasen sobre los botones o se corten en la página.
+%   \end{itemize}
 
 \section{Criterios de calidad}
 Se denomina criterio de calidad a cualquier requerimiento que define lo que el
@@ -971,17 +971,17 @@ Se definieron los siguientes como criterios de calidad fundamentales para el
         controlar el sistema.
     \end{itemize}
 
-\item [Compatibilidad] La compatibilidad del navegador determina el
-    comportamiento del servicio en diferentes plataformas de navegación.
-
-    Dado que cada navegador tiene su propia manera de mostrar y gestionar los
-    contenidos de una página web. Por lo tanto, las páginas web deben diseñarse
-    de tal manera que puedan ser compatibles con cada uno de los navegadores de
-    uso común. Actualmente hay casi cien tipos diferentes de navegadores
-    disponibles, lo que dificulta que los diseñadores / webmasters desarrollen
-    sitios web con un comportamiento similar en múltiples plataformas. El
-    estricto cumplimiento de las pautas de diseño puede cumplir con estos
-    criterios hasta cierto nivel.
+%   \item [Compatibilidad] La compatibilidad del navegador determina el
+%       comportamiento del servicio en diferentes plataformas de navegación.
+%
+%       Dado que cada navegador tiene su propia manera de mostrar y gestionar los
+%       contenidos de una página web. Por lo tanto, las páginas web deben diseñarse
+%       de tal manera que puedan ser compatibles con cada uno de los navegadores de
+%       uso común. Actualmente hay casi cien tipos diferentes de navegadores
+%       disponibles, lo que dificulta que los diseñadores / webmasters desarrollen
+%       sitios web con un comportamiento similar en múltiples plataformas. El
+%       estricto cumplimiento de las pautas de diseño puede cumplir con estos
+%       criterios hasta cierto nivel.
 
 \item [Soportabilidad] La soportabilidad es la capacidad del sistema para
     proporcionar información útil para identificar y resolver problemas.
@@ -990,15 +990,64 @@ Se definieron los siguientes como criterios de calidad fundamentales para el
     solo es visible a gran escala. Sin embargo, con el crecimiento del equipo y
     el producto, este atributo se convierte en una de las claves\cite{Ashanin}.
 
-\item [Localizabilidad] La localizabilidad es un proceso intermedio para
-    verificar que una aplicación globalizada está lista para la localización.
-    En una situación ideal, esta es solo una fase de garantía de calidad. Si se
-    diseñó y desarrolló una aplicación con miras a la localización, esta fase
-    consistirá principalmente en pruebas de localizabilidad. De lo contrario, es
-    durante esta fase que se descubrirán y corregirán los errores en el código
-    fuente que impiden la localización.
-
-    La localizabilidad ayuda a garantizar que la localización no introduzca
-    ningún defecto funcional en la aplicación\cite{Moura}.
+%   \item [Localizabilidad] La localizabilidad es un proceso intermedio para
+%       verificar que una aplicación globalizada está lista para la localización.
+%       En una situación ideal, esta es solo una fase de garantía de calidad. Si se
+%       diseñó y desarrolló una aplicación con miras a la localización, esta fase
+%       consistirá principalmente en pruebas de localizabilidad. De lo contrario, es
+%       durante esta fase que se descubrirán y corregirán los errores en el código
+%       fuente que impiden la localización.
+%
+%       La localizabilidad ayuda a garantizar que la localización no introduzca
+%       ningún defecto funcional en la aplicación\cite{Moura}.
 \end{description}
+
+\subsection{Resultados}
+En la figura \ref{tc-tests}, se puede ver la distribución de los casos de prueba
+segun el tipo de evaluación realizado, puede apreciarse que las pruebas
+funcionales ocupan mas de la mitad de la totalidad de casos de prueba en el
+proyecto, mientras que los casos de prueba negativos, y de aceptación, estan más
+proximos al 10\%.
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/tc-tests.eps}
+\caption{Casos de Prueba segun el tipo de evaluación realizada.}
+\label{tc-tests}
+\end{figure}
+
+En la figura \ref{tc-type}, se puede ver la distribución de los casos de prueba
+segun el tipo de acción que se realize en el sistema, es decir, si son casos
+que afectan la interfaz de usuario, si mas bien son funciones de validación, o
+si realizan alguna peticion al servidor, sea esta de lectura o escritura.
+
+Puede apreciarse igualmente que la mayor parte de los casos de prueba estan
+orientados a evaluar el comportamiento de la interfaz de usuario, mientras que
+en un 25\% aproximadamente se evaluan funcionalidades que se comunican con el
+servidor.
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/tc-type.eps}
+\caption{Casos de Prueba segun el tipo de acción a evaluar.}
+\label{tc-type}
+\end{figure}
+
+En la ejecución de las pruebas unicamente fallaron 2 casos de prueba, ambos
+relacionados a un mismo formulario, como puede verse en el reporte de error
+adjunto.
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/results-tests.eps}
+\caption{Resultados de las pruebas clasificadas por tipo de evaluación.}
+\label{results-tests}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/results-type.eps}
+\caption{Resultados de las pruebas clasificadas por tipo de acción a evaluar.}
+\label{results-type}
+\end{figure}
 
