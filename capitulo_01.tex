@@ -12,7 +12,7 @@ forma que este construya un marco solido para la planificación diseño, y
 ejecución de las pruebas de calidad del producto.
 
 \section{Entorno de proyecto}
-Los primeros componentes que se describiran son los relacionados con el entorno
+Los primeros componentes que se describirán son los relacionados con el entorno
 del proyecto, que son aquellos factores del contexto que incluyen recursos
 necesarios, restricciones, y cualquier otro elemento del proyecto que debe ser
 tomado en cuenta para la evaluación.
@@ -27,7 +27,7 @@ calidad del producto para los clientes.
 
 \subsection{Fuentes de Información}
 Para evaluar los componentes definidos en la misión del proyecto, se encontraron
-y hallaron utiles las siguientes fuentes de información respecto al producto:
+y hallaron útiles las siguientes fuentes de información respecto al producto:
 
 \begin{description}
 \item [Centro de Ayuda] \emph{Salesforce} ofrece un amplio conjunto de
@@ -52,8 +52,8 @@ vídeos, herramientas, y un sin fin de recursos orientados a usuarios con un rol
 administrativo de recursos sobre la plataforma
 (\emph{https://admin.salesforce.com/resources}).
 
-Este sitio será util para entender las diferencias existentes entre la
-funcionalidad provista a un usuario normal y a otro administrador, ademas de
+Este sitio será útil para entender las diferencias existentes entre la
+funcionalidad provista a un usuario normal y a otro administrador, además de
 conocer los permisos y roles de usuario en profundo.
 
 \item [Comunidad \emph{Trailblazer}] Sitio web enfocado a conectar a miembros de
@@ -61,7 +61,7 @@ la comunidad \emph{Salesforce}, para compartir experiencias, aprender, y proveer
 de nuevas ideas sobre la utilización del servicio
 (\emph{https://success.salesforce.com/}).
 
-Este stio tambien sirve como fuente de clamores de los usuarios, funcionalidades
+Este sitio también sirve como fuente de clamores de los usuarios, funcionalidades
 criticas, y errores comunes del servicio.
 
 \end{description}
@@ -69,7 +69,7 @@ criticas, y errores comunes del servicio.
 \subsection{Equipamiento}
 Esta sección describe los recursos necesarios para la ejecución del
 proyecto, tanto en software necesario para el uso del servicio,  como
-herramientas utilizadas durante el proceso de analisis, evaluación, y
+herramientas utilizadas durante el proceso de análisis, evaluación, y
 documentación.
 
 \subsubsection{Software}
@@ -231,10 +231,10 @@ Los elementos del sistema que se evaluarán son los siguientes:
 \item [Productos] Representado por las funcionalidades en el modulo de productos.
 \item [Listas de precios] Representado por las funcionalidades en el modulo de
     lista de precios.
-\item [Precios de productos] Los precios conforman la relacion intermedia entre
+\item [Precios de productos] Los precios conforman la relación intermedia entre
     los productos y las listas de precios.
-\item [Vistas de Lista] Componente generico utilizado ampliamente en ambos
-    modulos a ser evaluados, cuya funcionalidad principal es la de filtración de
+\item [Vistas de Lista] Componente genérico utilizado ampliamente en ambos
+    módulos a ser evaluados, cuya funcionalidad principal es la de filtración de
     los datos a presentar.
 \end{description}
 
@@ -266,7 +266,7 @@ A continuación se describen los documentos resultantes de la evaluación:
 \section{Elementos del producto}
 Dentro del alcance de la evaluación se encuentran los componentes de productos
 y listas de precios, las funcionalidades que comprenden estos se detallan en
-esta sección, desde multiples perspectivas de analisis.
+esta sección, desde múltiples perspectivas de análisis.
 
 Como se mencionó en anteriormente en la sección de equipamiento, se consideró la
 interfaz \emph{Lightning Experience}, como único objetivo de la evaluación. La
@@ -276,8 +276,8 @@ ediciones del producto: \emph{Essentials}, \emph{Group}, \emph{Professional},
 
 \subsection{Productos}
 El Producto para el software a evaluar, representa uno de los componentes
-fundamentales y claves para el exito, por ende es importante evaluarlo
-desde multiples facetas; la primera de estas es la funcionalidad provista por
+fundamentales y claves para el éxito, por ende es importante evaluarlo
+desde múltiples facetas; la primera de estas es la funcionalidad provista por
 las interfaces de este modulo. En la figura \ref{productos} pueden verse estas
 funcionalidades, clasificadas desde la perspectiva de la interfaz de usuario.
 
@@ -342,11 +342,11 @@ funcionalidades, clasificadas desde la perspectiva de la interfaz de usuario.
 \label{productos}
 \end{figure}
 
-Entre las funcionalidades que pueden apreciarse, estan las operaciones comunes
-de creación, busqueda, visualización, modificación, y eliminación de productos,
+Entre las funcionalidades que pueden apreciarse, están las operaciones comunes
+de creación, búsqueda, visualización, modificación, y eliminación de productos,
 se omitieron las funcionalidades de controles de vista de lista, para que
-todo este componente pueda ser tratado de manera separada. Tambien pueden
-observarse funciones relacionadas a registrar precios estandar y precios para
+todo este componente pueda ser tratado de manera separada. También pueden
+observarse funciones relacionadas a registrar precios estándar y precios para
 una lista de precios determinada.
 
 En la figura \ref{productos_vistas}, se aprecian las diferentes vistas que
@@ -400,7 +400,7 @@ tipo confirmación de acción.
 \label{productos_vistas}
 \end{figure}
 
-Ademas de las funcionalidades y vistas antes mencionadas, tambien se analizo el
+Además de las funcionalidades y vistas antes mencionadas, también se analizo el
 comportamiento de los formularios que provee el modulo, los cuales se presentan
 en la figura \ref{productos_formularios}.
 
@@ -452,14 +452,14 @@ en la figura \ref{productos_formularios}.
 \end{figure}
 
 Para la evaluación de las funcionalidades, vistas, formularios, mensajes de
-error y demas componentes, se realizarán las siguientes evaluaciones, estas
-serán similares para los otros modulos evaluados.
+error y demás componentes, se realizarán las siguientes evaluaciones, estas
+serán similares para los otros módulos evaluados.
 
 \begin{itemize}
 \item \textbf{Pruebas de aceptación}, para las funcionalidades de tipo CRUD en
     el gestor de productos, es decir, creación, visualización, modificación y
-    eliminación; de forma que se puedan garantizar que las operaciones minimas
-    sobre el elementos no presentan ningun problema.
+    eliminación; de forma que se puedan garantizar que las operaciones mínimas
+    sobre el elementos no presentan ningún problema.
 \item \textbf{Pruebas funcionales}, para todos los elementos que están provistos
     por la misma interfaz de usuario, se crearán los casos de prueba a partir
     del diagrama de funcionalidades del modulo.
@@ -469,17 +469,17 @@ serán similares para los otros modulos evaluados.
 \item \textbf{Pruebas negativas}, estas pruebas resultaran mas de complemento
     a la evaluación de las funcionalidades, y se centrara en las condiciones
     opuestas a aquellas que se esperan del usuario del sistema.
-\item \textbf{Pruebas de compatiblidad}, a partir del diagrama de vistas se
+\item \textbf{Pruebas de compatibilidad}, a partir del diagrama de vistas se
     realizarán pruebas muy puntuales sobre las vistas criticas del sistema sobre
     el conjunto de navegadores compatibles que se mencionaron anteriormente.
-\item \textbf{Pruebas de localización}, tambien utilizando el diagrama de vistas
+\item \textbf{Pruebas de localización}, también utilizando el diagrama de vistas
     del modulo, se realizara la validación de todos los texto para el idioma
-    español, ademas de comprobar el formato de fecha y moneda apropiada.
+    español, además de comprobar el formato de fecha y moneda apropiada.
 \end{itemize}
 
 \subsection{Listas de Precios}
 Las Listas de Precios, tienen como objetivo, hacer que un mismo producto pueda
-tener multiples precios, dependiendo de como la organización cliente maneje sus
+tener múltiples precios, dependiendo de como la organización cliente maneje sus
 canales de distribución y producción. Al igual que en el modulo de productos, en
 la figura \ref{listas_de_precios} pueden verse las funcionalidades clasificadas
 desde la perspectiva de la interfaz de usuario, también se omitió la sección de
@@ -557,7 +557,7 @@ modulo de productos, analizado anteriormente.
 En la figura \ref{listas_de_precios_vistas}, se detallan aquellas vistas
 presentes en este modulo, de la misma manera se ha destacado con amarillo a
 aquellas vistas que son formularios, mientras que en verde se presentan a
-aquellas que representan dialogos de confirmación.
+aquellas que representan diálogos de confirmación.
 
 \begin{figure}
 \centering
@@ -611,7 +611,7 @@ aquellas que representan dialogos de confirmación.
 \label{listas_de_precios_vistas}
 \end{figure}
 
-Tambien de las funcionalidades y vistas antes mencionadas, se analizo el
+También de las funcionalidades y vistas antes mencionadas, se analizo el
 comportamiento de los formularios que provee este modulo, los cuales se
 presentan en la figura \ref{listas_de_precios_formularios}.
 
@@ -634,7 +634,7 @@ presentan en la figura \ref{listas_de_precios_formularios}.
         child [missing] {}
         child { node {Agregar productos}
             child { node {Buscar entrada de catálogos de precios}
-                child { node {Modificar Entrada de catalogos de precios}}
+                child { node {Modificar Entrada de catálogos de precios}}
             }
         };
 \end{tikzpicture}
@@ -657,7 +657,7 @@ evaluaciones:
 \subsection{Controles de Vista de Lista}
 Los Controles de Vista de Lista son funcionalidades equivalentes entre los 
 dos componentes que están siendo evaluados, por lo que se ha decidido realizar
-un analisis separado de estos. En la figura \ref{vista_de_lista} puede verse
+un análisis separado de estos. En la figura \ref{vista_de_lista} puede verse
 las funciones omitidas en los diagramas anteriores relativas a los controles de
 vista.
 
@@ -697,10 +697,10 @@ vista.
 \end{figure}
 
 En la figura \ref{vista_de_lista_vistas}, se detallan aquellas vistas
-provistas por este componente, de la misma manera que en los dos modulos
-anteriormente citados, aqui tambien se han destacado con amarillo a
+provistas por este componente, de la misma manera que en los dos módulos
+anteriormente citados, aquí también se han destacado con amarillo a
 aquellas vistas que son formularios, mientras que en verde se presentan a
-aquellas que representan dialogos de confirmación.
+aquellas que representan diálogos de confirmación.
 
 \begin{figure}
 \centering
@@ -710,7 +710,7 @@ aquellas que representan dialogos de confirmación.
     edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
     \node {Vista de Lista}
         child { node [form] {Nueva vista de lista}}
-        child { node [form] {Duplicar vita de lista}}
+        child { node [form] {Duplicar vista de lista}}
         child { node [form] {Cambiar nombre}}
         child { node [form] {Configuración de colaboración}}
         child { node [form] {Seleccionar los campos que se visualizaran}}
@@ -721,7 +721,7 @@ aquellas que representan dialogos de confirmación.
 \label{vista_de_lista_vistas}
 \end{figure}
 
-Tambien de las funcionalidades y vistas antes mencionadas, se analizo el
+También de las funcionalidades y vistas antes mencionadas, se analizo el
 comportamiento de los formularios que provee este modulo, los cuales se
 presentan en la figura \ref{vista_de_lista_formularios}.
 
@@ -789,7 +789,7 @@ presentan en la figura \ref{vista_de_lista_formularios}.
 \label{vista_de_lista_formularios}
 \end{figure}
 
-Similarmente a los dos modulos anterior, tambien se realizarán las siguientes
+Similarmente a los dos módulos anterior, también se realizarán las siguientes
 evaluaciones:
 
 \begin{itemize}
@@ -804,7 +804,7 @@ evaluaciones:
 \section{Técnicas de prueba}
 Una vez definido los elementos del sistema que comprenden el alcance de este
 proyecto, y los criterios bajo los que estos deben ser evaluados. Ahora se
-describiran las técnicas de prueba que se utilizarán para cada elemento y
+describirán las técnicas de prueba que se utilizarán para cada elemento y
 criterio de calidad.
 
 \subsection{Pruebas de aceptación}
@@ -878,7 +878,7 @@ documento, siendo cada caso de prueba como el que se muestra en la figura
 \label{tc_domain}
 \end{figure}
 
-Para el analisis de los formularios se crearon sus respectivas tablas de
+Para el análisis de los formularios se crearon sus respectivas tablas de
 \emph{Myers} las cuales son descritas a continuación:
 
 \begin{itemize}
@@ -906,7 +906,7 @@ Nombre del producto & [1-255] caracteres & 0 \\
 \hline
 Activo  & {verdadero,falso} & \\
 \hline
-Codigo de producto & [0-255] caracteres & 0 \\
+Código de producto & [0-255] caracteres & 0 \\
 & & 255 \\
 & & 256 \\
 \hline
@@ -916,7 +916,7 @@ Programación de cantidades activada & {verdadero,falso} & \\
 \hline
 Programación de ingresos activada & {verdadero,falso} & \\
 \hline
-Descripcion del producto & [0,4000] caracteres & 0 \\
+Descripción del producto & [0,4000] caracteres & 0 \\
 & & 4000 \\
 & & 4001 \\
 \hline
@@ -944,7 +944,7 @@ Precio de la lista & [-9.007.199.254.740.991, 9.007.199.254.740.991] & -9.007.19
 & 3 decimales & 0,999 \\
 & & 0,9999 \\
 \hline
-Utilizar Precio estandar & {verdadero,falso} & \\
+Utilizar Precio estándar & {verdadero,falso} & \\
 \hline
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Crear Entrada del catalogo de precios»}
@@ -981,7 +981,7 @@ Precio de la lista & [-9.007.199.254.740.991, 9.007.199.254.740.991] & -9.007.19
 & 3 decimales & 0,999 \\
 & & 0,9999 \\
 \hline
-Utilizar Precio estandar & {verdadero,falso} & \\
+Utilizar Precio estándar & {verdadero,falso} & \\
 \hline
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Modificar Entrada del catalogo de precios»}
@@ -1001,11 +1001,11 @@ Nombre de la lista de precios & [1-255] caracteres & 0 \\
 \hline
 Activo  & {verdadero,falso} & \\
 \hline
-Descripcion del producto & [0,255] caracteres & 0 \\
+Descripción del producto & [0,255] caracteres & 0 \\
 & & 255 \\
 & & 256 \\
 \hline
-Es lista de precios estandar & {verdadero,falso} & \\
+Es lista de precios estándar & {verdadero,falso} & \\
 \hline
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Crear Lista de precios»}
@@ -1018,12 +1018,12 @@ Es lista de precios estandar & {verdadero,falso} & \\
 \hline
 \textbf{Variable} & \textbf{Casos Posibles} & \textbf{Limites} \\
 \hline
-Buscar Entrada de catalogos de precios\ldots & [1-500] caracteres & 0 \\
+Buscar Entrada de catálogos de precios\ldots & [1-500] caracteres & 0 \\
 & & 1 \\
 & & 500 \\
 & & 501 \\
 \hline
-\multicolumn{3}{|l|}{Modificar Entrada de catalogos de precios seleccionada} \\
+\multicolumn{3}{|l|}{Modificar Entrada de catálogos de precios seleccionada} \\
 \hline
 Activo  & {verdadero,falso} & \\
 \hline
@@ -1034,7 +1034,7 @@ Precio de la lista & [-9.007.199.254.740.991, 9.007.199.254.740.991] & -9.007.19
 & 3 decimales & 0,999 \\
 & & 0,9999 \\
 \hline
-Utilizar Precio estandar & {verdadero,falso} & \\
+Utilizar Precio estándar & {verdadero,falso} & \\
 \hline
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Modificar Entrada del catalogo de precios»}
@@ -1220,40 +1220,40 @@ Se definieron los siguientes como criterios de calidad fundamentales para el
 
 \subsection{Resultados}
 En la figura \ref{tc-tests}, se puede ver la distribución de los casos de prueba
-segun el tipo de evaluación realizado, puede apreciarse que las pruebas
+según el tipo de evaluación realizado, puede apreciarse que las pruebas
 funcionales ocupan mas de la mitad de la totalidad de casos de prueba en el
-proyecto, mientras que los casos de prueba negativos, y de aceptación, estan más
-proximos al 10\%.
+proyecto, mientras que los casos de prueba negativos, y de aceptación, están más
+próximos al 10\%.
 
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/tc-tests.eps}
-\caption{Casos de Prueba segun el tipo de evaluación realizada.}
+\caption{Casos de Prueba según el tipo de evaluación realizada.}
 \label{tc-tests}
 \end{figure}
 
 En la figura \ref{tc-type}, se puede ver la distribución de los casos de prueba
-segun el tipo de acción que se realize en el sistema, es decir, si son casos
+según el tipo de acción que se realiza en el sistema, es decir, si son casos
 que afectan la interfaz de usuario, si mas bien son funciones de validación, o
-si realizan alguna peticion al servidor, sea esta de lectura o escritura.
+si realizan alguna petición al servidor, sea esta de lectura o escritura.
 
-Puede apreciarse igualmente que la mayor parte de los casos de prueba estan
+Puede apreciarse igualmente que la mayor parte de los casos de prueba están
 orientados a evaluar el comportamiento de la interfaz de usuario, mientras que
-en un 25\% aproximadamente se evaluan funcionalidades que se comunican con el
+en un 25\% aproximadamente se evalúan funcionalidades que se comunican con el
 servidor.
 
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/tc-type.eps}
-\caption{Casos de Prueba segun el tipo de acción a evaluar.}
+\caption{Casos de Prueba según el tipo de acción a evaluar.}
 \label{tc-type}
 \end{figure}
 
 En las figuras \ref{results-tests} y \ref{results-type}, se condensan los
 resultados obtenidos de la ejecución de los casos de prueba, en los cuales
-unicamente fallaron 2 casos de prueba, ambos relacionados a un mismo formulario,
+únicamente fallaron 2 casos de prueba, ambos relacionados a un mismo formulario,
 como puede verse en el reporte de error adjunto, y debido al fallo de estos
-tambien se bloquearon dos casos de prueba.
+también se bloquearon dos casos de prueba.
 
 \begin{figure}
 \centering
@@ -1271,7 +1271,7 @@ tambien se bloquearon dos casos de prueba.
 
 \section{Conclusiones}
 Presentados los resultados de la ejecución de las pruebas, vemos que de los 315
-casos de pruebas unicamente existes 2 bloqueados, y dos fallidos. Por ende se
+casos de pruebas únicamente existes 2 bloqueados, y dos fallidos. Por ende se
 tiene 98.74\% de casos de prueba exitosos, lo que lleva a concluir que los
-atributos de calidad esperados del sistema estan cubiertos por completo.
+atributos de calidad esperados del sistema están cubiertos por completo.
 
