@@ -1,0 +1,27 @@
+Titulo:
+    Automatizaci髇 de las pruebas de Interfaz para el modulo "Productos y 
+    Listas de Precio" en Salesforce.
+
+Indice Tentativo:
+
+1. Introducci髇:
+    <dejar para el final>
+2. Automatizaci髇 de pruebas
+    2.1. Beneficios
+    2.2. End-to-End testing
+    2.3. Frameworks de automatizaci贸n
+        2.3.1. Conceptos generales
+        2.3.2. Webdriver.io
+            2.3.2.1. Caracter铆sticas
+            2.3.2.2. Ventajas
+        2.3.3. Comparativas con otros frameworks
+3. Salesforce
+    3.1. Caracter铆sticas
+    3.2. Modulo de Productos y Listas de Precios
+
+Pasos:
+    1. Extensi贸n el framework de automatizaci贸n
+    2. Automatizaci贸n de casos de prueba
+    3. Ejecuci髇 de las pruebas
+    4. Resultados de la ejecuci贸n
+
