@@ -1,9 +1,5 @@
 \chapter{Control de calidad de Software}
 
-En este capitulo se desglosan y describen todos sus componentes, de tal
-forma que este construya un marco solido para la planificación, diseño, y
-ejecución de las pruebas de calidad del producto, siguiendo el modelo HTSM.
-
 \section{Estrategia de testing}
 
 \emph{HTSM (Heuristic Test Strategy Model)} fue creado por James Bach en 1996
@@ -11,7 +7,7 @@ para que lo usen los evaluadores profesionales como una colección estructurada
 de recordatorios de qué pensar cuando están creando pruebas, divide el
 pensamiento de la creación de pruebas en diferentes ejes de análisis, que,
 cuando se unen, permiten al evaluador crear una estrategia de prueba
-holística\cite{Bach}.
+holística \cite{Bach}.
 
 \subsection{Entorno de proyecto}
 Los primeros componentes que se describirán son los relacionados con el entorno
@@ -20,8 +16,8 @@ necesarios, restricciones, y cualquier otro elemento del proyecto que debe ser
 tomado en cuenta para la evaluación.
 
 \subsubsection{Fuentes de Información}
-Para evaluar los componentes definidos en la misión del proyecto, se encontraron
-y hallaron útiles las siguientes fuentes de información respecto al producto:
+Para evaluar los componentes definidos en el proyecto, se encontraron
+y recurriran a las siguientes fuentes de información respecto al producto:
 
 \begin{description}
 \item [Centro de Ayuda] \emph{Salesforce} ofrece un amplio conjunto de
@@ -55,8 +51,8 @@ la comunidad \emph{Salesforce}, para compartir experiencias, aprender, y proveer
 de nuevas ideas sobre la utilización del servicio
 (\emph{https://success.salesforce.com/}).
 
-Este sitio también sirve como fuente de clamores de los usuarios, funcionalidades
-criticas, y errores comunes del servicio.
+Este sitio también sirve como fuente de clamores de los usuarios,
+funcionalidades criticas, y errores comunes encontrados en el servicio.
 
 \end{description}
 
@@ -80,17 +76,17 @@ que la evaluación se realizará sobre la versión \emph{Developer} debido a que
 está es la que requiere para su utilización, la menor cantidad de restricciones
 de parte del fabricante.
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|l|p{12.0cm}|}
 \hline
 \footnotesize{\textbf{Edición}} & \footnotesize{\textbf{Descripción}} \\
 \hline
-\footnotesize{\emph{Essentials}} & \footnotesize{Herramienta para la elaboración de los mapas mentales.} \\
-\footnotesize{\emph{Professional}} & \footnotesize{Herramienta para la generación de pruebas combinatorias.} \\
-\footnotesize{\emph{Enterprise}} & \footnotesize{Herramienta para la solicitud de peticiones HTTP para el uso de API.} \\
-\footnotesize{\emph{Unlimited}} & \footnotesize{Herramienta basada en web que facilita el proceso de gestión de calidad de software.} \\
-\footnotesize{\emph{Developer}} & \footnotesize{Servicio de almacenamiento y versionado de código fuente y documentación.} \\
+\footnotesize{\emph{Essentials}} & \footnotesize{.} \\
+\footnotesize{\emph{Professional}} & \footnotesize{.} \\
+\footnotesize{\emph{Enterprise}} & \footnotesize{.} \\
+\footnotesize{\emph{Unlimited}} & \footnotesize{.} \\
+\footnotesize{\emph{Developer}} & \footnotesize{.} \\
 \hline
 \end{tabular}
 \caption{Ediciones actualmente disponibles de \emph{Sales Cloud}.}
@@ -102,13 +98,13 @@ web diferentes: la antigua conocida como: \emph{Salesforce Classic}, y la nueva
 incluida desde 2015 denominada: \emph{Salesforce Lightning}; que tiene como
 objetivo principal la unificación del comportamiento y la apariencia a través de
 todo el servicio sea cual sea el dispositivo que el cliente
-utilice\cite{McCarthy}.
+utilice \cite{McCarthy}.
 
 Se evaluarán las funcionalidades de los módulos sobre el navegador cuya
 participación en el mercado es la mayor, en este caso: \emph{Google Chrome}
 como puede verse en la figura \ref{software}.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/compatibilidad.eps}
 \caption{Participación de mercado de los navegadores hasta Noviembre del 2018.}
@@ -124,35 +120,64 @@ cinco navegadores diferentes bajo condiciones de limitación conocidas por el
 fabricante\footnote{Información extraída y disponible en:
 https://help.salesforce.com/articleView?id=getstart\_browsers\_sfx.htm}.
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|p{6.0cm}|p{2.5cm}|p{1.4cm}|p{1.3cm}|p{1.3cm}|p{1.0cm}|}
 \hline
-& \footnotesize{\textbf{Microsoft Internet Explorer}} & \footnotesize{\textbf{Microsoft Edge}} & \footnotesize{\textbf{Google Chrome}} & \footnotesize{\textbf{Mozilla Firefox}} & \footnotesize{\textbf{Apple Safari}} \\
+& \footnotesize{\textbf{Microsoft Internet Explorer}}
+& \footnotesize{\textbf{Microsoft Edge}}
+& \footnotesize{\textbf{Google Chrome}}
+& \footnotesize{\textbf{Mozilla Firefox}}
+& \footnotesize{\textbf{Apple Safari}} \\
 \hline
-\footnotesize{Lightning Experience} & \footnotesize{IE11 (EOL Diciembre 31, 2020)} & \footnotesize{Ultima versión} & \footnotesize{Ultima versión} & \footnotesize{Ultima versión} & \footnotesize{11.x+} \\
-\footnotesize{Lightning Communities} & \footnotesize{IE11 (EOL Diciembre 31, 2020)} & \footnotesize{Ultima versión} & \footnotesize{Ultima versión} & \footnotesize{Ultima versión} & \footnotesize{11.x+} \\
-\footnotesize{¿Consideraciones especiales de configuración?} & \footnotesize{No} & \footnotesize{No} & \footnotesize{No} & \footnotesize{No} & \footnotesize{No} \\
-\footnotesize{Limitaciones conocidas} & \footnotesize{Sí} & \footnotesize{Si} & \footnotesize{No} & \footnotesize{Si} & \footnotesize{Si} \\
+\footnotesize{Lightning Experience}
+& \footnotesize{IE11 (EOL Diciembre 31, 2020)}
+& \footnotesize{Ultima versión}
+& \footnotesize{Ultima versión}
+& \footnotesize{Ultima versión}
+& \footnotesize{11.x+} \\
+\footnotesize{Lightning Communities}
+& \footnotesize{IE11 (EOL Diciembre 31, 2020)}
+& \footnotesize{Ultima versión}
+& \footnotesize{Ultima versión}
+& \footnotesize{Ultima versión}
+& \footnotesize{11.x+} \\
+\footnotesize{¿Consideraciones especiales de configuración?}
+& \footnotesize{No}
+& \footnotesize{No}
+& \footnotesize{No}
+& \footnotesize{No}
+& \footnotesize{No} \\
+\footnotesize{Limitaciones conocidas}
+& \footnotesize{Sí}
+& \footnotesize{Si}
+& \footnotesize{No}
+& \footnotesize{Si}
+& \footnotesize{Si} \\
 \hline
 \end{tabular}
 \caption{Lista de compatibilidad provista por \emph{Salesforce}.}
 \label{soporte_navegadores}
 \end{table}
 
-\subsubsection{Cronograma}
-Véase el cuadro \ref{cronograma} en la página \pageref{cronograma}.
+\subsubsection{Planificación de actividades}
+Para conseguir los objetivos planteados por el proyecto sea ha planteado la
+realización de diferentes actividades, que pueden ver en el cuadro
+\ref{planificacion} en la página \pageref{planificacion}.
 
 \begin{sidewaystable}
 \centering
 \small
-{\def\arraystretch{1.75}
+{\def\arraystretch{2}
 \begin{tabular}{|l|l|p{6.5cm}|l|}
 \hline
 Objetivo General & Objetivos Específicos & Actividades & Resultados \\
 \hline
-\multirow{11}{4.0cm}{Evaluar las funcionalidades provistas por la interfaz de usuario de los modulos de productos y listas de precios, con el diseño, ejecución y automatización de múltiples casos de prueba.} &
-\multirow{3}{4.0cm}{Evaluar las funciones del módulo de gestión de productos para garantizar sus atributos de calidad.} &
+\multirow{11}{4.0cm}{Evaluar las funcionalidades provistas por la interfaz de
+    usuario de los modulos de productos y listas de precios, con el diseño,
+    ejecución y automatización de múltiples casos de prueba.} &
+\multirow{3}{4.0cm}{Evaluar las funciones del módulo de gestión de productos
+    para garantizar sus atributos de calidad.} &
 Recolectar información, explorar y analizar el módulo de productos. &
 \multirow{3}{4.0cm}{Casos de prueba del modulo de productos.} \\
 \cline{3-3}
@@ -160,22 +185,30 @@ Recolectar información, explorar y analizar el módulo de productos. &
 \cline{3-3}
 & & Formular los casos de prueba necesarios para el módulo de productos. & \\
 \cline{2-4}
-& \multirow{3}{4.0cm}{Evaluar las funciones del módulo de gestión de listas de precios para garantizar sus atributos de calidad.} &
+& \multirow{3}{4.0cm}{Evaluar las funciones del módulo de gestión de listas de
+    precios para garantizar sus atributos de calidad.} &
 Recolectar información, explorar y analizar el módulo de listas de precios. &
 \multirow{3}{4.0cm}{Casos de prueba del modulo de listas de precios.} \\
 \cline{3-3}
-& & Diseñar los tipos de evaluación requeridos para el módulo de listas de precios. & \\
+& & Diseñar los tipos de evaluación requeridos para el módulo de listas de
+    precios. & \\
 \cline{3-3}
-& & Formular los casos de prueba necesarios para el módulo de listas de precios. & \\
+& & Formular los casos de prueba necesarios para el módulo de listas de
+    precios. & \\
 \cline{2-4}
-& \multirow{2}{4.0cm}{Ejecutar los casos de prueba que componen la evaluación de los componentes del producto.} &
-Realizar la ejecución de las pruebas manualmente sobre los casos de prueba del modulo de productos. &
+& \multirow{2}{4.0cm}{Ejecutar los casos de prueba que componen la evaluación de
+    los componentes del producto.} &
+Realizar la ejecución de las pruebas manualmente sobre los casos de prueba del
+    modulo de productos. &
 \multirow{3}{4.0cm}{Informe de ejecución de pruebas manuales.} \\
 \cline{3-3}
-& & Realizar la ejecución de las pruebas manualmente sobre los casos de prueba del modulo de listas de precios. & \\
+& & Realizar la ejecución de las pruebas manualmente sobre los casos de prueba
+    del modulo de listas de precios. & \\
 \cline{2-4}
-& \multirow{3}{4.0cm}{Automatizar los casos de prueba, para facilitar la evaluación continua del software.} &
-Analizar, y diseñar el software para la automatización de la interfaz de usuario. &
+& \multirow{3}{4.0cm}{Automatizar los casos de prueba, para facilitar la
+    evaluación continua del software.} &
+Analizar, y diseñar el software para la automatización de la interfaz de
+    usuario. &
 \multirow{3}{4.0cm}{Rutinas de automatización de los casos de prueba.} \\
 \cline{3-3}
 & & Implementar el software para automatización de los casos de prueba. & \\
@@ -183,15 +216,16 @@ Analizar, y diseñar el software para la automatización de la interfaz de usuar
 & & Ejecutar el software para automatización de los casos de prueba. & \\
 \hline
 \end{tabular}}
-\caption{Cronograma de actividades del proyecto.}
-\label{cronograma}
+\caption{Planificación de actividades del proyecto.}
+\label{planificacion}
 \end{sidewaystable}
 
 \subsubsection{Elementos a evaluar}
 Los elementos del sistema que se evaluarán son los siguientes:
 
 \begin{description}
-\item [Productos] Representado por las funcionalidades en el modulo de productos.
+\item [Productos] Representado por las funcionalidades en el modulo de
+    productos.
 \item [Listas de precios] Representado por las funcionalidades en el modulo de
     lista de precios.
 \item [Precios de productos] Los precios conforman la relación intermedia entre
@@ -200,10 +234,6 @@ Los elementos del sistema que se evaluarán son los siguientes:
     módulos a ser evaluados, cuya funcionalidad principal es la de filtración de
     los datos a presentar.
 \end{description}
-
-La evaluación se realizará al producto mediante la utilización del navegador
-web Google Chrome en su versión 68.0, con excepción de las pruebas automatizadas
-que serán ejecutadas mediante scripts de automatización.
 
 \subsubsection{Documentos entregables}
 A continuación se describen los documentos resultantes de la evaluación:
@@ -238,7 +268,23 @@ desde múltiples facetas; la primera de estas es la funcionalidad provista por
 las interfaces de este modulo. En la figura \ref{productos} pueden verse estas
 funcionalidades, clasificadas desde la perspectiva de la interfaz de usuario.
 
-\begin{figure}
+Entre las funcionalidades que pueden apreciarse, están las operaciones comunes
+de creación, búsqueda, visualización, modificación, y eliminación de productos,
+se omitieron las funcionalidades de controles de vista de lista, para que
+todo este componente pueda ser tratado de manera separada. También pueden
+observarse funciones relacionadas a registrar precios estándar y precios para
+una lista de precios determinada.
+
+En la figura \ref{productos_vistas}, se aprecian las diferentes vistas que
+comprenden el modulo, se resalto con color amarillo aquellas vistas que son de
+tipo formulario, mientras que se resalto con color verde aquellas que son de
+tipo confirmación de acción.
+
+Además de las funcionalidades y vistas antes mencionadas, también se analizo el
+comportamiento de los formularios que provee el modulo, los cuales se presentan
+en la figura \ref{productos_formularios}.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -299,19 +345,7 @@ funcionalidades, clasificadas desde la perspectiva de la interfaz de usuario.
 \label{productos}
 \end{figure}
 
-Entre las funcionalidades que pueden apreciarse, están las operaciones comunes
-de creación, búsqueda, visualización, modificación, y eliminación de productos,
-se omitieron las funcionalidades de controles de vista de lista, para que
-todo este componente pueda ser tratado de manera separada. También pueden
-observarse funciones relacionadas a registrar precios estándar y precios para
-una lista de precios determinada.
-
-En la figura \ref{productos_vistas}, se aprecian las diferentes vistas que
-comprenden el modulo, se resalto con color amarillo aquellas vistas que son de
-tipo formulario, mientras que se resalto con color verde aquellas que son de
-tipo confirmación de acción.
-
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -357,11 +391,7 @@ tipo confirmación de acción.
 \label{productos_vistas}
 \end{figure}
 
-Además de las funcionalidades y vistas antes mencionadas, también se analizo el
-comportamiento de los formularios que provee el modulo, los cuales se presentan
-en la figura \ref{productos_formularios}.
-
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -416,7 +446,19 @@ la figura \ref{listas_de_precios} pueden verse las funcionalidades clasificadas
 desde la perspectiva de la interfaz de usuario, también se omitió la sección de
 los controles de vista de lista.
 
-\begin{figure}
+Las funciones de Listas de Precios son muy similares a aquellas vistas en el
+modulo de productos, analizado anteriormente.
+
+En la figura \ref{listas_de_precios_vistas}, se detallan aquellas vistas
+presentes en este modulo, de la misma manera se ha destacado con amarillo a
+aquellas vistas que son formularios, mientras que en verde se presentan a
+aquellas que representan diálogos de confirmación.
+
+También de las funcionalidades y vistas antes mencionadas, se analizo el
+comportamiento de los formularios que provee este modulo, los cuales se
+presentan en la figura \ref{listas_de_precios_formularios}.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -482,15 +524,7 @@ los controles de vista de lista.
 \label{listas_de_precios}
 \end{figure}
 
-Las funciones de Listas de Precios son muy similares a aquellas vistas en el
-modulo de productos, analizado anteriormente.
-
-En la figura \ref{listas_de_precios_vistas}, se detallan aquellas vistas
-presentes en este modulo, de la misma manera se ha destacado con amarillo a
-aquellas vistas que son formularios, mientras que en verde se presentan a
-aquellas que representan diálogos de confirmación.
-
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -542,11 +576,7 @@ aquellas que representan diálogos de confirmación.
 \label{listas_de_precios_vistas}
 \end{figure}
 
-También de las funcionalidades y vistas antes mencionadas, se analizo el
-comportamiento de los formularios que provee este modulo, los cuales se
-presentan en la figura \ref{listas_de_precios_formularios}.
-
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -580,7 +610,17 @@ un análisis separado de estos. En la figura \ref{vista_de_lista} puede verse
 las funciones omitidas en los diagramas anteriores relativas a los controles de
 vista.
 
-\begin{figure}
+En la figura \ref{vista_de_lista_vistas}, se detallan aquellas vistas
+provistas por este componente, de la misma manera que en los dos módulos
+anteriormente citados, aquí también se han destacado con amarillo a
+aquellas vistas que son formularios, mientras que en verde se presentan a
+aquellas que representan diálogos de confirmación.
+
+También de las funcionalidades y vistas antes mencionadas, se analizo el
+comportamiento de los formularios que provee este modulo, los cuales se
+presentan en la figura \ref{vista_de_lista_formularios}.
+
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -615,13 +655,7 @@ vista.
 \label{vista_de_lista}
 \end{figure}
 
-En la figura \ref{vista_de_lista_vistas}, se detallan aquellas vistas
-provistas por este componente, de la misma manera que en los dos módulos
-anteriormente citados, aquí también se han destacado con amarillo a
-aquellas vistas que son formularios, mientras que en verde se presentan a
-aquellas que representan diálogos de confirmación.
-
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -640,11 +674,7 @@ aquellas que representan diálogos de confirmación.
 \label{vista_de_lista_vistas}
 \end{figure}
 
-También de las funcionalidades y vistas antes mencionadas, se analizo el
-comportamiento de los formularios que provee este modulo, los cuales se
-presentan en la figura \ref{vista_de_lista_formularios}.
-
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -718,57 +748,32 @@ Por lo general, los criterios de calidad parten de la combinación de las
 necesidades reales y de las demandas de los clientes, con el conocimiento de las
 ofertas y productos de organizaciones de la competencia y las posibilidades que
 el fabricante posee para satisfacer esas necesidades y expectativas o para
-procurar en la medida de lo posible y/o aconsejable\cite{Haaz}.
+procurar en la medida de lo posible y/o aconsejable \cite{Haaz}.
 
 Se definieron los siguientes como criterios de calidad fundamentales para el
-éxito del producto\cite{Fillottrani}.
+éxito del producto \cite{Fillottrani}.
 
 \begin{description}
 \item [Usabilidad] La usabilidad se refiere a la facilidad de operación del
-    producto por parte de los usuarios, y se relaciona con el esfuerzo
-    necesario para ser utilizado, y en la evaluación individual de tal uso, por
-    parte de un conjunto especificado o implícito de usuarios.
+producto por parte de los usuarios, y se relaciona con el esfuerzo
+necesario para ser utilizado, y en la evaluación individual de tal uso, por
+parte de un conjunto especificado o implícito de usuarios.
 
-    Entre algunos de los criterios que determinan este factor, están:
+\item [Confiabilidad] La confiabilidad es un atributo del sistema responsable de
+la capacidad de continuar operando bajo condiciones predefinidas. La mayoría de
+las veces, el sistema falla debido a la inaccesibilidad de elementos externos,
+como bases de datos, sistemas y conexiones de red \cite{Ashanin}.
 
-    \begin{itemize}
-    \item \textbf{Entendimiento} que mide el esfuerzo del usuario en reconocer el
-        concepto lógico del software y su aplicabilidad.
-    \item \textbf{Aprendizaje} que mide el esfuerzo del usuario en aprender
-        acerca del producto.
-    \item \textbf{Operabilidad} que mide el esfuerzo del usuario en operar y
-        controlar el sistema.
-    \end{itemize}
+\item [Compatibilidad] La compatibilidad del navegador determina el
+comportamiento del servicio en diferentes plataformas de navegación.
 
-%   \item [Compatibilidad] La compatibilidad del navegador determina el
-%       comportamiento del servicio en diferentes plataformas de navegación.
-%
-%       Dado que cada navegador tiene su propia manera de mostrar y gestionar los
-%       contenidos de una página web. Por lo tanto, las páginas web deben diseñarse
-%       de tal manera que puedan ser compatibles con cada uno de los navegadores de
-%       uso común. Actualmente hay casi cien tipos diferentes de navegadores
-%       disponibles, lo que dificulta que los diseñadores / webmasters desarrollen
-%       sitios web con un comportamiento similar en múltiples plataformas. El
-%       estricto cumplimiento de las pautas de diseño puede cumplir con estos
-%       criterios hasta cierto nivel.
-
-\item [Soportabilidad] La soportabilidad es la capacidad del sistema para
-    proporcionar información útil para identificar y resolver problemas.
-
-    El costo de mantener el atributo de compatibilidad es alto y el resultado
-    solo es visible a gran escala. Sin embargo, con el crecimiento del equipo y
-    el producto, este atributo se convierte en una de las claves\cite{Ashanin}.
-
-%   \item [Localizabilidad] La localizabilidad es un proceso intermedio para
-%       verificar que una aplicación globalizada está lista para la localización.
-%       En una situación ideal, esta es solo una fase de garantía de calidad. Si se
-%       diseñó y desarrolló una aplicación con miras a la localización, esta fase
-%       consistirá principalmente en pruebas de localizabilidad. De lo contrario, es
-%       durante esta fase que se descubrirán y corregirán los errores en el código
-%       fuente que impiden la localización.
-%
-%       La localizabilidad ayuda a garantizar que la localización no introduzca
-%       ningún defecto funcional en la aplicación\cite{Moura}.
+Dado que cada navegador tiene su propia manera de mostrar y gestionar los
+contenidos de una página web. Por lo tanto, las páginas web deben diseñarse
+de tal manera que puedan ser compatibles con cada uno de los navegadores de uso
+común. Actualmente hay casi cien tipos diferentes de navegadores disponibles, lo
+que dificulta que los diseñadores / webmasters desarrollen sitios web con un
+comportamiento similar en múltiples plataformas. El estricto cumplimiento de las
+pautas de diseño puede cumplir con estos criterios hasta cierto nivel.
 \end{description}
 
 \subsection{Técnicas de prueba}
@@ -781,23 +786,12 @@ criterio de calidad.
 La prueba de aceptación es una prueba formal que se realiza para determinar si
 un sistema satisface sus criterios de aceptación: los criterios que debe cumplir
 el sistema para que el cliente los acepte. Ayuda al cliente a determinar si
-acepta o no el sistema\cite{Naik}.
+acepta o no el sistema \cite{Naik}.
 
 Las pruebas de aceptación se realizaron para los tres componentes que comprenden
 el alcance del proyecto, como el mínimo de las funcionalidades que se consideran
 criticas, en este caso, las operaciones de creación, visualización, modificación
 y eliminación de los elementos de cada componente.
-
-Se crearon 33 casos de prueba, que pueden consultarse en los anexos de este
-documento, siendo cada caso de prueba como el que se muestra en la figura
-\ref{tc_acceptance}.
-
-\begin{figure}
-\centering
-\includegraphics[width=1.0\textwidth]{graphics/tc1-acceptance.eps}
-\caption{Caso de Prueba de Aceptación.}
-\label{tc_acceptance}
-\end{figure}
 
 \subsubsection{Pruebas funcionales}
 El software o sistema bajo prueba se ve como una «caja negra». La selección de
@@ -806,22 +800,11 @@ especificación de diseño de la entidad de software bajo prueba. Ejemplos de
 resultados esperados, algunas veces se llaman oráculos de prueba, incluyen
 requisitos/especificaciones de diseño, valores calculados a mano y resultados
 simulados. Las pruebas funcionales hacen hincapié en el comportamiento externo
-de la entidad de software\cite{Luo}.
+de la entidad de software \cite{Luo}.
 
 Las pruebas funcionales se realizaron para cada acción encontrada en la interfaz
 de usuario, siendo barrido completamente cualquier operación disponible en los
 componentes a evaluar.
-
-Se crearon 185 casos de prueba, que pueden consultarse en los anexos de este
-documento, siendo cada caso de prueba como el que se muestra en la figura
-\ref{tc_functional}.
-
-\begin{figure}
-\centering
-\includegraphics[width=1.0\textwidth]{graphics/tc2-functional.eps}
-\caption{Caso de Prueba Funcional.}
-\label{tc_functional}
-\end{figure}
 
 \subsubsection{Pruebas de dominio}
 La prueba de dominio es una estrategia de muestreo estratificada para elegir
@@ -834,19 +817,7 @@ técnicas de prueba de software más ampliamente practicadas. Algunos autores
 restringen su consideración del alcance de esta técnica a variables de entrada
 linealizables a funciones matemáticas. Una variable linealizable es aquella
 cuyos valores se pueden asignar a una recta numérica. El análisis es más
-sencillo y más obvio en estos casos\cite{Kaner}.
-
-Las pruebas de dominio se centraron en los formularios del sistema, y fueron
-creados 65 casos de prueba, que pueden consultarse en los anexos de este
-documento, siendo cada caso de prueba como el que se muestra en la figura
-\ref{tc_domain}.
-
-\begin{figure}
-\centering
-\includegraphics[width=1.0\textwidth]{graphics/tc3-domain.eps}
-\caption{Caso de Prueba de Dominio.}
-\label{tc_domain}
-\end{figure}
+sencillo y más obvio en estos casos \cite{Kaner}.
 
 Para el análisis de los formularios se crearon sus respectivas tablas de
 \emph{Myers} las cuales son descritas a continuación:
@@ -1088,43 +1059,8 @@ solo apuntan a detectar fallas potenciales que podrían causar un impacto grave
 en el consumo del servicio, sino que también pueden ser fundamentales para
 determinar las condiciones bajo las cuales la aplicación puede fallar.
 Finalmente, garantiza que haya suficiente validación de errores presente en el
-software\cite{Nadig}.
+software \cite{Nadig}.
 
 Las pruebas negativas se centraron en los mensajes de errores que el sistema
 envía y debe enviar según los mismos criterios del producto.
-
-Se crearon 32 casos de prueba, que pueden consultarse en los anexos de este
-documento, siendo cada caso de prueba como el que se muestra en la figura
-\ref{tc_negative}.
-
-\begin{figure}
-\centering
-\includegraphics[width=1.0\textwidth]{graphics/tc4-negative.eps}
-\caption{Caso de Prueba Negativa.}
-\label{tc_negative}
-\end{figure}
-
-%   \subsubsection{Pruebas de compatibilidad}
-%   La prueba de compatibilidad es una prueba no funcional realizada en la
-%   aplicación para evaluar la compatibilidad de la aplicación en diferentes
-%   entornos. En este caso sobre diferentes navegadores.
-%
-%   \subsubsection{Pruebas de localización}
-%   El propósito de las pruebas de localización es asegurar que los errores no se
-%   hayan introducido durante el proceso de traducción, que el contenido traducido
-%   se muestre correctamente y que el producto localizado funcione como se espera
-%   para el mercado objetivo. Probar sitios web para garantizar la adaptabilidad a
-%   un lugar y una cultura en particular también es crucial para sugerir su
-%   superioridad en el mercado objetivo\cite{Sampair}.
-%
-%   Aquí hay algunas áreas que examinamos durante esta prueba:
-%
-%   \begin{itemize}
-%   \item Todos los recursos de localización están traducidos correctamente.
-%   \item La compilación generada incluye todos los archivos necesarios.
-%   \item La funcionalidad en la versión localizada es consistente con el producto de origen.
-%   \item La pantalla localizada tiene el mismo número y tipo de elementos que el del producto de origen.
-%   \item Todos los caracteres específicos del entorno local aparecen correctamente.
-%   \item No hay palabras que pasen sobre los botones o se corten en la página.
-%   \end{itemize}
 
