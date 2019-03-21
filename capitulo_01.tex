@@ -1,38 +1,171 @@
 \chapter{Introducción}
 
+Hoy en día muchas empresas de software, siguen procedimientos de desarrollo
+ágiles, agilizando la producción y publicación de productos hacia el mercado,
+esto presenta un gran reto tanto desde la perspectiva del aseguramiento de la
+calidad del producto, como del seguimiento y control de la corrección de
+errores.
+
+La clave para agilizar estos procesos parte por optimizar y automatizar los
+procesos de despliegue y evaluación del software, el cambio es necesario para
+el manejo de proyectos de desarrollo grandes, o proyectos que siguen
+lineamientos o estándares de cumplimiento muy estrictos.
+
+Este capitulo define el propósito del presente trabajo, los antecedentes que se
+plantean, los objetivos del mismo, y los factores que despertaron el interés
+por resolverlos.
+
 \section{Antecedentes}
+\emph{Salesforce} es un servicio que apoya a la gestión de todo el flujo de
+clientes que se tienen en una empresa, este tipo de software es  conocido como
+\emph{CRM}, la meta principal es ayudar a gestionar las relaciones con los
+clientes, conocer su necesidades y preferencias.
+
+Entre los muchos componentes que integran el servicio, uno de los elementos mas
+básicos es aquel que gestiona los productos y las listas de precios.
+
+Los productos son un catálogo de base de todos los elementos y servicios que
+pueden venderse y sus precios estándar. Las listas de precios permiten crear un
+conjunto personalizado de productos con precios de lista asociados para usos
+específicos, ambos integran múltiples flujos de trabajo dentro de
+\emph{Salesforce}.
 
 \section{Definición del problema}
+Siendo el modulo de productos parte integrante de otros módulos de
+\emph{Salesforce}, un potencial error en este podría tener un efecto en cascada
+que afectaría a otros componentes, lo que conduce a dar mayor prioridad a la
+evaluación de la funcionalidad disponible por este modulo.
+
+Tanto el modulo de productos como el modulo de listas de precios, componen un
+conjunto de elementos muy acoplados entre si, haciendo que ambos requieran ser
+evaluados como una unidad única.
+
+\emph{Salesforce} sigue un política de actualizaciones muy fluida, pudiendo
+existir hasta tres versiones por año, lo que sin una automatización correcta
+de las pruebas de software, implicaría un enorme gasto de recursos para la
+compañía.
+
 Por lo mencionado se define el problema como:
 
 \emph{«Garantizar la calidad de los elementos que componen la interfaz de
-usuario requiere de un proceso de evaluación continua, de forma que las
-diferentes versiones del producto no presenten problemas a los clientes.»}.
+usuario requiere de un proceso de evaluación continua, de forma que el
+producto y sus diferentes versiones contengan la menor cantidad de errores.»}.
 
 \section{Objetivos}
 
 \subsection{Objetivo General}
-Evaluar las funcionalidades provistas por \emph{Salesforce} que componen la
-interfaz de usuario del modulo de gestión de productos y listas de precios, con
-el diseño, ejecución y automatización de múltiples casos de prueba, para que de
-esta manera se pueda garantizar la calidad del producto para los clientes.
+Automatizar los casos de prueba de las funcionalidades provistas por
+\emph{Salesforce} que componen la interfaz de usuario del modulo de gestión de
+productos y listas de precios, para minimizar la cantidad de errores que
+contiene el software.
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
-\item Evaluar las funciones que componen la interfaz de usuario del módulo de
-    gestión de productos para garantizar sus atributos de calidad.
-\item Evaluar las funciones que componen la interfaz de usuario del módulo de
-    gestión de listas de precios para garantizar sus atributos de calidad.
-\item Ejecutar los casos de prueba que componen la evaluación de los
-    componentes del producto para conocer el nivel de calidad actual del
-    producto.
-\item Automatizar los casos de prueba, para facilitar la evaluación continua del
-    software.
+\item Formular los casos de prueba necesarios que el modulo de gestión de
+    productos requiera para cubrir los atributos de calidad requeridos.
+\item Automatizar los casos de prueba de las funciones que componen la interfaz
+    de usuario del módulo de gestión de productos.
+\item Formular los casos de prueba necesarios que el modulo de gestión de
+    listas de precios requiera para cubrir los atributos de calidad requeridos.
+\item Automatizar los casos de prueba de las funciones que componen la interfaz
+    de usuario del módulo de gestión de lista de precios.
 \end{itemize}
 
 \section{Justificación}
+Hoy en día, la automatización de pruebas es una tarea esencial para proporcionar
+un servicio de testing adecuado ya que los sistemas han crecido tanto en tamaño
+como en complejidad.
+
+Es necesario tener el tiempo de probar las nuevas funcionalidades del sistema
+sin ignorar la funcionalidad previa. Una estrategia de automatización
+implementada apropiadamente nos ayudará a lograrlo junto con los beneficios
+propios de la automatización \cite{Software}.
 
 \section{Innovación tecnológica}
+Se plantea la realización de este proyecto haciendo uso de la biblioteca
+\emph{webdriver.io}, un framework de automatización de pruebas de interfaz de
+usuario escrito en \emph{javascript}, para facilitar la ejecución de las
+pruebas tanto en diferentes ámbitos de ejecución como en múltiples y variados
+entornos de prueba.
 
 \section{Alcance}
+El proyecto cubrirá exclusivamente los componentes de interfaz del modulo de
+productos y listas de precios, sin considerar aquellas funcionalidades dentro de
+estos que requieran la utilización de otros módulos, de esta forma no se tomaran
+en cuenta los siguientes aspectos:
+
+\begin{itemize}
+\item Generación de gráficas dentro de los módulos a evaluar.
+\item Configuración de múltiples familias de productos.
+\item Gestión de permisos de visibilidad de los elementos hacia diversas
+    categorías de usuarios.
+\end{itemize}
+
+\section{Planificación de actividades}
+Para conseguir los objetivos planteados por el proyecto sea realizaran las
+actividades detalladas en el cuadro \ref{planificacion} en la página
+\pageref{planificacion}.
+
+\begin{sidewaystable}
+\centering
+\small
+{\def\arraystretch{1.75}
+\begin{tabular}{|l|l|p{6.5cm}|l|}
+\hline
+Objetivo General & Objetivos Específicos & Actividades & Resultados \\
+\hline
+\multirow{12}{4.0cm}{Automatizar los casos de prueba de las funcionalidades
+provistas por \emph{Salesforce} que componen la interfaz de usuario del modulo
+de gestión de productos y listas de precios, para minimizar la cantidad de
+errores que contiene el software.} &
+\multirow{3}{4.0cm}{Formular los casos de prueba necesarios que el modulo de
+gestión de productos requiera para cubrir los atributos de calidad requeridos.} &
+Recolectar información, explorar y analizar el módulo de productos. &
+\multirow{3}{4.0cm}{Casos de prueba del modulo de productos.} \\
+\cline{3-3}
+& & Diseñar los tipos de evaluación requeridos para el módulo de productos. & \\
+\cline{3-3}
+& & Formular los casos de prueba necesarios para el módulo de productos. & \\
+\cline{2-4}
+
+& \multirow{3}{4.0cm}{Automatizar los casos de prueba de las funciones que
+componen la interfaz de usuario del módulo de gestión de productos.} &
+Analizar, y diseñar el software para la automatización de la interfaz de
+usuario. &
+\multirow{3}{4.0cm}{Rutinas de automatización de los casos de prueba del modulo
+de productos.} \\
+\cline{3-3}
+& & Implementar el software para automatización de los casos de prueba. & \\
+\cline{3-3}
+& & Ejecutar el software para automatización de los casos de prueba. & \\
+\cline{2-4}
+
+& \multirow{3}{4.0cm}{Formular los casos de prueba necesarios que el modulo de
+gestión de listas de precios requiera para cubrir los atributos de calidad
+requeridos.} &
+Recolectar información, explorar y analizar el módulo de listas de precios. &
+\multirow{3}{4.0cm}{Casos de prueba del modulo de listas de precios.} \\
+\cline{3-3}
+& & Diseñar los tipos de evaluación requeridos para el módulo de listas de
+precios. & \\
+\cline{3-3}
+& & Formular los casos de prueba necesarios para el módulo de listas de
+precios. & \\
+\cline{2-4}
+
+& \multirow{3}{4.0cm}{Automatizar los casos de prueba de las funciones que
+componen la interfaz de usuario del módulo de gestión de lista de precios.} &
+Analizar, y diseñar el software para la automatización de la interfaz de
+usuario. &
+\multirow{3}{4.0cm}{Rutinas de automatización de los casos de prueba del modulo
+de listas de precios.} \\
+\cline{3-3}
+& & Implementar el software para automatización de los casos de prueba. & \\
+\cline{3-3}
+& & Ejecutar el software para automatización de los casos de prueba. & \\
+\hline
+\end{tabular}}
+\caption{Planificación de actividades del proyecto.}
+\label{planificacion}
+\end{sidewaystable}
 

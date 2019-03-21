@@ -82,7 +82,7 @@ la figura \ref{piramide}.
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{graphics/pyramid.eps}
-\caption{Pirámide de testing. Elaboración propia.}
+\caption{Pirámide de testing.}
 \label{piramide}
 \end{figure}
 
@@ -184,5 +184,28 @@ clasificaciones:
         beneficios de otros marcos para el entorno de prueba.
 \end{description}
 
-\subsection{webdriver.io}
+\subsection{\emph{webdriver.io}}
+\emph{webdriver.io} es una biblioteca para la realización de pruebas
+automatizadas que hace uso de la tecnología \emph{Selenium} y el lenguaje de
+programación \emph{Javascript}, está esta basada en el patrón de diseño
+\emph{Page Object}.
+
+\emph{Page Object} sirve para mejorar el mantenimiento de las pruebas y reducir
+la duplicación del código. Un \emph{Page Object} es una clase orientada a
+objetos que sirve como la representación de los elementos de una pagina del
+software a evaluar. Las pruebas utilizan los métodos de esta clase cuando
+necesitan interactuar con la interfaz de usuario de la pagina a la que hace
+referencia. El beneficio es que si la interfaz de usuario de la pagina cambia,
+las pruebas en sí no necesitan cambiar, solo el código dentro del
+\emph{Page Object} necesitará actualizarse.
+
+Las ventajas de la utilización de esta biblioteca son:
+
+\begin{itemize}
+\item Soporte para la implementación de pruebas tipo BDD y TDD.
+\item Buena comunidad de soporte y documentación.
+\item Soporte para selección de componentes basado en CSS y XPath.
+\item Trabajo integral  con cualquier biblioteca para comparación de
+    resultados esperados.
+\end{itemize}
 

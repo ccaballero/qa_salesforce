@@ -1,21 +1,12 @@
-\chapter{Control de calidad de Software}
+\chapter{Análisis del Software}
 
-\section{Estrategia de testing}
-
-\emph{HTSM (Heuristic Test Strategy Model)} fue creado por James Bach en 1996
-para que lo usen los evaluadores profesionales como una colección estructurada
-de recordatorios de qué pensar cuando están creando pruebas, divide el
-pensamiento de la creación de pruebas en diferentes ejes de análisis, que,
-cuando se unen, permiten al evaluador crear una estrategia de prueba
-holística \cite{Bach}.
-
-\subsection{Entorno de proyecto}
+\section{Entorno de proyecto}
 Los primeros componentes que se describirán son los relacionados con el entorno
 del proyecto, que son aquellos factores del contexto que incluyen recursos
 necesarios, restricciones, y cualquier otro elemento del proyecto que debe ser
 tomado en cuenta para la evaluación.
 
-\subsubsection{Fuentes de Información}
+\subsection{Fuentes de Información}
 Para evaluar los componentes definidos en el proyecto, se encontraron
 y recurrirán a las siguientes fuentes de información respecto al producto:
 
@@ -56,13 +47,7 @@ funcionalidades criticas, y errores comunes encontrados en el servicio.
 
 \end{description}
 
-\subsubsection{Equipamiento}
-Esta sección describe los recursos necesarios para la ejecución del
-proyecto, tanto en software necesario para el uso del servicio,  como
-herramientas utilizadas durante el proceso de análisis, evaluación, y
-documentación.
-
-\paragraph{Software}
+\subsection{\emph{Salesforce}}
 \emph{Salesforce} cuenta con múltiples ediciones que comparten una apariencia,
 pero varían según la funcionalidad y los costos del servicio. Según la
 documentación del fabricante algunos clientes comienzan con una edición básica y
@@ -82,11 +67,31 @@ de parte del fabricante.
 \hline
 \footnotesize{\textbf{Edición}} & \footnotesize{\textbf{Descripción}} \\
 \hline
-\footnotesize{\emph{Essentials}} & \footnotesize{.} \\
-\footnotesize{\emph{Professional}} & \footnotesize{.} \\
-\footnotesize{\emph{Enterprise}} & \footnotesize{.} \\
-\footnotesize{\emph{Unlimited}} & \footnotesize{.} \\
-\footnotesize{\emph{Developer}} & \footnotesize{.} \\
+\footnotesize{\emph{Essentials}} & \footnotesize{Diseñado para pequeños negocios
+para empezar a trabajar con un sistema de CRM de forma rápida. Incluye
+presentaciones interactivas y un asistente de configuración para comenzar, una
+interfaz de usuario fácil de utilizar y herramientas de administración para
+personalizar su implementación conforme crece.} \\
+\footnotesize{\emph{Professional}} & \footnotesize{Diseñado para negocios que
+requieren la funcionalidad completa de CRM. Incluye herramientas de
+personalización, integración y administración directas y fáciles de usar para
+facilitar cualquier implementación de pequeño y mediano tamaño.} \\
+\footnotesize{\emph{Enterprise}} & \footnotesize{Cumple las necesidades
+comerciales grandes y complejas. Proporciona herramientas avanzadas de
+personalización y administración, además de todas las funcionalidades
+disponibles en Professional Edition, que pueden admitir implementaciones a gran
+escala. Enterprise Edition también incluye acceso a las API de Salesforce para
+que pueda integrar fácilmente sistemas de gestión interna.} \\
+\footnotesize{\emph{Unlimited}} & \footnotesize{Proporciona nuevos niveles de
+flexibilidad de plataforma para gestionar y compartir toda su información según
+demanda. Incluye todas las funcionalidades de Enterprise Edition además de
+Premier Support, acceso móvil completo, aplicaciones personalizadas sin límite,
+límites de almacenamiento ampliados y otras funciones.} \\
+\footnotesize{\emph{Developer}} & \footnotesize{Proporciona acceso a las API y
+la plataforma Lightning. Permite a los desarrolladores ampliar Salesforce,
+integrarlo con otras aplicaciones y desarrollar nuevas herramientas y
+aplicaciones. Developer Edition ofrece además acceso a muchas de las funciones
+disponibles en Enterprise Edition.} \\
 \hline
 \end{tabular}
 \caption{Ediciones actualmente disponibles de \emph{Sales Cloud}.}
@@ -160,97 +165,7 @@ https://help.salesforce.com/articleView?id=getstart\_browsers\_sfx.htm}.
 \label{soporte_navegadores}
 \end{table}
 
-\subsubsection{Planificación de actividades}
-Para conseguir los objetivos planteados por el proyecto sea ha planteado la
-realización de diferentes actividades, que pueden ver en el cuadro
-\ref{planificacion} en la página \pageref{planificacion}.
-
-\begin{sidewaystable}
-\centering
-\small
-{\def\arraystretch{2}
-\begin{tabular}{|l|l|p{6.5cm}|l|}
-\hline
-Objetivo General & Objetivos Específicos & Actividades & Resultados \\
-\hline
-\multirow{11}{4.0cm}{Evaluar las funcionalidades provistas por la interfaz de
-    usuario de los módulos de productos y listas de precios, con el diseño,
-    ejecución y automatización de múltiples casos de prueba.} &
-\multirow{3}{4.0cm}{Evaluar las funciones del módulo de gestión de productos
-    para garantizar sus atributos de calidad.} &
-Recolectar información, explorar y analizar el módulo de productos. &
-\multirow{3}{4.0cm}{Casos de prueba del modulo de productos.} \\
-\cline{3-3}
-& & Diseñar los tipos de evaluación requeridos para el módulo de productos. & \\
-\cline{3-3}
-& & Formular los casos de prueba necesarios para el módulo de productos. & \\
-\cline{2-4}
-& \multirow{3}{4.0cm}{Evaluar las funciones del módulo de gestión de listas de
-    precios para garantizar sus atributos de calidad.} &
-Recolectar información, explorar y analizar el módulo de listas de precios. &
-\multirow{3}{4.0cm}{Casos de prueba del modulo de listas de precios.} \\
-\cline{3-3}
-& & Diseñar los tipos de evaluación requeridos para el módulo de listas de
-    precios. & \\
-\cline{3-3}
-& & Formular los casos de prueba necesarios para el módulo de listas de
-    precios. & \\
-\cline{2-4}
-& \multirow{2}{4.0cm}{Ejecutar los casos de prueba que componen la evaluación de
-    los componentes del producto.} &
-Realizar la ejecución de las pruebas manualmente sobre los casos de prueba del
-    modulo de productos. &
-\multirow{3}{4.0cm}{Informe de ejecución de pruebas manuales.} \\
-\cline{3-3}
-& & Realizar la ejecución de las pruebas manualmente sobre los casos de prueba
-    del modulo de listas de precios. & \\
-\cline{2-4}
-& \multirow{3}{4.0cm}{Automatizar los casos de prueba, para facilitar la
-    evaluación continua del software.} &
-Analizar, y diseñar el software para la automatización de la interfaz de
-    usuario. &
-\multirow{3}{4.0cm}{Rutinas de automatización de los casos de prueba.} \\
-\cline{3-3}
-& & Implementar el software para automatización de los casos de prueba. & \\
-\cline{3-3}
-& & Ejecutar el software para automatización de los casos de prueba. & \\
-\hline
-\end{tabular}}
-\caption{Planificación de actividades del proyecto.}
-\label{planificacion}
-\end{sidewaystable}
-
-\subsubsection{Elementos a evaluar}
-Los elementos del sistema que se evaluarán son los siguientes:
-
-\begin{description}
-\item [Productos] Representado por las funcionalidades en el modulo de
-    productos.
-\item [Listas de precios] Representado por las funcionalidades en el modulo de
-    lista de precios.
-\item [Precios de productos] Los precios conforman la relación intermedia entre
-    los productos y las listas de precios.
-\item [Vistas de Lista] Componente genérico utilizado ampliamente en ambos
-    módulos a ser evaluados, cuya funcionalidad principal es la de filtración de
-    los datos a presentar.
-\end{description}
-
-\subsubsection{Documentos entregables}
-A continuación se describen los documentos resultantes de la evaluación:
-
-\begin{description}
-\item [Casos de prueba] Conjunto de casos de prueba a diseñar y
-    ejecutar para garantizar los atributos de calidad del producto.
-\item [Reportes de error] Conjunto de reportes de error, generados de
-    cualquier problema encontrado en el proceso de ejecución de las pruebas, si
-    es que se encuentra alguno.
-\item [Rutinas de automatización] Código fuente de los programas que se encargan
-    de la automatización de los casos de prueba.
-\item [Resultados de ejecución] Informe técnico que condensa los resultados
-    finales de la ejecución de las pruebas.
-\end{description}
-
-\subsection{Elementos del producto}
+\section{Elementos del producto}
 Dentro del alcance de la evaluación se encuentran los componentes de productos
 y listas de precios, las funcionalidades que comprenden estos se detallan en
 esta sección, desde múltiples perspectivas de análisis.
@@ -261,7 +176,7 @@ versión \emph{Lightning Experience} esta disponible para las siguientes
 ediciones del producto: \emph{Essentials}, \emph{Group}, \emph{Professional},
 \emph{Enterprise}, \emph{Performance}, \emph{Unlimited}, y \emph{Developer}.
 
-\subsubsection{Productos}
+\subsection{Productos}
 El Producto para el software a evaluar, representa uno de los componentes
 fundamentales y claves para el éxito, por ende es importante evaluarlo
 desde múltiples facetas; la primera de estas es la funcionalidad provista por
@@ -438,7 +353,7 @@ en la figura \ref{productos_formularios}.
 \label{productos_formularios}
 \end{figure}
 
-\subsubsection{Listas de Precios}
+\subsection{Listas de Precios}
 Las Listas de Precios, tienen como objetivo, hacer que un mismo producto pueda
 tener múltiples precios, dependiendo de como la organización cliente maneje sus
 canales de distribución y producción. Al igual que en el modulo de productos, en
@@ -603,7 +518,7 @@ presentan en la figura \ref{listas_de_precios_formularios}.
 \label{listas_de_precios_formularios}
 \end{figure}
 
-\subsubsection{Controles de Vista de Lista}
+\subsection{Controles de Vista de Lista}
 Los Controles de Vista de Lista son funcionalidades equivalentes entre los 
 dos componentes que están siendo evaluados, por lo que se ha decidido realizar
 un análisis separado de estos. En la figura \ref{vista_de_lista} puede verse
@@ -738,9 +653,7 @@ presentan en la figura \ref{vista_de_lista_formularios}.
 \label{vista_de_lista_formularios}
 \end{figure}
 
-\section{Pruebas de software}
-
-\subsection{Criterios de calidad}
+\section{Criterios de calidad}
 Se denomina criterio de calidad a cualquier requerimiento que define lo que el
 producto debe ser.
 
@@ -751,7 +664,7 @@ el fabricante posee para satisfacer esas necesidades y expectativas o para
 procurar en la medida de lo posible y/o aconsejable \cite{Haaz}.
 
 Se definieron los siguientes como criterios de calidad fundamentales para el
-éxito del producto \cite{Fillottrani}.
+éxito del producto \cite{Fillottrani}:
 
 \begin{description}
 \item [Usabilidad] La usabilidad se refiere a la facilidad de operación del
@@ -776,13 +689,13 @@ comportamiento similar en múltiples plataformas. El estricto cumplimiento de la
 pautas de diseño puede cumplir con estos criterios hasta cierto nivel.
 \end{description}
 
-\subsection{Técnicas de prueba}
+\section{Técnicas de prueba}
 Una vez definido los elementos del sistema que comprenden el alcance de este
 proyecto, y los criterios bajo los que estos deben ser evaluados. Ahora se
 describirán las técnicas de prueba que se utilizarán para cada elemento y
 criterio de calidad.
 
-\subsubsection{Pruebas de aceptación}
+\subsection{Pruebas de aceptación}
 La prueba de aceptación es una prueba formal que se realiza para determinar si
 un sistema satisface sus criterios de aceptación: los criterios que debe cumplir
 el sistema para que el cliente los acepte. Ayuda al cliente a determinar si
@@ -793,7 +706,7 @@ el alcance del proyecto, como el mínimo de las funcionalidades que se considera
 criticas, en este caso, las operaciones de creación, visualización, modificación
 y eliminación de los elementos de cada componente.
 
-\subsubsection{Pruebas funcionales}
+\subsection{Pruebas funcionales}
 El software o sistema bajo prueba se ve como una «caja negra». La selección de
 casos de prueba para pruebas funcionales se basa en el requisito o
 especificación de diseño de la entidad de software bajo prueba. Ejemplos de
@@ -806,7 +719,7 @@ Las pruebas funcionales se realizaron para cada acción encontrada en la interfa
 de usuario, siendo barrido completamente cualquier operación disponible en los
 componentes a evaluar.
 
-\subsubsection{Pruebas de dominio}
+\subsection{Pruebas de dominio}
 La prueba de dominio es una estrategia de muestreo estratificada para elegir
 algunos casos de prueba de la infinidad de casos de prueba candidatos. La
 estrategia tiene varios nombres, como la partición de equivalencia, el análisis
@@ -834,7 +747,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \item Configuración de colaboración, que puede verse en el cuadro \ref{myers_09}
 \end{itemize}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|p{6.0cm}|l|l|l|}
 \hline
@@ -866,7 +779,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \label{myers_01}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|p{3.0cm}|p{4.0cm}|p{4.0cm}|l|}
 \hline
@@ -892,7 +805,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \label{myers_02}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|p{6.0cm}|l|l|l|}
 \hline
@@ -907,7 +820,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \label{myers_03}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|p{3.0cm}|p{4.0cm}|p{4.0cm}|l|}
 \hline
@@ -929,7 +842,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \label{myers_04}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|p{6.0cm}|l|l|l|}
 \hline
@@ -953,7 +866,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \label{myers_05}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|p{3.0cm}|p{4.0cm}|p{4.0cm}|l|}
 \hline
@@ -982,7 +895,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \label{myers_06}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|p{3.0cm}|p{7.0cm}|p{3.0cm}|l|}
 \hline
@@ -1012,7 +925,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \label{myers_07}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -1028,7 +941,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \label{myers_08}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -1043,7 +956,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \label{myers_09}
 \end{table}
 
-\subsubsection{Pruebas negativas}
+\subsection{Pruebas negativas}
 La prueba negativa, comúnmente conocida como \emph{prueba de ruta de error} o
 \emph{prueba de falla}, generalmente se realiza para garantizar la estabilidad
 de la aplicación.

@@ -1,0 +1,139 @@
+
+core/commons.js
+    Commons
+        static void setUrl(url)
+        static string getUrl()
+        static string getTitle()
+        static string getCookie(cookie)
+        static void setValue(selector,value)
+        static string getValue(selector)
+        static object select(selector)
+        static object[] selects(selector)
+        static boolean exist(selector)
+        static string text(selector)
+        static string attribute(selector,attribute)
+        static void click(selector,delay)
+        static void pause(delay)
+        static void wait(selector,reverse,delay)
+        static void keys(sequence)
+
+core/patterns.js
+    Patterns<key,value>
+
+pages/card.po.js
+    Card
+        Card constructor()
+        void set name(name)
+        string get name()
+        Card options()
+        Confirmation delete()
+
+pages/confirmation.po.js
+    Confirmation
+        Confirmation constructor()
+        Message confirm()
+        void cancel()
+        void close()
+
+pages/launcher.po.js
+    Launcher
+        Launcher constructor()
+        Launcher open()
+        void close()
+        boolean exists(module)
+        List item(module)
+        static List app(module)
+
+pages/list.po.js
+    List
+        List constructor()
+        string currentView()
+        New new()
+        List search(query)
+        List clearSearch()
+        List displayAs(mode)
+        List displayTable()
+        List displayKanban()
+        List viewControls()
+        NewListView viewControlsNew()
+        List refresh()
+        List edit()
+        string emptyMessage()
+        string updatedInfo(delay)
+        Row row(name)
+        int totalRows()
+        Card card(name)
+        int totalCards(column)
+        List keys(sequence)
+        Message|List saveEdit(successful)
+
+pages/login.po.js
+    Login
+        Login constructor()
+        void set username(username)
+        string get username()
+        void set password(password)
+        string get password()
+        Login submit()
+        static Login loginAs(username,password)
+
+pages/message.po.js
+    Message
+        Message constructor()
+        string result()
+        string text()
+        void close(timeout)
+
+pages/new.po.js
+    New
+        New constructor()
+        New fill(obj)
+        void set name(name)
+        string get name()
+        void set code(code)
+        string get code()
+        void set description(description)
+        string get description()
+        Message|New save(successful)
+        Message|New saveAndNew(successful)
+        void cancel()
+        void close()
+        string messageValidation()
+        string errorsList()
+
+pages/newlistview.po.js
+    NewListView
+        NewListView constructor()
+        NewListView fill(obj)
+        void set name(name)
+        string get name()
+        void set api(api)
+        string get api()
+        List save()
+
+pages/profile.po.js
+    Profile
+        Profile constructor()
+        void logout()
+        static Profile profile()
+
+pages/row.po.js
+    Row
+        Row constructor()
+        void set name(name)
+        string get name()
+        Row options()
+        Confirmation delete()
+
+pages/view.po.js
+    View
+        View constructor()
+        string title()
+        string subtitle()
+        View related()
+        View details()
+        string data(attribute)
+        boolean checked(attribute)
+        View options()
+        Confirmation delete()
+
