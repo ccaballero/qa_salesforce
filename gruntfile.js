@@ -17,7 +17,7 @@ module.exports=function(grunt){
         }
       , watch:{
             tex:{
-                files:['*.tex']
+                files:['*.tex','graphics/*.eps']
               , tasks:['shell:latex']
             }
         }
