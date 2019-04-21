@@ -24,18 +24,77 @@ github, en la siguiente dirección:
 \section{Estructura del Framework}
 El framework desarrollado basa su estructura y comportamiento en las
 recomendaciones de la biblioteca utilizada (\emph{webdriver.io}), esta puede
-verse en la figura \ref{structura}.
+verse en la figura \ref{estructura}.
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\textwidth]{graphics/diagram00.eps}
+\begin{tikzpicture}[
+    grow via three points={one child at (0.5,-0.7) and
+    two children at (0.5,-0.7) and (0.5,-1.4)},
+    edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+    \node {salesforce\_automation}
+        child { node {Errors}}
+        child { node {PageObjects}
+            child { node {New}
+                child { node {ListView.po.js}}
+                child { node {PriceBook.po.js}}
+                child { node {Product.po.js}}
+            }
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child { node {Card.po.js}}
+            child { node {Confirmation.po.js}}
+            child { node {Launcher.po.js}}
+            child { node {List.po.js}}
+            child { node {Login.po.js}}
+            child { node {Message.po.js}}
+            child { node {Modal.po.js}}
+            child { node {Profile.po.js}}
+            child { node {Row.po.js}}
+            child { node {Setup.po.js}}
+            child { node {View.po.js}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Specs}
+            child { node {001.F001.js}}
+            child { node {002.F002.js}}
+            child { node {003.A001.js}}
+            child { node {\ldots.js}}
+        }
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node {Utils}
+            child { node {Common.js}}
+        }
+        child [missing] {}
+        child { node {config.js}}
+        child { node {package.json}}
+        child { node {wdio.conf.js}};
+\end{tikzpicture}
 \caption{Estructura de archivos del Framework.}
-\label{structura}
+\label{estructura}
 \end{figure}
 
-Puede observarse en esta figura, que se creó la carpeta \textbf{/PageObjects}
+Puede observarse en esta figura, que se creó la carpeta \textbf{PageObjects}
 para albergar todas las clases que representan elementos de las paginas que
-componen el framework, además de una carpeta \textbf{/Specs} que alberga los
+componen el framework, además de una carpeta \textbf{Specs} que alberga los
 casos de prueba automatizados, adicionalmente existe la carpeta \textbf{Utils}
 donde se ubicaron Clases adicionales utilitarias.
 
@@ -97,7 +156,7 @@ prueba relacionados con pruebas negativas en todos los módulos.} \\
 prueba relacionados con pruebas de dominio en todos los módulos.} \\
 \hline
 \end{tabular}
-\caption{Ediciones actualmente disponibles de \emph{Sales Cloud}.}
+\caption{Suites en el framework para las diferentes etapas de evaluación.}
 \label{suites}
 \end{table}
 
@@ -114,7 +173,7 @@ entre estos como se presenta en la figura \ref{pom}.
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\textwidth]{graphics/diagram00.eps}
+\includegraphics[width=1.0\textwidth]{graphics/diagram01.eps}
 \caption{Diagrama de clases sobre las relaciones entre \emph{Page Objects}.}
 \label{pom}
 \end{figure}
@@ -123,24 +182,66 @@ entre estos como se presenta en la figura \ref{pom}.
 Los \emph{Specs} representan las rutinas de automatización propiamente dichas,
 en estas se encuentran la implementación de los casos de prueba; para el
 proyecto se ha intentando hacer de estos lo mas expresivos posibles de forma
-que su legibilidad sea la mayor, por ejemplo puede apreciarse en la figura
-\ref{spec} que referencia al caso de prueba A001.
+que su legibilidad sea la mayor, en la figura \ref{lltc} se muestra el caso de
+prueba A001, y en la figura \ref{spec} se ve reflejado el código de ejecución
+automatizado.
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\textwidth]{graphics/diagram00.eps}
-\caption{\emph{Spec} que cubre el caso de prueba A001.}
+\includegraphics[width=1.0\textwidth]{graphics/lltc.eps}
+\caption{Especificación del Caso de Prueba.}
+\label{lltc}
+\end{figure}
+
+\begin{figure}
+\begin{verbatim}
+it('A001 - Producto es registrado con los valores obligatorios '+
+   'establecidos después de accionado el botón «Guardar»',()=>{
+    let modal_new=Launcher.app('Products').new()
+      , message=modal_new
+            .fill({
+                name:name
+            })
+            .save();
+
+    expect(message.result()).to.equal('success');
+    expect(message.text()).to.equal('Product "'+name+'" was created.');
+
+    message.close();
+
+    let view=new View();
+
+    expect(view.title()).to.equal(name);
+    expect(view.subtitle('Product Code')).to.equal('');
+    expect(view.subtitle('Product Family')).to.equal('');
+
+    view.details();
+
+    expect(view.data('Product Name')).to.equal(name);
+    expect(view.checked('Active')).to.equal(false);
+    expect(view.data('Product Code')).to.equal('');
+    expect(view.data('Product Family')).to.equal('');
+    expect(view.checked('Quantity Scheduling Enabled')).to.equal(false);
+    expect(view.checked('Revenue Scheduling Enabled')).to.equal(false);
+    expect(view.data('Product Description')).to.equal('');
+
+    view.options()
+        .delete()
+        .confirm();
+});
+\end{verbatim}
+\caption{Automatización del Caso de Prueba A001.}
 \label{spec}
 \end{figure}
 
 Este \emph{spec} que cubre la automatización del caso de prueba A001, utiliza
-cinco \emph{page objects}, dos utilizadas para la ejecución de las
+cinco \emph{Page Objects}, dos utilizadas para la ejecución de las
 precondiciones del test, y tres para realizar la secuencia de pasos, como puede
 verse en el diagrama de secuencia de la figura \ref{sequence}.
 
 \begin{figure}
 \centering
-\includegraphics[width=1.0\textwidth]{graphics/diagram00.eps}
+\includegraphics[width=1.0\textwidth]{graphics/diagram02.eps}
 \caption{Diagrama de secuencia para el \emph{spec} del caso de prueba A001.}
 \label{sequence}
 \end{figure}
