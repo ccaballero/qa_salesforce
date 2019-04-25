@@ -35,6 +35,9 @@
 \usepackage{rotating}
 \usepackage{multirow}
 
+\usepackage{caption}
+\newcommand{\source}[1]{\vspace{-11pt} \caption*{\small{Fuente: {#1}}}}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
@@ -80,12 +83,14 @@ pdftex]{hyperref}
 \include{capitulo_04}
 \include{capitulo_05}
 
+\include{bibliografia}
+
 \begin{appendix}
 \include{apendice_a}
+\include{apendice_b}
 \end{appendix}
 
 \backmatter
-\include{bibliografia}
 
 \end{document}
 

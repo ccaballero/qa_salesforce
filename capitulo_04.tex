@@ -11,7 +11,7 @@ capitulo es el framework mismo.
 \section{Casos de prueba}
 A partir del análisis realizado en el anterior capitulo, se termino formulando
 múltiples casos de prueba, estos se encuentran descritos en el \textbf{apéndice
-\ref{appendix}} categorizados e individualizados según el área y suba rea al que
+\ref{appendix}} categorizados e individualizados según el área y subarea al que
 pertenecen.
 
 \section{Código fuente}
@@ -90,6 +90,7 @@ verse en la figura \ref{estructura}.
 \end{tikzpicture}
 \caption{Estructura de archivos del Framework.}
 \label{estructura}
+\source{Elaboración propia.}
 \end{figure}
 
 Puede observarse en esta figura, que se creó la carpeta \textbf{PageObjects}
@@ -158,11 +159,12 @@ prueba relacionados con pruebas de dominio en todos los módulos.} \\
 \end{tabular}
 \caption{Suites en el framework para las diferentes etapas de evaluación.}
 \label{suites}
+\source{Elaboración propia.}
 \end{table}
 
 \section{\emph{Page Objects Model}}
 Los \emph{Page Objects} representan el corazón del proyecto de automatización,
-estos representan las diferentes paginas a ser testeadas y algunos de sus
+estos representan las diferentes paginas a ser evaluadas y algunos de sus
 componentes que posean cierto grado de complejidad.
 
 Si bien los \emph{Page Objects} son clases instanciables en \emph{javascript},
@@ -176,21 +178,35 @@ entre estos como se presenta en la figura \ref{pom}.
 \includegraphics[width=1.0\textwidth]{graphics/diagram01.eps}
 \caption{Diagrama de clases sobre las relaciones entre \emph{Page Objects}.}
 \label{pom}
+\source{Elaboración propia.}
 \end{figure}
 
 \section{\emph{Specs}}
 Los \emph{Specs} representan las rutinas de automatización propiamente dichas,
-en estas se encuentran la implementación de los casos de prueba; para el
-proyecto se ha intentando hacer de estos lo mas expresivos posibles de forma
-que su legibilidad sea la mayor, en la figura \ref{lltc} se muestra el caso de
-prueba A001, y en la figura \ref{spec} se ve reflejado el código de ejecución
-automatizado.
+cada \emph{spec} traduce directamente los pasos y comprobaciones que deberian
+ser realizados en una ejecucion de pruebas manual, de forma que la lectura de
+cada rutina sea concisa y ordenada.
+
+Un ejemplo de esto puede apreciarse en el caso de prueba \textbf{A001}, del cual
+puede verse su especificacion en la figura \ref{lltc}, tal especificación
+contiene la secuencia de pasos y el conjunto de verificaciones de la prueba como
+se describen en el diagrama de secuencia de la figura \ref{sequence}, y estos a
+su vez traducidos a código fuente como se ve en la figura \ref{spec}.
 
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/lltc.eps}
-\caption{Especificación del Caso de Prueba.}
+\caption{Especificación del Caso de Prueba A001.}
 \label{lltc}
+\source{Elaboración propia.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/diagram02.eps}
+\caption{Diagrama de secuencia para el Caso de Prueba A001.}
+\label{sequence}
+\source{Elaboración propia.}
 \end{figure}
 
 \begin{figure}
@@ -232,18 +248,7 @@ it('A001 - Producto es registrado con los valores obligatorios '+
 \end{verbatim}
 \caption{Automatización del Caso de Prueba A001.}
 \label{spec}
-\end{figure}
-
-Este \emph{spec} que cubre la automatización del caso de prueba A001, utiliza
-cinco \emph{Page Objects}, dos utilizadas para la ejecución de las
-precondiciones del test, y tres para realizar la secuencia de pasos, como puede
-verse en el diagrama de secuencia de la figura \ref{sequence}.
-
-\begin{figure}
-\centering
-\includegraphics[width=1.0\textwidth]{graphics/diagram02.eps}
-\caption{Diagrama de secuencia para el \emph{spec} del caso de prueba A001.}
-\label{sequence}
+\source{Elaboración propia.}
 \end{figure}
 
 \section{Ejecución de las pruebas}
@@ -263,6 +268,7 @@ si realizan alguna petición al servidor, sea esta de lectura o escritura.
 \includegraphics[width=1.0\textwidth]{graphics/tc-tests.eps}
 \caption{Casos de Prueba según el tipo de evaluación realizada.}
 \label{tc-tests}
+\source{Elaboración propia.}
 \end{figure}
 
 \begin{figure}[H]
@@ -270,6 +276,7 @@ si realizan alguna petición al servidor, sea esta de lectura o escritura.
 \includegraphics[width=1.0\textwidth]{graphics/tc-type.eps}
 \caption{Casos de Prueba según el tipo de acción a evaluar.}
 \label{tc-type}
+\source{Elaboración propia.}
 \end{figure}
 
 Puede apreciarse igualmente que la mayor parte de los casos de prueba están
@@ -288,6 +295,7 @@ también se bloquearon dos casos de prueba.
 \includegraphics[width=1.0\textwidth]{graphics/results-tests.eps}
 \caption{Resultados de las pruebas clasificadas por tipo de evaluación.}
 \label{results-tests}
+\source{Elaboración propia.}
 \end{figure}
 
 \begin{figure}[H]
@@ -295,6 +303,7 @@ también se bloquearon dos casos de prueba.
 \includegraphics[width=1.0\textwidth]{graphics/results-type.eps}
 \caption{Resultados de las pruebas clasificadas por tipo de acción a evaluar.}
 \label{results-type}
+\source{Elaboración propia.}
 \end{figure}
 
 Presentados los resultados de la ejecución de las pruebas, vemos que de los 315

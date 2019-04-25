@@ -1,13 +1,13 @@
 \chapter{Análisis del Software}
 
 En este capítulo, se desarrollan los aspectos necesarios para la definición del
-proceso de desarrollo del framework, primeramente se hará referencia a las
-cuestiones relacionadas con las fuentes de análisis utilizados.
+proceso de desarrollo del \emph{framework}, primeramente se hará referencia a
+las cuestiones relacionadas con las fuentes de análisis utilizados.
 
 Posteriormente se trataran cuestiones acerca del producto, introduciendo los
-conceptos claves que se utilizan en el framework posteriormente; para terminar
-detallando primero los criterios de calidad y las técnicas de prueba escogidas
-para formular los casos de uso a automatizar.
+conceptos claves que se utilizan en el \emph{framework} posteriormente; para
+terminar detallando primero los criterios de calidad y las técnicas de prueba
+escogidas para formular los casos de uso a automatizar.
 
 \section{Entorno de proyecto}
 Los primeros componentes que se describirán son los relacionados con el entorno
@@ -25,7 +25,7 @@ documentación, información general, preguntas frecuentes, y contacto con el
 servicio de asistencia técnica desde su sitio de ayuda
 (\emph{https://help.salesforce.com/}).
 
-Estos recursos serán útiles para conocer los clamores de los usuarios, las
+Estos recursos serán útiles para conocer los reclamos de los usuarios, las
 características criticas del producto, y las estrategias del fabricante hacia
 sus clientes.
 
@@ -33,9 +33,9 @@ sus clientes.
 específicamente para compartir recursos de desarrollo sobre la plataforma
 (\emph{https://developer.salesforce.com/}).
 
-Este sitio se podrá aprovechar para consultar las referencias a las API del
-servicio, conocer las posibilidades que proveen los componentes y como pueden
-aprovecharse desde la perspectiva del desarrollador.
+Este sitio se podrá aprovechar para consultar las referencias a las \emph{API}
+del servicio, conocer las posibilidades que proveen los componentes y como
+pueden aprovecharse desde la perspectiva del desarrollador.
 
 \item [Recursos para administradores] Sitio web enfocado a ofrecer experiencias,
 vídeos, herramientas, y un sin fin de recursos orientados a usuarios con un rol
@@ -51,7 +51,7 @@ la comunidad \emph{Salesforce}, para compartir experiencias, aprender, y proveer
 de nuevas ideas sobre la utilización del servicio
 (\emph{https://success.salesforce.com/}).
 
-Este sitio también sirve como fuente de clamores de los usuarios,
+Este sitio también sirve como fuente de reclamos de los usuarios,
 funcionalidades criticas, y errores comunes encontrados en el servicio.
 
 \end{description}
@@ -64,47 +64,47 @@ actualizan a una edición más rica en características a medida que evolucionan
 los requisitos empresariales.
 
 En el cuadro \ref{ediciones} se describen las ediciones disponibles con las que
-cuenta el servicio actualmente\footnote{Información extraída y disponible en:
-https://help.salesforce.com/articleView?id=overview\_edition.htm}, cabe comentar
-que la evaluación se realizará sobre la versión \emph{Developer} debido a que
-está es la que requiere para su utilización, la menor cantidad de restricciones
-de parte del fabricante.
+cuenta el servicio actualmente, cabe comentar que la evaluación se realizará
+sobre la versión \emph{Developer} debido a que está es la que requiere para su
+utilización, la menor cantidad de restricciones de parte del fabricante.
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|l|p{12.0cm}|}
 \hline
 \footnotesize{\textbf{Edición}} & \footnotesize{\textbf{Descripción}} \\
 \hline
 \footnotesize{\emph{Essentials}} & \footnotesize{Diseñado para pequeños negocios
-para empezar a trabajar con un sistema de CRM de forma rápida. Incluye
+para empezar a trabajar con un sistema de \emph{CRM} de forma rápida. Incluye
 presentaciones interactivas y un asistente de configuración para comenzar, una
 interfaz de usuario fácil de utilizar y herramientas de administración para
 personalizar su implementación conforme crece.} \\
 \footnotesize{\emph{Professional}} & \footnotesize{Diseñado para negocios que
-requieren la funcionalidad completa de CRM. Incluye herramientas de
+requieren la funcionalidad completa de \emph{CRM}. Incluye herramientas de
 personalización, integración y administración directas y fáciles de usar para
 facilitar cualquier implementación de pequeño y mediano tamaño.} \\
 \footnotesize{\emph{Enterprise}} & \footnotesize{Cumple las necesidades
 comerciales grandes y complejas. Proporciona herramientas avanzadas de
 personalización y administración, además de todas las funcionalidades
-disponibles en Professional Edition, que pueden admitir implementaciones a gran
-escala. Enterprise Edition también incluye acceso a las API de Salesforce para
-que pueda integrar fácilmente sistemas de gestión interna.} \\
+disponibles en \emph{Professional Edition}, que pueden admitir implementaciones
+a gran escala. \emph{Enterprise Edition} también incluye acceso a las \emph{API}
+de \emph{Salesforce} para que pueda integrar fácilmente sistemas de gestión
+interna.} \\
 \footnotesize{\emph{Unlimited}} & \footnotesize{Proporciona nuevos niveles de
 flexibilidad de plataforma para gestionar y compartir toda su información según
-demanda. Incluye todas las funcionalidades de Enterprise Edition además de
-Premier Support, acceso móvil completo, aplicaciones personalizadas sin límite,
-límites de almacenamiento ampliados y otras funciones.} \\
-\footnotesize{\emph{Developer}} & \footnotesize{Proporciona acceso a las API y
-la plataforma Lightning. Permite a los desarrolladores ampliar Salesforce,
-integrarlo con otras aplicaciones y desarrollar nuevas herramientas y
-aplicaciones. Developer Edition ofrece además acceso a muchas de las funciones
-disponibles en Enterprise Edition.} \\
+demanda. Incluye todas las funcionalidades de \emph{Enterprise Edition} además
+de \emph{Premier Support}, acceso móvil completo, aplicaciones personalizadas
+sin límite, límites de almacenamiento ampliados y otras funciones.} \\
+\footnotesize{\emph{Developer}} & \footnotesize{Proporciona acceso a las
+\emph{API} y la plataforma \emph{Lightning}. Permite a los desarrolladores
+ampliar \emph{Salesforce}, integrarlo con otras aplicaciones y desarrollar
+nuevas herramientas y aplicaciones. \emph{Developer Edition} ofrece además
+acceso a muchas de las funciones disponibles en \emph{Enterprise Edition.}} \\
 \hline
 \end{tabular}
 \caption{Ediciones actualmente disponibles de \emph{Sales Cloud}.}
 \label{ediciones}
+\source{https://help.salesforce.com/articleView?id=overview\_edition.htm}
 \end{table}
 
 Otra característica actual de \emph{Salesforce} es que cuenta con dos interfaces
@@ -118,39 +118,40 @@ Se evaluarán las funcionalidades de los módulos sobre el navegador cuya
 participación en el mercado es la mayor, en este caso: \emph{Google Chrome}
 como puede verse en la figura \ref{software}.
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/compatibilidad.eps}
 \caption{Participación de mercado de los navegadores hasta Noviembre del 2018.}
 \label{software}
+\source{http://gs.statcounter.com/browser-market-share/desktop/worldwide}
 \end{figure}
 
 Adicionalmente al uso del navegador \emph{Google Chrome} serán necesarios
 otros navegadores para realizar la evaluación de compatibilidad sobre
 vistas especificas del sistema, para este fin se consultó la información
 disponible en la pagina de soporte provista por el fabricante, la cual como
-puede verse en el cuadro \ref{soporte_navegadores}, nos dice que se soportan
+puede verse en el cuadro \ref{soporte_navegadores}, revelrevela que se soportan
 cinco navegadores diferentes bajo condiciones de limitación conocidas por el
 fabricante\footnote{Información extraída y disponible en:
 https://help.salesforce.com/articleView?id=getstart\_browsers\_sfx.htm}.
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|p{6.0cm}|p{2.5cm}|p{1.4cm}|p{1.3cm}|p{1.3cm}|p{1.0cm}|}
 \hline
-& \footnotesize{\textbf{Microsoft Internet Explorer}}
-& \footnotesize{\textbf{Microsoft Edge}}
-& \footnotesize{\textbf{Google Chrome}}
-& \footnotesize{\textbf{Mozilla Firefox}}
-& \footnotesize{\textbf{Apple Safari}} \\
+& \footnotesize{\textbf{\emph{Microsoft Internet Explorer}}}
+& \footnotesize{\textbf{\emph{Microsoft Edge}}}
+& \footnotesize{\textbf{\emph{Google Chrome}}}
+& \footnotesize{\textbf{\emph{Mozilla Firefox}}}
+& \footnotesize{\textbf{\emph{Apple Safari}}} \\
 \hline
-\footnotesize{Lightning Experience}
+\footnotesize{\emph{Lightning Experience}}
 & \footnotesize{IE11 (EOL Diciembre 31, 2020)}
 & \footnotesize{Ultima versión}
 & \footnotesize{Ultima versión}
 & \footnotesize{Ultima versión}
 & \footnotesize{11.x+} \\
-\footnotesize{Lightning Communities}
+\footnotesize{\emph{Lightning Communities}}
 & \footnotesize{IE11 (EOL Diciembre 31, 2020)}
 & \footnotesize{Ultima versión}
 & \footnotesize{Ultima versión}
@@ -172,7 +173,77 @@ https://help.salesforce.com/articleView?id=getstart\_browsers\_sfx.htm}.
 \end{tabular}
 \caption{Lista de compatibilidad provista por \emph{Salesforce}.}
 \label{soporte_navegadores}
+\source{Elaboración propia.}
 \end{table}
+
+\section{Planificación de actividades}
+Para conseguir los objetivos planteados por el proyecto se realizarán las
+actividades detalladas en el cuadro \ref{planificacion} en la página
+\pageref{planificacion}.
+
+\begin{sidewaystable}
+\centering
+\small
+{\def\arraystretch{1.75}
+\begin{tabular}{|l|l|p{6.5cm}|l|}
+\hline
+Objetivo General & Objetivos Específicos & Actividades & Resultados \\
+\hline
+\multirow{12}{4.0cm}{Automatizar los casos de prueba de las funcionalidades
+provistas por \emph{Salesforce} que componen la interfaz de usuario del módulo
+de gestión de productos y listas de precios, para minimizar la cantidad de
+errores que contiene el software.} &
+\multirow{3}{4.0cm}{Formular los casos de prueba necesarios que el módulo de
+gestión de productos requiera para cubrir los atributos de calidad requeridos.} &
+Recolectar información, explorar y analizar el módulo de productos. &
+\multirow{3}{4.0cm}{Casos de prueba del módulo de productos.} \\
+\cline{3-3}
+& & Diseñar los tipos de evaluación requeridos para el módulo de productos. & \\
+\cline{3-3}
+& & Formular los casos de prueba necesarios para el módulo de productos. & \\
+\cline{2-4}
+
+& \multirow{3}{4.0cm}{Automatizar los casos de prueba de las funciones que
+componen la interfaz de usuario del módulo de gestión de productos.} &
+Analizar, y diseñar el software para la automatización de la interfaz de
+usuario. &
+\multirow{3}{4.0cm}{Rutinas de automatización de los casos de prueba del módulo
+de productos.} \\
+\cline{3-3}
+& & Implementar el software para automatización de los casos de prueba. & \\
+\cline{3-3}
+& & Ejecutar el software para automatización de los casos de prueba. & \\
+\cline{2-4}
+
+& \multirow{3}{4.0cm}{Formular los casos de prueba necesarios que el módulo de
+gestión de listas de precios requiera para cubrir los atributos de calidad
+requeridos.} &
+Recolectar información, explorar y analizar el módulo de listas de precios. &
+\multirow{3}{4.0cm}{Casos de prueba del módulo de listas de precios.} \\
+\cline{3-3}
+& & Diseñar los tipos de evaluación requeridos para el módulo de listas de
+precios. & \\
+\cline{3-3}
+& & Formular los casos de prueba necesarios para el módulo de listas de
+precios. & \\
+\cline{2-4}
+
+& \multirow{3}{4.0cm}{Automatizar los casos de prueba de las funciones que
+componen la interfaz de usuario del módulo de gestión de lista de precios.} &
+Analizar, y diseñar el software para la automatización de la interfaz de
+usuario. &
+\multirow{3}{4.0cm}{Rutinas de automatización de los casos de prueba del módulo
+de listas de precios.} \\
+\cline{3-3}
+& & Implementar el software para automatización de los casos de prueba. & \\
+\cline{3-3}
+& & Ejecutar el software para automatización de los casos de prueba. & \\
+\hline
+\end{tabular}}
+\caption{Planificación de actividades del proyecto.}
+\label{planificacion}
+\source{Elaboración propia.}
+\end{sidewaystable}
 
 \section{Elementos del producto}
 Dentro del alcance de la evaluación se encuentran los componentes de productos
@@ -267,6 +338,7 @@ en la figura \ref{productos_formularios}.
 \end{tikzpicture}
 \caption{Funciones que componen el módulo de gestión de productos.}
 \label{productos}
+\source{Elaboración propia.}
 \end{figure}
 
 \begin{figure}[H]
@@ -313,6 +385,7 @@ en la figura \ref{productos_formularios}.
 \end{tikzpicture}
 \caption{Vistas que componen el módulo de gestión de productos.}
 \label{productos_vistas}
+\source{Elaboración propia.}
 \end{figure}
 
 \begin{figure}[H]
@@ -360,6 +433,7 @@ en la figura \ref{productos_formularios}.
 \end{tikzpicture}
 \caption{Formularios que componen el módulo de gestión de productos.}
 \label{productos_formularios}
+\source{Elaboración propia.}
 \end{figure}
 
 \subsection{Listas de Precios}
@@ -446,6 +520,7 @@ presentan en la figura \ref{listas_de_precios_formularios}.
 \end{tikzpicture}
 \caption{Funciones que componen el módulo de gestión de listas de precios.}
 \label{listas_de_precios}
+\source{Elaboración propia.}
 \end{figure}
 
 \begin{figure}[H]
@@ -498,6 +573,7 @@ presentan en la figura \ref{listas_de_precios_formularios}.
 \end{tikzpicture}
 \caption{Vistas que componen el módulo de gestión de listas de precios.}
 \label{listas_de_precios_vistas}
+\source{Elaboración propia.}
 \end{figure}
 
 \begin{figure}[H]
@@ -525,6 +601,7 @@ presentan en la figura \ref{listas_de_precios_formularios}.
 \end{tikzpicture}
 \caption{Formularios que componen el módulo de gestión de listas de precios.}
 \label{listas_de_precios_formularios}
+\source{Elaboración propia.}
 \end{figure}
 
 \subsection{Controles de Vista de Lista}
@@ -577,6 +654,7 @@ presentan en la figura \ref{vista_de_lista_formularios}.
 \end{tikzpicture}
 \caption{Funciones que componen el módulo de gestión de vistas de lista.}
 \label{vista_de_lista}
+\source{Elaboración propia.}
 \end{figure}
 
 \begin{figure}[H]
@@ -596,6 +674,7 @@ presentan en la figura \ref{vista_de_lista_formularios}.
 \end{tikzpicture}
 \caption{Vistas que componen el módulo de gestión de listas de precios.}
 \label{vista_de_lista_vistas}
+\source{Elaboración propia.}
 \end{figure}
 
 \begin{figure}[H]
@@ -660,6 +739,7 @@ presentan en la figura \ref{vista_de_lista_formularios}.
 \end{tikzpicture}
 \caption{Formularios que componen el módulo de gestión de vistas de listas.}
 \label{vista_de_lista_formularios}
+\source{Elaboración propia.}
 \end{figure}
 
 \section{Criterios de calidad}
@@ -786,6 +866,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Crear Producto»}
 \label{myers_01}
+\source{Elaboración propia.}
 \end{table}
 
 \begin{table}[H]
@@ -812,6 +893,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Crear Entrada del catalogo de precios»}
 \label{myers_02}
+\source{Elaboración propia.}
 \end{table}
 
 \begin{table}[H]
@@ -827,6 +909,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Agregar a lista de precios»}
 \label{myers_03}
+\source{Elaboración propia.}
 \end{table}
 
 \begin{table}[H]
@@ -849,6 +932,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Modificar Entrada del catalogo de precios»}
 \label{myers_04}
+\source{Elaboración propia.}
 \end{table}
 
 \begin{table}[H]
@@ -873,6 +957,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Crear Lista de precios»}
 \label{myers_05}
+\source{Elaboración propia.}
 \end{table}
 
 \begin{table}[H]
@@ -902,6 +987,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Agregar productos»}
 \label{myers_06}
+\source{Elaboración propia.}
 \end{table}
 
 \begin{table}[H]
@@ -932,6 +1018,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Nueva vista de lista»}
 \label{myers_07}
+\source{Elaboración propia.}
 \end{table}
 
 \begin{table}[H]
@@ -948,6 +1035,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Cambiar nombre»}
 \label{myers_08}
+\source{Elaboración propia.}
 \end{table}
 
 \begin{table}[H]
@@ -963,6 +1051,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \end{tabular}
 \caption{Tabla de Myers para el Formulario «Configuración de colaboración»}
 \label{myers_09}
+\source{Elaboración propia.}
 \end{table}
 
 \subsection{Pruebas negativas}

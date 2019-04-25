@@ -4,7 +4,7 @@ En este capitulo se desglosaran los conceptos utilizados a lo largo del
 proyecto, se tratará el concepto de automatización de pruebas, y como integrar
 la automatización en un proceso de desarrollo de software.
 
-A partir de ahí, se describirán las pruebas de punto a punto (E2E), y para
+A partir de ahí, se describirán las pruebas de \emph{End-to-End} (E2E), y para
 terminar se tratan temas acerca de las tecnologías utilizadas en el proyecto.
 
 \section{Automatización de pruebas}
@@ -74,11 +74,11 @@ estos están:
     \item No es conveniente automatizar una interfaz de usuario no establecida.
     \item Si la aplicación de usuario cambia constantemente, el costo de
         mantenimiento de las pruebas automatizadas será muy alto.
-    \item Bajo ciertos paradigmas de implementación los testers podrían requerir
-        tener un buen conocimiento de programación.
+    \item Bajo ciertos paradigmas de implementación los evaluadores podrían
+        requerir tener un buen conocimiento de programación.
 \end{itemize}
 
-\section{Pirámide de la automatización de pruebas}
+\section{Pirámide de automatización de pruebas}
 La pirámide de automatización de pruebas, es un concepto que fue introducido
 por \emph{Cohn} en su articulo «\emph{Succeeding with Agile}», y describe como
 equilibrar la automatización, comenzando con las pruebas unitarias en el nivel
@@ -86,11 +86,12 @@ mas bajo, y pasando a las pruebas de servicios; finalmente las pruebas de
 interfaz de usuario se encuentran en la parte superior, como puede apreciarse en
 la figura \ref{piramide}.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{graphics/pyramid.eps}
-\caption{Pirámide de testing.}
+\caption{Pirámide de automatización de pruebas.}
 \label{piramide}
+\source{Elaboración propia.}
 \end{figure}
 
 Las pruebas unitarias son rápidas y fiables, las pruebas en la capa de servicios
@@ -105,41 +106,40 @@ se llegan a fallar mas fácilmente.
 \subsection{La capa de interfaz}
 Cuando el foco de la evaluación es la interfaz de usuario, se requiere que la
 mayoría del código y la lógica de negocio este completamente evaluados. El
-enfoque ahora se centra en simplemente asegurarse de que la propia interfaz de
+enfoque se centra en simplemente asegurarse de que la propia interfaz de
 usuario este funcionando correctamente. Las pruebas de interfaz de usuario son
 muy frágiles, estas pruebas necesitaran mantenerse en cualquier momento que
 cambie la interfaz de usuario, y como hay muchos factores que entran en juego
 cuando se ejecuta una prueba que emula clics en una pantalla, estas pruebas
 pueden dar como resultado falsos negativos. Estas fallas en las pruebas no
 pueden ser ignoradas, pero tampoco debe gastarse mas tiempo en solucionar los
-problemas y mantener las pruebas de UI que en encontrar defectos de código
-reales.
+problemas y mantener las pruebas de interfaz de usuario que en encontrar
+defectos de código reales.
 
 Con un solido diseño de pruebas, las pruebas sobre la interfaz de usuario
 complementan muy bien el conjunto de pruebas de automatización.
 
-\section{End-to-End Testing}
-Las pruebas End-to-End es una metodología que se utiliza para probar si el flujo
-de una aplicación se esta realizando según lo diseñado de principio a fin. El
-propósito de llevar a cabo pruebas de extremo a extremo es identificar las
-dependencias del sistema y garantizar que la información correcta se transmita
-entre varios componentes del sistema. Toda la aplicación se prueba en un
-escenario del mundo real, como la comunicación con la base de datos, la red, el
-hardware, y otros.
+\section{Pruebas \emph{End-to-End}}
+Las pruebas \emph{End-to-End} representan una metodología que se utiliza para
+probar si el flujo de una aplicación se esta realizando según lo diseñado de
+principio a fin. El propósito de llevar a cabo pruebas \emph{End-to-End} es
+identificar las dependencias del sistema y garantizar que la información
+correcta se transmita entre varios componentes del sistema. Toda la aplicación
+se prueba en un escenario del mundo real, como la comunicación con la base de
+datos, la red, el hardware, y otros.
 
-La prueba generalmente se realiza en la capa UI y se usa para validar que el
-proceso de negocio de extremo a extremo funciona en todos los sistemas como una
-prueba "horizontal". A diferencia de las pruebas verticales que miden el
+Las pruebas generalmente se realizan en la capa de interfaz y se usan para
+validar que el proceso de negocio funciona en todos los sistemas como una
+prueba horizontal. A diferencia de las pruebas verticales que miden el
 rendimiento hacia arriba y hacia abajo de las capas de la pila de tecnología,
-las pruebas horizontales de extremo a extremo se utilizan para garantizar que
-los procesos de negocio de misión crítica funcionen. Las pruebas se ejecutan en
-la capa UI y miden si la prueba continúa o no al siguiente paso del proceso.
+las pruebas horizontales se utilizan para garantizar que los procesos de negocio
+de misión crítica funcionen.
 
-\subsection{Buenas prácticas para pruebas E2E}
-Una prueba típica de E2E puede ser compleja, con múltiples pasos que requieren
-mucho tiempo para realizarlos manualmente. Esta complejidad también puede hacer
-que las pruebas E2E sean difíciles de automatizar y lentas de ejecutar, para
-ayudar a administrar los costos de las pruebas automatizadas de E2E a la vez que
+\subsection{Buenas prácticas para pruebas \emph{End-to-End}}
+Una prueba típica \emph{End-to-End} puede ser compleja, con múltiples pasos que
+requieren mucho tiempo para realizarlos manualmente. Esta complejidad también
+puede hacer que las pruebas sean difíciles de automatizar y lentas de ejecutar,
+para ayudar a administrar los costos de las pruebas automatizadas  la vez que
 mantienen los beneficios, se recomienda seguir las siguientes practicas:
 
 \begin{itemize}
@@ -155,17 +155,17 @@ mantienen los beneficios, se recomienda seguir las siguientes practicas:
     \item Optimizar el proceso de configuración y desmontaje de la prueba.
 \end{itemize}
 
-\section{Frameworks de automatización}
+\section{\emph{Frameworks} de automatización}
 La automatización generalmente se interpreta como el manejo automático de
 procesos a través de algoritmos inteligentes que involucran poca o ninguna
 intervención humana. En el caso del software, significa realizar varias pruebas
-en aplicaciones de software utilizando herramientas de automatización que son
-versiones con licencia o de código abierto. En términos técnicos, el framework
-de automatización de pruebas es un conjunto personalizado de componentes
-interactivos que facilitan la ejecución de las pruebas con rutinas y la
-generación de reportes completos de los resultados de las pruebas.
+en aplicaciones, utilizando herramientas de automatización que son
+versiones con licencia o de código abierto. En términos técnicos, el
+\emph{framework} de automatización de pruebas es un conjunto personalizado de
+componentes interactivos que facilitan la ejecución de las pruebas con rutinas y
+la generación de reportes completos de los resultados de las pruebas.
 
-Dependiendo de como se desee abordar la creación de un framework y los
+Dependiendo de como se desee abordar la creación de un \emph{framework} y los
 requisitos de automatización del proyecto, se cuentan con diferentes
 clasificaciones:
 
@@ -209,10 +209,12 @@ las pruebas en sí no necesitan cambiar, solo el código dentro del
 Las ventajas de la utilización de esta biblioteca son:
 
 \begin{itemize}
-\item Soporte para la implementación de pruebas tipo BDD y TDD.
-\item Buena comunidad de soporte y documentación.
-\item Soporte para selección de componentes basado en CSS y XPath.
-\item Trabajo integral  con cualquier biblioteca para comparación de
-    resultados esperados.
+    \item Soporte para la implementación de pruebas tipo \emph{BDD} y
+        \emph{TDD}.
+    \item Buena comunidad de soporte y documentación.
+    \item Soporte para selección de componentes basado en \emph{CSS} y
+        \emph{XPath}.
+    \item Trabajo integral  con cualquier biblioteca para comparación de
+        resultados esperados.
 \end{itemize}
 
