@@ -1,28 +1,22 @@
-\chapter{Desarrollo del Framework}
+\chapter{Desarrollo del \emph{framework}}
 
 En este capitulo, trataremos los asuntos concernientes a la construcción de las
-funciones del framework, sobre las que recaen la automatización de los casos de
-prueba, y la expansibilidad que pueda darse a todo el proyecto.
+funciones del \emph{framework}, sobre las que recaen la automatización de los
+casos de prueba, y la expansibilidad que pueda darse a todo el proyecto.
 
 Si bien en el anterior capitulo el tema fundamental era el análisis y
 exploración que se realizo sobre el software, el objeto central de este
-capitulo es el framework mismo.
-
-\section{Casos de prueba}
-A partir del análisis realizado en el anterior capitulo, se termino formulando
-múltiples casos de prueba, estos se encuentran descritos en el \textbf{apéndice
-\ref{appendix}} categorizados e individualizados según el área y subarea al que
-pertenecen.
+capitulo es el \emph{framework} mismo.
 
 \section{Código fuente}
-Todo el código fuente del framework se encuentra versionado y disponible desde
-github, en la siguiente dirección:
+Todo el código fuente del \emph{framework} se encuentra versionado y disponible
+desde \emph{github}, en la siguiente dirección:
 \\
 \\
 \centerline{\textbf{https://github.com/ccaballero/salesforce\_automation}}
 
-\section{Estructura del Framework}
-El framework desarrollado basa su estructura y comportamiento en las
+\section{Estructura del \emph{framework}}
+El \emph{framework} desarrollado basa su estructura y comportamiento en las
 recomendaciones de la biblioteca utilizada (\emph{webdriver.io}), esta puede
 verse en la figura \ref{estructura}.
 
@@ -88,41 +82,42 @@ verse en la figura \ref{estructura}.
         child { node {package.json}}
         child { node {wdio.conf.js}};
 \end{tikzpicture}
-\caption{Estructura de archivos del Framework.}
+\caption{Estructura de archivos del \emph{framework}.}
 \label{estructura}
 \source{Elaboración propia.}
 \end{figure}
 
 Puede observarse en esta figura, que se creó la carpeta \textbf{PageObjects}
 para albergar todas las clases que representan elementos de las paginas que
-componen el framework, además de una carpeta \textbf{Specs} que alberga los
-casos de prueba automatizados, adicionalmente existe la carpeta \textbf{Utils}
-donde se ubicaron Clases adicionales utilitarias.
+componen el \emph{framework}, además de una carpeta \textbf{Specs} que alberga
+los casos de prueba automatizados, adicionalmente existe la carpeta
+\textbf{Utils} donde se ubicaron funciones adicionales utilitarias.
 
 Adicionalmente a estas carpetas también se encuentran los ficheros relacionados
-con la biblioteca webdriver.io, utilizados como se detallan a continuación:
+con la biblioteca \emph{webdriver.io}, utilizados como se detallan a
+continuación:
 
 \begin{description}
-\item [config.dist.js] Archivo de configuración del framework, sin
-    credenciales para ser versionado con el sistema de control de cambios.
-\item [config.js] Archivo de configuración del framework, donde están
-    parametrizados todas las variables y credenciales necesarias durante la
-    ejecución.
-\item [docker-compose.yml] Archivo de orquestación de imágenes utilizados para
-    la ejecución de los casos de prueba sobre imágenes de \emph{Docker}.
-\item [package.json] Archivo de configuración de node.js, que incluye los
-    diferentes tipos de ejecución disponible, las bibliotecas utilizadas, entre
-    otros detalles menores acerca del proyecto.
-\item [wdio.browserstack.conf.js] Archivo de configuración utilizado por la
-    biblioteca \emph{webdriver.io} para la ejecución de las pruebas sobre el
+    \item [\emph{config.dist.js}] Archivo de configuración del \emph{framework},
+    sin credenciales para ser versionado con el sistema de control de cambios.
+\item [\emph{config.js}] Archivo de configuración del \emph{framework}, donde
+    están parametrizados todas las variables y credenciales necesarias durante
+    la ejecución.
+\item [\emph{docker-compose.yml}] Archivo de orquestación de imágenes utilizados
+    para la ejecución de los casos de prueba sobre imágenes de \emph{Docker}.
+\item [\emph{package.json}] Archivo de configuración de \emph{node.js}, que
+    incluye los diferentes tipos de ejecución disponible, las bibliotecas
+    utilizadas, entre otros detalles menores acerca del proyecto.
+\item [\emph{wdio.browserstack.conf.js}] Archivo de configuración utilizado por
+    la biblioteca \emph{webdriver.io} para la ejecución de las pruebas sobre el
     servicio \emph{BrowserStack}.
-\item [wdio.conf.js] Archivo de configuración de \emph{webdriver.io}, este
-    contiene las conjuntos de pruebas disponibles, entre otras variables
+\item [\emph{wdio.conf.js}] Archivo de configuración de \emph{webdriver.io},
+    este contiene las conjuntos de pruebas disponibles, entre otras variables
     utilizadas por el entorno de prueba.
-\item [wdio.docker.conf.js] Archivo de configuración utilizado por la
+\item [\emph{wdio.docker.conf.js}] Archivo de configuración utilizado por la
     biblioteca \emph{webdriver.io} para la ejecución de las pruebas sobre el
     servidor \emph{Docker}.
-\item [wdio.standalone.conf.js] Archivo de configuración utilizado por la
+\item [\emph{wdio.standalone.conf.js}] Archivo de configuración utilizado por la
     biblioteca \emph{webdriver.io} para la ejecución de las pruebas sobre el
     mismo ordenador en modo solitario.
 \end{description}
@@ -157,7 +152,7 @@ prueba relacionados con pruebas negativas en todos los módulos.} \\
 prueba relacionados con pruebas de dominio en todos los módulos.} \\
 \hline
 \end{tabular}
-\caption{Suites en el framework para las diferentes etapas de evaluación.}
+\caption{Suites en el \emph{framework} para las diferentes etapas de evaluación.}
 \label{suites}
 \source{Elaboración propia.}
 \end{table}
@@ -193,7 +188,7 @@ contiene la secuencia de pasos y el conjunto de verificaciones de la prueba como
 se describen en el diagrama de secuencia de la figura \ref{sequence}, y estos a
 su vez traducidos a código fuente como se ve en la figura \ref{spec}.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/lltc.eps}
 \caption{Especificación del Caso de Prueba A001.}
@@ -201,7 +196,7 @@ su vez traducidos a código fuente como se ve en la figura \ref{spec}.
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/diagram02.eps}
 \caption{Diagrama de secuencia para el Caso de Prueba A001.}
@@ -209,7 +204,7 @@ su vez traducidos a código fuente como se ve en la figura \ref{spec}.
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \begin{verbatim}
 it('A001 - Producto es registrado con los valores obligatorios '+
    'establecidos después de accionado el botón «Guardar»',()=>{
@@ -252,38 +247,6 @@ it('A001 - Producto es registrado con los valores obligatorios '+
 \end{figure}
 
 \section{Ejecución de las pruebas}
-En la figura \ref{tc-tests}, se puede ver la distribución de los casos de prueba
-según el tipo de evaluación realizado, puede apreciarse que las pruebas
-funcionales ocupan mas de la mitad de la totalidad de casos de prueba en el
-proyecto, mientras que los casos de prueba negativos, y de aceptación, están más
-próximos al 10\%.
-
-En la figura \ref{tc-type}, se puede ver la distribución de los casos de prueba
-según el tipo de acción que se realiza en el sistema, es decir, si son casos
-que afectan la interfaz de usuario, si mas bien son funciones de validación, o
-si realizan alguna petición al servidor, sea esta de lectura o escritura.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{graphics/tc-tests.eps}
-\caption{Casos de Prueba según el tipo de evaluación realizada.}
-\label{tc-tests}
-\source{Elaboración propia.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{graphics/tc-type.eps}
-\caption{Casos de Prueba según el tipo de acción a evaluar.}
-\label{tc-type}
-\source{Elaboración propia.}
-\end{figure}
-
-Puede apreciarse igualmente que la mayor parte de los casos de prueba están
-orientados a evaluar el comportamiento de la interfaz de usuario, mientras que
-en un 25\% aproximadamente se evalúan funcionalidades que se comunican con el
-servidor.
-
 En las figuras \ref{results-tests} y \ref{results-type}, se condensan los
 resultados obtenidos de la ejecución de los casos de prueba, en los cuales
 únicamente fallaron 2 casos de prueba, ambos relacionados a un mismo formulario,

@@ -189,55 +189,49 @@ actividades detalladas en el cuadro \ref{planificacion} en la página
 \hline
 Objetivo General & Objetivos Específicos & Actividades & Resultados \\
 \hline
-\multirow{12}{4.0cm}{Automatizar los casos de prueba de las funcionalidades
-provistas por \emph{Salesforce} que componen la interfaz de usuario del módulo
-de gestión de productos y listas de precios, para minimizar la cantidad de
-errores que contiene el software.} &
-\multirow{3}{4.0cm}{Formular los casos de prueba necesarios que el módulo de
-gestión de productos requiera para cubrir los atributos de calidad requeridos.} &
-Recolectar información, explorar y analizar el módulo de productos. &
-\multirow{3}{4.0cm}{Casos de prueba del módulo de productos.} \\
+\multirow{10}{4.0cm}{Implementar un \emph{framework} para la automatización de
+las pruebas de interfaz de usuario en el módulo de Productos y Listas de Precios
+en \emph{Salesforce}, para garantizar un procedimiento continuo de evaluación y
+minimizar la cantidad de errores que contiene el software.} &
+\multirow{3}{4.0cm}{Formular los casos de prueba necesarios que los módulos de
+gestión de productos y listas de precios requieran para cubrir los atributos de
+calidad requeridos.} &
+Recolección de la información y exploración de los módulos especificos. &
+\multirow{3}{4.0cm}{Casos de prueba para los modulos de Productos y Listas de
+Precios.} \\
 \cline{3-3}
-& & Diseñar los tipos de evaluación requeridos para el módulo de productos. & \\
+& & Analisis y diseño de los tipos de evaluación requeridos para los modulos
+especificos. & \\
 \cline{3-3}
-& & Formular los casos de prueba necesarios para el módulo de productos. & \\
+& & Formulación los casos de prueba necesarios para los modulos
+especificos. & \\
 \cline{2-4}
 
-& \multirow{3}{4.0cm}{Automatizar los casos de prueba de las funciones que
-componen la interfaz de usuario del módulo de gestión de productos.} &
-Analizar, y diseñar el software para la automatización de la interfaz de
-usuario. &
-\multirow{3}{4.0cm}{Rutinas de automatización de los casos de prueba del módulo
-de productos.} \\
+& \multirow{3}{4.0cm}{Diseñar e implementar los modelos y bibliotecas de
+funciones que conforman un \emph{framework} de automatización.} &
+Analisis y modelamiento de los componentes del \emph{framework}. &
+\multirow{3}{4.0cm}{\emph{Framework} de automatización con los componentes
+necesarios para la implementación de los casos de prueba.} \\
 \cline{3-3}
-& & Implementar el software para automatización de los casos de prueba. & \\
+& & Estructuración de los entornos de prueba y configuración de los servicios
+disponibles. & \\
 \cline{3-3}
-& & Ejecutar el software para automatización de los casos de prueba. & \\
+& & Implementación de los componentes del \emph{framework}. & \\
 \cline{2-4}
 
-& \multirow{3}{4.0cm}{Formular los casos de prueba necesarios que el módulo de
-gestión de listas de precios requiera para cubrir los atributos de calidad
-requeridos.} &
-Recolectar información, explorar y analizar el módulo de listas de precios. &
-\multirow{3}{4.0cm}{Casos de prueba del módulo de listas de precios.} \\
+& \multirow{4}{4.0cm}{Automatizar los casos de prueba de las funciones que
+componen la interfaz de usuario del módulo de gestión de productos y listas de
+precios.} &
+Implementación de los casos de prueba formulados. &
+\multirow{4}{4.0cm}{Rutinas de automatización de los casos de prueba de los
+modulos de Productos y Listas de Precios.} \\
 \cline{3-3}
-& & Diseñar los tipos de evaluación requeridos para el módulo de listas de
-precios. & \\
+& & Implementación de precondiciones y postcondiciones en la ejecución de los
+casos de prueba. & \\
 \cline{3-3}
-& & Formular los casos de prueba necesarios para el módulo de listas de
-precios. & \\
-\cline{2-4}
-
-& \multirow{3}{4.0cm}{Automatizar los casos de prueba de las funciones que
-componen la interfaz de usuario del módulo de gestión de lista de precios.} &
-Analizar, y diseñar el software para la automatización de la interfaz de
-usuario. &
-\multirow{3}{4.0cm}{Rutinas de automatización de los casos de prueba del módulo
-de listas de precios.} \\
+& & Ejecución de los casos de prueba automatizados. & \\
 \cline{3-3}
-& & Implementar el software para automatización de los casos de prueba. & \\
-\cline{3-3}
-& & Ejecutar el software para automatización de los casos de prueba. & \\
+& & Generación del reporte de resultados y reporte de errores. & \\
 \hline
 \end{tabular}}
 \caption{Planificación de actividades del proyecto.}
@@ -250,20 +244,20 @@ Dentro del alcance de la evaluación se encuentran los componentes de productos
 y listas de precios, las funcionalidades que comprenden estos se detallan en
 esta sección, desde múltiples perspectivas de análisis.
 
-Como se mencionó anteriormente en la sección de equipamiento, se consideró la
-interfaz \emph{Lightning Experience}, como único objetivo de la evaluación. La
-versión \emph{Lightning Experience} esta disponible para las siguientes
-ediciones del producto: \emph{Essentials}, \emph{Group}, \emph{Professional},
+Como se mencionó anteriormente, se consideró la interfaz
+\emph{Lightning Experience}, como único objetivo de la evaluación. La versión
+\emph{Lightning Experience} esta disponible para las siguientes ediciones del
+producto: \emph{Essentials}, \emph{Group}, \emph{Professional},
 \emph{Enterprise}, \emph{Performance}, \emph{Unlimited}, y \emph{Developer}.
 
 \subsection{Productos}
 El Producto para el software a evaluar, representa uno de los componentes
 fundamentales y claves para el éxito, por ende es importante evaluarlo
 desde múltiples facetas; la primera de estas es la funcionalidad provista por
-las interfaces de este modulo. En la figura \ref{productos} pueden verse estas
+las interfaces de este módulo. En la figura \ref{productos} pueden verse estas
 funcionalidades, clasificadas desde la perspectiva de la interfaz de usuario.
 
-Entre las funcionalidades que pueden apreciarse, están las operaciones comunes
+Entre las funcionalidades que pueden apreciarse están las operaciones comunes
 de creación, búsqueda, visualización, modificación, y eliminación de productos,
 se omitieron las funcionalidades de controles de vista de lista, para que
 todo este componente pueda ser tratado de manera separada. También pueden
@@ -271,13 +265,13 @@ observarse funciones relacionadas a registrar precios estándar y precios para
 una lista de precios determinada.
 
 En la figura \ref{productos_vistas}, se aprecian las diferentes vistas que
-comprenden el modulo, se resalto con color amarillo aquellas vistas que son de
-tipo formulario, mientras que se resalto con color verde aquellas que son de
+comprenden el módulo, se resaltó con color amarillo aquellas vistas que son de
+tipo formulario, mientras que se resaltó con color verde aquellas que son de
 tipo confirmación de acción.
 
-Además de las funcionalidades y vistas antes mencionadas, también se analizo el
-comportamiento de los formularios que provee el modulo, los cuales se presentan
-en la figura \ref{productos_formularios}.
+Además de las funcionalidades y vistas antes mencionadas, también se analizó el
+comportamiento de los formularios que provee el módulo, como puede verse en la
+figura \ref{productos_formularios}.
 
 \begin{figure}[H]
 \centering
@@ -439,22 +433,22 @@ en la figura \ref{productos_formularios}.
 \subsection{Listas de Precios}
 Las Listas de Precios, tienen como objetivo, hacer que un mismo producto pueda
 tener múltiples precios, dependiendo de como la organización cliente maneje sus
-canales de distribución y producción. Al igual que en el modulo de productos, en
+canales de distribución y producción. Al igual que en el módulo de productos, en
 la figura \ref{listas_de_precios} pueden verse las funcionalidades clasificadas
 desde la perspectiva de la interfaz de usuario, también se omitió la sección de
 los controles de vista de lista.
 
 Las funciones de Listas de Precios son muy similares a aquellas vistas en el
-modulo de productos, analizado anteriormente.
+módulo de productos, analizado anteriormente.
 
 En la figura \ref{listas_de_precios_vistas}, se detallan aquellas vistas
-presentes en este modulo, de la misma manera se ha destacado con amarillo a
+presentes en este módulo, de la misma manera se ha destacado con amarillo a
 aquellas vistas que son formularios, mientras que en verde se presentan a
 aquellas que representan diálogos de confirmación.
 
-También de las funcionalidades y vistas antes mencionadas, se analizo el
-comportamiento de los formularios que provee este modulo, los cuales se
-presentan en la figura \ref{listas_de_precios_formularios}.
+También de las funcionalidades y vistas antes mencionadas, se analizó el
+comportamiento de los formularios que provee este módulo, como puede verse en la
+figura \ref{listas_de_precios_formularios}.
 
 \begin{figure}[H]
 \centering
@@ -617,9 +611,9 @@ anteriormente citados, aquí también se han destacado con amarillo a
 aquellas vistas que son formularios, mientras que en verde se presentan a
 aquellas que representan diálogos de confirmación.
 
-También de las funcionalidades y vistas antes mencionadas, se analizo el
-comportamiento de los formularios que provee este modulo, los cuales se
-presentan en la figura \ref{vista_de_lista_formularios}.
+También de las funcionalidades y vistas antes mencionadas, se analizó el
+comportamiento de los formularios que provee este módulo, como puede verse en la
+figura \ref{vista_de_lista_formularios}.
 
 \begin{figure}[H]
 \centering
@@ -864,7 +858,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 & & & \footnotesize{4001} \\
 \hline
 \end{tabular}
-\caption{Tabla de Myers para el Formulario «Crear Producto»}
+\caption{Tabla de \emph{Myers} para el Formulario «Crear Producto»}
 \label{myers_01}
 \source{Elaboración propia.}
 \end{table}
@@ -891,7 +885,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \footnotesize{Utilizar Precio estándar} & \footnotesize{\{verdadero,falso\}} & & \\
 \hline
 \end{tabular}
-\caption{Tabla de Myers para el Formulario «Crear Entrada del catalogo de precios»}
+\caption{Tabla de \emph{Myers} para el Formulario «Crear Entrada del catalogo de precios»}
 \label{myers_02}
 \source{Elaboración propia.}
 \end{table}
@@ -907,7 +901,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \footnotesize{Divisa} & \footnotesize{ninguno,[lista de valores]} & & \\
 \hline
 \end{tabular}
-\caption{Tabla de Myers para el Formulario «Agregar a lista de precios»}
+\caption{Tabla de \emph{Myers} para el Formulario «Agregar a lista de precios»}
 \label{myers_03}
 \source{Elaboración propia.}
 \end{table}
@@ -930,7 +924,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \footnotesize{Utilizar precio estándar} & \footnotesize{\{verdadero,falso\}} & & \\
 \hline
 \end{tabular}
-\caption{Tabla de Myers para el Formulario «Modificar Entrada del catalogo de precios»}
+\caption{Tabla de \emph{Myers} para el Formulario «Modificar Entrada del catalogo de precios»}
 \label{myers_04}
 \source{Elaboración propia.}
 \end{table}
@@ -955,7 +949,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \footnotesize{Es lista de precios estándar} & \footnotesize{\{verdadero,falso\}} & & \\
 \hline
 \end{tabular}
-\caption{Tabla de Myers para el Formulario «Crear Lista de precios»}
+\caption{Tabla de \emph{Myers} para el Formulario «Crear Lista de precios»}
 \label{myers_05}
 \source{Elaboración propia.}
 \end{table}
@@ -985,7 +979,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 \footnotesize{Utilizar Precio estándar} & \footnotesize{\{verdadero,falso\}} & & \\
 \hline
 \end{tabular}
-\caption{Tabla de Myers para el Formulario «Agregar productos»}
+\caption{Tabla de \emph{Myers} para el Formulario «Agregar productos»}
 \label{myers_06}
 \source{Elaboración propia.}
 \end{table}
@@ -1016,7 +1010,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 & \footnotesize{Compartir vista de lista con grupos de usuarios} & & \\
 \hline
 \end{tabular}
-\caption{Tabla de Myers para el Formulario «Nueva vista de lista»}
+\caption{Tabla de \emph{Myers} para el Formulario «Nueva vista de lista»}
 \label{myers_07}
 \source{Elaboración propia.}
 \end{table}
@@ -1033,7 +1027,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 & & & \footnotesize{41} \\
 \hline
 \end{tabular}
-\caption{Tabla de Myers para el Formulario «Cambiar nombre»}
+\caption{Tabla de \emph{Myers} para el Formulario «Cambiar nombre»}
 \label{myers_08}
 \source{Elaboración propia.}
 \end{table}
@@ -1049,7 +1043,7 @@ Para el análisis de los formularios se crearon sus respectivas tablas de
 & \footnotesize{Compartir vista de lista con grupos de usuarios} & & \\
 \hline
 \end{tabular}
-\caption{Tabla de Myers para el Formulario «Configuración de colaboración»}
+\caption{Tabla de \emph{Myers} para el Formulario «Configuración de colaboración»}
 \label{myers_09}
 \source{Elaboración propia.}
 \end{table}
@@ -1074,4 +1068,42 @@ software \cite{Nadig}.
 
 Las pruebas negativas se centraron en los mensajes de errores que el sistema
 envía y debe enviar según los mismos criterios del producto.
+
+\section{Casos de prueba}
+A partir del análisis realizado, se terminó formulando múltiples casos de
+prueba, estos se encuentran descritos en el \textbf{apéndice
+\ref{appendix_testscases}} categorizados e individualizados según el área y
+subarea al que pertenecen.
+
+En la figura \ref{tc-tests}, se puede ver la distribución de los casos de prueba
+según el tipo de evaluación realizado, puede apreciarse que las pruebas
+funcionales ocupan mas de la mitad de la totalidad de casos de prueba en el
+proyecto, mientras que los casos de prueba negativos, y de aceptación, están más
+próximos al 10\%.
+
+En la figura \ref{tc-type}, se puede ver la distribución de los casos de prueba
+según el tipo de acción que se realiza en el sistema, es decir, si son casos
+que afectan la interfaz de usuario, si mas bien son funciones de validación, o
+si realizan alguna petición al servidor, sea esta de lectura o escritura.
+
+Puede apreciarse igualmente que la mayor parte de los casos de prueba están
+orientados a evaluar el comportamiento de la interfaz de usuario, mientras que
+en un 25\% aproximadamente se evalúan funcionalidades que se comunican con el
+servidor.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/tc-tests.eps}
+\caption{Casos de Prueba según el tipo de evaluación realizada.}
+\label{tc-tests}
+\source{Elaboración propia.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{graphics/tc-type.eps}
+\caption{Casos de Prueba según el tipo de acción a evaluar.}
+\label{tc-type}
+\source{Elaboración propia.}
+\end{figure}
 
