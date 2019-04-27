@@ -16,331 +16,330 @@ abreviaturas:
     \item N00x, es el modelo de ID para un caso de prueba de tipo negativo.
 \end{itemize}
 
-\section{Casos de prueba}
-
 \begin{landscape}
 \centering
 \small
 {\def\arraystretch{2}
-\begin{longtable}[htb]{|c|c|p{5.0cm}|p{14.0cm}|}
+\begin{longtable}[htb]{|c|c|p{3.8cm}|p{15.2cm}|}
 \hline
-\textbf{ID} & \textbf{Área} & \textbf{Subarea} & \textbf{Caso de Prueba} \\
+\scriptsize{\textbf{ID}} & \scriptsize{\textbf{Área}} &
+\scriptsize{\textbf{Subarea}} & \scriptsize{\textbf{Caso de Prueba}} \\
 \hline
-F001 & P &  & Iniciador de Aplicación de Salesforce muestra el enlace a «Productos» \\ \hline
-F002 & P & NUEVO & Clic en el botón «Nuevo», lanza el formulario de creación de producto \\ \hline
-A001 & P & NUEVO & Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F003 & P & NUEVO & Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F004 & P & NUEVO & Formulario «Crear Producto» se cierra al accionar el botón «Cancelar» \\ \hline
-F005 & P & NUEVO & Formulario «Crear Producto» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N001 & P & NUEVO & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F006 & P & NUEVO & Mensaje «Se creó Producto "$<$Nombre de Producto$>$"» se muestra después de registrado un producto \\ \hline
-D001 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» no realiza el registro, cuando el campo «Nombre del producto» tiene 0 caracteres \\ \hline
-D002 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» realiza el registro, cuando el campo «Nombre del producto» tiene 1 carácter \\ \hline
-D003 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» realiza el registro, cuando el campo «Nombre del producto» tiene 255 caracteres \\ \hline
-D004 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» no realiza el registro, cuando el campo «Nombre del producto» tiene 256 caracteres \\ \hline
-D005 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» realiza el registro, cuando el campo «Código del producto» tiene 0 caracteres \\ \hline
-D006 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» realiza el registro, cuando el campo «Código del producto» tiene 255 caracteres \\ \hline
-D007 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» no realiza el registro, cuando el campo «Código del producto» tiene 256 caracteres \\ \hline
-D008 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» realiza el registro, cuando el campo «Descripción del producto» tiene 0 caracteres \\ \hline
-D009 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» realiza el registro, cuando el campo «Descripción del producto» tiene 4000 caracteres \\ \hline
-D010 & P & NUEVO-FORMULARIO & Formulario «Crear Producto» no realiza el registro, cuando el campo «Descripción del producto» tiene 4001 caracteres \\ \hline
-F007 & P & BUSCAR & «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Nombre del producto» \\ \hline
-F008 & P & BUSCAR & «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Código de producto» \\ \hline
-F009 & P & BUSCAR & «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Descripción de producto» \\ \hline
-N002 & P & BUSCAR & Mensaje «No hay elementos para mostrar» se muestra cuando la búsqueda no presenta resultados \\ \hline
-F010 & P & MOSTRAR COMO & «Mostrar como» posee los elementos: «Tabla» y «Kanban» \\ \hline
-F011 & P & MOSTRAR COMO & Opción «Tabla» en «Mostrar como», muestra los productos en formato tabular \\ \hline
-F012 & P & MOSTRAR COMO & Opción «Kanban» en «Mostrar como», muestra los productos en formato de columnas \\ \hline
-F013 & P & ACTUALIZAR & Botón «Actualizar», reenvía las peticiones de consulta al servidor \\ \hline
-N003 & P & MOSTRAR GRÁFICOS & «Mostrar Gráficos» está deshabilitado mientras no se use una «vista de lista» determinada \\ \hline
-F014 & P & MOSTRAR GRÁFICOS & «Mostrar Gráficos» está habilitado mientras se use una «vista de lista» determinada \\ \hline
-N004 & P & MOSTRAR FILTROS & «Mostrar filtros» está deshabilitado mientras no se use una «vista de lista» determinada \\ \hline
-F015 & P & MOSTRAR FILTROS & «Mostrar filtros» está habilitado mientras se use una «vista de lista» determinada \\ \hline
-F016 & P & FILTRAR & «Vistas de Lista» muestra los elementos registrados \\ \hline
-F017 & P & FILTRAR & «Vistas de Lista» muestra el elemento «Vistos recientemente» \\ \hline
-N005 & P & FILTRAR & Mensaje «No hay elementos para mostrar» se muestra cuando no existen productos bajo una vista de lista \\ \hline
-F018 & P & FILTRAR & Activar un «Vista de Lista» creada, filtra los productos basados en sus criterios establecidos \\ \hline
-A002 & P & LISTA & Vista de Lista «Vistos recientemente» lista los productos registrados \\ \hline
-N006 & P & LISTA & Mensaje «No hay elementos para mostrar» cuando ningún producto ha sido registrado \\ \hline
-F019 & P & LISTA & Columnas en la tabla de productos pueden reordenar la lista dinámicamente \\ \hline
-F020 & P & LISTA & Columnas en la tabla de productos permiten «Ajustar Texto» \\ \hline
-F021 & P & LISTA & Columnas en la tabla de productos permiten «Recortar Texto» \\ \hline
-F022 & P & LISTA & Tabla de productos permite la selección múltiple de elementos \\ \hline
-F023 & P & LISTA & Tabla de productos ofrece selección y de-selección de todos los elementos \\ \hline
-F024 & P & LISTA & Elementos de la tabla de productos ofrecen un enlace para «Ver» \\ \hline
-F025 & P & LISTA & Elementos de la tabla de productos ofrecen un enlace para «Modificar» \\ \hline
-F026 & P & LISTA & Elementos de la tabla de productos ofrecen un enlace para «Eliminar» \\ \hline
-F027 & P & LISTA & Celdas de la tabla de productos pueden ser editados \\ \hline
-F028 & P & LISTA & Tabla de productos muestra la Opción «Guardar» cuando existen elementos editados \\ \hline
-F029 & P & LISTA & Tabla de productos muestra la Opción «Cancelar» cuando existen elementos editados \\ \hline
-F030 & P & LISTA & Elementos editados en la tabla de productos solicitan confirmación de descarte antes de cambiar de vista \\ \hline
-A003 & P & LISTA & Tabla de productos registra la información modificada de las celdas editadas \\ \hline
-F031 & P & VER & Vista de producto muestra las opciones de «Modificar», «Eliminar», y «Duplicar» \\ \hline
-A004 & P & VER-DETALLES & Vista de producto muestra la información del producto en su pestaña «Detalles» \\ \hline
-A005 & P & VER-RELACIONADO & Vista de producto muestra la lista de «Listas de precios» en su pestaña «Relacionado» \\ \hline
-F032 & P & VER-RELACIONADO & «Agregar precio estándar» es visible cuando el producto no tiene un precio establecido \\ \hline
-N007 & P & VER-RELACIONADO & «Agregar precio estándar» no es visible cuando el producto tiene un precio establecido \\ \hline
-F033 & P & VER-RELACIONADO & Clic en el botón «Agregar precio estándar», lanza el formulario de creación de entrada del catálogo de precios \\ \hline
-A006 & P & VER-RELACIONADO & Precio estándar del producto es registrado con un valor de 1 después de accionado el botón «Guardar» \\ \hline
-F034 & P & VER-RELACIONADO & Precio estándar del producto es registrado con un valor de 1 después de accionado el botón «Guardar y nuevo» \\ \hline
-F035 & P & VER-RELACIONADO & Formulario «Crear Entrada del catálogo de precios» se cierra al accionar el botón «Cancelar» \\ \hline
-F036 & P & VER-RELACIONADO & Formulario «Crear Entrada del catálogo de precios» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N008 & P & VER-RELACIONADO & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F037 & P & VER-RELACIONADO & Mensaje «Se creó Entrada del catálogo de precios ."» se muestra después de registrado un precio estándar \\ \hline
-D011 & P & VER-RELACIONADO-FORMULARIO & Formulario «Crear Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor -9.007.199.254.740.992 \\ \hline
-D012 & P & VER-RELACIONADO-FORMULARIO & Formulario «Crear Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor -9.007.199.254.740.991 \\ \hline
-D013 & P & VER-RELACIONADO-FORMULARIO & Formulario «Crear Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 0,9999 \\ \hline
-D014 & P & VER-RELACIONADO-FORMULARIO & Formulario «Crear Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 0,999 \\ \hline
-D015 & P & VER-RELACIONADO-FORMULARIO & Formulario «Crear Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 9.007.199.254.740.991 \\ \hline
-D016 & P & VER-RELACIONADO-FORMULARIO & Formulario «Crear Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 9.007.199.254.740.992 \\ \hline
-F038 & P & VER-RELACIONADO & Clic en el botón «Agregar a lista de precios», lanza el formulario de de agregar a lista de precios \\ \hline
-A007 & P & VER-RELACIONADO & Precio de producto para una lista de precios es registrado después de accionado el botón «Guardar» \\ \hline
-F039 & P & VER-RELACIONADO & Formulario «Agregar a lista de precios» se cierra al accionar el botón «Cancelar» \\ \hline
-F040 & P & VER-RELACIONADO & Formulario «Agregar a lista de precios» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N009 & P & VER-RELACIONADO & Clic en el botón «Siguiente» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F041 & P & VER-RELACIONADO & Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra después de modificado un precio \\ \hline
-D017 & P & VER-RELACIONADO-FORMULARIO & Formulario «Agregar a lista de precios» permite el registro, cuando en el campo «Lista de precios» se ingresa el valor Nulo \\ \hline
-D018 & P & VER-RELACIONADO-FORMULARIO & Formulario «Agregar a lista de precios» permite el registro, cuando en el campo «Divisa» se ingresa el valor Nulo \\ \hline
-F042 & P & VER-RELACIONADO-LISTA & Elementos de la lista de «Listas de precios» ofrecen un enlace para «Ver» \\ \hline
-F043 & P & VER-RELACIONADO-LISTA & Elementos de la lista de «Listas de precios» ofrecen un enlace para «Modificar» \\ \hline
-F044 & P & VER-RELACIONADO-LISTA & Elementos de la lista de «Listas de precios» ofrecen un enlace para «Eliminar» \\ \hline
-F045 & P & VER-RELACIONADO-LISTA-MODIFICAR & Clic en el botón «Modificar», lanza el formulario «Modificar Entrada del catálogo de precios» \\ \hline
-A008 & P & VER-RELACIONADO-LISTA-MODIFICAR & Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F046 & P & VER-RELACIONADO-LISTA-MODIFICAR & Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F047 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» se cierra al accionar el botón «Cancelar» \\ \hline
-F048 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F049 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» no permite marcar «Utilizar Precio estándar» en la lista de precios por defecto \\ \hline
-N010 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» permite marcar «Utilizar Precio estándar» en la lista de precios que no son por defecto \\ \hline
-N011 & P & VER-RELACIONADO-LISTA-MODIFICAR & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F050 & P & VER-RELACIONADO-LISTA-MODIFICAR & Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra después de modificado un precio \\ \hline
-D019 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor -9.007.199.254.740.992 \\ \hline
-D020 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor -9.007.199.254.740.991 \\ \hline
-D021 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 0,9999 \\ \hline
-D022 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 0,999 \\ \hline
-D023 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 9.007.199.254.740.991 \\ \hline
-D024 & P & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 9.007.199.254.740.992 \\ \hline
-F051 & P & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Botón «Guardar y nuevo» muestra el formulario «Crear Entrada del catálogo de precios» \\ \hline
-A009 & P & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F052 & P & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F053 & P & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Formulario «Crear Entrada del catálogo de precios» se cierra al accionar el botón «Cancelar» \\ \hline
-F054 & P & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Formulario «Crear Entrada del catálogo de precios» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N012 & P & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F055 & P & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Mensaje «Se creó Entrada del catálogo de precios ."» se muestra después de modificado un precio \\ \hline
-F056 & P & VER-RELACIONADO-LISTA-ELIMINAR & Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
-A010 & P & VER-RELACIONADO-LISTA-ELIMINAR & Precio es eliminado después de accionado el botón «Eliminar» \\ \hline
-N013 & P & VER-RELACIONADO-LISTA-ELIMINAR & Precio estándar no puede ser eliminado después de accionado el botón «Eliminar», si existen referencias en otras listas de precios \\ \hline
-F057 & P & VER-RELACIONADO-LISTA-ELIMINAR & Confirmación «Eliminar Entrada del catálogo de precios» se cierra al accionar el botón «Cancelar» \\ \hline
-F058 & P & VER-RELACIONADO-LISTA-ELIMINAR & Confirmación «Eliminar Entrada del catálogo de precios» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F059 & P & VER-RELACIONADO-LISTA-ELIMINAR & Mensaje «Se eliminó Producto "$<$Nombre de Producto$>$"» se muestra después de eliminado un producto \\ \hline
-F060 & P & VER-RELACIONADO & Clic en el botón «Ver todos» amplía la lista de Listas de precios \\ \hline
-F061 & P & VER-RELACIONADO & Botón «Actualizar» ubicado en la ampliación de la lista de Listas de precios, reenvía las peticiones de consulta al servidor \\ \hline
-F062 & P & LISTA-MODIFICAR & Clic en el botón «Modificar», lanza el formulario de edición de producto \\ \hline
-A011 & P & LISTA-MODIFICAR & Producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F063 & P & LISTA-MODIFICAR & Producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F064 & P & LISTA-MODIFICAR & Formulario de edición de producto se cierra al accionar el botón «Cancelar» \\ \hline
-F065 & P & LISTA-MODIFICAR & Formulario de edición de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N014 & P & LISTA-MODIFICAR & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F066 & P & LISTA-MODIFICAR & Mensaje «Se guardó Producto "$<$Nombre de Producto$>$"» se muestra después de modificado un producto \\ \hline
-F067 & P & LISTA-ELIMINAR & Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
-A012 & P & LISTA-ELIMINAR & Producto es eliminado después de accionado el botón «Eliminar» \\ \hline
-F068 & P & LISTA-ELIMINAR & Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar» \\ \hline
-F069 & P & LISTA-ELIMINAR & Confirmación de eliminación de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F070 & P & LISTA-ELIMINAR & Mensaje «Se eliminó Producto "$<$Nombre de Producto$>$"» se muestra después de eliminado un producto \\ \hline
-F071 & P & LISTA-DUPLICAR & Clic en el botón «Duplicar», lanza el formulario de creación de producto \\ \hline
-A013 & P & LISTA-DUPLICAR & Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F072 & P & LISTA-DUPLICAR & Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F073 & P & LISTA-DUPLICAR & Formulario «Crear Producto» se cierra al accionar el botón «Cancelar» \\ \hline
-F074 & P & LISTA-DUPLICAR & Formulario «Crear Producto» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F075 & LP &  & En el iniciador de aplicación de Salesforce puede verse el enlace a «Listas de precios» \\ \hline
-F076 & LP & NUEVO & Clic en el botón «Nuevo», lanza el formulario de creación de lista de precios \\ \hline
-A014 & LP & NUEVO & Lista de Precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F077 & LP & NUEVO & Lista de Precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F078 & LP & NUEVO & Formulario «Crear Lista de precios» se cierra al accionar el botón «Cancelar» \\ \hline
-F079 & LP & NUEVO & Formulario «Crear Lista de precios» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N015 & LP & NUEVO & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F080 & LP & NUEVO & Mensaje «Se creó Lista de precios "$<$Nombre de Producto$>$"» se muestra después de registrada una lista de precios \\ \hline
-D025 & LP & NUEVO-FORMULARIO & Formulario «Crear Lista de precios» no realiza el registro, cuando el campo «Nombre de la lista de precios» tiene 0 caracteres \\ \hline
-D026 & LP & NUEVO-FORMULARIO & Formulario «Crear Lista de precios» realiza el registro, cuando el campo «Nombre de la lista de precios» tiene 1 carácter \\ \hline
-D027 & LP & NUEVO-FORMULARIO & Formulario «Crear Lista de precios» realiza el registro, cuando el campo «Nombre de la lista de precios» tiene 255 caracteres \\ \hline
-D028 & LP & NUEVO-FORMULARIO & Formulario «Crear Lista de precios» no realiza el registro, cuando el campo «Nombre de la lista de precios» tiene 256 caracteres \\ \hline
-D029 & LP & NUEVO-FORMULARIO & Formulario «Crear Lista de precios» realiza el registro, cuando el campo «Descripción» tiene 0 caracteres \\ \hline
-D030 & LP & NUEVO-FORMULARIO & Formulario «Crear Lista de precios» realiza el registro, cuando el campo «Descripción» tiene 255 caracteres \\ \hline
-D031 & LP & NUEVO-FORMULARIO & Formulario «Crear Lista de precios» no realiza el registro, cuando el campo «Descripción» tiene 256 caracteres \\ \hline
-F081 & LP & BUSCAR & «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Nombre de la lista de precios» \\ \hline
-F082 & LP & BUSCAR & «Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Descripción» \\ \hline
-N016 & LP & BUSCAR & Mensaje «No hay elementos para mostrar» se muestra cuando la búsqueda no presenta resultados \\ \hline
-F083 & LP & MOSTRAR COMO & «Mostrar como» posee los elementos: «Tabla» y «Kanban» \\ \hline
-F084 & LP & MOSTRAR COMO & Opción «Tabla» en «Mostrar como», muestra los productos en formato tabular \\ \hline
-F085 & LP & MOSTRAR COMO & Opción «Kanban» en «Mostrar como», muestra los productos en formato de columnas \\ \hline
-F086 & LP & ACTUALIZAR & Botón «Actualizar», reenvía las peticiones de consulta al servidor \\ \hline
-N017 & LP & MOSTRAR GRÁFICOS & «Mostrar Gráficos» está deshabilitado mientras no se use una «vista de lista» determinada \\ \hline
-F087 & LP & MOSTRAR GRÁFICOS & «Mostrar Gráficos» está habilitado mientras se use una «vista de lista» determinada \\ \hline
-N018 & LP & MOSTRAR FILTROS & «Mostrar filtros» está deshabilitado mientras no se use una «vista de lista» determinada \\ \hline
-F088 & LP & MOSTRAR FILTROS & «Mostrar filtros» está habilitado mientras se use una «vista de lista» determinada \\ \hline
-F089 & LP & FILTRAR & «Vistas de Lista» muestra los elementos registrados \\ \hline
-F090 & LP & FILTRAR & «Vistas de Lista» muestra el elemento «Vistos recientemente» \\ \hline
-N019 & LP & FILTRAR & Mensaje «No hay elementos para mostrar» se muestra cuando no existen listas de precios bajo una vista de lista \\ \hline
-F091 & LP & FILTRAR & Activar un «Vista de Lista» creada, filtra las listas de precios basados en sus criterios establecidos \\ \hline
-A015 & LP & LISTA & Vista de Lista «Vistos recientemente» lista las listas de precios registrados \\ \hline
-F092 & LP & LISTA & Columnas en la tabla de listas de precios pueden reordenar la lista dinámicamente \\ \hline
-F093 & LP & LISTA & Columnas en la tabla de listas de precios permiten «Ajustar Texto» \\ \hline
-F094 & LP & LISTA & Columnas en la tabla de listas de precios permiten «Recortar Texto» \\ \hline
-F095 & LP & LISTA & Tabla de listas de precios permite la selección múltiple de elementos \\ \hline
-F096 & LP & LISTA & Tabla de listas de precios ofrece selección y de-selección de todos los elementos \\ \hline
-F097 & LP & LISTA & Elementos de la tabla de listas de precios ofrecen un enlace para «Ver» \\ \hline
-F098 & LP & LISTA & Elementos de la tabla de listas de precios ofrecen un enlace para «Modificar» \\ \hline
-F099 & LP & LISTA & Elementos de la tabla de listas de precios ofrecen un enlace para «Eliminar» \\ \hline
-F100 & LP & LISTA & Celdas de la tabla de listas de precios pueden ser editados \\ \hline
-F101 & LP & LISTA & Tabla de listas de precios muestra la Opción «Guardar» cuando existen elementos editados \\ \hline
-F102 & LP & LISTA & Tabla de listas de precios muestra la Opción «Cancelar» cuando existen elementos editados \\ \hline
-F103 & LP & LISTA & Elementos editados en la tabla de listas de precios solicitan confirmación de descarte antes de cambiar de vista \\ \hline
-A016 & LP & LISTA & Tabla de productos registra la información modificada de las celdas editadas \\ \hline
-F104 & LP & VER & Vista de listas de precios muestra las opciones de «Modificar», «Eliminar», y «Duplicar» \\ \hline
-A017 & LP & VER-DETALLES & Vista de lista de precios muestra la información de la lista en su pestaña «Detalles» \\ \hline
-A018 & LP & VER-RELACIONADO & Vista de lista de precios muestra la lista de «Productos» en su pestaña «Relacionado» \\ \hline
-A019 & LP & VER-RELACIONADO & Vista de lista de precios muestra la lista de «Historial de lista de precios» en su pestaña «Relacionado» \\ \hline
-F105 & LP & VER-RELACIONADO & «Agregar productos» es visible cuando la lista de precios no es la lista estándar \\ \hline
-N020 & LP & VER-RELACIONADO & «Agregar productos» no es visible cuando la lista de precios es la lista estándar \\ \hline
-F106 & LP & VER-RELACIONADO & Clic en el botón «Agregar Productos», lanza el formulario para agregar productos \\ \hline
-F107 & LP & VER-RELACIONADO & Campo de búsqueda «Buscar Entrada de catálogos de precios...» filtra los resultados acorde a la entrada de texto \\ \hline
-F108 & LP & VER-RELACIONADO & Seleccionar productos en el formulario «Agregar productos» habilita en botón «Siguiente» \\ \hline
-N021 & LP & VER-RELACIONADO & Botón «Siguiente» para un formulario de «Agregar productos» esta deshabilitado mientras no se seleccionen productos \\ \hline
-A020 & LP & VER-RELACIONADO & Precios de la lista en el formulario de «Modificar Entrada de catálogos de precios seleccionadas» se registran después de accionado el botón «Guardar» \\ \hline
-F109 & LP & VER-RELACIONADO & Formulario «Agregar producto» se cierra al accionar el botón «Cancelar» \\ \hline
-F110 & LP & VER-RELACIONADO & Formulario «Agregar producto» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N022 & LP & VER-RELACIONADO & Clic en el botón «Guardar» para una tabla de precios vacía envía el mensaje «No se pueden guardar registros con errores.» \\ \hline
-F111 & LP & VER-RELACIONADO & Mensaje «X Entrada del catálogo de precios registro se actualizó.» se muestra después de registrados X precios de productos \\ \hline
-D032 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Agregar productos» no acepta buscar, cuando el campo «Buscar Entrada de catálogos de precios...» tiene valor con 0 caracteres \\ \hline
-D033 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Agregar productos» acepta buscar, cuando el campo «Buscar Entrada de catálogos de precios...» tiene valor con 1 carácter \\ \hline
-D034 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Agregar productos» acepta buscar, cuando el campo «Buscar Entrada de catálogos de precios...» tiene valor con 500 caracteres \\ \hline
-D035 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Agregar productos» no acepta buscar, cuando el campo «Buscar Entrada de catálogos de precios...» tiene valor con 501 caracteres \\ \hline
-D036 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Modificar Entrada de catálogos de precios seleccionadas» no permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con -9.007.199.254.740.992 \\ \hline
-D037 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Modificar Entrada de catálogos de precios seleccionadas» permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con -9.007.199.254.740.991 \\ \hline
-D038 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Modificar Entrada de catálogos de precios seleccionadas» no permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con 0,9999 \\ \hline
-D039 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Modificar Entrada de catálogos de precios seleccionadas» permite el registro de datos, cuando el campo «Precio de Lista» tiene valor 0,999 \\ \hline
-D040 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Modificar Entrada de catálogos de precios seleccionadas» permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con 9.007.199.254.740.991 \\ \hline
-D041 & LP & VER-RELACIONADO-FORMULARIO & Formulario «Modificar Entrada de catálogos de precios seleccionadas» no permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con 9.007.199.254.740.992 \\ \hline
-F112 & LP & VER-RELACIONADO-LISTA & Elementos de la lista de «Productos» ofrecen un enlace para «Ver» \\ \hline
-F113 & LP & VER-RELACIONADO-LISTA & Elementos de la lista de «Productos» ofrecen un enlace para «Modificar» \\ \hline
-F114 & LP & VER-RELACIONADO-LISTA & Elementos de la lista de «Productos» ofrecen un enlace para «Eliminar» \\ \hline
-F115 & LP & VER-RELACIONADO-LISTA-MODIFICAR & Clic en el botón «Modificar», lanza el formulario «Modificar Entrada del catálogo de precios» \\ \hline
-A021 & LP & VER-RELACIONADO-LISTA-MODIFICAR & Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F116 & LP & VER-RELACIONADO-LISTA-MODIFICAR & Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F117 & LP & VER-RELACIONADO-LISTA-MODIFICAR & Formulario de edición de precio se cierra al accionar el botón «Cancelar» \\ \hline
-F118 & LP & VER-RELACIONADO-LISTA-MODIFICAR & Formulario de edición de precio se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F119 & LP & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» no permite marcar «Utilizar Precio estándar» en la lista de precios por defecto \\ \hline
-N023 & LP & VER-RELACIONADO-LISTA-MODIFICAR & Formulario «Modificar Entrada del catálogo de precios» permite marcar «Utilizar Precio estándar» en la lista de precios que no son por defecto \\ \hline
-N024 & LP & VER-RELACIONADO-LISTA-MODIFICAR & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F120 & LP & VER-RELACIONADO-LISTA-MODIFICAR & Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra después de modificado un precio \\ \hline
-F121 & LP & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Botón «Guardar y nuevo» muestra el formulario «Crear Entrada del catálogo de precios» \\ \hline
-A022 & LP & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F122 & LP & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F123 & LP & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Formulario de edición de producto se cierra al accionar el botón «Cancelar» \\ \hline
-F124 & LP & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Formulario de edición de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N025 & LP & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F125 & LP & VER-RELACIONADO-LISTA-MODIFICAR-CREAR & Mensaje «Se creó Entrada del catálogo de precios ."» se muestra después de modificado un precio \\ \hline
-F126 & LP & VER-RELACIONADO-LISTA-ELIMINAR & Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
-A023 & LP & VER-RELACIONADO-LISTA-ELIMINAR & Precio es eliminado después de accionado el botón «Eliminar» \\ \hline
-N026 & LP & VER-RELACIONADO-LISTA-ELIMINAR & Precio estándar no puede ser eliminado después de accionado el botón «Eliminar», si existen referencias en otras listas de precios \\ \hline
-F127 & LP & VER-RELACIONADO-LISTA-ELIMINAR & Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar» \\ \hline
-F128 & LP & VER-RELACIONADO-LISTA-ELIMINAR & Confirmación de eliminación de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F129 & LP & VER-RELACIONADO-LISTA-ELIMINAR & Mensaje «Se eliminó Entrada del catálogo de precios "$<$Producto$>$".» se muestra después de eliminado el precio del producto \\ \hline
-F130 & LP & VER-RELACIONADO & Clic en el botón «Ver todos» de la sección «Productos» amplía la lista de Productos \\ \hline
-F131 & LP & VER-RELACIONADO & Botón «Actualizar» ubicado en la ampliación de la lista de Productos, reenvía las peticiones de consulta al servidor \\ \hline
-F132 & LP & VER-RELACIONADO & Clic en el botón «Ver todos» de la sección «Historial de lista de precios» amplía la lista de cambios \\ \hline
-F133 & LP & VER-RELACIONADO & Botón «Actualizar» ubicado en la ampliación de la lista de cambios reenvía las peticiones de consulta al servidor \\ \hline
-F134 & LP & LISTA-MODIFICAR & Clic en el botón «Modificar», lanza el formulario de edición de la lista de precios \\ \hline
-A024 & LP & LISTA-MODIFICAR & Lista de precios es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F135 & LP & LISTA-MODIFICAR & Lista de precios es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F136 & LP & LISTA-MODIFICAR & Formulario de edición de lista de precios se cierra al accionar el botón «Cancelar» \\ \hline
-F137 & LP & LISTA-MODIFICAR & Formulario de edición de lista de precios se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N027 & LP & LISTA-MODIFICAR & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F138 & LP & LISTA-MODIFICAR & Mensaje «Se guardó Lista de precios "$<$Nombre de Lista$>$"» se muestra después de modificado una lista \\ \hline
-F139 & LP & LISTA-ELIMINAR & Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
-A025 & LP & LISTA-ELIMINAR & Lista de precios es eliminado después de accionado el botón «Eliminar» \\ \hline
-F140 & LP & LISTA-ELIMINAR & Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar» \\ \hline
-F141 & LP & LISTA-ELIMINAR & Confirmación de eliminación de producto se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F142 & LP & LISTA-ELIMINAR & Mensaje «Se eliminó Lista de precios "$<$Nombre de Lista$>$"» se muestra después de eliminada una lista de precios \\ \hline
-F143 & LP & LISTA-DUPLICAR & Clic en el botón «Duplicar», lanza el formulario de creación de lista de precios \\ \hline
-A026 & LP & LISTA-DUPLICAR & Lista de precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F144 & LP & LISTA-DUPLICAR & Lista de precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo» \\ \hline
-F145 & LP & LISTA-DUPLICAR & Formulario de creación de lista de precios se cierra al accionar el botón «Cancelar» \\ \hline
-F146 & LP & LISTA-DUPLICAR & Formulario de creación de lista de precios se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F147 & VL & NUEVO & Clic en el botón «Nuevo», lanza el formulario de nueva vista de lista \\ \hline
-A027 & VL & NUEVO & Vista de lista es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F148 & VL & NUEVO & Formulario de creación de vista de lista se cierra al accionar el botón «Cancelar» \\ \hline
-F149 & VL & NUEVO & Formulario de creación de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N028 & VL & NUEVO & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F150 & VL & NUEVO & Registrada la vista de lista, se despliega la configuración de filtros \\ \hline
-D042 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Nombre de lista» tiene 0 caracteres \\ \hline
-D043 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» realiza el registro, cuando el campo «Nombre de lista» tiene 1 carácter \\ \hline
-D044 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» realiza el registro, cuando el campo «Nombre de lista» tiene 40 caracteres \\ \hline
-D045 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Nombre de lista» tiene 41 caracteres \\ \hline
-D046 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «List API Name» tiene 0 caracteres que siguen la restricción de campo \\ \hline
-D047 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «List API Name» tiene 1 carácter que siguen la restricción de campo \\ \hline
-D048 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» realiza el registro, cuando el campo «List API Name» tiene 2 caracteres que siguen la restricción de campo \\ \hline
-D049 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» realiza el registro, cuando el campo «Nombre de lista» tiene 80 caracteres que siguen la restricción de campo \\ \hline
-D050 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene 81 caracteres que siguen la restricción de campo \\ \hline
-D051 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene entre 2 y 80 caracteres pero que comienza con un dígito numérico \\ \hline
-D052 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene entre 2 y 80 caracteres pero que comienza con un guión bajo (\_) \\ \hline
-D053 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene entre 2 y 80 caracteres pero que contiene dos guiones bajos consecutivos (\_\_) \\ \hline
-D054 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene entre 2 y 80 caracteres pero que terminar con un guión bajo (\_) \\ \hline
-D055 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» contiene un valor ya registrado \\ \hline
-D056 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Solo yo puedo ver esta vista de lista» \\ \hline
-D057 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Todos los usuarios pueden ver esta vista de lista» \\ \hline
-D058 & VL & NUEVO-FORMULARIO & Formulario «Nueva vista de lista» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Compartir vista de lista con grupos de usuario» \\ \hline
-F151 & VL & DUPLICAR & Clic en el botón «Duplicar», lanza el formulario de creación de vista de lista \\ \hline
-F152 & VL & CAMBIAR NOMBRE & Clic en el botón «Cambiar nombre», lanza el formulario de cambiar nombre \\ \hline
-A028 & VL & CAMBIAR NOMBRE & Vista de lista es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F153 & VL & CAMBIAR NOMBRE & Formulario de creación de vista de lista se cierra al accionar el botón «Cancelar» \\ \hline
-F154 & VL & CAMBIAR NOMBRE & Formulario de creación de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N029 & VL & CAMBIAR NOMBRE & Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página» \\ \hline
-F155 & VL & CAMBIAR NOMBRE & Mensaje «La vista de lista se actualizó» se muestra después de renombrada la vista de lista \\ \hline
-D059 & VL & CAMBIAR NOMBRE-FORMULARIO & Formulario «Cambiar nombre» no realiza el registro, cuando el campo «Nombre de lista» tiene 0 caracteres \\ \hline
-D060 & VL & CAMBIAR NOMBRE-FORMULARIO & Formulario «Cambiar nombre» realiza el registro, cuando el campo «Nombre de lista» tiene 1 carácter \\ \hline
-D061 & VL & CAMBIAR NOMBRE-FORMULARIO & Formulario «Cambiar nombre» realiza el registro, cuando el campo «Nombre de lista» tiene 40 caracteres \\ \hline
-D062 & VL & CAMBIAR NOMBRE-FORMULARIO & Formulario «Cambiar nombre» no realiza el registro, cuando el campo «Nombre de lista» tiene 41 caracteres \\ \hline
-F156 & VL & COLABORACIÓN & Clic en el botón «Configuración de colaboración», lanza el formulario de configuración \\ \hline
-A029 & VL & COLABORACIÓN & Configuración de colaboración es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F157 & VL & COLABORACIÓN & Formulario de creación de vista de lista se cierra al accionar el botón «Cancelar» \\ \hline
-F158 & VL & COLABORACIÓN & Formulario de creación de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F159 & VL & COLABORACIÓN & Mensaje «La vista de lista se actualizó» se muestra después de configurada la vista de lista \\ \hline
-D063 & VL & COLABORACIÓN-FORMULARIO & Formulario «Configuración de colaboración» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Solo yo puedo ver esta vista de lista» \\ \hline
-D064 & VL & COLABORACIÓN-FORMULARIO & Formulario «Configuración de colaboración» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Todos los usuarios pueden ver esta vista de lista» \\ \hline
-D065 & VL & COLABORACIÓN-FORMULARIO & Formulario «Configuración de colaboración» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Compartir vista de lista con grupos de usuario» \\ \hline
-F160 & VL & FILTROS & Clic en el botón «Modificar filtros de lista», despliega la configuración de filtros \\ \hline
-F161 & VL & FILTROS & Clic en «Filtrar por propietario», despliega el menú de filtrado de los elementos \\ \hline
-F162 & VL & FILTROS & Clic en el botón «Listo», registra y cierra el menú de filtrado de los elementos \\ \hline
-F163 & VL & FILTROS & Clic en los elementos de filtro, despliega el formulario de configuración de elemento de filtro \\ \hline
-F164 & VL & FILTROS & Clic en el botón «Listo», registra y cierra el menú de configuración de elemento de filtro \\ \hline
-F165 & VL & FILTROS & Clic en el botón «X», remueve el elemento de filtro \\ \hline
-F166 & VL & FILTROS & Clic en el botón «Agregar filtro», despliega el formulario de agregar filtro \\ \hline
-F167 & VL & FILTROS & Clic en «Eliminar todos», remueve todos los elementos de filtro \\ \hline
-F168 & VL & FILTROS & Clic en «Agregar lógica de filtro, despliega un área de texto para registrar la lógica de filtraje \\ \hline
-F169 & VL & FILTROS & Clic en «Eliminar», remueve la lógica de filtro personalizada cuando esta ha sido registrada \\ \hline
-N030 & VL & FILTROS & Campo «Lógica de filtro» para un contenido vacío envía el mensaje «Compruebe la ortografía en la lógica de filtro.» \\ \hline
-F170 & VL & FILTROS & Clic en el botón «Cancelar», ignora todos los cambios hechos en el menú de filtrado \\ \hline
-A030 & VL & FILTROS & Clic en el botón «Guardar», registra los cambios en la configuración de la vista de lista \\ \hline
-F171 & VL & FILTROS & Mensaje «La vista de lista se actualizó» se muestra después de registrados los cambios en la vista de lista \\ \hline
-F172 & VL & FILTROS & Clic en el botón «Guardar como», despliega el formulario de Guardar nueva vista de lista \\ \hline
-F173 & VL & VISUALIZACIÓN & Clic en el botón «Seleccionar los campos que se visualizarán», despliega el formulario de selección \\ \hline
-A031 & VL & VISUALIZACIÓN & «Campos visibles» son registrados con al menos un valor establecido, después de accionado el botón «Guardar» \\ \hline
-F174 & VL & VISUALIZACIÓN & Formulario de selección de campos de visualización se cierra al accionar el botón «Cancelar» \\ \hline
-F175 & VL & VISUALIZACIÓN & Formulario de selección de campos de visualización se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-N031 & VL & VISUALIZACIÓN & Clic en el botón «Guardar» para «Campos visibles» sin ningún elemento, envía el mensaje «Revise los errores de esta página» \\ \hline
-F176 & VL & VISUALIZACIÓN & Mensaje «La vista de lista se actualizó» se muestra después de configurados los campos a ser visualizados \\ \hline
-F177 & VL & ELIMINAR & Clic en el botón «Eliminar», lanza un mensaje de confirmación \\ \hline
-A032 & VL & ELIMINAR & Vista de lista es eliminada después de accionado el botón «Eliminar» \\ \hline
-F178 & VL & ELIMINAR & Confirmación «Eliminar» se cierra al accionar el botón «Cancelar» \\ \hline
-F179 & VL & ELIMINAR & Confirmación «Eliminar» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
-F180 & VL & ELIMINAR & Mensaje «Se ha eliminado la vista de lista» se muestra después de eliminada la vista de lista \\ \hline
-N032 & VL & RESTABLECER & Elemento de menú «Restablecer anchuras de columna» se encuentra deshabilitado mientras no se haya modificado el ancho de las columnas \\ \hline
-F181 & VL & RESTABLECER & Elemento de menú «Restablecer anchuras de columna» se encuentra habilitado cuando se ha modificado el ancho de las columnas \\ \hline
-F182 & VL & RESTABLECER & Anchuras de columna son restablecidas después de accionado el botón «Restablecer anchuras de columna» \\ \hline
-F183 & VL & KANBAN & Clic en el botón «Configuración de Kanban», lanza el formulario del mismo nombre \\ \hline
-A033 & VL & KANBAN & «Configuración de Kanban» es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar» \\ \hline
-F184 & VL & KANBAN & Formulario «Configuración de Kanban» se cierra al accionar el botón «Cancelar» \\ \hline
-F185 & VL & KANBAN & Formulario «Configuración de Kanban» se cierra al accionar el botón «Cerrar esta ventana (X)» \\ \hline
+\scriptsize{F001} & \scriptsize{P} & & \scriptsize{Iniciador de Aplicación de Salesforce muestra el enlace a «Productos»} \\ \hline
+\scriptsize{F002} & \scriptsize{P} & \scriptsize{NUEVO} & \scriptsize{Clic en el botón «Nuevo», lanza el formulario de creación de producto} \\ \hline
+\scriptsize{A001} & \scriptsize{P} & \scriptsize{NUEVO} & \scriptsize{Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F003} & \scriptsize{P} & \scriptsize{NUEVO} & \scriptsize{Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F004} & \scriptsize{P} & \scriptsize{NUEVO} & \scriptsize{Formulario «Crear Producto» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F005} & \scriptsize{P} & \scriptsize{NUEVO} & \scriptsize{Formulario «Crear Producto» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N001} & \scriptsize{P} & \scriptsize{NUEVO} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F006} & \scriptsize{P} & \scriptsize{NUEVO} & \scriptsize{Mensaje «Se creó Producto "$<$Nombre de Producto$>$"» se muestra después de registrado un producto} \\ \hline
+\scriptsize{D001} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» no realiza el registro, cuando el campo «Nombre del producto» tiene 0 caracteres} \\ \hline
+\scriptsize{D002} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» realiza el registro, cuando el campo «Nombre del producto» tiene 1 carácter} \\ \hline
+\scriptsize{D003} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» realiza el registro, cuando el campo «Nombre del producto» tiene 255 caracteres} \\ \hline
+\scriptsize{D004} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» no realiza el registro, cuando el campo «Nombre del producto» tiene 256 caracteres} \\ \hline
+\scriptsize{D005} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» realiza el registro, cuando el campo «Código del producto» tiene 0 caracteres} \\ \hline
+\scriptsize{D006} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» realiza el registro, cuando el campo «Código del producto» tiene 255 caracteres} \\ \hline
+\scriptsize{D007} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» no realiza el registro, cuando el campo «Código del producto» tiene 256 caracteres} \\ \hline
+\scriptsize{D008} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» realiza el registro, cuando el campo «Descripción del producto» tiene 0 caracteres} \\ \hline
+\scriptsize{D009} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» realiza el registro, cuando el campo «Descripción del producto» tiene 4000 caracteres} \\ \hline
+\scriptsize{D010} & \scriptsize{P} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Producto» no realiza el registro, cuando el campo «Descripción del producto» tiene 4001 caracteres} \\ \hline
+\scriptsize{F007} & \scriptsize{P} & \scriptsize{BUSCAR} & \scriptsize{«Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Nombre del producto»} \\ \hline
+\scriptsize{F008} & \scriptsize{P} & \scriptsize{BUSCAR} & \scriptsize{«Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Código de producto»} \\ \hline
+\scriptsize{F009} & \scriptsize{P} & \scriptsize{BUSCAR} & \scriptsize{«Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Descripción de producto»} \\ \hline
+\scriptsize{N002} & \scriptsize{P} & \scriptsize{BUSCAR} & \scriptsize{Mensaje «No hay elementos para mostrar» se muestra cuando la búsqueda no presenta resultados} \\ \hline
+\scriptsize{F010} & \scriptsize{P} & \scriptsize{MOSTRAR COMO} & \scriptsize{«Mostrar como» posee los elementos: «Tabla» y «Kanban»} \\ \hline
+\scriptsize{F011} & \scriptsize{P} & \scriptsize{MOSTRAR COMO} & \scriptsize{Opción «Tabla» en «Mostrar como», muestra los productos en formato tabular} \\ \hline
+\scriptsize{F012} & \scriptsize{P} & \scriptsize{MOSTRAR COMO} & \scriptsize{Opción «Kanban» en «Mostrar como», muestra los productos en formato de columnas} \\ \hline
+\scriptsize{F013} & \scriptsize{P} & \scriptsize{ACTUALIZAR} & \scriptsize{Botón «Actualizar», reenvía las peticiones de consulta al servidor} \\ \hline
+\scriptsize{N003} & \scriptsize{P} & \scriptsize{MOSTRAR GRÁFICOS} & \scriptsize{«Mostrar Gráficos» está deshabilitado mientras no se use una «vista de lista» determinada} \\ \hline
+\scriptsize{F014} & \scriptsize{P} & \scriptsize{MOSTRAR GRÁFICOS} & \scriptsize{«Mostrar Gráficos» está habilitado mientras se use una «vista de lista» determinada} \\ \hline
+\scriptsize{N004} & \scriptsize{P} & \scriptsize{MOSTRAR FILTROS} & \scriptsize{«Mostrar filtros» está deshabilitado mientras no se use una «vista de lista» determinada} \\ \hline
+\scriptsize{F015} & \scriptsize{P} & \scriptsize{MOSTRAR FILTROS} & \scriptsize{«Mostrar filtros» está habilitado mientras se use una «vista de lista» determinada} \\ \hline
+\scriptsize{F016} & \scriptsize{P} & \scriptsize{FILTRAR} & \scriptsize{«Vistas de Lista» muestra los elementos registrados} \\ \hline
+\scriptsize{F017} & \scriptsize{P} & \scriptsize{FILTRAR} & \scriptsize{«Vistas de Lista» muestra el elemento «Vistos recientemente»} \\ \hline
+\scriptsize{N005} & \scriptsize{P} & \scriptsize{FILTRAR} & \scriptsize{Mensaje «No hay elementos para mostrar» se muestra cuando no existen productos bajo una vista de lista} \\ \hline
+\scriptsize{F018} & \scriptsize{P} & \scriptsize{FILTRAR} & \scriptsize{Activar un «Vista de Lista» creada, filtra los productos basados en sus criterios establecidos} \\ \hline
+\scriptsize{A002} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Vista de Lista «Vistos recientemente» lista los productos registrados} \\ \hline
+\scriptsize{N006} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Mensaje «No hay elementos para mostrar» cuando ningún producto ha sido registrado} \\ \hline
+\scriptsize{F019} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Columnas en la tabla de productos pueden reordenar la lista dinámicamente} \\ \hline
+\scriptsize{F020} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Columnas en la tabla de productos permiten «Ajustar Texto»} \\ \hline
+\scriptsize{F021} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Columnas en la tabla de productos permiten «Recortar Texto»} \\ \hline
+\scriptsize{F022} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Tabla de productos permite la selección múltiple de elementos} \\ \hline
+\scriptsize{F023} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Tabla de productos ofrece selección y de-selección de todos los elementos} \\ \hline
+\scriptsize{F024} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Elementos de la tabla de productos ofrecen un enlace para «Ver»} \\ \hline
+\scriptsize{F025} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Elementos de la tabla de productos ofrecen un enlace para «Modificar»} \\ \hline
+\scriptsize{F026} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Elementos de la tabla de productos ofrecen un enlace para «Eliminar»} \\ \hline
+\scriptsize{F027} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Celdas de la tabla de productos pueden ser editados} \\ \hline
+\scriptsize{F028} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Tabla de productos muestra la Opción «Guardar» cuando existen elementos editados} \\ \hline
+\scriptsize{F029} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Tabla de productos muestra la Opción «Cancelar» cuando existen elementos editados} \\ \hline
+\scriptsize{F030} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Elementos editados en la tabla de productos solicitan confirmación de descarte antes de cambiar de vista} \\ \hline
+\scriptsize{A003} & \scriptsize{P} & \scriptsize{LISTA} & \scriptsize{Tabla de productos registra la información modificada de las celdas editadas} \\ \hline
+\scriptsize{F031} & \scriptsize{P} & \scriptsize{VER} & \scriptsize{Vista de producto muestra las opciones de «Modificar», «Eliminar», y «Duplicar»} \\ \hline
+\scriptsize{A004} & \scriptsize{P} & \scriptsize{VER-DETALLES} & \scriptsize{Vista de producto muestra la información del producto en su pestaña «Detalles»} \\ \hline
+\scriptsize{A005} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Vista de producto muestra la lista de «Listas de precios» en su pestaña «Relacionado»} \\ \hline
+\scriptsize{F032} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{«Agregar precio estándar» es visible cuando el producto no tiene un precio establecido} \\ \hline
+\scriptsize{N007} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{«Agregar precio estándar» no es visible cuando el producto tiene un precio establecido} \\ \hline
+\scriptsize{F033} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Clic en el botón «Agregar precio estándar», lanza el formulario de creación de entrada del catálogo de precios} \\ \hline
+\scriptsize{A006} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Precio estándar del producto es registrado con un valor de 1 después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F034} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Precio estándar del producto es registrado con un valor de 1 después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F035} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F036} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N008} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F037} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Mensaje «Se creó Entrada del catálogo de precios ."» se muestra después de registrado un precio estándar} \\ \hline
+\scriptsize{D011} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor -9.007.199.254.740.992} \\ \hline
+\scriptsize{D012} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor -9.007.199.254.740.991} \\ \hline
+\scriptsize{D013} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 0,9999} \\ \hline
+\scriptsize{D014} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 0,999} \\ \hline
+\scriptsize{D015} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 9.007.199.254.740.991} \\ \hline
+\scriptsize{D016} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 9.007.199.254.740.992} \\ \hline
+\scriptsize{F038} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Clic en el botón «Agregar a lista de precios», lanza el formulario de de agregar a lista de precios} \\ \hline
+\scriptsize{A007} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Precio de producto para una lista de precios es registrado después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F039} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Formulario «Agregar a lista de precios» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F040} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Formulario «Agregar a lista de precios» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N009} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Clic en el botón «Siguiente» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F041} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra después de modificado un precio} \\ \hline
+\scriptsize{D017} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Agregar a lista de precios» permite el registro, cuando en el campo «Lista de precios» se ingresa el valor Nulo} \\ \hline
+\scriptsize{D018} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Agregar a lista de precios» permite el registro, cuando en el campo «Divisa» se ingresa el valor Nulo} \\ \hline
+\scriptsize{F042} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA} & \scriptsize{Elementos de la lista de «Listas de precios» ofrecen un enlace para «Ver»} \\ \hline
+\scriptsize{F043} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA} & \scriptsize{Elementos de la lista de «Listas de precios» ofrecen un enlace para «Modificar»} \\ \hline
+\scriptsize{F044} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA} & \scriptsize{Elementos de la lista de «Listas de precios» ofrecen un enlace para «Eliminar»} \\ \hline
+\scriptsize{F045} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Clic en el botón «Modificar», lanza el formulario «Modificar Entrada del catálogo de precios»} \\ \hline
+\scriptsize{A008} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F046} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F047} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F048} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F049} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» no permite marcar «Utilizar Precio estándar» en la lista de precios por defecto} \\ \hline
+\scriptsize{N010} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» permite marcar «Utilizar Precio estándar» en la lista de precios que no son por defecto} \\ \hline
+\scriptsize{N011} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F050} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra después de modificado un precio} \\ \hline
+\scriptsize{D019} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor -9.007.199.254.740.992} \\ \hline
+\scriptsize{D020} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor -9.007.199.254.740.991} \\ \hline
+\scriptsize{D021} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 0,9999} \\ \hline
+\scriptsize{D022} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 0,999} \\ \hline
+\scriptsize{D023} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 9.007.199.254.740.991} \\ \hline
+\scriptsize{D024} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» no permite el registro, cuando en el campo «Precio de la lista» se ingresa el valor 9.007.199.254.740.992} \\ \hline
+\scriptsize{F051} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Botón «Guardar y nuevo» muestra el formulario «Crear Entrada del catálogo de precios»} \\ \hline
+\scriptsize{A009} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F052} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F053} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F054} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Formulario «Crear Entrada del catálogo de precios» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N012} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F055} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Mensaje «Se creó Entrada del catálogo de precios ."» se muestra después de modificado un precio} \\ \hline
+\scriptsize{F056} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Clic en el botón «Eliminar», lanza un mensaje de confirmación} \\ \hline
+\scriptsize{A010} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Precio es eliminado después de accionado el botón «Eliminar»} \\ \hline
+\scriptsize{N013} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Precio estándar no puede ser eliminado después de accionado el botón «Eliminar», si existen referencias en otras listas de precios} \\ \hline
+\scriptsize{F057} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Confirmación «Eliminar Entrada del catálogo de precios» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F058} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Confirmación «Eliminar Entrada del catálogo de precios» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F059} & \scriptsize{P} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Mensaje «Se eliminó Producto "$<$Nombre de Producto$>$"» se muestra después de eliminado un producto} \\ \hline
+\scriptsize{F060} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Clic en el botón «Ver todos» amplía la lista de Listas de precios} \\ \hline
+\scriptsize{F061} & \scriptsize{P} & \scriptsize{VER-RELACIONADO} & \scriptsize{Botón «Actualizar» ubicado en la ampliación de la lista de Listas de precios, reenvía las peticiones de consulta al servidor} \\ \hline
+\scriptsize{F062} & \scriptsize{P} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Clic en el botón «Modificar», lanza el formulario de edición de producto} \\ \hline
+\scriptsize{A011} & \scriptsize{P} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F063} & \scriptsize{P} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F064} & \scriptsize{P} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Formulario de edición de producto se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F065} & \scriptsize{P} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Formulario de edición de producto se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N014} & \scriptsize{P} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F066} & \scriptsize{P} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Mensaje «Se guardó Producto "$<$Nombre de Producto$>$"» se muestra después de modificado un producto} \\ \hline
+\scriptsize{F067} & \scriptsize{P} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Clic en el botón «Eliminar», lanza un mensaje de confirmación} \\ \hline
+\scriptsize{A012} & \scriptsize{P} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Producto es eliminado después de accionado el botón «Eliminar»} \\ \hline
+\scriptsize{F068} & \scriptsize{P} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F069} & \scriptsize{P} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Confirmación de eliminación de producto se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F070} & \scriptsize{P} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Mensaje «Se eliminó Producto "$<$Nombre de Producto$>$"» se muestra después de eliminado un producto} \\ \hline
+\scriptsize{F071} & \scriptsize{P} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Clic en el botón «Duplicar», lanza el formulario de creación de producto} \\ \hline
+\scriptsize{A013} & \scriptsize{P} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F072} & \scriptsize{P} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Producto es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F073} & \scriptsize{P} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Formulario «Crear Producto» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F074} & \scriptsize{P} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Formulario «Crear Producto» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F075} & \scriptsize{LP} & & \scriptsize{En el iniciador de aplicación de Salesforce puede verse el enlace a «Listas de precios»} \\ \hline
+\scriptsize{F076} & \scriptsize{LP} & \scriptsize{NUEVO} & \scriptsize{Clic en el botón «Nuevo», lanza el formulario de creación de lista de precios} \\ \hline
+\scriptsize{A014} & \scriptsize{LP} & \scriptsize{NUEVO} & \scriptsize{Lista de Precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F077} & \scriptsize{LP} & \scriptsize{NUEVO} & \scriptsize{Lista de Precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F078} & \scriptsize{LP} & \scriptsize{NUEVO} & \scriptsize{Formulario «Crear Lista de precios» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F079} & \scriptsize{LP} & \scriptsize{NUEVO} & \scriptsize{Formulario «Crear Lista de precios» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N015} & \scriptsize{LP} & \scriptsize{NUEVO} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F080} & \scriptsize{LP} & \scriptsize{NUEVO} & \scriptsize{Mensaje «Se creó Lista de precios "$<$Nombre de Producto$>$"» se muestra después de registrada una lista de precios} \\ \hline
+\scriptsize{D025} & \scriptsize{LP} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Lista de precios» no realiza el registro, cuando el campo «Nombre de la lista de precios» tiene 0 caracteres} \\ \hline
+\scriptsize{D026} & \scriptsize{LP} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Lista de precios» realiza el registro, cuando el campo «Nombre de la lista de precios» tiene 1 carácter} \\ \hline
+\scriptsize{D027} & \scriptsize{LP} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Lista de precios» realiza el registro, cuando el campo «Nombre de la lista de precios» tiene 255 caracteres} \\ \hline
+\scriptsize{D028} & \scriptsize{LP} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Lista de precios» no realiza el registro, cuando el campo «Nombre de la lista de precios» tiene 256 caracteres} \\ \hline
+\scriptsize{D029} & \scriptsize{LP} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Lista de precios» realiza el registro, cuando el campo «Descripción» tiene 0 caracteres} \\ \hline
+\scriptsize{D030} & \scriptsize{LP} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Lista de precios» realiza el registro, cuando el campo «Descripción» tiene 255 caracteres} \\ \hline
+\scriptsize{D031} & \scriptsize{LP} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Crear Lista de precios» no realiza el registro, cuando el campo «Descripción» tiene 256 caracteres} \\ \hline
+\scriptsize{F081} & \scriptsize{LP} & \scriptsize{BUSCAR} & \scriptsize{«Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Nombre de la lista de precios»} \\ \hline
+\scriptsize{F082} & \scriptsize{LP} & \scriptsize{BUSCAR} & \scriptsize{«Buscar en esta lista...» filtra los elementos a partir de contenido en el campo «Descripción»} \\ \hline
+\scriptsize{N016} & \scriptsize{LP} & \scriptsize{BUSCAR} & \scriptsize{Mensaje «No hay elementos para mostrar» se muestra cuando la búsqueda no presenta resultados} \\ \hline
+\scriptsize{F083} & \scriptsize{LP} & \scriptsize{MOSTRAR COMO} & \scriptsize{«Mostrar como» posee los elementos: «Tabla» y «Kanban»} \\ \hline
+\scriptsize{F084} & \scriptsize{LP} & \scriptsize{MOSTRAR COMO} & \scriptsize{Opción «Tabla» en «Mostrar como», muestra los productos en formato tabular} \\ \hline
+\scriptsize{F085} & \scriptsize{LP} & \scriptsize{MOSTRAR COMO} & \scriptsize{Opción «Kanban» en «Mostrar como», muestra los productos en formato de columnas} \\ \hline
+\scriptsize{F086} & \scriptsize{LP} & \scriptsize{ACTUALIZAR} & \scriptsize{Botón «Actualizar», reenvía las peticiones de consulta al servidor} \\ \hline
+\scriptsize{N017} & \scriptsize{LP} & \scriptsize{MOSTRAR GRÁFICOS} & \scriptsize{«Mostrar Gráficos» está deshabilitado mientras no se use una «vista de lista» determinada} \\ \hline
+\scriptsize{F087} & \scriptsize{LP} & \scriptsize{MOSTRAR GRÁFICOS} & \scriptsize{«Mostrar Gráficos» está habilitado mientras se use una «vista de lista» determinada} \\ \hline
+\scriptsize{N018} & \scriptsize{LP} & \scriptsize{MOSTRAR FILTROS} & \scriptsize{«Mostrar filtros» está deshabilitado mientras no se use una «vista de lista» determinada} \\ \hline
+\scriptsize{F088} & \scriptsize{LP} & \scriptsize{MOSTRAR FILTROS} & \scriptsize{«Mostrar filtros» está habilitado mientras se use una «vista de lista» determinada} \\ \hline
+\scriptsize{F089} & \scriptsize{LP} & \scriptsize{FILTRAR} & \scriptsize{«Vistas de Lista» muestra los elementos registrados} \\ \hline
+\scriptsize{F090} & \scriptsize{LP} & \scriptsize{FILTRAR} & \scriptsize{«Vistas de Lista» muestra el elemento «Vistos recientemente»} \\ \hline
+\scriptsize{N019} & \scriptsize{LP} & \scriptsize{FILTRAR} & \scriptsize{Mensaje «No hay elementos para mostrar» se muestra cuando no existen listas de precios bajo una vista de lista} \\ \hline
+\scriptsize{F091} & \scriptsize{LP} & \scriptsize{FILTRAR} & \scriptsize{Activar un «Vista de Lista» creada, filtra las listas de precios basados en sus criterios establecidos} \\ \hline
+\scriptsize{A015} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Vista de Lista «Vistos recientemente» lista las listas de precios registrados} \\ \hline
+\scriptsize{F092} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Columnas en la tabla de listas de precios pueden reordenar la lista dinámicamente} \\ \hline
+\scriptsize{F093} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Columnas en la tabla de listas de precios permiten «Ajustar Texto»} \\ \hline
+\scriptsize{F094} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Columnas en la tabla de listas de precios permiten «Recortar Texto»} \\ \hline
+\scriptsize{F095} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Tabla de listas de precios permite la selección múltiple de elementos} \\ \hline
+\scriptsize{F096} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Tabla de listas de precios ofrece selección y de-selección de todos los elementos} \\ \hline
+\scriptsize{F097} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Elementos de la tabla de listas de precios ofrecen un enlace para «Ver»} \\ \hline
+\scriptsize{F098} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Elementos de la tabla de listas de precios ofrecen un enlace para «Modificar»} \\ \hline
+\scriptsize{F099} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Elementos de la tabla de listas de precios ofrecen un enlace para «Eliminar»} \\ \hline
+\scriptsize{F100} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Celdas de la tabla de listas de precios pueden ser editados} \\ \hline
+\scriptsize{F101} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Tabla de listas de precios muestra la Opción «Guardar» cuando existen elementos editados} \\ \hline
+\scriptsize{F102} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Tabla de listas de precios muestra la Opción «Cancelar» cuando existen elementos editados} \\ \hline
+\scriptsize{F103} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Elementos editados en la tabla de listas de precios solicitan confirmación de descarte antes de cambiar de vista} \\ \hline
+\scriptsize{A016} & \scriptsize{LP} & \scriptsize{LISTA} & \scriptsize{Tabla de productos registra la información modificada de las celdas editadas} \\ \hline
+\scriptsize{F104} & \scriptsize{LP} & \scriptsize{VER} & \scriptsize{Vista de listas de precios muestra las opciones de «Modificar», «Eliminar», y «Duplicar»} \\ \hline
+\scriptsize{A017} & \scriptsize{LP} & \scriptsize{VER-DETALLES} & \scriptsize{Vista de lista de precios muestra la información de la lista en su pestaña «Detalles»} \\ \hline
+\scriptsize{A018} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Vista de lista de precios muestra la lista de «Productos» en su pestaña «Relacionado»} \\ \hline
+\scriptsize{A019} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Vista de lista de precios muestra la lista de «Historial de lista de precios» en su pestaña «Relacionado»} \\ \hline
+\scriptsize{F105} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{«Agregar productos» es visible cuando la lista de precios no es la lista estándar} \\ \hline
+\scriptsize{N020} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{«Agregar productos» no es visible cuando la lista de precios es la lista estándar} \\ \hline
+\scriptsize{F106} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Clic en el botón «Agregar Productos», lanza el formulario para agregar productos} \\ \hline
+\scriptsize{F107} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Campo de búsqueda «Buscar Entrada de catálogos de precios...» filtra los resultados acorde a la entrada de texto} \\ \hline
+\scriptsize{F108} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Seleccionar productos en el formulario «Agregar productos» habilita en botón «Siguiente»} \\ \hline
+\scriptsize{N021} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Botón «Siguiente» para un formulario de «Agregar productos» esta deshabilitado mientras no se seleccionen productos} \\ \hline
+\scriptsize{A020} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Precios de la lista en el formulario de «Modificar Entrada de catálogos de precios seleccionadas» se registran después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F109} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Formulario «Agregar producto» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F110} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Formulario «Agregar producto» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N022} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Clic en el botón «Guardar» para una tabla de precios vacía envía el mensaje «No se pueden guardar registros con errores.»} \\ \hline
+\scriptsize{F111} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Mensaje «X Entrada del catálogo de precios registro se actualizó.» se muestra después de registrados X precios de productos} \\ \hline
+\scriptsize{D032} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Agregar productos» no acepta buscar, cuando el campo «Buscar Entrada de catálogos de precios...» tiene valor con 0 caracteres} \\ \hline
+\scriptsize{D033} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Agregar productos» acepta buscar, cuando el campo «Buscar Entrada de catálogos de precios...» tiene valor con 1 carácter} \\ \hline
+\scriptsize{D034} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Agregar productos» acepta buscar, cuando el campo «Buscar Entrada de catálogos de precios...» tiene valor con 500 caracteres} \\ \hline
+\scriptsize{D035} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Agregar productos» no acepta buscar, cuando el campo «Buscar Entrada de catálogos de precios...» tiene valor con 501 caracteres} \\ \hline
+\scriptsize{D036} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Modificar Entrada de catálogos de precios seleccionadas» no permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con -9.007.199.254.740.992} \\ \hline
+\scriptsize{D037} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Modificar Entrada de catálogos de precios seleccionadas» permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con -9.007.199.254.740.991} \\ \hline
+\scriptsize{D038} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Modificar Entrada de catálogos de precios seleccionadas» no permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con 0,9999} \\ \hline
+\scriptsize{D039} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Modificar Entrada de catálogos de precios seleccionadas» permite el registro de datos, cuando el campo «Precio de Lista» tiene valor 0,999} \\ \hline
+\scriptsize{D040} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Modificar Entrada de catálogos de precios seleccionadas» permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con 9.007.199.254.740.991} \\ \hline
+\scriptsize{D041} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-FORMULARIO} & \scriptsize{Formulario «Modificar Entrada de catálogos de precios seleccionadas» no permite el registro de datos, cuando el campo «Precio de Lista» tiene valor con 9.007.199.254.740.992} \\ \hline
+\scriptsize{F112} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA} & \scriptsize{Elementos de la lista de «Productos» ofrecen un enlace para «Ver»} \\ \hline
+\scriptsize{F113} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA} & \scriptsize{Elementos de la lista de «Productos» ofrecen un enlace para «Modificar»} \\ \hline
+\scriptsize{F114} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA} & \scriptsize{Elementos de la lista de «Productos» ofrecen un enlace para «Eliminar»} \\ \hline
+\scriptsize{F115} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Clic en el botón «Modificar», lanza el formulario «Modificar Entrada del catálogo de precios»} \\ \hline
+\scriptsize{A021} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F116} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F117} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario de edición de precio se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F118} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario de edición de precio se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F119} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» no permite marcar «Utilizar Precio estándar» en la lista de precios por defecto} \\ \hline
+\scriptsize{N023} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Formulario «Modificar Entrada del catálogo de precios» permite marcar «Utilizar Precio estándar» en la lista de precios que no son por defecto} \\ \hline
+\scriptsize{N024} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F120} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR} & \scriptsize{Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra después de modificado un precio} \\ \hline
+\scriptsize{F121} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Botón «Guardar y nuevo» muestra el formulario «Crear Entrada del catálogo de precios»} \\ \hline
+\scriptsize{A022} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F122} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Precio del producto es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F123} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Formulario de edición de producto se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F124} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Formulario de edición de producto se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N025} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F125} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-MODIFICAR-CREAR} & \scriptsize{Mensaje «Se creó Entrada del catálogo de precios ."» se muestra después de modificado un precio} \\ \hline
+\scriptsize{F126} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Clic en el botón «Eliminar», lanza un mensaje de confirmación} \\ \hline
+\scriptsize{A023} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Precio es eliminado después de accionado el botón «Eliminar»} \\ \hline
+\scriptsize{N026} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Precio estándar no puede ser eliminado después de accionado el botón «Eliminar», si existen referencias en otras listas de precios} \\ \hline
+\scriptsize{F127} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F128} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Confirmación de eliminación de producto se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F129} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO-LISTA-ELIMINAR} & \scriptsize{Mensaje «Se eliminó Entrada del catálogo de precios "$<$Producto$>$".» se muestra después de eliminado el precio del producto} \\ \hline
+\scriptsize{F130} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Clic en el botón «Ver todos» de la sección «Productos» amplía la lista de Productos} \\ \hline
+\scriptsize{F131} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Botón «Actualizar» ubicado en la ampliación de la lista de Productos, reenvía las peticiones de consulta al servidor} \\ \hline
+\scriptsize{F132} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Clic en el botón «Ver todos» de la sección «Historial de lista de precios» amplía la lista de cambios} \\ \hline
+\scriptsize{F133} & \scriptsize{LP} & \scriptsize{VER-RELACIONADO} & \scriptsize{Botón «Actualizar» ubicado en la ampliación de la lista de cambios reenvía las peticiones de consulta al servidor} \\ \hline
+\scriptsize{F134} & \scriptsize{LP} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Clic en el botón «Modificar», lanza el formulario de edición de la lista de precios} \\ \hline
+\scriptsize{A024} & \scriptsize{LP} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Lista de precios es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F135} & \scriptsize{LP} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Lista de precios es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F136} & \scriptsize{LP} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Formulario de edición de lista de precios se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F137} & \scriptsize{LP} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Formulario de edición de lista de precios se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N027} & \scriptsize{LP} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F138} & \scriptsize{LP} & \scriptsize{LISTA-MODIFICAR} & \scriptsize{Mensaje «Se guardó Lista de precios "$<$Nombre de Lista$>$"» se muestra después de modificado una lista} \\ \hline
+\scriptsize{F139} & \scriptsize{LP} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Clic en el botón «Eliminar», lanza un mensaje de confirmación} \\ \hline
+\scriptsize{A025} & \scriptsize{LP} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Lista de precios es eliminado después de accionado el botón «Eliminar»} \\ \hline
+\scriptsize{F140} & \scriptsize{LP} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Confirmación de eliminación de producto se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F141} & \scriptsize{LP} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Confirmación de eliminación de producto se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F142} & \scriptsize{LP} & \scriptsize{LISTA-ELIMINAR} & \scriptsize{Mensaje «Se eliminó Lista de precios "$<$Nombre de Lista$>$"» se muestra después de eliminada una lista de precios} \\ \hline
+\scriptsize{F143} & \scriptsize{LP} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Clic en el botón «Duplicar», lanza el formulario de creación de lista de precios} \\ \hline
+\scriptsize{A026} & \scriptsize{LP} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Lista de precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F144} & \scriptsize{LP} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Lista de precios es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar y nuevo»} \\ \hline
+\scriptsize{F145} & \scriptsize{LP} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Formulario de creación de lista de precios se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F146} & \scriptsize{LP} & \scriptsize{LISTA-DUPLICAR} & \scriptsize{Formulario de creación de lista de precios se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F147} & \scriptsize{VL} & \scriptsize{NUEVO} & \scriptsize{Clic en el botón «Nuevo», lanza el formulario de nueva vista de lista} \\ \hline
+\scriptsize{A027} & \scriptsize{VL} & \scriptsize{NUEVO} & \scriptsize{Vista de lista es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F148} & \scriptsize{VL} & \scriptsize{NUEVO} & \scriptsize{Formulario de creación de vista de lista se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F149} & \scriptsize{VL} & \scriptsize{NUEVO} & \scriptsize{Formulario de creación de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N028} & \scriptsize{VL} & \scriptsize{NUEVO} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F150} & \scriptsize{VL} & \scriptsize{NUEVO} & \scriptsize{Registrada la vista de lista, se despliega la configuración de filtros} \\ \hline
+\scriptsize{D042} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Nombre de lista» tiene 0 caracteres} \\ \hline
+\scriptsize{D043} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» realiza el registro, cuando el campo «Nombre de lista» tiene 1 carácter} \\ \hline
+\scriptsize{D044} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» realiza el registro, cuando el campo «Nombre de lista» tiene 40 caracteres} \\ \hline
+\scriptsize{D045} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Nombre de lista» tiene 41 caracteres} \\ \hline
+\scriptsize{D046} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «List API Name» tiene 0 caracteres que siguen la restricción de campo} \\ \hline
+\scriptsize{D047} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «List API Name» tiene 1 carácter que siguen la restricción de campo} \\ \hline
+\scriptsize{D048} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» realiza el registro, cuando el campo «List API Name» tiene 2 caracteres que siguen la restricción de campo} \\ \hline
+\scriptsize{D049} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» realiza el registro, cuando el campo «Nombre de lista» tiene 80 caracteres que siguen la restricción de campo} \\ \hline
+\scriptsize{D050} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene 81 caracteres que siguen la restricción de campo} \\ \hline
+\scriptsize{D051} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene entre 2 y 80 caracteres pero que comienza con un dígito numérico} \\ \hline
+\scriptsize{D052} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene entre 2 y 80 caracteres pero que comienza con un guión bajo (\_)} \\ \hline
+\scriptsize{D053} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene entre 2 y 80 caracteres pero que contiene dos guiones bajos consecutivos (\_\_)} \\ \hline
+\scriptsize{D054} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» tiene entre 2 y 80 caracteres pero que terminar con un guión bajo (\_)} \\ \hline
+\scriptsize{D055} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» no realiza el registro, cuando el campo «Lista API Name» contiene un valor ya registrado} \\ \hline
+\scriptsize{D056} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Solo yo puedo ver esta vista de lista»} \\ \hline
+\scriptsize{D057} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Todos los usuarios pueden ver esta vista de lista»} \\ \hline
+\scriptsize{D058} & \scriptsize{VL} & \scriptsize{NUEVO-FORMULARIO} & \scriptsize{Formulario «Nueva vista de lista» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Compartir vista de lista con grupos de usuario»} \\ \hline
+\scriptsize{F151} & \scriptsize{VL} & \scriptsize{DUPLICAR} & \scriptsize{Clic en el botón «Duplicar», lanza el formulario de creación de vista de lista} \\ \hline
+\scriptsize{F152} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE} & \scriptsize{Clic en el botón «Cambiar nombre», lanza el formulario de cambiar nombre} \\ \hline
+\scriptsize{A028} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE} & \scriptsize{Vista de lista es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F153} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE} & \scriptsize{Formulario de creación de vista de lista se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F154} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE} & \scriptsize{Formulario de creación de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N029} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE} & \scriptsize{Clic en el botón «Guardar» para un formulario vacío envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F155} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE} & \scriptsize{Mensaje «La vista de lista se actualizó» se muestra después de renombrada la vista de lista} \\ \hline
+\scriptsize{D059} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE-FORMULARIO} & \scriptsize{Formulario «Cambiar nombre» no realiza el registro, cuando el campo «Nombre de lista» tiene 0 caracteres} \\ \hline
+\scriptsize{D060} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE-FORMULARIO} & \scriptsize{Formulario «Cambiar nombre» realiza el registro, cuando el campo «Nombre de lista» tiene 1 carácter} \\ \hline
+\scriptsize{D061} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE-FORMULARIO} & \scriptsize{Formulario «Cambiar nombre» realiza el registro, cuando el campo «Nombre de lista» tiene 40 caracteres} \\ \hline
+\scriptsize{D062} & \scriptsize{VL} & \scriptsize{CAMBIAR NOMBRE-FORMULARIO} & \scriptsize{Formulario «Cambiar nombre» no realiza el registro, cuando el campo «Nombre de lista» tiene 41 caracteres} \\ \hline
+\scriptsize{F156} & \scriptsize{VL} & \scriptsize{COLABORACIÓN} & \scriptsize{Clic en el botón «Configuración de colaboración», lanza el formulario de configuración} \\ \hline
+\scriptsize{A029} & \scriptsize{VL} & \scriptsize{COLABORACIÓN} & \scriptsize{Configuración de colaboración es registrado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F157} & \scriptsize{VL} & \scriptsize{COLABORACIÓN} & \scriptsize{Formulario de creación de vista de lista se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F158} & \scriptsize{VL} & \scriptsize{COLABORACIÓN} & \scriptsize{Formulario de creación de vista de lista se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F159} & \scriptsize{VL} & \scriptsize{COLABORACIÓN} & \scriptsize{Mensaje «La vista de lista se actualizó» se muestra después de configurada la vista de lista} \\ \hline
+\scriptsize{D063} & \scriptsize{VL} & \scriptsize{COLABORACIÓN-FORMULARIO} & \scriptsize{Formulario «Configuración de colaboración» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Solo yo puedo ver esta vista de lista»} \\ \hline
+\scriptsize{D064} & \scriptsize{VL} & \scriptsize{COLABORACIÓN-FORMULARIO} & \scriptsize{Formulario «Configuración de colaboración» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Todos los usuarios pueden ver esta vista de lista»} \\ \hline
+\scriptsize{D065} & \scriptsize{VL} & \scriptsize{COLABORACIÓN-FORMULARIO} & \scriptsize{Formulario «Configuración de colaboración» realiza el registro, cuando el campo «¿Quien ve esta vista de lista?» contiene un valor «Compartir vista de lista con grupos de usuario»} \\ \hline
+\scriptsize{F160} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en el botón «Modificar filtros de lista», despliega la configuración de filtros} \\ \hline
+\scriptsize{F161} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en «Filtrar por propietario», despliega el menú de filtrado de los elementos} \\ \hline
+\scriptsize{F162} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en el botón «Listo», registra y cierra el menú de filtrado de los elementos} \\ \hline
+\scriptsize{F163} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en los elementos de filtro, despliega el formulario de configuración de elemento de filtro} \\ \hline
+\scriptsize{F164} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en el botón «Listo», registra y cierra el menú de configuración de elemento de filtro} \\ \hline
+\scriptsize{F165} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en el botón «X», remueve el elemento de filtro} \\ \hline
+\scriptsize{F166} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en el botón «Agregar filtro», despliega el formulario de agregar filtro} \\ \hline
+\scriptsize{F167} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en «Eliminar todos», remueve todos los elementos de filtro} \\ \hline
+\scriptsize{F168} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en «Agregar lógica de filtro, despliega un área de texto para registrar la lógica de filtraje} \\ \hline
+\scriptsize{F169} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en «Eliminar», remueve la lógica de filtro personalizada cuando esta ha sido registrada} \\ \hline
+\scriptsize{N030} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Campo «Lógica de filtro» para un contenido vacío envía el mensaje «Compruebe la ortografía en la lógica de filtro.»} \\ \hline
+\scriptsize{F170} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en el botón «Cancelar», ignora todos los cambios hechos en el menú de filtrado} \\ \hline
+\scriptsize{A030} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en el botón «Guardar», registra los cambios en la configuración de la vista de lista} \\ \hline
+\scriptsize{F171} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Mensaje «La vista de lista se actualizó» se muestra después de registrados los cambios en la vista de lista} \\ \hline
+\scriptsize{F172} & \scriptsize{VL} & \scriptsize{FILTROS} & \scriptsize{Clic en el botón «Guardar como», despliega el formulario de Guardar nueva vista de lista} \\ \hline
+\scriptsize{F173} & \scriptsize{VL} & \scriptsize{VISUALIZACIÓN} & \scriptsize{Clic en el botón «Seleccionar los campos que se visualizarán», despliega el formulario de selección} \\ \hline
+\scriptsize{A031} & \scriptsize{VL} & \scriptsize{VISUALIZACIÓN} & \scriptsize{«Campos visibles» son registrados con al menos un valor establecido, después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F174} & \scriptsize{VL} & \scriptsize{VISUALIZACIÓN} & \scriptsize{Formulario de selección de campos de visualización se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F175} & \scriptsize{VL} & \scriptsize{VISUALIZACIÓN} & \scriptsize{Formulario de selección de campos de visualización se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{N031} & \scriptsize{VL} & \scriptsize{VISUALIZACIÓN} & \scriptsize{Clic en el botón «Guardar» para «Campos visibles» sin ningún elemento, envía el mensaje «Revise los errores de esta página»} \\ \hline
+\scriptsize{F176} & \scriptsize{VL} & \scriptsize{VISUALIZACIÓN} & \scriptsize{Mensaje «La vista de lista se actualizó» se muestra después de configurados los campos a ser visualizados} \\ \hline
+\scriptsize{F177} & \scriptsize{VL} & \scriptsize{ELIMINAR} & \scriptsize{Clic en el botón «Eliminar», lanza un mensaje de confirmación} \\ \hline
+\scriptsize{A032} & \scriptsize{VL} & \scriptsize{ELIMINAR} & \scriptsize{Vista de lista es eliminada después de accionado el botón «Eliminar»} \\ \hline
+\scriptsize{F178} & \scriptsize{VL} & \scriptsize{ELIMINAR} & \scriptsize{Confirmación «Eliminar» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F179} & \scriptsize{VL} & \scriptsize{ELIMINAR} & \scriptsize{Confirmación «Eliminar» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
+\scriptsize{F180} & \scriptsize{VL} & \scriptsize{ELIMINAR} & \scriptsize{Mensaje «Se ha eliminado la vista de lista» se muestra después de eliminada la vista de lista} \\ \hline
+\scriptsize{N032} & \scriptsize{VL} & \scriptsize{RESTABLECER} & \scriptsize{Elemento de menú «Restablecer anchuras de columna» se encuentra deshabilitado mientras no se haya modificado el ancho de las columnas} \\ \hline
+\scriptsize{F181} & \scriptsize{VL} & \scriptsize{RESTABLECER} & \scriptsize{Elemento de menú «Restablecer anchuras de columna» se encuentra habilitado cuando se ha modificado el ancho de las columnas} \\ \hline
+\scriptsize{F182} & \scriptsize{VL} & \scriptsize{RESTABLECER} & \scriptsize{Anchuras de columna son restablecidas después de accionado el botón «Restablecer anchuras de columna»} \\ \hline
+\scriptsize{F183} & \scriptsize{VL} & \scriptsize{KANBAN} & \scriptsize{Clic en el botón «Configuración de Kanban», lanza el formulario del mismo nombre} \\ \hline
+\scriptsize{A033} & \scriptsize{VL} & \scriptsize{KANBAN} & \scriptsize{«Configuración de Kanban» es modificado con los valores obligatorios establecidos después de accionado el botón «Guardar»} \\ \hline
+\scriptsize{F184} & \scriptsize{VL} & \scriptsize{KANBAN} & \scriptsize{Formulario «Configuración de Kanban» se cierra al accionar el botón «Cancelar»} \\ \hline
+\scriptsize{F185} & \scriptsize{VL} & \scriptsize{KANBAN} & \scriptsize{Formulario «Configuración de Kanban» se cierra al accionar el botón «Cerrar esta ventana (X)»} \\ \hline
 \end{longtable}
 }
 \end{landscape}

@@ -1,41 +1,124 @@
-\chapter{Glosario}\label{appendix_glossary}
-A continuación se detallan algunos terminos utilizados a lo largo del
-documento, para que esta sección sirva como una referencia global del documento.
+\chapter{Reportes de error}\label{appendix_bugreport}
+Este apendice tiene como objetivo presentar los errores encontrados en los casos
+de prueba que fueron evaluados en cada caso. Existen cuatro casos de prueba que
+presentaron fallos tras la ejecución, como se describen en el cuadro
+\ref{bugs}.
 
-\begin{description}
-\item [API:] Sigla que procede de la lengua inglesa y que alude a la expresión
-    \emph{Application Programming Interface} (cuya traducción es interfaz de
-    programación de aplicaciones). El concepto hace referencia a los procesos,
-    las funciones y los métodos que brinda una determinada biblioteca de
-    programación a modo de capa de abstracción para que sea empleada por otro
-    programa informático.
-\item [AUT:] Sigla que procede de la lengua inglesa y que alude a la expresión
-    \emph{Application under Test} (cuya traducción es aplicación bajo pruebas).
-    Después de la fase de diseño y codificación en el ciclo de vida del
-    desarrollo del software, la aplicación viene para la prueba y en ese momento
-    la aplicación se declara como Aplicación bajo prueba.
-\item [BDD:] Sigla que procede de la lengua inglesa y que alude a la expresión
-    \emph{Behavior-driver development} (cuya traducción es desarrollo orientado
-    a comportamiento). Es una metodología agil de desarrollo de software en la
-    que una aplicación está documentada y diseñada en torno al comportamiento
-    que un usuario espera experimentar al interactuar con ella.
-\item [CRM:] Sigla que procede de la lengua inglesa y que alude a la expresión
-    \emph{Customer Relationship Management} (cuya traducción es gestión de las
-    relaciones con clientes). Es una tecnología para gestionar todas las
-    relaciones e interacciones de su empresa con clientes y clientes
-    potenciales. El objetivo es simple: mejorar las relaciones comerciales. Un
-    sistema de CRM ayuda a las empresas a mantenerse conectadas con los
-    clientes, racionalizar los procesos y mejorar la rentabilidad.
-\item [Framework:]
-\item [Github:]
-\item [Javascript:]
-\item [Node.js:]
-\item [Page Object:]
-\item [Pruebas End-to-End:]
-\item [Salesforce:]
-\item [Selenium:]
-\item [Tabla de Myers:]
-\item [TDD:]
-\item [Webdriver.io:]
-\end{description}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|p{6.5cm}|c|c|c|}
+\hline
+\footnotesize{\textbf{Código}} & \footnotesize{\textbf{Caso de Prueba}} &
+\footnotesize{\textbf{Resultado}} & \footnotesize{\textbf{Especificación}} &
+\footnotesize{\textbf{Reporte de Error}} \\
+\hline
+\footnotesize{\emph{A007}} &
+\footnotesize{Precio de producto para una lista de precios es registrado después
+de accionado el botón «Guardar»} &
+\footnotesize{Bloqueado} &
+\footnotesize{\emph{\ref{tca007}}} &
+\footnotesize{\emph{\ref{bra007}}}
+\\
+\footnotesize{\emph{F041}} &
+\footnotesize{Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra
+después de modificado un precio} &
+\footnotesize{Bloqueado} &
+\footnotesize{\emph{\ref{tcf041}}} &
+\footnotesize{\emph{\ref{brf041}}}
+\\
+\footnotesize{\emph{D017}} &
+\footnotesize{Formulario «Agregar a lista de precios» permite el registro,
+cuando en el campo «Lista de precios» se ingresa el valor Nulo} &
+\footnotesize{Fallido} &
+\footnotesize{\emph{\ref{tcd017}}} &
+\footnotesize{\emph{\ref{brd017}}}
+\\
+\footnotesize{\emph{D018}} &
+\footnotesize{Formulario «Agregar a lista de precios» permite el registro,
+cuando en el campo «Divisa» se ingresa el valor Nulo} &
+\footnotesize{Fallido} &
+\footnotesize{\emph{\ref{tcd018}}} &
+\footnotesize{\emph{\ref{brd018}}}
+\\
+\hline
+\end{tabular}
+\caption{Casos de prueba que resultaron no exitosos.}
+\label{bugs}
+\source{Elaboración propia.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.8cm}|p{2.5cm}|p{2.6cm}|}
+\hline
+\footnotesize{\textbf{Proyecto:}} &
+\multicolumn{2}{c|}{\footnotesize{\emph{Salesforce} - Módulo de productos.}} &
+\footnotesize{\textbf{Función:}} & \footnotesize{[Ver - Relacionado]} \\
+\hline
+\footnotesize{\textbf{ID:}} & \multicolumn{2}{c|}{\footnotesize{A007}} &
+\footnotesize{\textbf{Prioridad:}} & \footnotesize{3} \\
+\hline
+\footnotesize{\textbf{Título:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Precio de producto para una lista de
+precios es registrado después de accionado el botón «Guardar»}} \\
+\hline
+\footnotesize{\textbf{Descripción:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{.}} \\
+\hline
+\multirow{2}{*}{\footnotesize{\textbf{Requerimientos:}}} &
+\footnotesize{\textbf{Software:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{Navegador \emph{Google Chrome}
+version 70.0.3538.110}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Instrucciones de inicialización:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Autenticarse en la plataforma \emph{Salesforce}.
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Productos».
+\end{enumerate}
+}} \\
+\hline
+\footnotesize{\textbf{Pasos:}} &
+\multicolumn{4}{p{11.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Clic en el icono de «Controles de Vista de Lista».
+\item Clic en el boton «Nuevo».
+\item Rellenar el campo «Nombre del Producto» con el valor \textbf{TESTA001}.
+\item Clic en el boton «Guardar».
+\item Verificar que el mensaje enviado sea: \textbf{Producto TESTA001 ha sido creado}.
+\item Verificar que en la vista de Producto el «Título» sea: \textbf{TESTA001}.
+\item Verificar que en la vista de Producto el subtítulo «Código de Producto» este vacio.
+\item Verificar que en la vista de Producto el subtítulo «Familia de Producto» este vacio.
+\item Clic en el boton «Detalles».
+\end{enumerate}
+}} \\
+\hline
+\multirow{2}{2.8cm}{\footnotesize{\textbf{Criterio de aceptación:}}} &
+\footnotesize{\textbf{Resultado esperado:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{En la pestaña «Detalles», todos los
+valores exceptuando el «Nombre de Producto» se encuentran con los valores
+vacios.}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Verificación:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{Comprobar elemento por elemento que los
+valores se encuentren vacios, y que el campo «Nombre de Producto» sea igual a:
+\textbf{TESTA001}.}} \\
+\hline
+\footnotesize{\textbf{Adjuntos:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Notas:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Fecha:}} & \footnotesize{2018-12-05} & \multicolumn{2}{c|}{\footnotesize{\textbf{Tiempo de ejecución:}}} & \footnotesize{1 min 24 seg} \\
+\hline
+\footnotesize{\textbf{Creado por:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{CC - Carlos Caballero}} \\
+\hline
+\end{tabular}
+\caption{Especificación del Caso de Prueba A007.}
+\label{lltc}
+\source{Elaboración propia.}
+\end{table}
 

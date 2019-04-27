@@ -122,7 +122,7 @@ continuación:
     mismo ordenador en modo solitario.
 \end{description}
 
-\section{Suites Disponibles}
+\section{Categorias Disponibles}
 El proyecto ha sido configurado de forma que puedan ejecutarse diferentes
 conjuntos de casos de prueba, estos se detallan en el cuadro \ref{suites}.
 
@@ -152,7 +152,7 @@ prueba relacionados con pruebas negativas en todos los módulos.} \\
 prueba relacionados con pruebas de dominio en todos los módulos.} \\
 \hline
 \end{tabular}
-\caption{Suites en el \emph{framework} para las diferentes etapas de evaluación.}
+\caption{Categorización en el \emph{framework} para las diferentes etapas de evaluación.}
 \label{suites}
 \source{Elaboración propia.}
 \end{table}
@@ -183,18 +183,87 @@ ser realizados en una ejecucion de pruebas manual, de forma que la lectura de
 cada rutina sea concisa y ordenada.
 
 Un ejemplo de esto puede apreciarse en el caso de prueba \textbf{A001}, del cual
-puede verse su especificacion en la figura \ref{lltc}, tal especificación
+puede verse su especificacion en el cuadro \ref{lltc}, tal especificación
 contiene la secuencia de pasos y el conjunto de verificaciones de la prueba como
 se describen en el diagrama de secuencia de la figura \ref{sequence}, y estos a
 su vez traducidos a código fuente como se ve en la figura \ref{spec}.
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\includegraphics[width=1.0\textwidth]{graphics/lltc.eps}
+\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.8cm}|p{2.5cm}|p{2.6cm}|}
+\hline
+\footnotesize{\textbf{Proyecto:}} &
+\multicolumn{2}{c|}{\footnotesize{\emph{Salesforce} - Módulo de productos.}} &
+\footnotesize{\textbf{Función:}} & \footnotesize{[Nuevo Producto]} \\
+\hline
+\footnotesize{\textbf{ID:}} & \multicolumn{2}{c|}{\footnotesize{A001}} &
+\footnotesize{\textbf{Prioridad:}} & \footnotesize{3} \\
+\hline
+\footnotesize{\textbf{Título:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Producto es registrado con los valores
+obligatorios establecidos después de accionado el botón «Guardar»}} \\
+\hline
+\footnotesize{\textbf{Descripción:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Verificar que un nuevo producto sea
+registrado correctamente cuando en el formulario de creación unicamente se han
+establecido los valores obligatorios establecidos por este.}} \\
+\hline
+\multirow{2}{*}{\footnotesize{\textbf{Requerimientos:}}} &
+\footnotesize{\textbf{Software:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{Navegador \emph{Google Chrome}
+version 70.0.3538.110}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Instrucciones de inicialización:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Autenticarse en la plataforma \emph{Salesforce}.
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Productos».
+\end{enumerate}
+}} \\
+\hline
+\footnotesize{\textbf{Pasos:}} &
+\multicolumn{4}{p{11.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Clic en el icono de «Controles de Vista de Lista».
+\item Clic en el boton «Nuevo».
+\item Rellenar el campo «Nombre del Producto» con el valor \textbf{TESTA001}.
+\item Clic en el boton «Guardar».
+\item Verificar que el mensaje enviado sea: \textbf{Producto TESTA001 ha sido creado}.
+\item Verificar que en la vista de Producto el «Título» sea: \textbf{TESTA001}.
+\item Verificar que en la vista de Producto el subtítulo «Código de Producto» este vacio.
+\item Verificar que en la vista de Producto el subtítulo «Familia de Producto» este vacio.
+\item Clic en el boton «Detalles».
+\end{enumerate}
+}} \\
+\hline
+\multirow{2}{2.8cm}{\footnotesize{\textbf{Criterio de aceptación:}}} &
+\footnotesize{\textbf{Resultado esperado:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{En la pestaña «Detalles», todos los
+valores exceptuando el «Nombre de Producto» se encuentran con los valores
+vacios.}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Verificación:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{Comprobar elemento por elemento que los
+valores se encuentren vacios, y que el campo «Nombre de Producto» sea igual a:
+\textbf{TESTA001}.}} \\
+\hline
+\footnotesize{\textbf{Adjuntos:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Notas:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Fecha:}} & \footnotesize{2018-12-05} & \multicolumn{2}{c|}{\footnotesize{\textbf{Tiempo de ejecución:}}} & \footnotesize{1 min 24 seg} \\
+\hline
+\footnotesize{\textbf{Creado por:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{CC - Carlos Caballero}} \\
+\hline
+\end{tabular}
 \caption{Especificación del Caso de Prueba A001.}
 \label{lltc}
 \source{Elaboración propia.}
-\end{figure}
+\end{table}
 
 \begin{figure}[H]
 \centering
@@ -253,6 +322,10 @@ resultados obtenidos de la ejecución de los casos de prueba, en los cuales
 como puede verse en el reporte de error adjunto, y debido al fallo de estos
 también se bloquearon dos casos de prueba.
 
+Presentados los resultados de la ejecución de las pruebas, vemos que de los 315
+casos de prueba, únicamente existen 2 bloqueados, y dos fallidos. Por ende se
+tiene 98.74\% de casos de prueba exitosos.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/results-tests.eps}
@@ -269,8 +342,10 @@ también se bloquearon dos casos de prueba.
 \source{Elaboración propia.}
 \end{figure}
 
-Presentados los resultados de la ejecución de las pruebas, vemos que de los 315
-casos de pruebas únicamente existen 2 bloqueados, y dos fallidos. Por ende se
-tiene 98.74\% de casos de prueba exitosos, lo que lleva a concluir que los
-atributos de calidad esperados del sistema están cubiertos por completo.
+\section{Reportes de Error}
+Como anteriormente se mencionó, se encontraron cuatro casos de prueba no
+exitosos, dos de ellos bloqueados, debido al fallo de otros dos casos de
+prueba, es decir que no pueden verificarse apropiadamente, debido a que la
+precondición requerida es fallida, estos casos de prueba pueden verse en el
+\textbf{apéndice \ref{appendix_bugreport}}.
 
