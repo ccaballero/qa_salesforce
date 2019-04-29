@@ -122,7 +122,7 @@ continuación:
     mismo ordenador en modo solitario.
 \end{description}
 
-\section{Categorias Disponibles}
+\section{Categorías Disponibles}
 El proyecto ha sido configurado de forma que puedan ejecutarse diferentes
 conjuntos de casos de prueba, estos se detallan en el cuadro \ref{suites}.
 
@@ -178,26 +178,28 @@ entre estos como se presenta en la figura \ref{pom}.
 
 \section{\emph{Specs}}
 Los \emph{Specs} representan las rutinas de automatización propiamente dichas,
-cada \emph{spec} traduce directamente los pasos y comprobaciones que deberian
-ser realizados en una ejecucion de pruebas manual, de forma que la lectura de
+cada \emph{spec} traduce directamente los pasos y comprobaciones que deberían
+ser realizados en una ejecución de pruebas manual, de forma que la lectura de
 cada rutina sea concisa y ordenada.
 
 Un ejemplo de esto puede apreciarse en el caso de prueba \textbf{A001}, del cual
-puede verse su especificacion en el cuadro \ref{lltc}, tal especificación
+puede verse su especificación en el cuadro \ref{lltc}, tal especificación
 contiene la secuencia de pasos y el conjunto de verificaciones de la prueba como
 se describen en el diagrama de secuencia de la figura \ref{sequence}, y estos a
 su vez traducidos a código fuente como se ve en la figura \ref{spec}.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.8cm}|p{2.5cm}|p{2.6cm}|}
+\begin{tabular}{|p{2.5cm}|p{2.8cm}|p{2.2cm}|p{2.8cm}|p{2.2cm}|}
 \hline
 \footnotesize{\textbf{Proyecto:}} &
 \multicolumn{2}{c|}{\footnotesize{\emph{Salesforce} - Módulo de productos.}} &
-\footnotesize{\textbf{Función:}} & \footnotesize{[Nuevo Producto]} \\
+\footnotesize{\textbf{Función:}} &
+\multicolumn{1}{c|}{\footnotesize{[Nuevo]}} \\
 \hline
 \footnotesize{\textbf{ID:}} & \multicolumn{2}{c|}{\footnotesize{A001}} &
-\footnotesize{\textbf{Prioridad:}} & \footnotesize{3} \\
+\footnotesize{\textbf{Prioridad:}} &
+\multicolumn{1}{c|}{\footnotesize{Alta}} \\
 \hline
 \footnotesize{\textbf{Título:}} &
 \multicolumn{4}{p{12.4cm}|}{\footnotesize{Producto es registrado con los valores
@@ -205,13 +207,13 @@ obligatorios establecidos después de accionado el botón «Guardar»}} \\
 \hline
 \footnotesize{\textbf{Descripción:}} &
 \multicolumn{4}{p{12.4cm}|}{\footnotesize{Verificar que un nuevo producto sea
-registrado correctamente cuando en el formulario de creación unicamente se han
+registrado correctamente cuando en el formulario de creación únicamente se han
 establecido los valores obligatorios establecidos por este.}} \\
 \hline
 \multirow{2}{*}{\footnotesize{\textbf{Requerimientos:}}} &
 \footnotesize{\textbf{Software:}} &
 \multicolumn{3}{p{7.8cm}|}{\footnotesize{Navegador \emph{Google Chrome}
-version 70.0.3538.110}} \\
+versión 70.0.3538.110}} \\
 \cline{2-5}
 & \footnotesize{\textbf{Instrucciones de inicialización:}} &
 \multicolumn{3}{p{7.8cm}|}{\footnotesize{
@@ -226,14 +228,14 @@ version 70.0.3538.110}} \\
 \multicolumn{4}{p{11.8cm}|}{\footnotesize{
 \begin{enumerate}
 \item Clic en el icono de «Controles de Vista de Lista».
-\item Clic en el boton «Nuevo».
+\item Clic en el botón «Nuevo».
 \item Rellenar el campo «Nombre del Producto» con el valor \textbf{TESTA001}.
-\item Clic en el boton «Guardar».
+\item Clic en el botón «Guardar».
 \item Verificar que el mensaje enviado sea: \textbf{Producto TESTA001 ha sido creado}.
 \item Verificar que en la vista de Producto el «Título» sea: \textbf{TESTA001}.
-\item Verificar que en la vista de Producto el subtítulo «Código de Producto» este vacio.
-\item Verificar que en la vista de Producto el subtítulo «Familia de Producto» este vacio.
-\item Clic en el boton «Detalles».
+\item Verificar que en la vista de Producto el subtítulo «Código de Producto» este vació.
+\item Verificar que en la vista de Producto el subtítulo «Familia de Producto» este vació.
+\item Clic en el pestaña «Detalles».
 \end{enumerate}
 }} \\
 \hline
@@ -241,11 +243,11 @@ version 70.0.3538.110}} \\
 \footnotesize{\textbf{Resultado esperado:}} &
 \multicolumn{3}{p{9.1cm}|}{\footnotesize{En la pestaña «Detalles», todos los
 valores exceptuando el «Nombre de Producto» se encuentran con los valores
-vacios.}} \\
+vacíos.}} \\
 \cline{2-5}
 & \footnotesize{\textbf{Verificación:}} &
 \multicolumn{3}{p{9.1cm}|}{\footnotesize{Comprobar elemento por elemento que los
-valores se encuentren vacios, y que el campo «Nombre de Producto» sea igual a:
+valores se encuentren vacíos, y que el campo «Nombre de Producto» sea igual a:
 \textbf{TESTA001}.}} \\
 \hline
 \footnotesize{\textbf{Adjuntos:}} &
@@ -254,10 +256,13 @@ valores se encuentren vacios, y que el campo «Nombre de Producto» sea igual a:
 \footnotesize{\textbf{Notas:}} &
 \multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
 \hline
-\footnotesize{\textbf{Fecha:}} & \footnotesize{2018-12-05} & \multicolumn{2}{c|}{\footnotesize{\textbf{Tiempo de ejecución:}}} & \footnotesize{1 min 24 seg} \\
+\footnotesize{\textbf{Fecha:}} &
+\multicolumn{1}{c|}{\footnotesize{2018-12-05}} &
+\multicolumn{2}{l|}{\footnotesize{\textbf{Tiempo de ejecución:}}} &
+\multicolumn{1}{c|}{\footnotesize{1 min 24 seg}} \\
 \hline
 \footnotesize{\textbf{Creado por:}} &
-\multicolumn{4}{p{12.4cm}|}{\footnotesize{CC - Carlos Caballero}} \\
+\multicolumn{4}{c|}{\footnotesize{CC - Carlos Caballero}} \\
 \hline
 \end{tabular}
 \caption{Especificación del Caso de Prueba A001.}
@@ -346,6 +351,6 @@ tiene 98.74\% de casos de prueba exitosos.
 Como anteriormente se mencionó, se encontraron cuatro casos de prueba no
 exitosos, dos de ellos bloqueados, debido al fallo de otros dos casos de
 prueba, es decir que no pueden verificarse apropiadamente, debido a que la
-precondición requerida es fallida, estos casos de prueba pueden verse en el
+pre condición requerida es fallida, estos casos de prueba pueden verse en el
 \textbf{apéndice \ref{appendix_bugreport}}.
 

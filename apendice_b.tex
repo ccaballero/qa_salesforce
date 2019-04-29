@@ -1,5 +1,5 @@
 \chapter{Reportes de error}\label{appendix_bugreport}
-Este apendice tiene como objetivo presentar los errores encontrados en los casos
+Este apéndice tiene como objetivo presentar los errores encontrados en los casos
 de prueba que fueron evaluados en cada caso. Existen cuatro casos de prueba que
 presentaron fallos tras la ejecución, como se describen en el cuadro
 \ref{bugs}.
@@ -9,36 +9,31 @@ presentaron fallos tras la ejecución, como se describen en el cuadro
 \begin{tabular}{|c|p{6.5cm}|c|c|c|}
 \hline
 \footnotesize{\textbf{Código}} & \footnotesize{\textbf{Caso de Prueba}} &
-\footnotesize{\textbf{Resultado}} & \footnotesize{\textbf{Especificación}} &
-\footnotesize{\textbf{Reporte de Error}} \\
+\footnotesize{\textbf{Resultado}} & \footnotesize{\textbf{Especificación}} \\
 \hline
 \footnotesize{\emph{A007}} &
 \footnotesize{Precio de producto para una lista de precios es registrado después
 de accionado el botón «Guardar»} &
 \footnotesize{Bloqueado} &
-\footnotesize{\emph{\ref{tca007}}} &
-\footnotesize{\emph{\ref{bra007}}}
+\footnotesize{Cuadro \ref{tca007}}
 \\
 \footnotesize{\emph{F041}} &
 \footnotesize{Mensaje «Se guardó Entrada del catálogo de precios ."» se muestra
 después de modificado un precio} &
 \footnotesize{Bloqueado} &
-\footnotesize{\emph{\ref{tcf041}}} &
-\footnotesize{\emph{\ref{brf041}}}
+\footnotesize{Cuadro \ref{tcf041}}
 \\
 \footnotesize{\emph{D017}} &
 \footnotesize{Formulario «Agregar a lista de precios» permite el registro,
 cuando en el campo «Lista de precios» se ingresa el valor Nulo} &
 \footnotesize{Fallido} &
-\footnotesize{\emph{\ref{tcd017}}} &
-\footnotesize{\emph{\ref{brd017}}}
+\footnotesize{Cuadro \ref{tcd017}}
 \\
 \footnotesize{\emph{D018}} &
 \footnotesize{Formulario «Agregar a lista de precios» permite el registro,
 cuando en el campo «Divisa» se ingresa el valor Nulo} &
 \footnotesize{Fallido} &
-\footnotesize{\emph{\ref{tcd018}}} &
-\footnotesize{\emph{\ref{brd018}}}
+\footnotesize{Cuadro \ref{tcd018}}
 \\
 \hline
 \end{tabular}
@@ -47,33 +42,48 @@ cuando en el campo «Divisa» se ingresa el valor Nulo} &
 \source{Elaboración propia.}
 \end{table}
 
+Considerando que todos los casos de prueba fallidos comparten un problema común,
+es posible englobar a todos en un solo caso de error, presentado en el cuadro
+\ref{br}.
+
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.8cm}|p{2.5cm}|p{2.6cm}|}
+\begin{tabular}{|p{2.5cm}|p{2.8cm}|p{2.2cm}|p{2.8cm}|p{2.2cm}|}
 \hline
 \footnotesize{\textbf{Proyecto:}} &
 \multicolumn{2}{c|}{\footnotesize{\emph{Salesforce} - Módulo de productos.}} &
-\footnotesize{\textbf{Función:}} & \footnotesize{[Ver - Relacionado]} \\
+\footnotesize{\textbf{Función:}} &
+\multicolumn{1}{c|}{\footnotesize{[Ver-Relacionado]}} \\
 \hline
 \footnotesize{\textbf{ID:}} & \multicolumn{2}{c|}{\footnotesize{A007}} &
-\footnotesize{\textbf{Prioridad:}} & \footnotesize{3} \\
+\footnotesize{\textbf{Prioridad:}} &
+\multicolumn{1}{c|}{\footnotesize{Alta}} \\
 \hline
 \footnotesize{\textbf{Título:}} &
 \multicolumn{4}{p{12.4cm}|}{\footnotesize{Precio de producto para una lista de
 precios es registrado después de accionado el botón «Guardar»}} \\
 \hline
 \footnotesize{\textbf{Descripción:}} &
-\multicolumn{4}{p{12.4cm}|}{\footnotesize{.}} \\
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Verificar que una vez establecido un
+precio estándar en un Producto, puede agregarse un precio nuevo en una lista de
+precios creada previamente, desde el formulario provisto por el sistema desde
+la pestaña «Detalles» en la vista de «Producto».}} \\
 \hline
 \multirow{2}{*}{\footnotesize{\textbf{Requerimientos:}}} &
 \footnotesize{\textbf{Software:}} &
 \multicolumn{3}{p{7.8cm}|}{\footnotesize{Navegador \emph{Google Chrome}
-version 70.0.3538.110}} \\
+versión 70.0.3538.110}} \\
 \cline{2-5}
 & \footnotesize{\textbf{Instrucciones de inicialización:}} &
 \multicolumn{3}{p{7.8cm}|}{\footnotesize{
 \begin{enumerate}
 \item Autenticarse en la plataforma \emph{Salesforce}.
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Lista de precios».
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre de la lista de precios» con el valor
+    \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
 \item Clic en el «Iniciador de Aplicaciones».
 \item Clic en el enlace «Productos».
 \end{enumerate}
@@ -82,28 +92,34 @@ version 70.0.3538.110}} \\
 \footnotesize{\textbf{Pasos:}} &
 \multicolumn{4}{p{11.8cm}|}{\footnotesize{
 \begin{enumerate}
-\item Clic en el icono de «Controles de Vista de Lista».
-\item Clic en el boton «Nuevo».
-\item Rellenar el campo «Nombre del Producto» con el valor \textbf{TESTA001}.
-\item Clic en el boton «Guardar».
-\item Verificar que el mensaje enviado sea: \textbf{Producto TESTA001 ha sido creado}.
-\item Verificar que en la vista de Producto el «Título» sea: \textbf{TESTA001}.
-\item Verificar que en la vista de Producto el subtítulo «Código de Producto» este vacio.
-\item Verificar que en la vista de Producto el subtítulo «Familia de Producto» este vacio.
-\item Clic en el boton «Detalles».
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre del Producto» con el valor \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
+\item Verificar que el mensaje enviado sea:
+    \textbf{Producto TESTA007 ha sido creado}.
+\item Clic en el pestaña «Relacionado».
+\item Clic en el botón «Agregar precio estándar».
+\item Rellenar el campo «Precio de la lista» con el valor \textbf{1}.
+\item Clic en el botón «Guardar».
+\item Clic en el botón «Agregar a lista de precios».
+\item Seleccionar en el campo «Lista de precios» el valor \textbf{TESTA007}.
+\item Clic en el botón «Siguiente».
+\item Clic en el botón «Guardar».
+\item Verificar que el mensaje enviado sea:
+    \textbf{Se creó Entrada del catálogo de precios .}
 \end{enumerate}
 }} \\
 \hline
 \multirow{2}{2.8cm}{\footnotesize{\textbf{Criterio de aceptación:}}} &
 \footnotesize{\textbf{Resultado esperado:}} &
-\multicolumn{3}{p{9.1cm}|}{\footnotesize{En la pestaña «Detalles», todos los
-valores exceptuando el «Nombre de Producto» se encuentran con los valores
-vacios.}} \\
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{En la pestaña «Detalles», en la tabla
+«Listas de precios» existen dos filas, una para el precio estándar, y otra para
+la lista \textbf{TESTA007}.}} \\
 \cline{2-5}
 & \footnotesize{\textbf{Verificación:}} &
 \multicolumn{3}{p{9.1cm}|}{\footnotesize{Comprobar elemento por elemento que los
-valores se encuentren vacios, y que el campo «Nombre de Producto» sea igual a:
-\textbf{TESTA001}.}} \\
+valores de la tabla «Listas de precios» sean los valores anteriormente
+rellenados.}} \\
 \hline
 \footnotesize{\textbf{Adjuntos:}} &
 \multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
@@ -111,14 +127,372 @@ valores se encuentren vacios, y que el campo «Nombre de Producto» sea igual a:
 \footnotesize{\textbf{Notas:}} &
 \multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
 \hline
-\footnotesize{\textbf{Fecha:}} & \footnotesize{2018-12-05} & \multicolumn{2}{c|}{\footnotesize{\textbf{Tiempo de ejecución:}}} & \footnotesize{1 min 24 seg} \\
+\footnotesize{\textbf{Fecha:}} &
+\multicolumn{1}{c|}{\footnotesize{2018-12-05}} &
+\multicolumn{2}{l|}{\footnotesize{\textbf{Tiempo de ejecución:}}} &
+\multicolumn{1}{c|}{\footnotesize{2 min 12 seg}} \\
 \hline
 \footnotesize{\textbf{Creado por:}} &
-\multicolumn{4}{p{12.4cm}|}{\footnotesize{CC - Carlos Caballero}} \\
+\multicolumn{4}{c|}{\footnotesize{CC - Carlos Caballero}} \\
 \hline
 \end{tabular}
 \caption{Especificación del Caso de Prueba A007.}
-\label{lltc}
+\label{tca007}
+\source{Elaboración propia.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{2.5cm}|p{2.8cm}|p{2.2cm}|p{2.8cm}|p{2.2cm}|}
+\hline
+\footnotesize{\textbf{Proyecto:}} &
+\multicolumn{2}{c|}{\footnotesize{\emph{Salesforce} - Módulo de productos.}} &
+\footnotesize{\textbf{Función:}} &
+\multicolumn{1}{c|}{\footnotesize{[Ver-Relacionado]}} \\
+\hline
+\footnotesize{\textbf{ID:}} & \multicolumn{2}{c|}{\footnotesize{F041}} &
+\footnotesize{\textbf{Prioridad:}} &
+\multicolumn{1}{c|}{\footnotesize{Media}} \\
+\hline
+\footnotesize{\textbf{Título:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Mensaje «Se guardó Entrada del
+catálogo de precios ."» se muestra después de modificado un precio}} \\
+\hline
+\footnotesize{\textbf{Descripción:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Verificar que una vez establecido un
+precio estándar en un Producto, al agregarse un precio nuevo en una lista de
+precios creada previamente, se muestra el mensaje de éxito de la operación,
+desde el formulario provisto por el sistema desde la pestaña «Detalles» en la
+vista de «Producto».}} \\
+\hline
+\multirow{2}{*}{\footnotesize{\textbf{Requerimientos:}}} &
+\footnotesize{\textbf{Software:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{Navegador \emph{Google Chrome}
+versión 70.0.3538.110}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Instrucciones de inicialización:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Autenticarse en la plataforma \emph{Salesforce}.
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Lista de precios».
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre de la lista de precios» con el valor
+    \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Productos».
+\end{enumerate}
+}} \\
+\hline
+\footnotesize{\textbf{Pasos:}} &
+\multicolumn{4}{p{11.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre del Producto» con el valor \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
+\item Verificar que el mensaje enviado sea:
+    \textbf{Producto TESTA007 ha sido creado}.
+\item Clic en el pestaña «Relacionado».
+\item Clic en el botón «Agregar precio estándar».
+\item Rellenar el campo «Precio de la lista» con el valor \textbf{1}.
+\item Clic en el botón «Guardar».
+\item Clic en el botón «Agregar a lista de precios».
+\item Seleccionar en el campo «Lista de precios» el valor \textbf{TESTA007}.
+\item Clic en el botón «Siguiente».
+\item Clic en el botón «Guardar».
+\end{enumerate}
+}} \\
+\hline
+\multirow{2}{2.8cm}{\footnotesize{\textbf{Criterio de aceptación:}}} &
+\footnotesize{\textbf{Resultado esperado:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{Valor del precio del producto en la
+lista de precio es agregado a la tabla de «Listas de precios».}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Verificación:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{Verificar que el mensaje enviado sea:
+\textbf{Se creó Entrada del catálogo de precios .}}} \\
+\hline
+\footnotesize{\textbf{Adjuntos:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Notas:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Fecha:}} &
+\multicolumn{1}{c|}{\footnotesize{2018-12-05}} &
+\multicolumn{2}{l|}{\footnotesize{\textbf{Tiempo de ejecución:}}} &
+\multicolumn{1}{c|}{\footnotesize{2 min 06 seg}} \\
+\hline
+\footnotesize{\textbf{Creado por:}} &
+\multicolumn{4}{c|}{\footnotesize{CC - Carlos Caballero}} \\
+\hline
+\end{tabular}
+\caption{Especificación del Caso de Prueba F041.}
+\label{tcf041}
+\source{Elaboración propia.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{2.5cm}|p{2.8cm}|p{2.2cm}|p{2.8cm}|p{2.2cm}|}
+\hline
+\footnotesize{\textbf{Proyecto:}} &
+\multicolumn{2}{c|}{\footnotesize{\emph{Salesforce} - Módulo de productos.}} &
+\footnotesize{\textbf{Función:}} &
+\multicolumn{1}{c|}{\footnotesize{[Ver-Relacionado]}} \\
+\hline
+\footnotesize{\textbf{ID:}} & \multicolumn{2}{c|}{\footnotesize{D017}} &
+\footnotesize{\textbf{Prioridad:}} &
+\multicolumn{1}{c|}{\footnotesize{Baja}} \\
+\hline
+\footnotesize{\textbf{Título:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Formulario «Agregar a lista de
+precios» permite el registro, cuando en el campo «Lista de precios» se ingresa
+el valor Nulo}} \\
+\hline
+\footnotesize{\textbf{Descripción:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Verificar que una vez establecido un
+precio estándar en un Producto, en el formulario «Agregar a lista de precios»,
+el valor para el campo «Lista de precios» pasa al siguiente paso con el valor
+Nulo.}} \\
+\hline
+\multirow{2}{*}{\footnotesize{\textbf{Requerimientos:}}} &
+\footnotesize{\textbf{Software:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{Navegador \emph{Google Chrome}
+versión 70.0.3538.110}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Instrucciones de inicialización:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Autenticarse en la plataforma \emph{Salesforce}.
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Lista de precios».
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre de la lista de precios» con el valor
+    \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Productos».
+\end{enumerate}
+}} \\
+\hline
+\footnotesize{\textbf{Pasos:}} &
+\multicolumn{4}{p{11.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre del Producto» con el valor \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
+\item Verificar que el mensaje enviado sea:
+    \textbf{Producto TESTA007 ha sido creado}.
+\item Clic en el pestaña «Relacionado».
+\item Clic en el botón «Agregar precio estándar».
+\item Rellenar el campo «Precio de la lista» con el valor \textbf{1}.
+\item Clic en el botón «Guardar».
+\item Clic en el botón «Agregar a lista de precios».
+\item Seleccionar en el campo «Lista de precios» el valor: \textbf{Ninguno}.
+\item Clic en el botón «Siguiente».
+\end{enumerate}
+}} \\
+\hline
+\multirow{2}{2.8cm}{\footnotesize{\textbf{Criterio de aceptación:}}} &
+\footnotesize{\textbf{Resultado esperado:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{El formulario «Agregar a lista de
+precios», pasa al segundo paso.}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Verificación:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{Verificar que el formulario se
+encuentra en el segundo paso.}} \\
+\hline
+\footnotesize{\textbf{Adjuntos:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Notas:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Fecha:}} &
+\multicolumn{1}{c|}{\footnotesize{2018-12-05}} &
+\multicolumn{2}{l|}{\footnotesize{\textbf{Tiempo de ejecución:}}} &
+\multicolumn{1}{c|}{\footnotesize{2 min 01 seg}} \\
+\hline
+\footnotesize{\textbf{Creado por:}} &
+\multicolumn{4}{c|}{\footnotesize{CC - Carlos Caballero}} \\
+\hline
+\end{tabular}
+\caption{Especificación del Caso de Prueba D017.}
+\label{tcd017}
+\source{Elaboración propia.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{2.5cm}|p{2.8cm}|p{2.2cm}|p{2.8cm}|p{2.2cm}|}
+\hline
+\footnotesize{\textbf{Proyecto:}} &
+\multicolumn{2}{c|}{\footnotesize{\emph{Salesforce} - Módulo de productos.}} &
+\footnotesize{\textbf{Función:}} &
+\multicolumn{1}{c|}{\footnotesize{[Ver-Relacionado]}} \\
+\hline
+\footnotesize{\textbf{ID:}} & \multicolumn{2}{c|}{\footnotesize{D018}} &
+\footnotesize{\textbf{Prioridad:}} &
+\multicolumn{1}{c|}{\footnotesize{Baja}} \\
+\hline
+\footnotesize{\textbf{Título:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Formulario «Agregar a lista de
+precios» permite el registro, cuando en el campo «Divisa» se ingresa
+el valor Nulo}} \\
+\hline
+\footnotesize{\textbf{Descripción:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Verificar que una vez establecido un
+precio estándar en un Producto, en el formulario «Agregar a lista de precios»,
+el valor para el campo «Divisa» pasa al siguiente paso con el valor
+Nulo.}} \\
+\hline
+\multirow{2}{*}{\footnotesize{\textbf{Requerimientos:}}} &
+\footnotesize{\textbf{Software:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{Navegador \emph{Google Chrome}
+versión 70.0.3538.110}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Instrucciones de inicialización:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Autenticarse en la plataforma \emph{Salesforce}.
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Lista de precios».
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre de la lista de precios» con el valor
+    \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Productos».
+\end{enumerate}
+}} \\
+\hline
+\footnotesize{\textbf{Pasos:}} &
+\multicolumn{4}{p{11.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre del Producto» con el valor \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
+\item Verificar que el mensaje enviado sea:
+    \textbf{Producto TESTA007 ha sido creado}.
+\item Clic en el pestaña «Relacionado».
+\item Clic en el botón «Agregar precio estándar».
+\item Rellenar el campo «Precio de la lista» con el valor \textbf{1}.
+\item Clic en el botón «Guardar».
+\item Clic en el botón «Agregar a lista de precios».
+\item Seleccionar en el campo «Divisa» el valor: \textbf{Ninguno}.
+\item Clic en el botón «Siguiente».
+\end{enumerate}
+}} \\
+\hline
+\multirow{2}{2.8cm}{\footnotesize{\textbf{Criterio de aceptación:}}} &
+\footnotesize{\textbf{Resultado esperado:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{El formulario «Agregar a lista de
+precios», pasa al segundo paso.}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Verificación:}} &
+\multicolumn{3}{p{9.1cm}|}{\footnotesize{Verificar que el formulario se
+encuentra en el segundo paso.}} \\
+\hline
+\footnotesize{\textbf{Adjuntos:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Notas:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Fecha:}} &
+\multicolumn{1}{c|}{\footnotesize{2018-12-05}} &
+\multicolumn{2}{l|}{\footnotesize{\textbf{Tiempo de ejecución:}}} &
+\multicolumn{1}{c|}{\footnotesize{2 min 01 seg}} \\
+\hline
+\footnotesize{\textbf{Creado por:}} &
+\multicolumn{4}{c|}{\footnotesize{CC - Carlos Caballero}} \\
+\hline
+\end{tabular}
+\caption{Especificación del Caso de Prueba D018.}
+\label{tcd018}
+\source{Elaboración propia.}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{2.5cm}|p{2.8cm}|p{2.2cm}|p{2.8cm}|p{2.2cm}|}
+\hline
+\footnotesize{\textbf{Proyecto:}} &
+\multicolumn{2}{c|}{\footnotesize{\emph{Salesforce} - Módulo de productos.}} &
+\footnotesize{\textbf{Función:}} &
+\multicolumn{1}{c|}{\footnotesize{[Ver-Relacionado]}} \\
+\hline
+\footnotesize{\textbf{Fecha:}} & \multicolumn{2}{c|}{\footnotesize{2018-12-24}} &
+\footnotesize{\textbf{Prioridad:}} &
+\multicolumn{1}{c|}{\footnotesize{Baja}} \\
+\hline
+\footnotesize{\textbf{Título:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{El formulario «Agregar a lista de
+precios», no presenta valores correctos, tales que puedan pasar al siguiente
+paso.}} \\
+\hline
+\footnotesize{\textbf{Descripción:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\multirow{2}{*}{\footnotesize{\textbf{Requerimientos:}}} &
+\footnotesize{\textbf{Software:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{Navegador \emph{Google Chrome}
+versión 70.0.3538.110}} \\
+\cline{2-5}
+& \footnotesize{\textbf{Instrucciones de inicialización:}} &
+\multicolumn{3}{p{7.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Autenticarse en la plataforma \emph{Salesforce}.
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Lista de precios».
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre de la lista de precios» con el valor
+    \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
+\item Clic en el «Iniciador de Aplicaciones».
+\item Clic en el enlace «Productos».
+\end{enumerate}
+}} \\
+\hline
+\footnotesize{\textbf{Pasos:}} &
+\multicolumn{4}{p{11.8cm}|}{\footnotesize{
+\begin{enumerate}
+\item Clic en el botón «Nuevo».
+\item Rellenar el campo «Nombre del Producto» con el valor \textbf{TESTA007}.
+\item Clic en el botón «Guardar».
+\item Verificar que el mensaje enviado sea:
+    \textbf{Producto TESTA007 ha sido creado}.
+\item Clic en el pestaña «Relacionado».
+\item Clic en el botón «Agregar precio estándar».
+\item Rellenar el campo «Precio de la lista» con el valor \textbf{1}.
+\item Clic en el botón «Guardar».
+\item Clic en el botón «Agregar a lista de precios».
+\item Seleccionar en el campo «Lista de precios» el valor: \textbf{Ninguno}.
+\item Seleccionar en el campo «Divisa» el valor: \textbf{Ninguno}.
+\item Clic en el botón «Siguiente».
+\end{enumerate}
+}} \\
+\hline
+\footnotesize{\textbf{Resultado Actual:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Se ven los mensajes de validación,
+que indican que los valores no pueden ser nulos.}} \\
+\hline
+\footnotesize{\textbf{Resultado Esperado:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{Se muestren los componentes del
+segundo paso del formulario, y puedan ingresarse los valores de precios en esta.
+}} \\
+\hline
+\footnotesize{\textbf{Adjuntos:}} &
+\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
+\hline
+\footnotesize{\textbf{Creado por:}} &
+\multicolumn{4}{c|}{\footnotesize{CC - Carlos Caballero}} \\
+\hline
+\end{tabular}
+\caption{Reporte de Error sobre el formulario «Agregar a lista de precios».}
+\label{br}
 \source{Elaboración propia.}
 \end{table}
 
