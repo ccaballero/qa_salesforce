@@ -8,17 +8,10 @@ Si bien en el anterior capitulo el tema fundamental era el análisis y
 exploración que se realizo sobre el software, el objeto central de este
 capitulo es el \emph{framework} mismo.
 
-\section{Código fuente}
-Todo el código fuente del \emph{framework} se encuentra versionado y disponible
-desde \emph{github}, en la siguiente dirección:
-\\
-\\
-\centerline{\textbf{https://github.com/ccaballero/salesforce\_automation}}
-
 \section{Estructura del \emph{framework}}
 El \emph{framework} desarrollado basa su estructura y comportamiento en las
 recomendaciones de la biblioteca utilizada (\emph{webdriver.io}), esta puede
-verse en la figura \ref{estructura}.
+verse en la \emph{figura \ref{estructura}}.
 
 \begin{figure}
 \centering
@@ -124,7 +117,8 @@ continuación:
 
 \section{Categorías Disponibles}
 El proyecto ha sido configurado de forma que puedan ejecutarse diferentes
-conjuntos de casos de prueba, estos se detallan en el cuadro \ref{suites}.
+conjuntos de casos de prueba, estos se detallan en el
+\emph{cuadro \ref{suites}}.
 
 \begin{table}
 \centering
@@ -166,7 +160,7 @@ Si bien los \emph{Page Objects} son clases instanciables en \emph{javascript},
 la mayor parte son utilizados de manera estática y con un relacionamiento
 entre estos que es dinámico y sustancialmente inexistente, aun así puede
 utilizarse un diagrama de clases convencional para comprender las relaciones
-entre estos como se presenta en la figura \ref{pom}.
+entre estos como se presenta en la \emph{figura \ref{pom}}.
 
 \begin{figure}
 \centering
@@ -183,12 +177,15 @@ ser realizados en una ejecución de pruebas manual, de forma que la lectura de
 cada rutina sea concisa y ordenada.
 
 Un ejemplo de esto puede apreciarse en el caso de prueba \textbf{A001}, del cual
-puede verse su especificación en el cuadro \ref{lltc}, tal especificación
+puede verse su especificación en el \emph{cuadro \ref{lltc}}, tal especificación
 contiene la secuencia de pasos y el conjunto de verificaciones de la prueba como
-se describen en el diagrama de secuencia de la figura \ref{sequence}, y estos a
-su vez traducidos a código fuente como se ve en la figura \ref{spec}.
+se describen en el diagrama de secuencia de la \emph{figura \ref{sequence}}, y
+estos a su vez traducidos a código fuente como se ve en la
+\emph{figura \ref{spec}}.
 
-\begin{table}[H]
+\begin{table}
+\renewcommand{\arraystretch}{1}
+\linespread{1}
 \centering
 \begin{tabular}{|p{2.5cm}|p{2.8cm}|p{2.2cm}|p{2.8cm}|p{2.2cm}|}
 \hline
@@ -217,15 +214,18 @@ versión 70.0.3538.110}} \\
 \cline{2-5}
 & \footnotesize{\textbf{Instrucciones de inicialización:}} &
 \multicolumn{3}{p{7.8cm}|}{\footnotesize{
+\vspace{-3mm}
 \begin{enumerate}
 \item Autenticarse en la plataforma \emph{Salesforce}.
 \item Clic en el «Iniciador de Aplicaciones».
 \item Clic en el enlace «Productos».
 \end{enumerate}
+\vspace{-5mm}
 }} \\
 \hline
 \footnotesize{\textbf{Pasos:}} &
 \multicolumn{4}{p{11.8cm}|}{\footnotesize{
+\vspace{-3mm}
 \begin{enumerate}
 \item Clic en el icono de «Controles de Vista de Lista».
 \item Clic en el botón «Nuevo».
@@ -237,6 +237,7 @@ versión 70.0.3538.110}} \\
 \item Verificar que en la vista de Producto el subtítulo «Familia de Producto» este vació.
 \item Clic en el pestaña «Detalles».
 \end{enumerate}
+\vspace{-5mm}
 }} \\
 \hline
 \multirow{2}{2.8cm}{\footnotesize{\textbf{Criterio de aceptación:}}} &
@@ -249,12 +250,6 @@ vacíos.}} \\
 \multicolumn{3}{p{9.1cm}|}{\footnotesize{Comprobar elemento por elemento que los
 valores se encuentren vacíos, y que el campo «Nombre de Producto» sea igual a:
 \textbf{TESTA001}.}} \\
-\hline
-\footnotesize{\textbf{Adjuntos:}} &
-\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
-\hline
-\footnotesize{\textbf{Notas:}} &
-\multicolumn{4}{p{12.4cm}|}{\footnotesize{}} \\
 \hline
 \footnotesize{\textbf{Fecha:}} &
 \multicolumn{1}{c|}{\footnotesize{2018-12-05}} &
@@ -270,7 +265,7 @@ valores se encuentren vacíos, y que el campo «Nombre de Producto» sea igual a
 \source{Elaboración propia.}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/diagram02.eps}
 \caption{Diagrama de secuencia para el Caso de Prueba A001.}
@@ -278,7 +273,7 @@ valores se encuentren vacíos, y que el campo «Nombre de Producto» sea igual a
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \begin{verbatim}
 it('A001 - Producto es registrado con los valores obligatorios '+
    'establecidos después de accionado el botón «Guardar»',()=>{
@@ -320,18 +315,25 @@ it('A001 - Producto es registrado con los valores obligatorios '+
 \source{Elaboración propia.}
 \end{figure}
 
+\section{Código fuente}
+Todo el código fuente del \emph{framework} se encuentra versionado y disponible
+desde \emph{github}, en la siguiente dirección:
+\\
+\\
+\centerline{\textbf{https://github.com/ccaballero/salesforce\_automation}}
+
 \section{Ejecución de las pruebas}
-En las figuras \ref{results-tests} y \ref{results-type}, se condensan los
-resultados obtenidos de la ejecución de los casos de prueba, en los cuales
-únicamente fallaron 2 casos de prueba, ambos relacionados a un mismo formulario,
-como puede verse en el reporte de error adjunto, y debido al fallo de estos
-también se bloquearon dos casos de prueba.
+En las \emph{figuras \ref{results-tests}} y \emph{\ref{results-type}}, se
+condensan los resultados obtenidos de la ejecución de los casos de prueba, en
+los cuales únicamente fallaron 2 casos de prueba, ambos relacionados a un mismo
+formulario, como puede verse en el reporte de error adjunto, y debido al fallo
+de estos también se bloquearon dos casos de prueba.
 
 Presentados los resultados de la ejecución de las pruebas, vemos que de los 315
 casos de prueba, únicamente existen 2 bloqueados, y dos fallidos. Por ende se
 tiene 98.74\% de casos de prueba exitosos.
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/results-tests.eps}
 \caption{Resultados de las pruebas clasificadas por tipo de evaluación.}
@@ -339,7 +341,7 @@ tiene 98.74\% de casos de prueba exitosos.
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/results-type.eps}
 \caption{Resultados de las pruebas clasificadas por tipo de acción a evaluar.}
@@ -352,5 +354,5 @@ Como anteriormente se mencionó, se encontraron cuatro casos de prueba no
 exitosos, dos de ellos bloqueados, debido al fallo de otros dos casos de
 prueba, es decir que no pueden verificarse apropiadamente, debido a que la
 pre condición requerida es fallida, estos casos de prueba pueden verse en el
-\textbf{apéndice \ref{appendix_bugreport}}.
+\emph{\textbf{apéndice \ref{appendix_bugreport}}}.
 

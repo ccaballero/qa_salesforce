@@ -31,6 +31,8 @@
 \marginsize{3cm}{2cm}{2cm}{2cm}
 
 \setlength{\parskip}{6pt}
+\linespread{1.25}
+\usepackage[font=small]{caption}
 
 \usepackage{rotating}
 \usepackage{multirow}
@@ -66,7 +68,8 @@ pdftex]{hyperref}
 \usepackage[nottoc,notlof,notlot]{tocbibind}
 \usepackage{float}
 
-\bibliographystyle{apalike}
+\usepackage[backend=biber,style=apa,autocite=inline,sorting=ynt]{biblatex}
+\addbibresource{bibliografia.bib}
 
 \begin{document}
 \frontmatter
@@ -80,18 +83,19 @@ pdftex]{hyperref}
 
 \mainmatter
 \include{capitulo_01}
-\include{capitulo_02}
-\include{capitulo_03}
-\include{capitulo_04}
-\include{capitulo_05}
+%\include{capitulo_02}
+%\include{capitulo_03}
+%\include{capitulo_04}
+%\include{capitulo_05}
 
-\include{bibliografia}
+\printbibliography[title={Bibliografía}]
 
-\begin{appendix}
-\include{apendice_a}
-\include{apendice_b}
-\include{apendice_c}
-\end{appendix}
+%\begin{appendix}
+%\include{apendice_a}
+%\include{apendice_b}
+%\include{apendice_c}
+%\include{apendice_d}
+%\end{appendix}
 
 \backmatter
 

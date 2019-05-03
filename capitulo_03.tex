@@ -2,12 +2,14 @@
 
 En este capítulo, se desarrollan los aspectos necesarios para la definición del
 proceso de desarrollo del \emph{framework}, primeramente se hará referencia a
-las cuestiones relacionadas con las fuentes de análisis utilizados.
+las cuestiones relacionadas con las fuentes de análisis utilizadas, y algunos
+conceptos puntuales acerca del producto, y la descripción de las actividades
+planificadas durante el proyecto.
 
-Posteriormente se trataran cuestiones acerca del producto, introduciendo los
-conceptos claves que se utilizan en el \emph{framework} posteriormente; para
-terminar detallando primero los criterios de calidad y las técnicas de prueba
-escogidas para formular los casos de uso a automatizar.
+Posteriormente se describirán los \emph{tours} realizados en el sistema como
+parte del análisis de los elementos, los cálculos de valor limite realizados
+sobre los formularios, para terminar condensando los casos de prueba
+formulados.
 
 \section{Entorno de proyecto}
 Los primeros componentes que se describirán son los relacionados con el entorno
@@ -63,10 +65,10 @@ documentación del fabricante algunos clientes comienzan con una edición básic
 actualizan a una edición más rica en características a medida que evolucionan
 los requisitos empresariales.
 
-En el cuadro \ref{ediciones} se describen las ediciones disponibles con las que
-cuenta el servicio actualmente, cabe comentar que la evaluación se realizará
-sobre la versión \emph{Developer} debido a que está es la que requiere para su
-utilización, la menor cantidad de restricciones de parte del fabricante.
+En el \emph{cuadro \ref{ediciones}} se describen las ediciones disponibles con
+las que cuenta el servicio actualmente, cabe comentar que la evaluación se
+realizará sobre la versión \emph{Developer} debido a que está es la que requiere
+para su utilización, la menor cantidad de restricciones de parte del fabricante.
 
 \begin{table}
 \centering
@@ -116,7 +118,8 @@ utilice \cite{McCarthy}.
 
 Se evaluarán las funcionalidades de los módulos sobre el navegador cuya
 participación en el mercado es la mayor, en este caso: \emph{Google Chrome}
-como puede verse en la figura \ref{software}.
+como puede verse en la \emph{figura \ref{software}}, priorizando las pruebas
+sobre resoluciones de pantalla no menores a 1024 píxeles por 768 píxeles.
 
 \begin{figure}
 \centering
@@ -130,10 +133,9 @@ Adicionalmente al uso del navegador \emph{Google Chrome} serán necesarios
 otros navegadores para realizar la evaluación de compatibilidad sobre
 vistas especificas del sistema, para este fin se consultó la información
 disponible en la pagina de soporte provista por el fabricante, la cual como
-puede verse en el cuadro \ref{soporte_navegadores}, revela que se soportan
-cinco navegadores diferentes bajo condiciones de limitación conocidas por el
-fabricante\footnote{Información extraída y disponible en:
-https://help.salesforce.com/articleView?id=getstart\_browsers\_sfx.htm}.
+puede verse en el \emph{cuadro \ref{soporte_navegadores}}, revela que se
+soportan cinco navegadores diferentes bajo condiciones de limitación descritas
+por el fabricante.
 
 \begin{table}
 \centering
@@ -173,18 +175,20 @@ https://help.salesforce.com/articleView?id=getstart\_browsers\_sfx.htm}.
 \end{tabular}
 \caption{Lista de compatibilidad provista por \emph{Salesforce}.}
 \label{soporte_navegadores}
-\source{Elaboración propia.}
+\source{https://help.salesforce.com/articleView?id=getstart\_browsers\_sfx.htm}
 \end{table}
 
 \section{Planificación de actividades}
 Para conseguir los objetivos planteados por el proyecto se realizarán las
-actividades detalladas en el cuadro \ref{planificacion} en la página
-\pageref{planificacion}.
+actividades detalladas en el \emph{cuadro \ref{planificacion}} en la página
+\pageref{planificacion}. Este cuadro detalla las actividades agrupadas por el
+objetivo especifico y detallando también el resultado esperado de estas.
 
 \begin{sidewaystable}
+\renewcommand{\arraystretch}{1}
+\linespread{1.25}
 \centering
 \small
-{\def\arraystretch{1.75}
 \begin{tabular}{|l|l|p{6.5cm}|l|}
 \hline
 Objetivo General & Objetivos Específicos & Actividades & Resultados \\
@@ -206,7 +210,6 @@ específicos. & \\
 & & Formulación los casos de prueba necesarios para los módulos
 específicos. & \\
 \cline{2-4}
-
 & \multirow{3}{4.0cm}{Diseñar e implementar los modelos y bibliotecas de
 funciones que conforman un \emph{framework} de automatización.} &
 Análisis y modelamiento de los componentes del \emph{framework}. &
@@ -218,7 +221,6 @@ disponibles. & \\
 \cline{3-3}
 & & Implementación de los componentes del \emph{framework}. & \\
 \cline{2-4}
-
 & \multirow{4}{4.0cm}{Automatizar los casos de prueba de las funciones que
 componen la interfaz de usuario del módulo de gestión de productos y listas de
 precios.} &
@@ -233,7 +235,7 @@ casos de prueba. & \\
 \cline{3-3}
 & & Generación del reporte de resultados y reporte de errores. & \\
 \hline
-\end{tabular}}
+\end{tabular}
 \caption{Planificación de actividades del proyecto.}
 \label{planificacion}
 \source{Elaboración propia.}
@@ -254,8 +256,9 @@ producto: \emph{Essentials}, \emph{Group}, \emph{Professional},
 El Producto para el software a evaluar, representa uno de los componentes
 fundamentales y claves para el éxito, por ende es importante evaluarlo
 desde múltiples facetas; la primera de estas es la funcionalidad provista por
-las interfaces de este módulo. En la figura \ref{productos} pueden verse estas
-funcionalidades, clasificadas desde la perspectiva de la interfaz de usuario.
+las interfaces de este módulo. En la \emph{figura \ref{productos}} pueden verse
+estas funcionalidades, clasificadas desde la perspectiva de la interfaz de
+usuario.
 
 Entre las funcionalidades que pueden apreciarse están las operaciones comunes
 de creación, búsqueda, visualización, modificación, y eliminación de productos,
@@ -264,16 +267,16 @@ todo este componente pueda ser tratado de manera separada. También pueden
 observarse funciones relacionadas a registrar precios estándar y precios para
 una lista de precios determinada.
 
-En la figura \ref{productos_vistas}, se aprecian las diferentes vistas que
-comprenden el módulo, se resaltó con color amarillo aquellas vistas que son de
-tipo formulario, mientras que se resaltó con color verde aquellas que son de
+En la \emph{figura \ref{productos_vistas}}, se aprecian las diferentes vistas
+que comprenden el módulo, se resaltó con color amarillo aquellas vistas que son
+de tipo formulario, mientras que se resaltó con color verde aquellas que son de
 tipo confirmación de acción.
 
 Además de las funcionalidades y vistas antes mencionadas, también se analizó el
 comportamiento de los formularios que provee el módulo, como puede verse en la
-figura \ref{productos_formularios}.
+\emph{figura \ref{productos_formularios}}.
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -335,7 +338,7 @@ figura \ref{productos_formularios}.
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -382,7 +385,7 @@ figura \ref{productos_formularios}.
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -434,23 +437,23 @@ figura \ref{productos_formularios}.
 Las Listas de Precios, tienen como objetivo, hacer que un mismo producto pueda
 tener múltiples precios, dependiendo de como la organización cliente maneje sus
 canales de distribución y producción. Al igual que en el módulo de productos, en
-la figura \ref{listas_de_precios} pueden verse las funcionalidades clasificadas
-desde la perspectiva de la interfaz de usuario, también se omitió la sección de
-los controles de vista de lista.
+la \emph{figura \ref{listas_de_precios}} pueden verse las funcionalidades
+clasificadas desde la perspectiva de la interfaz de usuario, también se omitió
+la sección de los controles de vista de lista.
 
 Las funciones de Listas de Precios son muy similares a aquellas vistas en el
 módulo de productos, analizado anteriormente.
 
-En la figura \ref{listas_de_precios_vistas}, se detallan aquellas vistas
+En la \emph{figura \ref{listas_de_precios_vistas}}, se detallan aquellas vistas
 presentes en este módulo, de la misma manera se ha destacado con amarillo a
 aquellas vistas que son formularios, mientras que en verde se presentan a
 aquellas que representan diálogos de confirmación.
 
 También de las funcionalidades y vistas antes mencionadas, se analizó el
 comportamiento de los formularios que provee este módulo, como puede verse en la
-figura \ref{listas_de_precios_formularios}.
+\emph{figura \ref{listas_de_precios_formularios}}.
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -517,7 +520,7 @@ figura \ref{listas_de_precios_formularios}.
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -570,7 +573,7 @@ figura \ref{listas_de_precios_formularios}.
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -601,11 +604,11 @@ figura \ref{listas_de_precios_formularios}.
 \subsection{Controles de Vista de Lista}
 Los Controles de Vista de Lista son funcionalidades equivalentes entre los 
 dos componentes que están siendo evaluados, por lo que se ha decidido realizar
-un análisis separado de estos. En la figura \ref{vista_de_lista} puede verse
-las funciones omitidas en los diagramas anteriores relativas a los controles de
-vista.
+un análisis separado de estos. En la \emph{figura \ref{vista_de_lista}} puede
+verse las funciones omitidas en los diagramas anteriores relativas a los
+controles de vista.
 
-En la figura \ref{vista_de_lista_vistas}, se detallan aquellas vistas
+En la \emph{figura \ref{vista_de_lista_vistas}}, se detallan aquellas vistas
 provistas por este componente, de la misma manera que en los dos módulos
 anteriormente citados, aquí también se han destacado con amarillo a
 aquellas vistas que son formularios, mientras que en verde se presentan a
@@ -613,9 +616,9 @@ aquellas que representan diálogos de confirmación.
 
 También de las funcionalidades y vistas antes mencionadas, se analizó el
 comportamiento de los formularios que provee este módulo, como puede verse en la
-figura \ref{vista_de_lista_formularios}.
+\emph{figura \ref{vista_de_lista_formularios}}.
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -671,7 +674,7 @@ figura \ref{vista_de_lista_formularios}.
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{tikzpicture}[
     grow via three points={one child at (0.5,-0.7) and
@@ -736,102 +739,30 @@ figura \ref{vista_de_lista_formularios}.
 \source{Elaboración propia.}
 \end{figure}
 
-\section{Criterios de calidad}
-Se denomina criterio de calidad a cualquier requerimiento que define lo que el
-producto debe ser.
-
-Por lo general, los criterios de calidad parten de la combinación de las
-necesidades reales y de las demandas de los clientes, con el conocimiento de las
-ofertas y productos de organizaciones de la competencia y las posibilidades que
-el fabricante posee para satisfacer esas necesidades y expectativas o para
-procurar en la medida de lo posible y/o aconsejable \cite{Haaz}.
-
-Se definieron los siguientes como criterios de calidad fundamentales para el
-éxito del producto \cite{Fillottrani}:
-
-\begin{description}
-\item [Usabilidad] La usabilidad se refiere a la facilidad de operación del
-producto por parte de los usuarios, y se relaciona con el esfuerzo
-necesario para ser utilizado, y en la evaluación individual de tal uso, por
-parte de un conjunto especificado o implícito de usuarios.
-
-\item [Confiabilidad] La confiabilidad es un atributo del sistema responsable de
-la capacidad de continuar operando bajo condiciones predefinidas. La mayoría de
-las veces, el sistema falla debido a la inaccesibilidad de elementos externos,
-como bases de datos, sistemas y conexiones de red \cite{Ashanin}.
-
-\item [Compatibilidad] La compatibilidad del navegador determina el
-comportamiento del servicio en diferentes plataformas de navegación.
-
-Dado que cada navegador tiene su propia manera de mostrar y gestionar los
-contenidos de una página web. Por lo tanto, las páginas web deben diseñarse
-de tal manera que puedan ser compatibles con cada uno de los navegadores de uso
-común. Actualmente hay casi cien tipos diferentes de navegadores disponibles, lo
-que dificulta que los diseñadores / webmasters desarrollen sitios web con un
-comportamiento similar en múltiples plataformas. El estricto cumplimiento de las
-pautas de diseño puede cumplir con estos criterios hasta cierto nivel.
-\end{description}
-
-\section{Técnicas de prueba}
-Una vez definido los elementos del sistema que comprenden el alcance de este
-proyecto, y los criterios bajo los que estos deben ser evaluados. Ahora se
-describirán las técnicas de prueba que se utilizarán para cada elemento y
-criterio de calidad.
-
-\subsection{Pruebas de aceptación}
-La prueba de aceptación es una prueba formal que se realiza para determinar si
-un sistema satisface sus criterios de aceptación: los criterios que debe cumplir
-el sistema para que el cliente los acepte. Ayuda al cliente a determinar si
-acepta o no el sistema \cite{Naik}.
-
-Las pruebas de aceptación se realizaron para los tres componentes que comprenden
-el alcance del proyecto, como el mínimo de las funcionalidades que se consideran
-criticas, en este caso, las operaciones de creación, visualización, modificación
-y eliminación de los elementos de cada componente.
-
-\subsection{Pruebas funcionales}
-El software o sistema bajo prueba se ve como una «caja negra». La selección de
-casos de prueba para pruebas funcionales se basa en el requisito o
-especificación de diseño de la entidad de software bajo prueba. Ejemplos de
-resultados esperados, algunas veces se llaman oráculos de prueba, incluyen
-requisitos/especificaciones de diseño, valores calculados a mano y resultados
-simulados. Las pruebas funcionales hacen hincapié en el comportamiento externo
-de la entidad de software \cite{Luo}.
-
-Las pruebas funcionales se realizaron para cada acción encontrada en la interfaz
-de usuario, siendo barrido completamente cualquier operación disponible en los
-componentes a evaluar.
-
-\subsection{Pruebas de dominio}
-La prueba de dominio es una estrategia de muestreo estratificada para elegir
-algunos casos de prueba de la infinidad de casos de prueba candidatos. La
-estrategia tiene varios nombres, como la partición de equivalencia, el análisis
-de límites y la partición de categorías.
-
-La prueba de dominio es probablemente la más ampliamente descrita y una de las
-técnicas de prueba de software más ampliamente practicadas. Algunos autores
-restringen su consideración del alcance de esta técnica a variables de entrada
-linealizables a funciones matemáticas. Una variable linealizable es aquella
-cuyos valores se pueden asignar a una recta numérica. El análisis es más
-sencillo y más obvio en estos casos \cite{Kaner}.
-
+\section{Análisis de valor limite}
 Para el análisis de los formularios se crearon las respectivas tablas producidas
 a partir del análisis de sus valores limite, las cuales son descritas a
 continuación:
 
 \begin{itemize}
-\item Crear Producto, que puede verse en el cuadro \ref{myers_01}
-\item Crear Entrada del catalogo de precios, que puede verse en el cuadro \ref{myers_02}
-\item Agregar a lista de precios, que puede verse en el cuadro \ref{myers_03}
-\item Modificar Entrada del catalogo de precios, que puede verse en el cuadro \ref{myers_04}
-\item Crear Lista de precios, que puede verse en el cuadro \ref{myers_05}
-\item Agregar productos, que puede verse en el cuadro \ref{myers_06}
-\item Nueva vista de lista, que puede verse en el cuadro \ref{myers_07}
-\item Cambiar nombre, que puede verse en el cuadro \ref{myers_08}
-\item Configuración de colaboración, que puede verse en el cuadro \ref{myers_09}
+    \item Crear Producto, que puede verse en el \emph{cuadro \ref{myers_01}}.
+    \item Crear Entrada del catalogo de precios, que puede verse en el
+        \emph{cuadro \ref{myers_02}}.
+    \item Agregar a lista de precios, que puede verse en el
+        \emph{cuadro \ref{myers_03}}.
+    \item Modificar Entrada del catalogo de precios, que puede verse en el
+        \emph{cuadro \ref{myers_04}}.
+    \item Crear Lista de precios, que puede verse en el
+        \emph{cuadro \ref{myers_05}}.
+    \item Agregar productos, que puede verse en el \emph{cuadro \ref{myers_06}}.
+    \item Nueva vista de lista, que puede verse en el
+        \emph{cuadro \ref{myers_07}}.
+    \item Cambiar nombre, que puede verse en el \emph{cuadro \ref{myers_08}}.
+    \item Configuración de colaboración, que puede verse en el
+        \emph{cuadro \ref{myers_09}}.
 \end{itemize}
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|p{6.0cm}|l|l|l|}
 \hline
@@ -864,7 +795,7 @@ continuación:
 \source{Elaboración propia.}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|p{3.0cm}|p{4.0cm}|p{4.0cm}|l|}
 \hline
@@ -891,7 +822,7 @@ continuación:
 \source{Elaboración propia.}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|p{6.0cm}|l|l|l|}
 \hline
@@ -907,7 +838,7 @@ continuación:
 \source{Elaboración propia.}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|p{3.0cm}|p{4.0cm}|p{4.0cm}|l|}
 \hline
@@ -930,7 +861,7 @@ continuación:
 \source{Elaboración propia.}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|p{6.0cm}|l|l|l|}
 \hline
@@ -955,7 +886,7 @@ continuación:
 \source{Elaboración propia.}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|p{3.0cm}|p{4.0cm}|p{4.0cm}|l|}
 \hline
@@ -985,7 +916,7 @@ continuación:
 \source{Elaboración propia.}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|p{3.0cm}|p{7.0cm}|p{3.0cm}|l|}
 \hline
@@ -1016,7 +947,7 @@ continuación:
 \source{Elaboración propia.}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -1033,7 +964,7 @@ continuación:
 \source{Elaboración propia.}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -1049,50 +980,30 @@ continuación:
 \source{Elaboración propia.}
 \end{table}
 
-\subsection{Pruebas negativas}
-La prueba negativa, comúnmente conocida como \emph{prueba de ruta de error} o
-\emph{prueba de falla}, generalmente se realiza para garantizar la estabilidad
-de la aplicación.
-
-La prueba negativa es el proceso de aplicar tanta creatividad como sea posible y
-validar la aplicación contra datos no válidos. Esto significa que su propósito
-es verificar si los errores se muestran al usuario donde se supone que debe
-hacerlo o si se está manejando un valor incorrecto con mayor gracia.
-
-La fiabilidad funcional de la aplicación o el software solo se puede cuantificar
-con escenarios negativos diseñados de manera efectiva. Las pruebas negativas no
-solo apuntan a detectar fallas potenciales que podrían causar un impacto grave
-en el consumo del servicio, sino que también pueden ser fundamentales para
-determinar las condiciones bajo las cuales la aplicación puede fallar.
-Finalmente, garantiza que haya suficiente validación de errores presente en el
-software \cite{Nadig}.
-
-Las pruebas negativas se centraron en los mensajes de errores que el sistema
-envía y debe enviar según los mismos criterios del producto.
-
 \section{Casos de prueba}
 A partir del análisis realizado, se terminó formulando múltiples casos de
-prueba, estos se encuentran descritos en el \textbf{apéndice
-\ref{appendix_testscases}} categorizados e individualizados según el área y
+prueba, estos se encuentran descritos en el \emph{\textbf{apéndice
+\ref{appendix_testscases}}} categorizados e individualizados según el área y
 subarea al que pertenecen.
 
-En la figura \ref{tc-tests}, se puede ver la distribución de los casos de prueba
-según el tipo de evaluación realizado, puede apreciarse que las pruebas
+En la \emph{figura \ref{tc-tests}}, se puede ver la distribución de los casos de
+prueba según el tipo de evaluación realizado, puede apreciarse que las pruebas
 funcionales ocupan mas de la mitad de la totalidad de casos de prueba en el
 proyecto, mientras que los casos de prueba negativos, y de aceptación, están más
 próximos al 10\%.
 
-En la figura \ref{tc-type}, se puede ver la distribución de los casos de prueba
-según el tipo de acción que se realiza en el sistema, es decir, si son casos
-que afectan la interfaz de usuario, si mas bien son funciones de validación, o
-si realizan alguna petición al servidor, sea esta de lectura o escritura.
+En la \emph{figura \ref{tc-type}}, se puede ver la distribución de los casos de
+prueba según el tipo de acción que se realiza en el sistema, es decir, si son
+casos que afectan la interfaz de usuario, si mas bien son funciones de
+validación, o si realizan alguna petición al servidor, sea esta de lectura o
+escritura.
 
 Puede apreciarse igualmente que la mayor parte de los casos de prueba están
 orientados a evaluar el comportamiento de la interfaz de usuario, mientras que
 en un 25\% aproximadamente se evalúan funcionalidades que se comunican con el
 servidor.
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/tc-tests.eps}
 \caption{Casos de Prueba según el tipo de evaluación realizada.}
@@ -1100,7 +1011,7 @@ servidor.
 \source{Elaboración propia.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{graphics/tc-type.eps}
 \caption{Casos de Prueba según el tipo de acción a evaluar.}

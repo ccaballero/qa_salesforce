@@ -9,15 +9,17 @@ module.exports=function(grunt){
             latex:{
                 command:function(doc){
                     return [
-                        'latex -interaction=nonstopmode proyecto.tex'
-                      , 'dvipdf proyecto.dvi'
+                        'latex -interaction=nonstopmode proyecto'
+                      , 'biber proyecto'
+                      , 'latex -interaction=nonstopmode proyecto'
+                      , 'dvipdf proyecto'
                     ].join(' && ');
                 }
             }
         }
       , watch:{
             tex:{
-                files:['*.tex','graphics/*.eps']
+                files:['*.tex','*.bib','graphics/*.eps']
               , tasks:['shell:latex']
             }
         }
