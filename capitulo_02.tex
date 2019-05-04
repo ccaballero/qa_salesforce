@@ -19,9 +19,9 @@ versiones de software, para evaluar que todos los errores anteriormente
 corregidos no sean introducidos nuevamente, mientras que será difícil y costoso
 hacer las pruebas manualmente, ejecutar las pruebas automatizadas será mas
 efectivo en términos de costo, uso de los recursos, y aprovechamiento del
-tiempo \cite{STC}.
+tiempo.
 
-Se conoce que en los siguientes escenarios es útil automatizar:
+Se conoce que en los siguientes escenarios es útil automatizar \parencite{STC}:
 
 \begin{itemize}
     \item Los requerimientos no cambian frecuentemente.
@@ -99,7 +99,7 @@ la \emph{figura \ref{piramide}}.
 Las pruebas unitarias son rápidas y fiables, las pruebas en la capa de servicios
 permiten evaluar la lógica del negocio donde la interfaz de usuario no esta
 involucrada, cuanto mas alto sea el nivel en la pirámide, mas lentas y frágiles
-resultan las pruebas \cite{Cohn}.
+resultan las pruebas \parencite{Cohn}.
 
 Finalmente aunque se debe realizar alguna automatización de las pruebas de
 interfaz de usuario, estas pruebas son mas lentas, mas difíciles de mantener y
@@ -116,7 +116,7 @@ cuando se ejecuta una prueba que emula clics en una pantalla, estas pruebas
 pueden dar como resultado falsos negativos. Estas fallas en las pruebas no
 pueden ser ignoradas, pero tampoco debe gastarse mas tiempo en solucionar los
 problemas y mantener las pruebas de interfaz de usuario que en encontrar
-defectos de código reales \cite{Francino}.
+defectos de código reales \parencite{Francino}.
 
 Con un solido diseño de pruebas, las pruebas sobre la interfaz de usuario
 complementan muy bien el conjunto de pruebas de automatización.
@@ -128,7 +128,7 @@ principio a fin. El propósito de llevar a cabo pruebas \emph{End-to-End} es
 identificar las dependencias del sistema y garantizar que la información
 correcta se transmita entre varios componentes del sistema. Toda la aplicación
 se prueba en un escenario del mundo real, como la comunicación con la base de
-datos, la red, el hardware, y otros \cite{Sharma}.
+datos, la red, el hardware, y otros \parencite{Sharma}.
 
 Las pruebas generalmente se realizan en la capa de interfaz y se usan para
 validar que el proceso de negocio funciona en todos los sistemas como una
@@ -143,7 +143,7 @@ requieren mucho tiempo para realizarlos manualmente. Esta complejidad también
 puede hacer que las pruebas sean difíciles de automatizar y lentas de ejecutar,
 para ayudar a administrar los costos de las pruebas automatizadas  la vez que
 mantienen los beneficios, se recomienda seguir las siguientes practicas
-\cite{King}:
+\parencite{King}:
 
 \begin{itemize}
     \item Mantener una perspectiva de usuario final.
@@ -167,11 +167,11 @@ versiones con licencia o de código abierto. En términos técnicos, el
 \emph{framework} de automatización de pruebas es un conjunto personalizado de
 componentes interactivos que facilitan la ejecución de las pruebas con rutinas y
 la generación de reportes completos de los resultados de las pruebas
-\cite{Techlabs}.
+\parencite{Techlabs}.
 
 Dependiendo de como se desee abordar la creación de un \emph{framework} y los
 requisitos de automatización del proyecto, se cuentan con diferentes
-clasificaciones \cite{Nguyen}:
+clasificaciones \parencite{Nguyen}:
 
 \begin{description}
 \item [Lineal:] Son aquellos que registran los pasos de prueba y luego
@@ -230,10 +230,10 @@ Por lo general, los criterios de calidad parten de la combinación de las
 necesidades reales y de las demandas de los clientes, con el conocimiento de las
 ofertas y productos de organizaciones de la competencia y las posibilidades que
 el fabricante posee para satisfacer esas necesidades y expectativas o para
-procurar en la medida de lo posible y/o aconsejable \cite{Haaz}.
+procurar en la medida de lo posible y/o aconsejable \parencite{Haaz}.
 
 Se definieron los siguientes como criterios de calidad fundamentales para el
-éxito del producto \cite{Fillottrani}:
+éxito del producto \parencite{Fillottrani}:
 
 \begin{description}
 \item [Usabilidad] La usabilidad se refiere a la facilidad de operación del
@@ -244,7 +244,7 @@ parte de un conjunto especificado o implícito de usuarios.
 \item [Confiabilidad] La confiabilidad es un atributo del sistema responsable de
 la capacidad de continuar operando bajo condiciones predefinidas. La mayoría de
 las veces, el sistema falla debido a la inaccesibilidad de elementos externos,
-como bases de datos, sistemas y conexiones de red \cite{Ashanin}.
+como bases de datos, sistemas y conexiones de red \parencite{Ashanin}.
 
 \item [Compatibilidad] La compatibilidad del navegador determina el
 comportamiento del servicio en diferentes plataformas de navegación.
@@ -268,7 +268,7 @@ criterio de calidad.
 La prueba de aceptación es una prueba formal que se realiza para determinar si
 un sistema satisface sus criterios de aceptación: los criterios que debe cumplir
 el sistema para que el cliente los acepte. Ayuda al cliente a determinar si
-acepta o no el sistema \cite{Naik}.
+acepta o no el sistema \parencite{Naik}.
 
 Las pruebas de aceptación se realizaron para los tres componentes que comprenden
 el alcance del proyecto, como el mínimo de las funcionalidades que se consideran
@@ -282,7 +282,7 @@ especificación de diseño de la entidad de software bajo prueba. Ejemplos de
 resultados esperados, algunas veces se llaman oráculos de prueba, incluyen
 requisitos/especificaciones de diseño, valores calculados a mano y resultados
 simulados. Las pruebas funcionales hacen hincapié en el comportamiento externo
-de la entidad de software \cite{Luo}.
+de la entidad de software \parencite{Luo}.
 
 Las pruebas funcionales se realizaron para cada acción encontrada en la interfaz
 de usuario, siendo barrido completamente cualquier operación disponible en los
@@ -299,7 +299,7 @@ técnicas de prueba de software más ampliamente practicadas. Algunos autores
 restringen su consideración del alcance de esta técnica a variables de entrada
 linealizables a funciones matemáticas. Una variable linealizable es aquella
 cuyos valores se pueden asignar a una recta numérica. El análisis es más
-sencillo y más obvio en estos casos \cite{Kaner}.
+sencillo y más obvio en estos casos \parencite{Kaner}.
 
 \subsection{Pruebas negativas}
 La prueba negativa, comúnmente conocida como \emph{prueba de ruta de error} o
@@ -317,5 +317,5 @@ solo apuntan a detectar fallas potenciales que podrían causar un impacto grave
 en el consumo del servicio, sino que también pueden ser fundamentales para
 determinar las condiciones bajo las cuales la aplicación puede fallar.
 Finalmente, garantiza que haya suficiente validación de errores presente en el
-software \cite{Nadig}.
+software \parencite{Nadig}.
 

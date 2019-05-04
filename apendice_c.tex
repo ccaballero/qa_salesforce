@@ -1,8 +1,213 @@
 \chapter{Configuración y puesta en marcha del \emph{framework}}
-A continuación se detallan los pasos necesarios para la ejecución del framework,
-desde sus multiples formas de ejecutarse.
+\label{appendix_execution}
 
-\section{Ejecución local}
-\section{Ejecución sobre contenedores \emph{Docker}}
-\section{Ejecución sobre el servicio \emph{BrowserStack}}
+En este apéndice se describen los pasos necesarios para la ejecución del
+\emph{framework}. Se comenzará con los detalles de la obtención del código
+fuente, y las configuraciones previas a la ejecución, posteriormente se
+demostrará como hacer la ejecución en diferentes contextos de prueba.
+
+\section{Requerimientos de software}
+El \emph{framework} desarrollado tiene tres ambientes de ejecución posibles:
+
+\begin{description}
+\item [Local:] Ejecución sobre el host donde se invocan los comandos.
+\item [Docker:] Ejecución sobre contenedores de \emph{Docker}.
+\item [BrowserStack:] Ejecución sobre el servicio \emph{BrowserStack}.
+\end{description}
+
+Para la ejecución del \emph{framework} se debe tener instalado el software
+detallado en el \emph{cuadro \ref{requirements}}, según el tipo de contexto
+sobre el cual va a ser ejecutado.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+\footnotesize{\textbf{Software}} &
+\footnotesize{\textbf{Local}} &
+\footnotesize{\textbf{Docker}} &
+\footnotesize{\textbf{BrowserStack}} \\
+\hline
+\footnotesize{\emph{Git}} &
+\footnotesize{versión 2.0 o superior} &
+\footnotesize{versión 2.0 o superior} &
+\footnotesize{versión 2.0 o superior} \\
+\hline
+\footnotesize{\emph{Node.js}} &
+\footnotesize{versión 9.11 o superior} &
+\footnotesize{versión 9.11 o superior} &
+\footnotesize{versión 9.11 o superior} \\
+\hline
+\footnotesize{\emph{Docker}} &
+\footnotesize{No necesario} &
+\footnotesize{versión 18 o superior} &
+\footnotesize{No necesario} \\
+\hline
+\end{tabular}
+\caption{Requerimientos de software para la ejecución.}
+\label{requirements}
+\source{Elaboración propia.}
+\end{table}
+
+\section{Código fuente}
+Todo el código fuente del \emph{framework} se encuentra versionado y disponible
+desde \emph{github}, en la siguiente dirección:
+\\
+\\
+\centerline{\textbf{https://github.com/ccaballero/salesforce\_automation}}
+
+\section{Obtención del código y configuración}
+Para la obtención del código se debe proceder a la clonación del repositorio,
+desde una terminal del sistema operativo como se muestra en la
+\emph{figura \ref{clone}}.
+
+\begin{figure}[H]
+\footnotesize
+\begin{verbatim}
+$ git clone https://github.com/ccaballero/salesforce_automation
+Clonando en 'salesforce_automation'...
+remote: Enumerating objects: 481, done.
+remote: Counting objects: 100% (481/481), done.
+remote: Compressing objects: 100% (283/283), done.
+remote: Total 481 (delta 306), reused 358 (delta 185), pack-reused 0
+Recibiendo objetos: 100% (481/481), 83.17 KiB | 166.00 KiB/s, listo.
+Resolviendo deltas: 100% (306/306), listo.
+
+$ cd salesforce_automation
+\end{verbatim}
+\caption{Obtención del código fuente.}
+\label{clone}
+\source{Elaboración propia.}
+\end{figure}
+
+Posteriormente a clonar el repositorio, deben instalarse las bibliotecas
+dependientes del \emph{framework}, como se muestra en la
+\emph{figura \ref{npm}}.
+
+\begin{figure}
+\footnotesize
+\begin{verbatim}
+~/salesforce_automation $ npm install
+
+> fibers@3.1.1 install ~/salesforce_automation/node_modules/fibers
+> node build.js || nodejs build.js
+
+make: se entra en el directorio '~/salesforce_automation/node_modules/fibers/build'
+  CXX(target) Release/obj.target/fibers/src/fibers.o
+../src/fibers.cc: En la función ‘void uni::SetAccessor(v8::Isolate*, v8::Local<v8::Object>, 
+v8::Local<v8::String>, uni::FunctionType (*)(v8::Local<v8::String>, const GetterCallbackInfo
+&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, const SetterCallbackInfo&))’:
+../src/fibers.cc:341:87: aviso: cast between incompatible function types from ‘uni::Function
+Type (*)(v8::Local<v8::String>, const GetterCallbackInfo&)’ {aka ‘void (*)(v8::Local<v8::Str
+ing>, const v8::PropertyCallbackInfo<v8::Value>&)’} to ‘v8::AccessorNameGetterCallback’ {aka
+‘void (*)(v8::Local<v8::Name>, const v8::PropertyCallbackInfo<v8::Value>&)’} [-Wcast-functio
+n-type]
+   object->SetAccessor(isolate->GetCurrentContext(), name, (AccessorNameGetterCallback)gette
+r, (AccessorNameSetterCallback)setter).ToChecked();
+                                                                                       ^~~~~
+In file included from ../src/coroutine.h:1,
+                 from ../src/fibers.cc:1:
+../src/fibers.cc: En el ámbito global:
+~/.node-gyp/11.14.0/include/node/node.h:544:43: aviso: cast between incompatible function ty
+pes from ‘void (*)(v8::Handle<v8::Object>)’ {aka ‘void (*)(v8::Local<v8::Object>)’} to ‘node
+::addon_register_func’ {aka ‘void (*)(v8::Local<v8::Object>, v8::Local<v8::Value>, void*)’} 
+[-Wcast-function-type]
+       (node::addon_register_func) (regfunc),                          \
+                                           ^
+~/.node-gyp/11.14.0/include/node/node.h:578:3: nota: en expansión de macro ‘NODE_MODULE_X’
+   NODE_MODULE_X(modname, regfunc, NULL, 0)  // NOLINT (readability/null_usage)
+   ^~~~~~~~~~~~~
+../src/fibers.cc:916:1: nota: en expansión de macro ‘NODE_MODULE’
+ NODE_MODULE(fibers, init)
+ ^~~~~~~~~~~
+  CXX(target) Release/obj.target/fibers/src/coroutine.o
+  CC(target) Release/obj.target/fibers/src/libcoro/coro.o
+  SOLINK_MODULE(target) Release/obj.target/fibers.node
+  COPY Release/fibers.node
+make: se sale del directorio '~/salesforce_automation/node_modules/fibers/build'
+Installed in `~/salesforce_automation/node_modules/fibers/bin/linux-x64-67-glibc/fibers.node`
+npm notice created a lockfile as package-lock.json. You should commit this file.
+added 248 packages from 819 contributors and audited 682 packages in 53.763s
+found 0 vulnerabilities
+\end{verbatim}
+\caption{Instalación de bibliotecas del proyecto.}
+\label{npm}
+\source{Elaboración propia.}
+\end{figure}
+
+Ya instaladas las bibliotecas requeridas por el \emph{framework}, se deben
+configurar las credenciales a utilizarse para acceder al servicio de
+\emph{Salesforce}; para eso es necesario copiar el archivo \emph{config.dist.js}
+sobre el mismo directorio, con el nombre \emph{config.js} y agregar los datos de
+las credenciales en su interior, como se muestra en la \emph{figura
+\ref{config}}.
+
+Para obtener las credenciales, es necesario crear una cuenta de desarrollador en
+la plataforma \emph{Salesforce} y configurarla para evitar la solicitud de doble
+factor de autenticación.
+
+De la misma manera se requieren las credenciales de \emph{BrowserStack}, si es
+que se desea ejecutar el framework sobre esta plataforma.
+
+\begin{figure}[H]
+\footnotesize
+\begin{verbatim}
+module.exports={
+    timeout:40000
+  , url:{
+      login:'https://login.salesforce.com'
+    }
+  , credentials:{
+        administrator:{
+            username:'<nombre de usuario salesforce>'
+          , password:'<contraseña del usuario salesforce>'
+        }
+    }
+  , browserstack:{
+        user:'<nombre de usuario browserstack>'
+      , key:'<clave provista por browserstack>'
+      , capabilities:[{
+            os:'OS X'
+          , os_version:'Mojave'
+          , browserName:'Chrome'
+          , browser_version:'72.0 beta'
+        }]
+    }
+  , docker:{
+        host:'127.0.0.1'
+      , port:4444
+    }
+};
+\end{verbatim}
+\caption{Contenido del fichero config.js.}
+\label{config}
+\source{Elaboración propia.}
+\end{figure}
+
+El framework consta de múltiples grupos de prueba ya especificados en el
+capitulo de desarrollo del \emph{frawework}, por lo que pueden ejecutarse según
+estos, o puntualizando el caso de prueba que quiere ejecutarse.
+
+\section{Ejecución de casos de prueba}
+Para la ejecución de casos de prueba, se tienen disponibles tres
+configuraciones, uno por cada contexto en el que se tiene la posibilidad de
+ejecución, estas únicamente difieren según el archivo de configuración que
+deberá utilizarse, como se muestra en la \emph{figura \ref{execution}}.
+
+\begin{figure}[H]
+\footnotesize
+\begin{verbatim}
+# Ejecución en host local del caso de prueba A001
+~/salesforce_automation $ ./node_modules/.bin/wdio wdio.standalone.conf.js --suite A001
+
+# Ejecución en host local de todos los casos de prueba de tipo dominio
+~/salesforce_automation $ ./node_modules/.bin/wdio wdio.standalone.conf.js --suite domain
+
+# Ejecución en host local de todos los casos de prueba relacionados con productos
+~/salesforce_automation $ ./node_modules/.bin/wdio wdio.standalone.conf.js --suite products
+\end{verbatim}
+\caption{Ejemplos de ejecución de casos de prueba.}
+\label{execution}
+\source{Elaboración propia.}
+\end{figure}
 

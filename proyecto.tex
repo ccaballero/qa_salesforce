@@ -48,6 +48,9 @@
 
 \usepackage[grey]{quotchap}
 
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+
 \usepackage[
 pdfauthor={Carlos Eduardo Caballero Burgoa},%
 pdftitle={Salesforce (Productos y Listas de Precios)},%
@@ -55,8 +58,9 @@ colorlinks,%
 citecolor=black,%
 filecolor=black,%
 linkcolor=black,%
-urlcolor=black
-pdftex]{hyperref}
+urlcolor=black,
+breaklinks]{hyperref}
+\usepackage{breakurl}
 
 \newcommand{\blankpage}{
 \newpage
@@ -68,7 +72,12 @@ pdftex]{hyperref}
 \usepackage[nottoc,notlof,notlot]{tocbibind}
 \usepackage{float}
 
-\usepackage[backend=biber,style=apa,autocite=inline,sorting=ynt]{biblatex}
+\usepackage[
+backend=biber,
+style=apa,
+citestyle=authoryear,
+block=ragged
+]{biblatex}
 \addbibresource{bibliografia.bib}
 
 \begin{document}
@@ -83,19 +92,22 @@ pdftex]{hyperref}
 
 \mainmatter
 \include{capitulo_01}
-%\include{capitulo_02}
-%\include{capitulo_03}
-%\include{capitulo_04}
-%\include{capitulo_05}
+\include{capitulo_02}
+\include{capitulo_03}
+\include{capitulo_04}
+\include{capitulo_05}
 
-\printbibliography[title={Bibliografía}]
+\printbibliography[
+heading=bibintoc,
+title={Bibliografía}
+]
 
-%\begin{appendix}
-%\include{apendice_a}
-%\include{apendice_b}
-%\include{apendice_c}
-%\include{apendice_d}
-%\end{appendix}
+\begin{appendix}
+\include{apendice_a}
+\include{apendice_b}
+\include{apendice_c}
+\include{apendice_d}
+\end{appendix}
 
 \backmatter
 
