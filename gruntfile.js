@@ -1,4 +1,4 @@
-const path=require('path')
+const path=require('path');
 
 module.exports=function(grunt){
     require('time-grunt')(grunt);
@@ -6,7 +6,7 @@ module.exports=function(grunt){
 
     grunt.initConfig({
         shell:{
-            latex:{
+            latex1:{
                 command:function(doc){
                     return [
                         'latex -interaction=nonstopmode proyecto'
@@ -16,18 +16,43 @@ module.exports=function(grunt){
                     ].join(' && ');
                 }
             }
+          , latex2:{
+                command:function(doc){
+                    return [
+                        'latex -interaction=nonstopmode presentacion'
+                      , 'latex -interaction=nonstopmode presentacion'
+                      , 'dvipdf presentacion'
+                    ].join(' && ');
+                }
+            }
         }
       , watch:{
-            tex:{
-                files:['*.tex','*.bib','graphics/*.eps']
-              , tasks:['shell:latex']
+            tex1:{
+                files:[
+                    'apendice_*.tex'
+                  , 'bibliografia.bib'
+                  , 'capitulo__*.tex'
+                  , 'caratula.tex'
+                  , 'proyecto.tex'
+                  , 'graphics/*.eps'
+                ]
+              , tasks:['shell:latex1']
+            }
+          , tex2:{
+                files:[
+                    'presentacion.tex'
+                  , 'graphics/*.eps'
+                ]
+              , tasks:['shell:latex2']
             }
         }
     });
 
     grunt.event.on('watch',function(action,filepath,target){
         var c=path.parse(filepath);
-        grunt.config('watch.tex.tasks','shell:latex:'+c.dir);
+
+        grunt.config('watch.tex1.tasks','shell:latex1:'+c.dir);
+        grunt.config('watch.tex2.tasks','shell:latex2:'+c.dir);
     });
 
     grunt.registerTask('serve',[
