@@ -228,7 +228,7 @@ Implementación de los casos de prueba formulados. &
 \multirow{4}{4.0cm}{Rutinas de automatización de los casos de prueba de los
 módulos de Productos y Listas de Precios.} \\
 \cline{3-3}
-& & Implementación de pre condiciones y post condiciones en la ejecución de los
+& & Implementación de precondiciones y postcondiciones en la ejecución de los
 casos de prueba. & \\
 \cline{3-3}
 & & Ejecución de los casos de prueba automatizados. & \\
@@ -268,9 +268,8 @@ observarse funciones relacionadas a registrar precios estándar y precios para
 una lista de precios determinada.
 
 En la \emph{figura \ref{productos_vistas}}, se aprecian las diferentes vistas
-que comprenden el módulo, se resaltó con color amarillo aquellas vistas que son
-de tipo formulario, mientras que se resaltó con color verde aquellas que son de
-tipo confirmación de acción.
+que comprenden el módulo, se resaltaron las vistas que son de tipo formulario,
+y también las que son de tipo confirmación de acción.
 
 Además de las funcionalidades y vistas antes mencionadas, también se analizó el
 comportamiento de los formularios que provee el módulo, como puede verse en la
@@ -351,19 +350,31 @@ comportamiento de los formularios que provee el módulo, como puede verse en la
         }
         child [missing] {}
         child [missing] {}
-        child { node [form] {Crear Producto}}
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> \\ Crear Producto}}
+        child [missing] {}
         child { node {Filtros}}
         child { node {Producto}
-            child { node [form] {Modificar: Producto}}
-            child { node [confirm] {Eliminar: Producto}}
-            child { node [form] {Crear Producto}}
+            child [missing] {}
+            child { node [align=center] {<<\emph{formulario}>> \\ Modificar: Producto}}
+            child [missing] {}
+            child { node [align=center] {<<\emph{confirmación}>> \\ Eliminar: Producto}}
+            child [missing] {}
+            child { node [align=center] {<<\emph{formulario}>> \\ Crear Producto}}
+            child [missing] {}
             child { node {Detalles}}
             child { node {Relacionado}
-                child { node [form] {Crear Entrada del catalogo de precios}}
-                child { node [form] {Agregar a lista de precios}}
+                child [missing] {}
+                child { node [align=center] {<<\emph{formulario}>> \\ Crear Entrada del catalogo de precios}}
+                child [missing] {}
+                child { node [align=center] {<<\emph{formulario}>> \\ Agregar a lista de precios}}
+                child [missing] {}
                 child { node {Listas de precios}
-                    child { node [form] {Modificar Entrada del catalogo de precios}}
-                    child { node [confirm] {Eliminar entrada del catalogo de precios}}
+                    child [missing] {}
+                    child { node [align=center] {<<\emph{formulario}>> \\ Modificar Entrada del catalogo de precios}}
+                    child [missing] {}
+                    child { node [align=center] {<<\emph{confirmación}>> \\ Eliminar entrada del catalogo de precios}}
+                    child [missing] {}
                 }
             }
         }
@@ -377,8 +388,15 @@ comportamiento de los formularios que provee el módulo, como puede verse en la
         child [missing] {}
         child [missing] {}
         child [missing] {}
-        child { node [form] {Modificar: Producto}}
-        child { node [confirm] {Eliminar: Producto}};
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> \\ Modificar: Producto}}
+        child [missing] {}
+        child { node [align=center] {<<\emph{confirmación}>> \\ Eliminar: Producto}};
 \end{tikzpicture}
 \caption{Vistas que componen el módulo de gestión de productos.}
 \label{productos_vistas}
@@ -392,6 +410,7 @@ comportamiento de los formularios que provee el módulo, como puede verse en la
     two children at (0.5,-0.7) and (0.5,-1.4)},
     edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
     \node {Productos}
+        child [missing] {}
         child { node {Crear producto}
             child { node {Nombre del producto (*)}}
             child { node {Activo}}
@@ -399,6 +418,7 @@ comportamiento de los formularios que provee el módulo, como puede verse en la
             child { node {Familia de productos}}
             child { node {Descripción del producto}}
         }
+        child [missing] {}
         child [missing] {}
         child [missing] {}
         child [missing] {}
@@ -416,10 +436,12 @@ comportamiento de los formularios que provee el módulo, como puede verse en la
         child [missing] {}
         child [missing] {}
         child [missing] {}
+        child [missing] {}
         child { node {Agregar a lista de precios}
             child { node {Lista de precios (*)}}
             child { node {Divisa (*)}}
         }
+        child [missing] {}
         child [missing] {}
         child [missing] {}
         child { node {Modificar entrada del catálogo de precios}
@@ -445,9 +467,8 @@ Las funciones de Listas de Precios son muy similares a aquellas vistas en el
 módulo de productos, analizado anteriormente.
 
 En la \emph{figura \ref{listas_de_precios_vistas}}, se detallan aquellas vistas
-presentes en este módulo, de la misma manera se ha destacado con amarillo a
-aquellas vistas que son formularios, mientras que en verde se presentan a
-aquellas que representan diálogos de confirmación.
+presentes en este módulo, de la misma manera se ha destacado aquellas vistas que
+son formularios, y aquellas que representan diálogos de confirmación.
 
 También de las funcionalidades y vistas antes mencionadas, se analizó el
 comportamiento de los formularios que provee este módulo, como puede verse en la
@@ -533,22 +554,36 @@ comportamiento de los formularios que provee este módulo, como puede verse en l
         }
         child [missing] {}
         child [missing] {}
-        child { node [form] {Crear Lista de precios}}
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> Crear Lista de precios}}
         child { node {Filtros}}
         child { node {Lista de precios}
-            child { node [form] {Modificar: Lista de Precios}}
-            child { node [form] {Crear Lista de precios}}
-            child { node [confirm] {Eliminar: Lista de precios}}
+            child [missing] {}
+            child { node [align=center] {<<\emph{formulario}>> \\ Modificar: Lista de Precios}}
+            child [missing] {}
+            child { node [align=center] {<<\emph{formulario}>> \\ Crear Lista de precios}}
+            child [missing] {}
+            child { node [align=center] {<<\emph{confirmación}>> \\ Eliminar: Lista de precios}}
+            child [missing] {}
             child { node {Detalles}}
             child { node {Relacionado}
-                child { node [form] {Agregar productos}
-                    child { node [form] {Modificar Entrada del catalogo de precios}}
+                child [missing] {}
+                child { node [align=center] {<<\emph{formulario}>> \\ Agregar productos}
+                    child [missing] {}
+                    child { node [align=center] {<<\emph{formulario}>> \\ Modificar Entrada del catalogo de precios}}
                 }
                 child [missing] {}
+                child [missing] {}
                 child { node {Productos}
-                    child { node [form] {Modificar Entrada del catalogo de precios}}
-                    child { node [confirm] {Eliminar Entrada del catalogo de precios}}
+                    child [missing] {}
+                    child { node [align=center] {<<\emph{formulario}>> \\ Modificar Entrada del catalogo de precios}}
+                    child [missing] {}
+                    child { node [align=center] {<<\emph{confirmación}>> \\ Eliminar Entrada del catalogo de precios}}
+                    child [missing] {}
                 }
+                child [missing] {}
+                child [missing] {}
+                child [missing] {}
                 child [missing] {}
                 child [missing] {}
                 child { node {Historial de lista de precios}}
@@ -565,8 +600,17 @@ comportamiento de los formularios que provee este módulo, como puede verse en l
         child [missing] {}
         child [missing] {}
         child [missing] {}
-        child { node [form] {Modificar: Lista de Precio}}
-        child { node [confirm] {Eliminar: Lista de Precio}};
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> Modificar: Lista de Precio}}
+        child { node [align=center] {<<\emph{confirmación}>> Eliminar: Lista de Precio}};
 \end{tikzpicture}
 \caption{Vistas que componen el módulo de gestión de listas de precios.}
 \label{listas_de_precios_vistas}
@@ -610,9 +654,8 @@ controles de vista.
 
 En la \emph{figura \ref{vista_de_lista_vistas}}, se detallan aquellas vistas
 provistas por este componente, de la misma manera que en los dos módulos
-anteriormente citados, aquí también se han destacado con amarillo a
-aquellas vistas que son formularios, mientras que en verde se presentan a
-aquellas que representan diálogos de confirmación.
+anteriormente citados, aquí también se han destacado aquellas vistas que son
+formularios y aquellas que representan diálogos de confirmación.
 
 También de las funcionalidades y vistas antes mencionadas, se analizó el
 comportamiento de los formularios que provee este módulo, como puede verse en la
@@ -661,13 +704,20 @@ comportamiento de los formularios que provee este módulo, como puede verse en l
     two children at (0.5,-0.7) and (0.5,-1.4)},
     edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
     \node {Vista de Lista}
-        child { node [form] {Nueva vista de lista}}
-        child { node [form] {Duplicar vista de lista}}
-        child { node [form] {Cambiar nombre}}
-        child { node [form] {Configuración de colaboración}}
-        child { node [form] {Seleccionar los campos que se visualizaran}}
-        child { node [confirm] {Eliminar}}
-        child { node [form] {Configuración de Kanban}};
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> \\ Nueva vista de lista}}
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> \\ Duplicar vista de lista}}
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> \\ Cambiar nombre}}
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> \\ Configuración de colaboración}}
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> \\ Seleccionar los campos que se visualizaran}}
+        child [missing] {}
+        child { node [align=center] {<<\emph{confirmación}>> \\ Eliminar}}
+        child [missing] {}
+        child { node [align=center] {<<\emph{formulario}>> \\ Configuración de Kanban}};
 \end{tikzpicture}
 \caption{Vistas que componen el módulo de gestión de listas de precios.}
 \label{vista_de_lista_vistas}
@@ -680,7 +730,8 @@ comportamiento de los formularios que provee este módulo, como puede verse en l
     grow via three points={one child at (0.5,-0.7) and
     two children at (0.5,-0.7) and (0.5,-1.4)},
     edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
-    \node {Vista de lista}
+    \node {Vista de Lista}
+        child [missing] {}
         child { node {Nueva vista de lista}
             child { node {Nombre de la lista (*)}}
             child { node {List API Name (*)}}

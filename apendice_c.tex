@@ -205,6 +205,20 @@ deberá utilizarse, como se muestra en la \emph{figura \ref{execution}}.
 
 # Ejecución en host local de todos los casos de prueba relacionados con productos
 ~/salesforce_automation $ ./node_modules/.bin/wdio wdio.standalone.conf.js --suite products
+
+
+# Arranque de los contenedores docker
+~/salesforce_automation $ docker-compose -f docker-compose.yml up -d
+
+# Ejecución sobre docker del caso de prueba A001
+~/salesforce_automation $ ./node_modules/.bin/wdio wdio.docker.conf.js --suite A001
+
+# Ejecución sobre docker de todos los casos de prueba de tipo dominio
+~/salesforce_automation $ ./node_modules/.bin/wdio wdio.docker.conf.js --suite domain
+
+# Ejecución sobre docker de todos los casos de prueba relacionados con productos
+~/salesforce_automation $ ./node_modules/.bin/wdio wdio.docker.conf.js --suite products
+
 \end{verbatim}
 \caption{Ejemplos de ejecución de casos de prueba.}
 \label{execution}

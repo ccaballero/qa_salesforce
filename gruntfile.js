@@ -31,7 +31,7 @@ module.exports=function(grunt){
                 files:[
                     'apendice_*.tex'
                   , 'bibliografia.bib'
-                  , 'capitulo__*.tex'
+                  , 'capitulo_*.tex'
                   , 'caratula.tex'
                   , 'proyecto.tex'
                   , 'graphics/*.eps'
